@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "//blog.coderockr.com/"
+baseurl = "https://blog.coderockr.com/"
 languageCode = "pt-br"
 title = "Blog Coderockr"
 theme = "coderockr"
