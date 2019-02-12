@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/api/</link>
+    <description>Recent content in Api on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Definindo APIs com o API Blueprint</title>
+      <link>//blog.coderockr.com/posts/2017/definindo-apis-com-o-api-blueprint/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/definindo-apis-com-o-api-blueprint/</guid>
+      <description>Definindo APIs com o API Blueprint Uma das melhores decisões que tomamos na Coderockr foi adotarmos a abordagem “API First” para todos os projetos que iniciamos, desde 2010. Mas nos últimos meses percebemos uma necessidade: melhorar o processo de definição e documentação das APIs.
+Já usávamos outras abordagens, mas a maioria delas envolvia documentar a API no próprio código, usando annotations. Esta abordagem funciona, mas tem alguns problemas, principalmente quando a documentação precisa ser alterada por alguém de negócios.</description>
+    </item>
+    
+    <item>
+      <title>Developer Experience na Prática</title>
+      <link>//blog.coderockr.com/posts/2016/developer-experience-na-pratica/</link>
+      <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/developer-experience-na-pratica/</guid>
+      <description>No post anterior eu falei sobre a ideia do DX e como implementar algo similar em nossas empresas. Neste post quero comentar um exemplo prático comparando duas empresas similares.
+Quando o Stripe foi lançado nos EUA o mercado de gateways de pagamento já estava consolidado, com grandes players como o Paypal. Nestes cenários a única forma de uma nova empresa se destacar é criando uma “vantagem competitiva” em relação aos outros concorrentes.</description>
+    </item>
+    
+    <item>
+      <title>DX — Developer Experience</title>
+      <link>//blog.coderockr.com/posts/2016/dx-developer-experience/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/dx-developer-experience/</guid>
+      <description>Depois de algumas cervejas e várias horas de conversa (ou teriam sido várias cervejas e algumas horas de conversa?), eis que o Guilherme Siquinelli cunha o termo que dá título a este post.
+E este termo faz muito sentido. Nos últimos anos a disciplina de UX — User Experience — provou-se muito importante, desde projetos de aplicativos até e-commerce e sistemas bancários. Tornar um sistema fácil e amigável aos seus usuários é um grande passo para o seu sucesso.</description>
+    </item>
+    
+    <item>
+      <title>Gerando documentação de APIs</title>
+      <link>//blog.coderockr.com/posts/2016/gerando-documentacao-de-apis/</link>
+      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/gerando-documentacao-de-apis/</guid>
+      <description>Uma das melhores decisões técnicas que tomei na minha carreira foi investir pesado nas arquiteturas baseadas em serviços. Meu primeiro post sobre isso data de 2011 e desde então esta decisão só se provou um acerto.
+Uma das tarefas mais importantes, e chatas, é manter a documentação das APIs sempre atualizadas pois elas são consumidas por cada vez mais camadas: frontend, mobile, outros serviços e sistemas. Existem várias ferramentas para esta tarefa, sendo uma das mais completas, e complexas, o Swagger, além de alguns serviços pagos.</description>
+    </item>
+    
+  </channel>
+</rss>

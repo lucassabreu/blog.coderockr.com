@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Definindo APIs com o API Blueprint"/>
+  <meta name="twitter:description" content="Uma das melhores decisões que tomamos na Coderockr foi adotarmos a abordagem “API First” para todos os projetos que iniciamos..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Definindo APIs com o API Blueprint &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Definindo APIs com o API Blueprint
+                    </h1>
+                    <h2 class="headline">
+                    Jun 28, 2017 00:00
+                    · 803 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/api">API</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="definindo-apis-com-o-api-blueprint">Definindo APIs com o API Blueprint</h1>
+
+<p>Uma das melhores decisões que tomamos na Coderockr foi adotarmos a abordagem “API First” para todos os projetos que iniciamos, desde 2010. Mas nos últimos meses percebemos uma necessidade: melhorar o processo de definição e documentação das APIs.</p>
+
+<p>Já usávamos <a href="http://eltonminetto.net/2016/06/01/gerando-documentacao-de-apis/">outras abordagens</a>, mas a maioria delas envolvia documentar a API no próprio código, usando <em>annotations</em>. Esta abordagem funciona, mas tem alguns problemas, principalmente quando a documentação precisa ser alterada por alguém de negócios. E gerar “mocks” e testes destas anotações também é um desafio complexo.</p>
+
+<p>Com isso em mente fizemos algumas pesquisas e chegamos a duas alternativas: Swagger e API Blueprint. Ambos são padrões de documentação de APIs e tem suas vantagens e desvantagens:</p>
+
+<ul>
+<li><p>Swagger: é o <a href="https://www.openapis.org/">padrão de mercado</a> e vem sendo adotado por várias empresas como a Amazon. Para descrever a API é necessário criar arquivos JSON, o que facilita bastante para os programadores, mas é um pouco complexo para visualizar e alterar seu conteúdo por pessoas não tão envolvidas com código. Existe uma série de ferramentas que podem ajudar neste processo, mas isso tornou-se uma pequena barreira para nós. (bom, pelo menos não é YML… Já comentei que odeio YML?)</p></li>
+
+<li><p>API Blueprint: é uma <a href="https://apiblueprint.org/">especificação</a> mais recente e foi criada por uma empresa chamada <a href="https://apiary.io/">apiary</a>, comprada pela Oracle. A grande vantagem do API Blueprint é ser descrita em Markdown, o que facilita bastante a edição dos documentos, mesmo por quem não tem familiaridade com código. Além disso, existe uma série de ferramentas disponíveis que permitem gerar documentos no padrão Swagger, “mock servers” e testes.</p></li>
+</ul>
+
+<p>Optamos pelo API Blueprint pela facilidade de uso e agilidade que isso nos trouxe. Vou demonstrar com um pequeno exemplo.</p>
+
+<p>A definição é escrita em um arquivo no formato Markdown, que pode ser nomeado como “api.md” ou “api.apib”. Ambos funcionam, mas se usarmos a extensão .apib podemos aproveitar plugins para editores como o SublimeText que auxiliam na escrita. Os plugins podem ser encontrados no site oficial da especificação.</p>
+
+<p>Nosso exemplo:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/c8b2a6a8e726d36c202eaae41eef8d73.js"></script>
+
+<p>No site da especificação é possível ver os detalhes, mas basicamente o que fazemos é definir as URLs, o formato das requisições e das respostas. Podemos definir estruturas de dados simples e complexas e usá-las para descrever o que a API espera de entradas e o que deve gerar de saída. O documento é relativamente simples de entender e alterar, o que foi um dos pontos de maior peso para nossa escolha. Mesmo assim, podemos melhorar a apresentação.</p>
+
+<h2 id="gerando-documentação">Gerando documentação</h2>
+
+<p>Dentre as ferramentas disponíveis no site oficial a <a href="https://github.com/danielgtaylor/aglio">aglio</a> é uma das mais interessantes para geração de uma apresentação HTML da nossa definição. Ele pode ser instalado via:</p>
+
+<pre><code>npm install -g aglio
+</code></pre>
+
+<p>Para gerar a documentação podemos usar o comando:</p>
+
+<pre><code>aglio -i api.apib --theme-full-width --no-theme-condense -o index.html
+</code></pre>
+
+<p>No site da ferramenta é possível ver todas as opções de customização de temas e apresentação. Outro comando útil é o:</p>
+
+<pre><code>aglio -i api.apib --theme-full-width --no-theme-condense -s
+</code></pre>
+
+<p>Ele gera um servidor local, na porta 3000, que fica observando alterações no arquivo .apib e atualiza automaticamente a página da documentação. Isso facilita bastante a manutenção do documento. Um exemplo da documentação gerada:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*qX1oOdJe2z_9DgdB.png" alt="" /></p>
+
+<p>A documentação ajuda muito no processo de desenvolvimento dos clientes da API, mas podemos ir além.</p>
+
+<h2 id="gerando-um-mock-server">Gerando um mock server</h2>
+
+<p>Com a API definida as equipes de frontend (web, mobile, etc) e backend (quem vai desenvolver a API) podem trabalhar em paralelo. Para facilitar ainda mais podemos criar um “mock server” que vai gerar dados falsos baseados na definição da API. Assim a equipe de frontend pode trabalhar sem precisar esperar a equipe de backend terminar a implementação. Para isso vamos usar outra ferramenta, a <a href="https://github.com/Aconex/drakov">drakov</a>.</p>
+
+<p>Para instalar a ferramenta basta executar:</p>
+
+<pre><code>npm install -g drakov
+</code></pre>
+
+<p>E para gerar o servidor:</p>
+
+<pre><code>drakov -f api.apib -p 4000
+</code></pre>
+
+<p>Desta forma temos uma API funcional que pode ser usada para testes e desenvolvimento.</p>
+
+<p>O passo final é definirmos uma forma de validarmos nossa API.</p>
+
+<h2 id="testando">Testando</h2>
+
+<p>Podemos usar uma ferramenta chamada <a href="https://github.com/kminami/apib2swagger">apib2swagger</a> para gerar um arquivo Swagger da nossa API e realizarmos testes usando algum recurso do Swagger. Optamos por usar o <a href="https://github.com/apiaryio/dredd">dredd</a> que automatiza os testes, tanto usando API Blueprint quanto Swagger.</p>
+
+<p>Para instalá-lo:</p>
+
+<pre><code>npm install -g dredd
+</code></pre>
+
+<p>E para executar os testes:</p>
+
+<pre><code>dredd api.apib [http://localhost:4000](http://localhost:4000)
+</code></pre>
+
+<p>Neste exemplo estou usando o dredd para testar nosso “mock server”, por isso o resultado deve ser positivo. Podemos colocar o dredd na execução do nosso servidor de integração contínua para garantir que a implementação da API sempre esteja de acordo com a documentação, evitando surpresas e documentos abandonados.</p>
+
+<p>Com o conjunto API Blueprint + aglio + drakov + dredd conseguimos mapear todo o ciclo de vida de uma API: definição, documentação, desenvolvimento e testes. Os resultados estão sendo bem positivos e devemos adotar essa solução em todos os novos projetos.</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2017-06-29-definindo-apis-com-api-blueprint/">http://eltonminetto.net/post/2017-06-29-definindo-apis-com-api-blueprint/</a> on June 29, 2017.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fdefinindo-apis-com-o-api-blueprint%2f - Definindo%20APIs%20com%20o%20API%20Blueprint by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

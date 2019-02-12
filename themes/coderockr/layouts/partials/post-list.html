@@ -11,6 +11,7 @@
                     {{ if .Site.Params.enableSummary }}
                         {{ if .Site.Params.useDescriptionReplaceSummary }}
                             <h2>{{ .Description | plainify }}</h2>
+                            <h3 class="author">{{ .Params.Author | plainify }}</h3>
                         {{ else }}
                             <h2>{{ .Summary | plainify | htmlUnescape }}</h2>
                         {{ end }}

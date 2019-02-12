@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Time Tracking na Linha de Comando"/>
+  <meta name="twitter:description" content="Escrevi um post algum tempo atrás falando sobre as armadilhas do “multitasking” no nosso dia a dia. Uma das minhas sugestões no post foi usar uma ferramenta para anotar as horas e tarefas..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Time Tracking na Linha de Comando &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Time Tracking na Linha de Comando
+                    </h1>
+                    <h2 class="headline">
+                    Aug 21, 2017 00:00
+                    · 584 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Escrevi <a href="http://eltonminetto.net/2014/11/26/multitasking-so-e-bom-no-seu-computador/">um post</a> algum tempo atrás falando sobre as armadilhas do “multitasking” no nosso dia a dia. Uma das minhas sugestões no post foi usar uma ferramenta para anotar as horas e tarefas, o que ajuda a manter o foco em uma coisa de cada vez. Neste post vou apresentar uma nova ferramenta que estou usando e gostando bastante, o Watson.</p>
+
+<p>Eu passo a maior parte do meu tempo na frente do computador com um terminal aberto. Quem me conhece sabe que não sou fã de IDEs e uso o terminal para fazer tudo, desde pesquisa em arquivos (<em>grep, fgrep, find, ack</em>) até executar testes unitários (<em>PHPUnit, go test</em>) e deploys (<em>shell script</em>). Nada mais natural que eu acabasse usando a linha de comando para monitorar o meu tempo também. Em uma das minhas leituras diárias no Hacker News esbarrei com uma ferramenta interessante, o <a href="https://tailordev.github.io/Watson/">Watson</a>.</p>
+
+<p>O funcionamento dele é bem simples. Após a <a href="https://tailordev.github.io/Watson/#installation">instalação</a> basta iniciar o trabalho usando o comando <em>start</em>, como no exemplo:</p>
+
+<pre><code>watson start coderockr +&quot;Criacao de Post&quot;
+</code></pre>
+
+<p>Sim, estou usando o Watson para monitorar o tempo que estou dedicando para escrever este post!</p>
+
+<p>O parâmetro <em>coderockr</em> é o nome do projeto e o <em>+“Criacao de Post”</em> é a tag que estou atribuindo ao trabalho. É possível colocar mais tags, seguidas de espaços como:</p>
+
+<pre><code>watson start coderockr +&quot;Criacao de Post&quot; +Medium +Produtividade
+</code></pre>
+
+<p>Para visualizar todos os seus projetos basta executar:</p>
+
+<pre><code>watson projects
+</code></pre>
+
+<p>E as tags com o</p>
+
+<pre><code>watson tags
+</code></pre>
+
+<p>Também é possível ver o status do trabalho que está realizando agora:</p>
+
+<pre><code>watson status Project coderockr [Criacao de Post, Elton Minetto] started 9 minutes ago (2017.08.22 08:23:56-0300)
+</code></pre>
+
+<p>E ver o <em>log</em> dos seus trabalhos recentes com o :</p>
+
+<pre><code>watson log
+</code></pre>
+
+<p>A saída do comando <em>log</em> vai mostrar um identificador do trabalho, algo bem parecido com um <em>commit</em> do <em>Git</em>. Com esse identificador é possível editar determinado trabalho:</p>
+
+<pre><code>watson edit 66843a7
+</code></pre>
+
+<p>O seu editor padrão vai ser aberto com um arquivo <em>json</em> contendo as informações do trabalho, que pode ser alterado e salvo.</p>
+
+<p>Para salvar o histórico dos trabalhos existe duas soluções. A mais simples é configurar uma variável de ambiente indicando para o Watson onde salvar seus arquivos, o que pode ser em um diretório do Dropbox, iCloud, ou mesmo Git. Eu configurei desta forma:</p>
+
+<pre><code>WATSON_DIR=/Users/eminetto/Dropbox/watson
+</code></pre>
+
+<p>A segunda forma é usar um servidor remoto para armazenar o seu log. O Watson tem um projeto complementar, o <a href="https://github.com/TailorDev/crick">Crick</a>. Com ele é possível sincronizar os seus logs e também visualizar de maneira gráfica como está sendo usado o tempo em cada projeto.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2778/0*mNlpOG8DPDcDS1v_.png" alt="" /></p>
+
+<p>O Crick é um projeto open source que pode ser hospedado em um servidor próprio mas também existe uma <a href="https://crick.io/">solução na nuvem</a> que pode ser usada tranquilamente. O Crick também permite a criação de times, o que facilita o seu uso em grupo. Depois de criada a conta no <a href="http://crick.io/">http://crick.io</a>, ou no servidor próprio, basta <a href="https://tailordev.github.io/Watson/user-guide/configuration/#available-settings">configurar o Watson</a> para usar o backend do Crick para sincronizar os dados. Depois de configurado basta executar o comando:</p>
+
+<pre><code>watson sync
+</code></pre>
+
+<p>Desta forma os logs são enviados para o servidor e ficam disponíveis via interface gráfica.</p>
+
+<p>A grande vantagem do Watson é podermos usá-lo em automatizações e scripts, facilitando bastante o dia a dia do desenvolvedor e evitando o multitasking. E o Crick ajuda bastante na tarefa de visualizar de maneira mais rápida e prática como estamos consumindo nosso tempo, o que ajuda na otimização de tarefas.</p>
+
+<p>E tudo isso sem sair do nosso amado terminal ;)</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2017-08-22-time-tracking-na-linha-de-comando/">http://eltonminetto.net/post/2017-08-22-time-tracking-na-linha-de-comando/</a> on August 22, 2017.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2ftime-tracking-na-linha-de-comando%2f - Time%20Tracking%20na%20Linha%20de%20Comando by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

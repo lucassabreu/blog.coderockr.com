@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Tratamento de Erros em Go"/>
+  <meta name="twitter:description" content="Um dos primeiros pontos que causam estranheza para quem está começando em Go é a forma como os erros são tratados"/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Tratamento de Erros em Go &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Tratamento de Erros em Go
+                    </h1>
+                    <h2 class="headline">
+                    Jul 13, 2016 00:00
+                    · 248 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/go">GO</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Um dos primeiros pontos que causam estranheza para quem está começando em Go é a forma como os erros são tratados, principalmente quando viemos de outras linguagens orientadas a objetos. Em Go os erros são “first class citizens”, ou seja, eles não são ocultos ou delegados e são considerados parte importante do código.</p>
+
+<p>Hoje passei por uma situação onde isso fez diferença. Revisando/debugando o código em PHP (alterado do original):</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/e6fb9c415fc86db28f6018cc3533ca97.js"></script>
+
+<p>Assume-se que o <em>$response</em>, por exemplo, deve retornar um valor correto, que qualquer erro seria tratado pelo método <em>transmit</em> e <em>exceptions</em> seriam geradas caso contrário.</p>
+
+<p>Em Go o mesmo código poderia ser escrito da seguinte forma:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/dccc686a54ce563647940ec7bbb2ee8e.js"></script>
+
+<p>Como todo método pode retornar dois resultados, um de sucesso e outro de erro, podemos capturar e tratar o problema explicitamente.</p>
+
+<p>A primeira impressão é que o código está mais burocrático e ferindo algum princípio como os defendidos pelo SOLID, mas o erro e seu tratamento está bem mais claro. E em uma linguagem de programação que tem como foco o desenvolvimento de aplicativos concorrentes isso pode ser uma grande vantagem.</p>
+
+<p>Também é possível ignorar o erro usando:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/a318e490dbaf1779f6243873e73387e7.js"></script>
+
+<p>E desta forma estamos delegando o controle para o método <em>transmit</em>, como no exemplo em PHP.</p>
+
+<p>A “moral da história” aqui é entender as vantagens e desvantagens de cada abordagem para podermos escolher a melhor forma para implementá-la em nossos projetos.</p>
+
+<p>Mais detalhes sobre o tratamento de erros em Go pode ser vista no <a href="https://blog.golang.org/error-handling-and-go">blog oficial</a></p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/2016-07-14-tratamento-erros-go/">eltonminetto.net</a> on July 14, 2016.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2ftratamento-de-erros-em-go%2f - Tratamento%20de%20Erros%20em%20Go by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

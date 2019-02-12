@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Simplificando Ainda Mais o Setup de Projetos"/>
+  <meta name="twitter:description" content="Ano passado nós criamos um script simples para auxiliar no setup de projetos no GitHub, ele atendeu bem as nossas necessidades para os novos repositórios que criamos no GitHub..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Simplificando Ainda Mais o Setup de Projetos &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Simplificando Ainda Mais o Setup de Projetos
+                    </h1>
+                    <h2 class="headline">
+                    Jun 6, 2018 00:00
+                    · 463 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/github">GitHub</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="simplificando-ainda-mais-o-setup-de-projetos">Simplificando ainda mais o Setup de Projetos</h1>
+
+<p>Agora simplificando GitHub, GitLab e Trello</p>
+
+<p><em>English version: <a href="https://blog.coderockr.com/simplifying-project-setup-even-further-da5ef60a1ec9">click here</a></em></p>
+
+<p>Ano passado nós criamos um script simples para auxiliar no <a href="https://blog.coderockr.com/simplificando-o-setup-de-projetos-no-github-f29b76c83194">setup de projetos no GitHub</a>, ele atendeu bem as nossas necessidades para os novos repositórios que criamos no GitHub.</p>
+
+<p>Porém também trabalhamos com outras ferramentas para gerir os nossos projetos, como o GitLab e o Trello, mas não fizemos um script semelhante para eles.</p>
+
+<p>Agora no inicio do ano criei um novo script para realizar o <a href="https://github.com/Coderockr/coderockr-way-github-setup#gitlab">setup dos projetos no GitLab</a>, que é basicamente uma cópia com os endpoints do GitLab.</p>
+
+<p>Ao começar a trabalhar no script para o Trello acabei me deparando com um problema, diferente do GitLab e GitHub ele não oferece um sistema de tokens para serem usados em scripts. Mas isso não impede integrações com o Trello, apenas é necessário usar o processo de autenticação deles (<a href="https://developers.trello.com/page/authorization">lembra OAuth, mas muito mais simples</a>).</p>
+
+<p>Eu poderia criar um script que usasse o token retornado por esse processo, porém isso exigiria que o usuário usasse o navegador para autenticar e depois informasse no script ou abrir a tela durante a execução do script.</p>
+
+<p>Não gostei muito da ideia parecia muito com uma gambiara, digo, artifício técnico.</p>
+
+<p>Procurando uma outra solução resolvi criar uma SPA para fazer o setup dos projetos com base no Coderockr Way, dessa forma quando fosse necessário fazer o setup de um projeto não precisaria nem da minha máquina, poderia fazer direto do celular por exemplo.</p>
+
+<p>Aproveitei e além do Trello essa SPA também iria cobrir o GitHub e o GitLab, sendo uma solução completa para as ferramentas que usamos hoje.</p>
+
+<p>Então encontrei outro problema, quando comecei a desenvolver a integração com o GitHub e GitLab seria necessário usar a autenticação por OAuth que exige um callback e tratamento em um backend. Isso queria dizer que precisaria também de um servidor para realizar as autorizações, não poderia ser simplesmente um GitHub Pages ou S3 servindo a SPA.</p>
+
+<p>Para minha sorte eu já estava usando um outro serviço de gerenciamento de páginas estáticas, o Netlify! E convenientemente ele possui um feature chamada <a href="https://www.netlify.com/docs/authentication-providers/">OAuth Providers</a> que pode ser usada para se autenticar contra o GitHub e GitLab (BitBucket também, mas não vem ao caso), além de servir as páginas por HTTPs que é muito bom.</p>
+
+<p>Agora com todos os problemas resolvidos, faltava apenas terminar o SPA e publicar 😄</p>
+
+<p>Agora quando for necessário fazer o setup é só entrar no “Coderockr Way Project Setup”, se autorizar, escolher o projeto na lista (com base na sua permissão) e Aplicar !</p>
+
+<p>De uma olhada em como ficou: <a href="https://cwps.lucassabreu.net.br/">https://cwps.lucassabreu.net.br</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2702/1*3i2vq5LRI-jMOamXQQASog.png" alt="" /></p>
+
+<p>Para quem estiver interessado em customizar a ferramenta com as próprias labels basta fazer um fork e alterar o arquivo <a href="https://github.com/lucassabreu/coderockr-way-project-setup/blob/master/src/Labels.js">Labels.js</a> e aproveitar 😉</p>
+
+<p>Aqui esta o <a href="https://github.com/lucassabreu/coderockr-way-project-setup">fonte</a>.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2018%2fsimplificando-ainda-mais-o-setup-de-projetos%2f - Simplificando%20Ainda%20Mais%20o%20Setup%20de%20Projetos by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

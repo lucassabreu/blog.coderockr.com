@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Gerenciando Dependências em Golang"/>
+  <meta name="twitter:description" content="Desenvolver software atualmente se parece cada vez mais com montar um quebra-cabeça. Foi-se o tempo dos grandes frameworks, com várias funcionalidades acopladas..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Gerenciando Dependências em Golang &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Gerenciando Dependências em Golang
+                    </h1>
+                    <h2 class="headline">
+                    Jul 27, 2017 00:00
+                    · 500 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/go">GO</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<h1 id="gerenciando-dependências-em-golang">Gerenciando dependências em Golang</h1>
+
+<p>Desenvolver software atualmente se parece cada vez mais com montar um quebra-cabeça. Foi-se o tempo dos grandes frameworks, com várias funcionalidades acopladas, e é muito comum usarmos vários pequenos pacotes para montarmos nossos projetos.</p>
+
+<p>A maioria das linguagens de programação modernas possui um sistema de gerenciamento destas dependências, como o Composer do PHP, o yarn/npm para JavaScript, pip no Python, etc. No ecossistema Go existem várias implementações deste conceito, o que acabou gerando um certo conflito na hora de selecionar uma solução. Para resolver isso a comunidade começou a desenvolver uma ferramenta para ser o padrão das próximas versões da linguagem.</p>
+
+<p>Esta ferramenta é o <a href="https://github.com/golang/dep">dep</a> que está em acelerado desenvolvimento. Apesar de ainda não estar <a href="https://github.com/golang/dep/wiki/Roadmap">pronto</a> ele já pode ser considerado “safe for production use”, segundo o site oficial.</p>
+
+<p>Neste post vou mostrar como usá-lo em um <a href="https://github.com/eminetto/goCep">projeto já existente</a>, o primeiro que eu desenvolvi em Go.</p>
+
+<p>O primeiro passo é instalar a ferramenta, usando o comando:</p>
+
+<pre><code>go get -u github.com/golang/dep/cmd/dep
+</code></pre>
+
+<p>Depois basta entrar no projeto e executar o comando:</p>
+
+<pre><code>cd goCep dep init
+</code></pre>
+
+<p>A saída do comando foi:</p>
+
+<pre><code>Using ^1.4.0 as constraint for direct dep github.com/gorilla/mux Locking in v1.4.0 (bcd8bc7) for direct dep github.com/gorilla/mux Locking in v1.1 (1ea2538) for transitive dep github.com/gorilla/context Using master as constraint for direct dep github.com/andelf/go-curl Locking in master (f8b334d) for direct dep github.com/andelf/go-curl Using master as constraint for direct dep github.com/ryanuber/go-filecache Locking in master (52ce07f) for direct dep github.com/ryanuber/go-filecache
+</code></pre>
+
+<p>O que o <em>dep</em> fez foi analisar os meus arquivos <em>.go</em> procurando pelos <em>import</em> e ao encontrá-lo ele fez os seguintes passos:</p>
+
+<ul>
+<li><p>criou um diretório chamado <em>vendor</em></p></li>
+
+<li><p>fez o <em>go get</em> de cada dependência salvando os arquivos no <em>vendor</em></p></li>
+
+<li><p>criou um arquivo chamado <em>Gopkg.toml</em> com as definições das dependências</p></li>
+
+<li><p>criou um arquivo chamado <em>Gopkg.lock</em> com os detalhes das versões instaladas, incluindo o <em>commit</em> específico que está sendo usado de cada dependência</p></li>
+</ul>
+
+<p>Para quem está usando o <em>Composer</em> do PHP vai reconhecer alguns destes passos pois o resultado é parecido com o <em>composer.json</em> e <em>composer.lock</em>.</p>
+
+<p>Agora basta salvar no repositório os arquivos <em>Gopkg.toml</em> e <em>Gopkg.lock</em>. <a href="https://github.com/digitalocean/doctl">Alguns projetos</a> defendem a ideia de salvar no repositório o diretório <em>vendor</em> para facilitar a compilação, mas eu não acho uma alternativa muito válida. Prefiro salvar apenas os arquivos das definições das dependências e não o código delas.</p>
+
+<p>Para instalar as dependências novamente basta ter o <em>dep</em> instalado e executar:</p>
+
+<pre><code>dep ensure
+</code></pre>
+
+<p>Quando uma nova dependência for necessária no projeto basta adicionar ela no código usando o <em>import</em> e executar novamente o <em>dep ensure</em> que ela será instalada.</p>
+
+<p>O <em>dep</em> possui mais algumas funcionalidades que podem ser vistas no site oficial, como compatibilidade com outros gerenciadores (Glide por exemplo), atualização das dependências, configurações do arquivo <em>.toml</em>, etc.</p>
+
+<p>O plano é a ferramenta ser incluída por padrão em todas as instalações da linguagem a partir da versão 1.10, o que vai facilitar ainda mais o uso no dia a dia. Sem dúvida vai ser uma ótima adição a linguagem.</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2017-07-28-gerenciando-dependencias-golang/">http://eltonminetto.net/post/2017-07-28-gerenciando-dependencias-golang/</a> on July 28, 2017.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fgerenciando-dependencias-em-golang%2f - Gerenciando%20Depend%c3%aancias%20em%20Golang by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

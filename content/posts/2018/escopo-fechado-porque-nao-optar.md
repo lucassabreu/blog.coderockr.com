@@ -1,0 +1,78 @@
+---
+title: "Escopo Fechado: Porque Não Optar?"
+description: "O mercado de desenvolvimento de soluções digitais têm frequentemente se deparado com vários problemas ao optar por métodos de desenvolvimento de software tradicionais..."
+author: "Renata Willwock"
+date: 2018-06-05
+draft: false
+categories: ["Mercado"]
+tags: ["Transformação Digital"]
+---
+
+Motivos que afetam o insucesso do seu projeto digital
+
+![](https://cdn-images-1.medium.com/max/4840/1*DwV_rokmmJihNQp74W5sxQ.jpeg)
+
+O mercado de desenvolvimento de soluções digitais têm frequentemente se deparado com vários problemas ao optar por métodos de desenvolvimento de software tradicionais.
+
+Principalmente quando as necessidades do projeto mudam e os desenvolvedores não tem expertise para atender essas mudanças em curto prazo. E acredite, com certeza as necessidades do projeto vão mudar em algum momento, mesmo você afirmando que hoje é somente isso o que quer em seu projeto.
+
+Se o seu planejamento depende de algo que está em constante transformação, é praticamente impossível manter o planejamento atual a longo prazo, sem que ocorra nenhum tipo de mudanças. Bem diferente do que a maioria pensa, mudar definitivamente não é um problema. Se mudanças são previstas, é porque foi analisado onde algo pode melhorar.
+
+Mas então vem o X da questão, como melhorar, readaptar ou aperfeiçoar se você optou por algo fechado? Trabalhar com** **escopo fechado é isso! É limitar as possibilidades, ignorar a inovação e as mudanças constantes, reduzir o envolvimento entre cliente e a desenvolvedora, **restringir o acompanhamento do cliente ao projeto, até que esteja pronto como firmado no início do “contrato”**.
+
+## Por que ainda muitas empresas acreditam ser mais vantajoso?
+
+Ao contratar uma empresa para desenvolver seu projeto, você quer saber no que está investindo e quando isso estará “pronto”.
+
+No escopo fechado, tudo o que será criado, quanto será investido e quando o desenvolvedor irá entregar seu produto, são informações e decisões tomadas no início do contrato. Você acredita estar tomando a decisão certa, acredita que desta maneira estará protegido de surpresas e que não haverá mudanças na entrega do projeto, mas é aí que você se engana.
+
+Apesar de você ter listado como você quer exatamente sua solução digital, você dificilmente terá ela funcional e viável no seu planejamento. Isto, por alguns motivos:
+
+* **Você não pode prever como o desenvolvimento do software irá acontecer. Nenhum software é igual ao outro, não existe software igual, como um modelo para ser copiado, todo processo é de descoberta, cada projeto é único!**
+
+* **Você sabe as funcionalidades que quer, mas até testar, você não saberá quais as funcionalidades precisará realmente considerar.**
+
+* **O software não termina depois de “pronto”, porque “pronto” não existe para o que está em constante transformação, o avanço da tecnologia não para!**
+
+* **Como você pode prever o quanto será investido no total, se você não sabe o que precisará aprimorar ou corrigir depois do projeto “finalizado”?**
+
+* **E o prazo de desenvolvimento? Infelizmente o modelo de escopo fechado com um tempo determinado (fechado), acarreta quase sempre em atraso no projeto.**
+
+Com o **escopo fechado** você recebe o seu projeto no final do prazo estipulado, com pouca ou nenhuma interação, durante o desenvolvimento, entre a desenvolvedora e cliente. Afinal, vocês já acertaram todos os detalhes no fechamento do contrato. Além desses pontos negativos, ainda há outros grandes motivos que levam ao insucesso os projetos em escopo fechado.
+
+![](https://cdn-images-1.medium.com/max/2000/1*uYFtCPQ891V2Hd3pXC9MWQ.jpeg)
+
+## O grande intervalo de tempo entre o esclarecimento do cliente e a entrega de produto final
+
+Aí está a grande armadilha, não há como criar algo estabelecido meses antes em um universo criativo, sem que não haja nenhuma modificação ou obstáculos. E dificilmente você receberá algo 6 meses depois por exemplo, sem desejar nenhuma modificação. Sempre haverá onde melhorar, e é neste momento que entra o primeiro problema. Como você optou por determinado valor para o desenvolvimento do seu software, o que surgir a partir deste instante é outro item, portanto, um novo valor (orçamento) a ser investido.
+
+## O acompanhamento do cliente no desenvolvimento do projeto
+
+No formato de **escopo fechado**, as metas são definidas no início do projeto e a partir daí, não há interação constante entre empresa e cliente. Não é levado em consideração o que o cliente pode contribuir para o projeto e sim o que foi definido pelo escopo com o valor afirmado.
+
+Dessa forma, possíveis erros ou obstáculos são percebidos tardiamente e geralmente acabam causando transtornos para o cliente que esperava receber o software em determinada data, com determinadas funcionalidades e isso acaba não acontecendo. Isto por falta de comunicação, ou por interpretação errada sobre o que o cliente queria.
+
+Com as atuais metodologias de desenvolvimento de software, dificilmente ocorrem problemas desse tipo, pois há uma interação constante com o cliente, corrigindo e aprimorando o que se observa necessário. E isso, colabora diretamente com a antecipação de possíveis erros futuros, formando uma parceria confiável entre os integrantes da equipe de desenvolvimento e o cliente.
+
+## Os desenvolvedores não têm a autonomia no projeto
+
+Em muitas empresas de desenvolvimento, infelizmente, ainda é comum os desenvolvedores não possuírem autonomia alguma sobre os projetos. É comum receberem um layout pronto para programarem em cima do que já foi pensado, sem que os gestores levem em consideração as funcionalidades e a melhor forma do seu software ser desenvolvido, tarefa esta que cabe ao desenvolvedor realizar, pois é ele que está com a “mão na massa” e sabe o que pode se adaptar melhor.
+
+Empresas que trabalham com métodos atuais, como as metodologias ágeis, investem na interação constante entre o time de desenvolvedores e o de designers. Ambos buscam os melhores resultados para o sucesso dos seus clientes, o que realmente importa! Pois querem o cliente com eles por muito tempo.
+
+Trabalhar com o escopo fechado é ainda assumir, que todas as necessidades do cliente foram totalmente compreendidas e não terão mudanças até o término do projeto, que levará semanas ou meses para ser concluído. Correndo o risco de chegar na entrega e o projeto não ser nada ou praticamente nada do que o cliente esperava.
+
+![Equipe de desenvolvimento de software ágil](https://cdn-images-1.medium.com/max/2000/1*nqv33E6Q25uudIgKlKEcnQ.jpeg)*Equipe de desenvolvimento de software ágil*
+
+Em um cenário atual de desenvolvimento, as metodologias ágeis têm sido amplamente associadas a maior qualidade dos projetos, com o melhor envolvimento entre empresa e cliente e entregas frequentes e satisfatórias.
+
+Isto acaba contrastando drasticamente com os métodos tradicionais de desenvolvimento, que possuem modelos de escopo fechado, associados a maiores riscos de atrasos e o serviço de má qualidade.
+
+É claro que há exemplos de projetos de software bem sucedidos ou mal sucedidos, tanto com as metodologias tradicionais quanto com metodologias ágeis. Cabe a cada gestor buscar o caminho que favoreça seu negócio. Por isso, é importante ter muito bem definido os objetivos do seu projeto, as necessidades a serem atingidas, a realidade do seu negócio e além disso tudo, conhecer a empresa e o método de trabalho que será utilizado, porque de fato, isto interferirá diretamente no resultado do seu projeto, podendo levá-lo ao fracasso ou ao sucesso.
+
+> Se você está em busca de uma empresa que trabalhe de forma eficaz e traga resultados positivos, nós da [Coderockr](http://www.coderockr.com) podemos te ajudar, pois em 8 anos de serviços prestados no desenvolvimento personalizado, utilizando de métodos ágeis e com entregas constantes, temos orgulho de continuarmos com clientes que se renovam a cada nova fase do seu software com o nosso apoio.<br>
+
+> [coderockr.com](http://www.coderockr.com) <br>
+> **+55 (47) 3227–6359**<br>
+> **contato@coderockr.com**
+

@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "blog.coderockr.com"
+baseurl = "//blog.coderockr.com/"
 languageCode = "pt-br"
 title = "Blog Coderockr"
 theme = "coderockr"
@@ -13,14 +13,14 @@ hasCJKLanguage = false
 	description = "Site Description"
 	bio = "Nosso desafio é transformar suas ideias em aplicações inovadoras."
 
-	twitter = "your_twitter_id"
-	facebook = "your_facebook_id"
+	twitter = "coderockr"
+	facebook = "Coderockr"
 
 	enableRSS = false
 	enableToc = false
 
-	enableDisqus = false
-	disqusShortname = "your_disqus_short_name"
+	enableDisqus = true
+	disqusShortname = "blog-coderockr"
 
 	enableSummary = true
 	# Set the value to true if use description in post front matter replace content summary
@@ -71,10 +71,13 @@ hasCJKLanguage = false
   # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
   socialIconStyle = ""
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 # Add additional social link entries underneath
 [social]
 	globe = "http://www.coderockr.com"
 	facebook = "https://www.facebook.com/coderockr"
-	twitter = "https://www.twitter.com/nodejh"
-	github = "https://www.github.com/nodejh"
+	twitter = "https://twitter.com/coderockr"
+	github = "https://github.com/Coderockr"

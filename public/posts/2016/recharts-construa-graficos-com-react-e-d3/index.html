@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Recharts, Construa Gráficos com React e D3"/>
+  <meta name="twitter:description" content="Recentemente iniciamos o desenvolvimento de mais cinco widgets no iMasters Planrockr, todos de gráficos. Para a renderização dos mesmos, optamos por usar o D3JS, que é uma das libs..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Recharts, Construa Gráficos com React e D3 &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Recharts, Construa Gráficos com React e D3
+                    </h1>
+                    <h2 class="headline">
+                    Aug 22, 2016 00:00
+                    · 442 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/d3">D3</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Recentemente iniciamos o desenvolvimento de <a href="https://blog.planrockr.com/novo-plano-novos-conte%C3%BAdos-e-gr%C3%A1ficos-no-planrockr-f2b4ab0c9d18#.vudj5kkkc">mais cinco widgets</a> no <a href="http://planrockr.com">iMasters Planrockr</a>, todos de gráficos. Para a renderização dos mesmos, optamos por usar o <a href="https://d3js.org/">D3JS</a>, que é uma das libs mais robustas para a implementação de gráficos atualmente.</p>
+
+<p>Seria possível implementá-los utilizando somente <strong>D3</strong> e foi dessa forma que começamos a implementar o primeiro gráfico. No entanto, aprender a lib do zero pode exigir um tempo e esforço considerável, não sendo nada produtivo no estado inicial. No meio do caminho, acabamos conhecendo uma outra lib para React que abstrai o <strong>D3JS</strong>, a <a href="http://recharts.org/">Recharts</a>.</p>
+
+<p>Essa lib possui uma excelente documentação e conta com vários exemplos. Os gráficos são altamente customizáveis, tanto pelos próprios parâmetros dos components quanto pelo CSS.</p>
+
+<p>Para instalar ela em seu projeto é bem simples.</p>
+
+<p>Utilizando o npm:</p>
+
+<pre><code>npm install recharts --save
+</code></pre>
+
+<p>No nosso componente, importamos os componentes do <strong>Recharts</strong> que iremos utilizar para montar o gráfico. Abaixo segue o exemplo de como ficaria o código para um gráfico de linhas:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/786886670415171584.js"></script>
+
+<p>Com o código acima, obtemos o seguinte resultado:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*af9UjLpzsJ_PiMcmcTDEnQ.png" alt="Gráfico de linha renderizado pelo Recharts." /><em>Gráfico de linha renderizado pelo Recharts.</em></p>
+
+<p>Na imagem abaixo conseguimos observar quais são os elementos que compõem o gráfico:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*WfFRIrgKGSM4aZr-RoGIyw.jpeg" alt="" /></p>
+
+<p>Cada tipo de gráfico possui seu respectivo componente raiz, que no caso do gráfico acima, é o <strong>LineChart.</strong></p>
+
+<p>Cada tag interna ao **LineChart **representa um componente do gráfico, que normalmente são mais genéricos e são utilizados por mais de um tipo de gráfico. Cada um desses componentes possui seus respectivos parâmetros de configuração, fazendo com que o gráfico fique fácil de ser customizado. Os mesmos podem ser consultados na sessão <a href="http://recharts.org/api">API</a> da documentação.</p>
+
+<p>Além do <a href="http://recharts.org/api#LineChart">LineChart</a>, a lib possui outros tipos de gráficos, como:</p>
+
+<ul>
+<li><p><a href="http://recharts.org/api#AreaChart">AreaChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#BarChart">BarChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#PieChart">PieChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#RadarChart">RadarChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#RadialBarChart">RadialBarChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#ScatterChart">ScatterChart</a></p></li>
+
+<li><p><a href="http://recharts.org/api#Treemap">Treemap</a></p></li>
+</ul>
+
+<p>Ainda é possível mesclar alguns desses gráficos entre si, utilizando o <a href="http://recharts.org/api#ComposedChart">ComposedChart</a>, que permite mesclar um gráfico de linhas, com um de área e com um de barra por exemplo, como podemos ver na imagem abaixo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*dm0yQ0VfDXQ_5_I_vIpmIA.png" alt="" /></p>
+
+<h2 id="customização-por-css">Customização por CSS</h2>
+
+<p>Cada um dos componentes do gráfico possui suas classes, o que permite que você os customize através de css, sobrescrevendo os estilos globais. Alguns deles permitem que você forneça um <strong>className</strong>, tornando o trabalho ainda mais fácil.</p>
+
+<p>Abaixo segue o exemplo de dois gráficos customizados, que foram implementados utilizando a lib:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Gi4ro0h4lX1dVk9cfp6ZOg.png" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*fbvRI7kxAQzAxhlnroCr4Q.png" alt="" /></p>
+
+<h2 id="responsividade">Responsividade</h2>
+
+<p>Ainda é possível construir gráficos responsivos utilizando o componente <a href="http://recharts.org/api#ResponsiveContainer">ResponsiveContainer</a>, que ainda aceita os parametros <strong>width</strong> e <strong>height</strong> em percentagem ou em pixel. Para utilizá-lo, basta colocá-lo como wrapper do componente pai do gráfico, conforme abaixo:</p>
+
+<pre><code>&lt;ResponsiveContainer&gt;
+  &lt;LineChart&gt;
+   ...
+  &lt;/LineChart&gt;
+&lt;/ResponsiveContainer&gt;
+</code></pre>
+
+<p>Clique <a href="http://recharts.org/examples#AreaResponsiveContainer">aqui</a> para ver alguns exemplos.</p>
+
+<p>Gostaria de finalizar o post deixando os parabéns para <a href="https://github.com/recharts/recharts/graphs/contributors">essa equipe</a> que criou e que mantém a lib. Nunca foi tão fácil construir gráficos!</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2frecharts-construa-graficos-com-react-e-d3%2f - Recharts%2c%20Construa%20Gr%c3%a1ficos%20com%20React%20e%20D3 by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 2"/>
+  <meta name="twitter:description" content="Este post é parte de uma série sobre o básico necessário para usar o Kubernetes..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 2 &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 2
+                    </h1>
+                    <h2 class="headline">
+                    Mar 8, 2017 00:00
+                    · 803 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/kubernetes">Kubernetes</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Este post é parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido os post anteriores recomendo lê-los e depois voltar aqui para não ficar perdido.</p>
+
+<ul>
+<li><p>Parte 1 — Conceitos Básicos: <a href="https://blog.coderockr.com/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1-d012d6eb5344">clique aqui</a></p></li>
+
+<li><p>Parte 3 — Volumes Persistentes: <a href="https://medium.com/@lucassabreu/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3-a36e01e920cb">clique aqui</a></p></li>
+
+<li><p>Parte 4 — Segredos: <a href="https://medium.com/@lucassabreu/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4-665505dbba59#.akd139siq">clique aqui</a></p></li>
+</ul>
+
+<p>Conhecendo os componentes básicos explicados no <a href="https://blog.coderockr.com/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1-d012d6eb5344">post anterior</a> posso preparar a aplicação que mostrei para o Kubernetes.</p>
+
+<p>O primeiro passo é definir quais são os Pods do meu cluster.</p>
+
+<p>Embora o primeiro impulso seja colocar cada um dos contêineres em um Pod distinto e seguir em frente, esse não é necessariamente a melhor forma de defini-los. Por exemplo, em situação certos contêineres tem o mesmo objetivo, ou dependem muito um do outro é uma boa ideia mantê-los juntos.</p>
+
+<p>Mas para a minha aplicação faz mais sentido um Pod por contêiner, um para o servidor HTTP e outro para o banco de dados.</p>
+
+<p>Como não é uma boa ideia simplesmente definir um Pod diretamente, criei dois Deployments o node-deployment e o db-deployment.</p>
+
+<p><em>No momento da escrita desse post os Deployments ainda estavam marcados como uma versão beta, mas já são bastante usados, então é confiável.</em></p>
+
+<iframe src="https://medium.com/media/69c84fb1984593949d88a5f2fd61eb60" frameborder=0></iframe>
+
+<p>O primeiro Deployment é para o db-deployment. Os arquivos de configuração são simples de ler, sempre começamos o arquivo dizendo o tipo de objeto que será criado, o metadata e definimos as specs (que variam para cada tipo de componente).</p>
+
+<p>Defini que preciso de apenas um Pod (replica) e que as mesmas serão identificáveis pelas labels: name=db-pod.</p>
+
+<p>Outras duas informações importantes são ports e volumeMounts.</p>
+
+<ul>
+<li><p>ports define quais portas deverão ser expostas no Pod e permite que possam ser mapeadas nos Services posteriormente. Também é recomendado dar nomes às mesmas (mysql-port), assim podemos usar o nome como identificador no lugar de números.</p></li>
+
+<li><p>volumeMounts define todos os volumes do contêiner, dessa forma o volume de dados do MySQL precisou ser mapeado (/var/lib/mysql).</p></li>
+</ul>
+
+<iframe src="https://medium.com/media/6d679886ea7b87dc1ed218faebb1dccf" frameborder=0></iframe>
+
+<p>O segundo Deployment é do servidor HTTP, chamei-o de node-deployment. Ele segue as mesmas regras do anterior, sendo até mais simples.</p>
+
+<p>A novidade aqui é o db-service, que vou explicar agora:</p>
+
+<iframe src="https://medium.com/media/7f99fa74569679b605cf8f8af570ab14" frameborder=0></iframe>
+
+<p>O db-service é o nome do Service que defini para agrupar os Pods de banco de dados, o Service ficou bem simples e basicamente tem duas partes:</p>
+
+<ul>
+<li><p>selector define uma regra para selecionar quais Pods fazem parte do Service, no caso estou usando uma regra bem simples de name=db-pod.</p></li>
+
+<li><p>ports permite que você mapeie as portas dos Pods para uma porta no Service, no caso estou roteando a porta de nome mysql-port para a 3306 do Service. Assim toda chamada para db-service:3306 será direcionada para a mysql-port de um dos Pods.</p></li>
+</ul>
+
+<iframe src="https://medium.com/media/6ad94466f31893ff61116857683ba8f0" frameborder=0></iframe>
+
+<p>O node-service segue a mesma lógica, mas para os Pods do servidor HTTP.</p>
+
+<iframe src="https://medium.com/media/0d9727d5f952a1334027422606daafea" frameborder=0></iframe>
+
+<p>Por fim criei uma Route para expor o serviço node-service para a Internet. Eu poderia definir qual o nome de host, mas como não o fiz o OpenShift irá gerar uma URL automaticamente para mim.</p>
+
+<p>Essa URL pode ser descoberta entrando na Dashboard do OpenShift ou com o comando oc get routes:</p>
+
+<iframe src="https://medium.com/media/72962b149323439800ece6deb133716f" frameborder=0></iframe>
+
+<p>Para aplicar as configurações no cluster a OpenShift disponibiliza um cliente de linha de comando, que usa basicamente a mesma estrutura do kubectl, o oc. Então tudo que precisa ser feito é executar:</p>
+
+<iframe src="https://medium.com/media/5c231de454163f7a6a590edfb652e9f5" frameborder=0></iframe>
+
+<p>As instruções de como instalar o cliente e configurá-lo estão nesse link: <a href="https://console.preview.openshift.com/console/command-line">https://console.preview.openshift.com/console/command-line</a>.</p>
+
+<h3 id="update-2017-04-29">*** Update 2017–04–29 ***</h3>
+
+<p>Se estiver lendo esse artigo algum tempo depois de lançado, a OpenShift fechou o preview e o link anterior não funciona, mas ainda é possível baixar o oc client em:
+<a href="https://github.com/openshift/origin/releases"><strong>openshift/origin</strong>
+*origin - Enterprise Kubernetes for Developers*github.com</a></p>
+
+<p>Caso não queira criar os todos esses fontes, pode pegá-los aqui: <a href="https://github.com/lucassabreu/openshift-next-gen/tree/v1">https://github.com/lucassabreu/openshift-next-gen/tree/v1</a>; ou executar:</p>
+
+<pre><code>git clone -b v1 \
+    [https://github.com/lucassabreu/openshift-next-gen.git](https://github.com/lucassabreu/openshift-next-gen.git)
+</code></pre>
+
+<p>Agora no console do OpenShift deverão aparecer todos esses componentes rodando.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2022/1*YAuHwlP-hLMdmI-f60mjAQ.png" alt="eu fiz algumas brincadeiras antes de chegar aqui, então tenho mais versões dos deploys ☺" /><em>eu fiz algumas brincadeiras antes de chegar aqui, então tenho mais versões dos deploys ☺</em></p>
+
+<p>Caso esteja acompanhando as etapas, você já deve ter visto esse Dashboard, mas caso esteja apenas lendo: esse Dashboard é a tela principal dos clusters que você criar no OpenShift; basta clicar aqui, autenticar-se com o GitHub, criar um <em>Project</em>, e pronto em <em>Overview</em> você verá os componentes surgirem e sumirem em tempo real conforme vai aplicando as configurações.</p>
+
+<p>Voltando, nesse momento temos o mesmo comportamento da aplicação local, rodando dentro do Kubernetes, empenhando o mínimo possível de configuração.</p>
+
+<p>Mas existem alguns problemas no que foi definido.</p>
+
+<p>O primeiro é que os db-pods estão totalmente efêmeros, ou seja, se eu adicionar novos dados nele, no momento que o Pod fosse destruído os dados iriam junto e sem backup !</p>
+
+<p>Irei mostrar como resolver esse problema no próximo post.</p>
+
+<p>Próximo Post: <a href="https://medium.com/@lucassabreu/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3-a36e01e920cb">clique aqui</a></p>
+
+<p>Gostou do post e achou útil? Dê um **like **❤ abaixo para ajudar na divulgação e para que mais pessoas tenham acesso <strong>😄</strong>, e volte amanhã para acompanhar essa série sobre Kubernetes !</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fum-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2%2f - Um%20Ambiente%20Simples%20Usando%20Kubernetes%20e%20OpenShift%20Next%20Gen%20%e2%80%94%20Parte%202 by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

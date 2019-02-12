@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 3"/>
+  <meta name="twitter:description" content="Este post é a terceira parte de uma série sobre o básico necessário para usar o Kubernetes..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 3 &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 3
+                    </h1>
+                    <h2 class="headline">
+                    Mar 9, 2017 00:00
+                    · 584 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/kubernetes">Kubernetes</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Este post é a terceira parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.</p>
+
+<ul>
+<li><p>Parte 1 — Conceitos Básicos: <a href="https://blog.coderockr.com/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1-d012d6eb5344">clique aqui</a></p></li>
+
+<li><p>Parte 2 — Construindo o Ambiente: <a href="https://blog.coderockr.com/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2-30aea15a74fb">clique aqui</a></p></li>
+
+<li><p>Parte 4 — Segredos: <a href="https://medium.com/@lucassabreu/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4-665505dbba59#.akd139siq">clique aqui</a></p></li>
+</ul>
+
+<p>Como comentei no <a href="https://blog.coderockr.com/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2-30aea15a74fb">post anterior</a> existem alguns problemas no ambiente que construí, e o princípial deles é que os Pods não totalmente efêmeros, ou seja, se eu adicionar novos dados nele, no momento que o Pod fosse destruído os dados iriam junto e sem backup !</p>
+
+<p>E agora iremos tratar esse primeiro problema. Caso não tenha mais os fontes até o estado do post anterior, ou prefira acompanhar o meu andamento, pode pode pegá-los aqui: <a href="https://github.com/lucassabreu/openshift-next-gen/tree/v1">https://github.com/lucassabreu/openshift-next-gen/tree/v1</a>; ou executar:</p>
+
+<pre><code>git clone -b v1 \
+    https://github.com/lucassabreu/openshift-next-gen.git
+</code></pre>
+
+<h3 id="volumes-persistentes">Volumes Persistentes</h3>
+
+<p>Podemos testar esse problema conectando no Pod e adicionando alguns dados e então destruindo ele para ver o efeito. Vou adicionar um registro sobre para Homens no Sábado, pois é um dia sem nenhuma informação e facilita a visualização.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*FYVpOeVGfqY7G-gZsNt0ZA.png" alt="Antes… sem dados" /><em>Antes… sem dados</em></p>
+
+<p>Para acessar o Pod usa-se o comando oc rsh <pod-name>, e para encontrar o nome do Pod posso usar o comando oc get pods -l <selector>, então é só acessar o MySQL e inserir os dados:</p>
+
+<iframe src="https://medium.com/media/55c02f282924e6ab8e58c3e9bcf19ecb" frameborder=0></iframe>
+
+<p>Entrando novamente na aplicação e indo em “Sunday”, tenho um gráfico com dados para os Homens.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*eHFCHyzMZmAfpDSHYRMEmw.png" alt="isso se o seu contêiner não morrer no caminho" /><em>isso se o seu contêiner não morrer no caminho</em></p>
+
+<p>Para concluir o teste, basta apagar o Pod com oc delete pods -l name=db-pod ou oc delete pod db-deployment-xyz, esperar o Pod ser recriado e então ver que as alterações nos dados se foram:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*FYVpOeVGfqY7G-gZsNt0ZA.png" alt=":’(" /><em>:’(</em></p>
+
+<p>Para resolver esse problema o Kubernetes possui os <a href="https://kubernetes.io/docs/user-guide/persistent-volumes/">**Persistent Volume Claims (PVC)</a> **que permitem definir volumes que existem fora do ciclo de vida de um Pod, ou seja, mesmo que todos os Pods sejam destruídos, o PVC irá manter os dados em si.</p>
+
+<p>Podemos utilizar vários tipos de volumes em um PVC para armazenar os dados, no caso do OpenShift o padrão é <a href="https://kubernetes.io/docs/user-guide/persistent-volumes/#aws">EBS</a>, que são volumes armazenados dentro do <a href="https://aws.amazon.com/">AWS da Amazon</a>, mas existe a opção de usar volumes do Google Cloud, do Azure, Locais, etc; no Kubernetes.</p>
+
+<p>Mas no momento o OpenShift esta ofertando apenas o EBS. Abaixo esta a definição do PVC:</p>
+
+<iframe src="https://medium.com/media/ca2a8bce9c526199cb07061e5c2dda0f" frameborder=0></iframe>
+
+<p>Depois de um momento o OpenShift irá criar um volume e disponibilizá-lo, agora é preciso vincular ele com os db-pods, para isso basta alterar os volumes no db-deployment:</p>
+
+<iframe src="https://medium.com/media/27079efa8eee93cd39840231724b2ebf" frameborder=0></iframe>
+
+<p>Duas coisas foram alteradas no db-deployment:</p>
+
+<ul>
+<li><p>O nome do volume mudou, isso é necessário porque estamos fazendo uma mudança de tipo de volume, e o Deployment não consegue alterar o tipo, mas se temos um novo, então tudo bem.</p></li>
+
+<li><p>Adicionei a tag persistentVolumeClaim no volume novo e apontei para o PVC que criei agora a pouco.</p></li>
+</ul>
+
+<p>Executo o comando oc apply -f db-deployment.yml e o Deployment irá destruir os Pods antigos e criar novos usando o PVC.</p>
+
+<p>Agora se replicarmos os comandos de para incluir registros e destruir o Pod do MySQL, quando o Deployment recriar o Pod ele manterá os dados.</p>
+
+<p>Outro ponto que esta desconfortável no meu ambiente é o fato das senhas e usuários estarem expostas diretamente nas configurações. O Kubernetes oferece uma solução para esse problema, que irei abordar no próximo post.</p>
+
+<p>Próximo Post: <Em Breve></p>
+
+<p>Gostou do post e achou útil? Dê um **like **❤ abaixo para ajudar na divulgação e para que mais pessoas tenham acesso <strong>😄</strong>, e volte amanhã para acompanhar essa série sobre Kubernetes !</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fum-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3%2f - Um%20Ambiente%20Simples%20Usando%20Kubernetes%20e%20OpenShift%20Next%20Gen%20%e2%80%94%20Parte%203 by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

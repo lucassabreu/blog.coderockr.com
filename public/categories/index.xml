@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Blog Coderockr</title>
+    <link>//blog.coderockr.com/categories/</link>
+    <description>Recent content in Categories on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 30 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Carreira</title>
+      <link>//blog.coderockr.com/categories/carreira/</link>
+      <pubDate>Thu, 30 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/categories/carreira/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coderockr Culture</title>
+      <link>//blog.coderockr.com/categories/coderockr-culture/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/categories/coderockr-culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Desenvolvimento</title>
+      <link>//blog.coderockr.com/categories/desenvolvimento/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/categories/desenvolvimento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mercado</title>
+      <link>//blog.coderockr.com/categories/mercado/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/categories/mercado/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

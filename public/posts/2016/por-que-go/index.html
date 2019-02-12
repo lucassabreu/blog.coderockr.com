@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Por que Go?"/>
+  <meta name="twitter:description" content="estes quase 20 anos de carreira como desenvolvedor eu já trabalhei com várias linguagens de programação, desde C, passando por Cobol, Java, Python e PHP..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Por que Go? &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Por que Go?
+                    </h1>
+                    <h2 class="headline">
+                    Apr 28, 2016 00:00
+                    · 564 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/go">GO</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>A melhor ferramenta para cada necessidade</p>
+
+<p>Nestes quase 20 anos de carreira como desenvolvedor eu já trabalhei com várias linguagens de programação, desde C, passando por Cobol, Java, Python e PHP, que tornou-se minha principal ferramenta.</p>
+
+<p>Uma das coisas que aprendi nesse processo foi sempre tentar encontrar a melhor ferramenta para cada situação e evitar cair na máxima:</p>
+
+<blockquote>
+<p>Se a única ferramenta que você tem é um martelo, para você tudo começa a se parecer com um prego.</p>
+</blockquote>
+
+<p>E no último ano incluimos uma nova linguagem na nossa caixinha de soluções aqui na Coderockr: Go. Neste post vou explicar para que estamos usando a linguagem e porque escolhemos ela em detrimento de outras opções.</p>
+
+<h3 id="para-que-estamos-usando">Para que estamos usando?</h3>
+
+<p>Basicamente para duas situações: micro-serviços e algoritmos que necessitam de performance.</p>
+
+<p>Um exemplo clássico de micro-serviço é o fato de um grande número de projetos precisar realizar a consulta dos dados de um endereço a partir de um CEP. Esta é uma funcionalidade que pode ser isolada na forma de um serviço e ser compartilhada entre todos os projetos, o que fizemos com o <a href="https://github.com/eminetto/gocep">goCep</a>. Unindo este pequeno serviço com as vantagens do Docker podemos simplesmente executar o comando *docker pull eminetto/gocep *e temos um container com o serviço pronto para ser usado em qualquer servidor/máquina.</p>
+
+<p>Quanto a segunda situação, ela vem surgindo cada vez mais durante o desenvolvimento do <a href="http://planrockr.com">Planrockr</a>. O exemplo mais recente é o de um serviço em que usamos o <a href="https://pt.wikipedia.org/wiki/Método_de_Monte_Carlo">Método de Monte Carlo</a> para realizar simulações e indicar a probabilidade de datas de término de um determinado projeto. Usamos o recurso de <em>goroutines</em> para gerar mais de 1000 simulações para cada execução, fornecendo um resultado bem mais preciso. E como este serviço vai ficar disponível para os usuários acessarem via interface web é importante que ele possa ser performático ao extremo.</p>
+
+<h3 id="mas-afinal-por-que-go-e-não-outra-linguagem">Mas afinal, por que Go e não outra linguagem?</h3>
+
+<p>Alguns dos motivos pelos quais optamos por Go:</p>
+
+<p><strong>Pedigree</strong>. A linguagem foi criada dentro do Google, por ninguém menos do que <a href="https://en.wikipedia.org/wiki/Robert_Griesemer">Robert Griesemer</a> (que trabalhou no desenvolvimento da engine JS V8), <a href="https://en.wikipedia.org/wiki/Rob_Pike">Rob Pike</a> (que faz parte da equipe que desenvolveu o Unix) e <a href="https://en.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a> (também parte do time original do Unix e criador da linguagem B, precursora do C)</p>
+
+<p><strong>Boa documentação</strong>. Existe uma boa documentação no <a href="https://golang.org/doc/">site oficial</a> além de um bom número de livros e blogs. Este é um ponto que ainda deve melhorar bastante, principalmente a documentação em português, mas é possível ver um aumento considerável nos últimos anos.</p>
+
+<p><strong>Evolução constante</strong>. Como o código da linguagem <a href="https://github.com/golang/go/milestones?state=open">está no Github</a> é fácil acompanhar o roadmap e ver as novas funcionalidades que estão sendo desenvolvidas.</p>
+
+<p><strong>Curva de aprendizado moderada</strong>. Por ser uma linguagem compilada e estaticamente tipada talvez quem esteja acostumado com códigos em PHP ou JavaScript vai enfrentar alguns problemas para se acostumar, mas nada assustador. Go consegue tornar fácil técnicas complexas como concorrência, sincronização, ponteiros, etc. E para quem tem alguma experiência em C vai se sentir confortável rapidamente.</p>
+
+<p><strong>Divertida</strong>. Isso é um bônus! Realmente venho me divertindo bastante com a linguagem, construindo coisas rapidamente, encontrando soluções, melhorando a cada compilação.</p>
+
+<p>Estamos aos poucos aumentando nossa experiência com a linguagem e com isso novos posts e códigos devem surgir no nosso Github. Tem sido uma jornada divertida :)</p>
+
+<p>P.S.: se ficou curioso quanto ao serviço que implementamos no Planrockr, cadastre-se <a href="http://planrockr.com">gratuitamente no site</a> que em breve teremos novidades…</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fpor-que-go%2f - Por%20que%20Go%3f by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

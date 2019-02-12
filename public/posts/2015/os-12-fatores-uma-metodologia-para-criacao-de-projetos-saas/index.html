@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Os 12 Fatores: Uma Metodologia para Criação de Projetos SaaS"/>
+  <meta name="twitter:description" content="Todo desenvolvedor já deve ter ouvido falar do Heroku, plataforma de cloud computing que revolucionou o desenvolvimento, ajudou a criar o movimento..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Os 12 Fatores: Uma Metodologia para Criação de Projetos SaaS &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Os 12 Fatores: Uma Metodologia para Criação de Projetos SaaS
+                    </h1>
+                    <h2 class="headline">
+                    Apr 28, 2015 00:00
+                    · 1352 words
+                    · 7 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/metodologias">Metodologias</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Todo desenvolvedor já deve ter ouvido falar do Heroku, plataforma de cloud computing que revolucionou o desenvolvimento, ajudou a criar o movimento “devops” e que foi vendida por diversos milhares de dólares para a Salesforce. Se tem algo que eles tem muita experiência é na criação e suporte de aplicativos SaaS (software-as-a-service), principalmente aplicativos web.</p>
+
+<p>Eles usaram toda essa experiência para criar o <a href="http://12factor.net/">12factor</a> que é uma espécie de “manifesto” com os 12 fatores que uma aplicação deveria seguir para ter sucesso nesse formato.</p>
+
+<p>Vou citar elas abaixo e fazer alguns comentários, principalmente usando analogias e exemplos do mundo PHP, mas os conceitos se aplicam a qualquer plataforma.</p>
+
+<h2 id="i-codebase">I. Codebase</h2>
+
+<p>Todos os seus códigos devem ser gerenciados por um sistema de controle de versões como o Git ou o Subversion. Não deve haver mais de uma base de códigos no projeto e desta base são gerados diversos “deploys”. Um deploy é uma versão do código executando em máquinas de desenvolvedores, testes ou produção. Podem haver pequenas diferenças de versão entre os deploys, por exemplo um desenvolvedor possui códigos ainda não commitados em sua máquina, mas a base de códigos, o repositório deve ser sempre o mesmo.</p>
+
+<h2 id="ii-dependencies">II. Dependencies</h2>
+
+<p>As dependências do projeto devem ser explicitamente declaradas e isoladas do código. Em se tratando de PHP podemos usar o Composer para declarar e gerenciar as dependências. Caso o projeto dependa de alguma ferramenta externa, do sistema operacional por exemplo, o ideal é que uma versão dessa ferramenta esteja contida dentro de algum diretório do projeto. Desta forma o deploy pode ser feito para diversos servidores sem se preocupar com a falta de alguma dependência, o que facilita a escalabilidade.</p>
+
+<h2 id="iii-config">III. Config</h2>
+
+<p>As configurações devem ser armazenadas fora do código. Aqui uma opinião minha. O 12factor sugere que todas as configurações deveriam ser feitas em variáveis de ambiente, que seriam configuradas em cada servidor e o código iria lê-las no momento da execução. Por exemplo, no Apache iríamos incluir algo como:</p>
+
+<p><em><code>SetEnv DN_NAME “project_db”</code></em></p>
+
+<p>E no PHP usaríamos a função <em><code>getenv()</code></em> para recuperar essa informação e usá-la para conectar ao banco de dados, por exemplo. E em cada máquina, de desenvolvimento ou servidor, este valor pode ser configurado de maneira diferente.
+Eu prefiro uma abordagem um pouco mais simples ao incluir no Apache algo como:</p>
+
+<p><em><code>SetEnv APPLICATION_ENV “development”</code></em></p>
+
+<p>E criaríamos arquivos de configuração diferentes para cada ambiente, como <em>config/development.php</em>, <em>config/production.php</em>, etc. São abordagens similares, mas o conceito é o mesmo: não colocar configurações em códigos-fonte.</p>
+
+<h2 id="iv-backing-services">IV. Backing Services</h2>
+
+<p>Um “backing service” é um serviço que o aplicativo consome, geralmente via rede, como parte necessária para sua operação normal. Exemplos são banco de dados, servidores de cache, repositórios de arquivos, etc. O seu código deve ser criado considerando que estes recursos podem tanto estar instalados na máquina local quanto em servidores remotos, sem nenhuma mudança além de configurações. O modelo ideal é usar abstrações como um ORM e classes bem construídas para que a mudança de um banco de dados do MySQL para o PostgreSQL seja imperceptível para o projeto. Ou mesmo a mudança de armazenamento de arquivos local para o S3, mudança de cache de arquivos para o Memcached e assim por diante.</p>
+
+<h2 id="v-build-release-run">V. Build, Release, Run</h2>
+
+<p>Uma base de códigos é transformada em um deploy geralmente por três estágios:</p>
+
+<ul>
+<li><p><strong>build</strong>, que consiste em pegar uma versão específica do repositório com suas dependências e transformá-la em uma versão executável, seja por compilação ou empacotamento</p></li>
+
+<li><p><strong>release</strong>, que consiste no envio de um build para um servidor e a execução de todas as configurações necessárias para que ele entre no terceiro estágio</p></li>
+
+<li><p><strong>execução</strong>, que é a inicialização de todos os processos necessários para que ele esteja disponível para os usuários acessarem.</p></li>
+</ul>
+
+<p>Ter estas três fases bem separadas e definidas facilita a criação de scripts e procedimentos a serem executados em cada uma delas. Ferramentas como Capistrano, Ant, Deployer, Grunt, etc, podem ser usadas em conjunto ou em separado para tornar estes procedimentos automatizados e versáteis.</p>
+
+<h2 id="vi-processes">VI. Processes</h2>
+
+<p>Pense em seu aplicativo como um ou mais processos, que sejam “stateless” e “share-nothing”. A ideia é diminuir o acoplamento entre os componentes do projeto para facilitar a escala. Um exemplo bem comum é armazenarmos as sessões dos usuários no próprio servidor Apache, ou usarmos o APC como cache. O problema é que esta abordagem mantém o código atrelado a apenas um servidor e com isso torna complexo a escalabilidade, o fato de novos servidores serem adicionados ou removidos da arquitetura. O ideal é usar algo como um Memcached, Redis ou mesmo um banco de dados para diminuir o acoplamento.</p>
+
+<h2 id="vii-port-binding">VII. Port binding</h2>
+
+<p>A ideia é que o projeto não dependa de um servidor externo como o Apache para ser executado, mas que possa ser auto-contido e executar em uma porta específica que seria acessado por outras partes do projeto ou mesmo pelos usuários. Em um projeto Python poderíamos usar o Tornado, em um projeto Ruby o Thin, e assim por diante.
+Trazendo um pouco esse conceito para o ambiente PHP eu faria uma pequena mudança indicando para que o projeto dependa de uma estrutura de nomes e endereços que podem ser configurados em arquivos de configuração. Por exemplo, em uma máquina de desenvolvimento os componentes do projeto poderiam ser:</p>
+
+<p><code>http://coderockr.dev | http://api.coderockr.dev | http://admin.coderockr.dev</code></p>
+
+<p>Ou</p>
+
+<p><code>http://coderockr.dev | http://coderockr.dev:8080 | http://coderockr.dev:8888</code></p>
+
+<p>Sendo que os três endereços podem ser configurados dentro do Apache usando o conceito de VirtualHost ao invés de criarmos um servidor próprio para cada componente, como é comum em projetos Python ou NodeJS.
+E no servidor de produção o arquivo de configuração apontaria para endereços diferentes, sem alteração de código, como comentado no item III.</p>
+
+<h2 id="viii-concurrency">VIII. Concurrency</h2>
+
+<p>Tente pensar em seu projeto na forma de processos, como citado anteriormente, que podem ser executados em paralelo. Por exemplo, uma requisição HTTP normal pode ser executada por um processo do Apache enquanto que tarefas que demoram mais tempo podem ser encaminhadas a uma fila de processos e executadas em backgroud. Exemplos como Gearman e RabbitMQ são comuns para executar este tipo de procedimento.</p>
+
+<h2 id="ix-disposability">IX. Disposability</h2>
+
+<p>Um projeto que segue os 12 fatores possui diversos processos facilmente descartáveis, ou seja, que podem ser iniciados ou parados a qualquer momento. Desenvolva-os de forma a facilitar este processo, permitindo início rápido e tornando o processo de finalização simplificado e sem traumas como perda de dados.</p>
+
+<h2 id="x-dev-prod-parity">X. Dev/prod parity</h2>
+
+<p>Mantenha os ambientes de desenvolvimento, homologação e produção o mais similares possíveis. Os 12 fatores auxiliam no processo de deploy contínuo e esta similaridade evita erros durante o processo de envio do desenvolvimento para produção. Ferramentas como o Vagrant, Ansible, Puppet e Docker são muito úteis e importantes neste processo.</p>
+
+<h2 id="xi-logs">XI. Logs</h2>
+
+<p>Os logs são uma importante ferramenta para entender o comportamento de um projeto, identificando erros e pontos de melhoria. Normalmente tratamos os logs simplesmente escrevendo as mensagens em arquivos para futura análise, mas a dica aqui é que o código não deve se importar tanto com o formato de armazenamento. O projeto deve apenas enviar as mensagens para a saída padrão e esta deve ser redirecionada para locais específicos de acordo com o ambiente onde o projeto está executando. Em uma máquina de desenvolvimento isso pode ser um arquivo mas em um servidor de produção podemos usar algo mais complexo, como um Hadoop ou um serviço externo. Ferramentas como o Monolog permitem que os logs sejam tratados como streams de dados e redirecionados para diferentes localizações.</p>
+
+<h2 id="xii-admin-processes">XII. Admin processes</h2>
+
+<p>Tarefas adiminstrativas devem ser tratadas de forma automatizada. Como agora nosso projeto pode rodar em diversos servidores, com diversos processos, coisas como limpar caches, carregar dados, atualizar bases de dados, etc, também devem ser facilitadas. O PHP possui uma interface CLI (Command Line Interface) que nos permite criar scripts poderosos e que facilitam esse processo. E frameworks como o Doctrine, Symfony, CakePHP, etc, fornecem uma série de facilidades para a criação destas tarefas.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Estes fatores não são uma verdade absoluta e tampouco devem ser seguidos cegamente, mas são um ótimo ponto de partida para a criação de projetos web modernos e que podem escalar mais facilmente para atender as demandas das empresas.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2015%2fos-12-fatores-uma-metodologia-para-criacao-de-projetos-saas%2f - Os%2012%20Fatores%3a%20Uma%20Metodologia%20para%20Cria%c3%a7%c3%a3o%20de%20Projetos%20SaaS by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

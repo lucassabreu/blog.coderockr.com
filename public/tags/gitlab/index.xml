@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/gitlab/</link>
+    <description>Recent content in Gitlab on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 01 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ambientes por Branch com OpenShift Next Gen Usando Gitlab</title>
+      <link>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</guid>
+      <description>Hoje na Coderockr utilizamos Pull Requests e Code Reviews como uma ferramenta de qualidade nos nossos desenvolvimentos, e tem garantido resultados nesse sentido.
+Mas mesmo com esse processo eventualmente temos de lidar com alguns problemas como, por exemplo, funções que interferem umas nas outras depois de aprovadas, permitir que os Testers possam avaliar as melhorias, e garantir que todos as mudanças feitas na branch principal podem ser enviadas para produção.</description>
+    </item>
+    
+  </channel>
+</rss>

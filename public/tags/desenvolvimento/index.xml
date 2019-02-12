@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Desenvolvimento on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/desenvolvimento/</link>
+    <description>Recent content in Desenvolvimento on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 06 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/desenvolvimento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simplificando Ainda Mais o Setup de Projetos</title>
+      <link>//blog.coderockr.com/posts/2018/simplificando-ainda-mais-o-setup-de-projetos/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplificando-ainda-mais-o-setup-de-projetos/</guid>
+      <description>Simplificando ainda mais o Setup de Projetos Agora simplificando GitHub, GitLab e Trello
+English version: click here
+Ano passado nós criamos um script simples para auxiliar no setup de projetos no GitHub, ele atendeu bem as nossas necessidades para os novos repositórios que criamos no GitHub.
+Porém também trabalhamos com outras ferramentas para gerir os nossos projetos, como o GitLab e o Trello, mas não fizemos um script semelhante para eles.</description>
+    </item>
+    
+    <item>
+      <title>Simplifying Project Setup on GitHub</title>
+      <link>//blog.coderockr.com/posts/2018/simplifying-project-setup-on-github/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplifying-project-setup-on-github/</guid>
+      <description>At Coderockr we start and take on many projects, either for clients that hire us or for internal actions, and usually GitHub ends up being the tool we choose for them.
+Over the years we ended up defining a structure to control our issues, using the following labels:
+Labels set used on Coderockr Way
+It is a very simple set, but it makes all the steps, priorities, types and states of the tasks clear, and becomes very easy to understand what is happening.</description>
+    </item>
+    
+    <item>
+      <title>Simplifying Project Setup Even Further</title>
+      <link>//blog.coderockr.com/posts/2018/simplifying-project-setup-even-further/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplifying-project-setup-even-further/</guid>
+      <description>Now simplifying GitHub, GitLab and Trello
+Em português clique aqui
+Last year we created a simple script to assist in the setup of projects in GitHub, it met our needs well for the new repositories we created in GitHub.
+We also worked with other tools to manage our projects, like GitLab and Trello, but we did not do a similar script for them.
+At the beginning of the year, I created a new script to perform the project setup in GitLab, which is basically a copy of the first script, but with the GitLab endpoints.</description>
+    </item>
+    
+    <item>
+      <title>Android x iOS: 6 Pontos Essenciais no Desenvolvimento de Aplicativos</title>
+      <link>//blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</guid>
+      <description>O mercado de aplicativos para celulares é um dos mais rentáveis, a maioria das empresas já entendeu que é fundamental ter um bom produto mobile para atender cada vez melhor seus clientes. Isso significa que a demanda por mão de obra qualificada é crescente, como também a busca por uma fábrica de software, que se compromete a longo prazo com o sucesso do seu produto, desde sua criação a manutenção dele, com todas as melhorias e inovações.</description>
+    </item>
+    
+    <item>
+      <title>Aplicando HTTPS para uma SPA na AWS</title>
+      <link>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</guid>
+      <description>Recentemente passamos a servir a nossa landing page e o SPA do Planrockr sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend, mas percebemos que seria melhor que nosso frontend também usasse.
+Alguns dos motivos por traz disso seriam para melhorar o ranking em sites de pesquisa, para garantir ainda mais a segurança nas comunicações, e também para passar mais segurança para os nossos usuários.
+Como estamos servindo nosso frontend usando o S3 da AWS, é apenas uma questão de colocar um CloudFront na frente e alterar a rota no Route 53 e tudo passa a funcionar, mas acabou dando alguma dor de cabeça, não por ser uma tarefa difícil, mas simplesmente por termos encontrado instruções confusas e errôneas quando pesquisamos como executar a migração.</description>
+    </item>
+    
+    <item>
+      <title>Boas Práticas na Criação de Milestones, Tarefas, Pull Requests e Commits</title>
+      <link>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</guid>
+      <description>Um dos fatores de sucesso do processo de desenvolvimento de software, assim como a maioria dos empreendimentos humanos, é uma boa comunicação.
+A Gitlab, ao cunhar o termo Conversational Development foi muito feliz ao definir
+ ConvDev takes a different approach by constraining the agile principles to what’s at the center of getting work done, the conversation.
+ Neste post vou citar algumas práticas que estamos implementando e que vem melhorando nossos processos.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com React - #5 Criando Componentes com Storybook</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</guid>
+      <description>Iniciando com React - 5 Criando componentes com Storybook
+Quando estamos desenvolvendo um novo componente para um projeto, é comum o fazermos diretamente na aplicação. Essa abordagem pode nos levar à um processo exaustivo, onde as vezes não temos os dados necessários a nossa disposição, ou situações onde temos que preencher todos os campos de um formulário, só para ver se a mensagem de erro está correta. O *React Storybook *vem para solucionar esses problemas e deixar o nosso workflow muito mais fluído.</description>
+    </item>
+    
+    <item>
+      <title>Modelando Sistemas Usando Event Storming</title>
+      <link>//blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</guid>
+      <description>Mão na massa!
+O desenvolvimento de software envolve muito mais do que escrever códigos. O objetivo maior é desenvolver o software correto, que resolva as necessidades do usuários e com a máxima qualidade.
+Parte deste desafio é aumentar o entendimento do negócio e dos problemas que estão sendo resolvidos, por todos os envolvidos no projeto.
+Existem varias formas de realizar este levantamento de requisitos, desde as mais tradicionais até ideias modernas.</description>
+    </item>
+    
+    <item>
+      <title>Time Tracking na Linha de Comando</title>
+      <link>//blog.coderockr.com/posts/2017/time-tracking-na-linha-de-comando/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/time-tracking-na-linha-de-comando/</guid>
+      <description>Escrevi um post algum tempo atrás falando sobre as armadilhas do “multitasking” no nosso dia a dia. Uma das minhas sugestões no post foi usar uma ferramenta para anotar as horas e tarefas, o que ajuda a manter o foco em uma coisa de cada vez. Neste post vou apresentar uma nova ferramenta que estou usando e gostando bastante, o Watson.
+Eu passo a maior parte do meu tempo na frente do computador com um terminal aberto.</description>
+    </item>
+    
+    <item>
+      <title>Gerenciando Dependências em Golang</title>
+      <link>//blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</guid>
+      <description>Gerenciando dependências em Golang Desenvolver software atualmente se parece cada vez mais com montar um quebra-cabeça. Foi-se o tempo dos grandes frameworks, com várias funcionalidades acopladas, e é muito comum usarmos vários pequenos pacotes para montarmos nossos projetos.
+A maioria das linguagens de programação modernas possui um sistema de gerenciamento destas dependências, como o Composer do PHP, o yarn/npm para JavaScript, pip no Python, etc. No ecossistema Go existem várias implementações deste conceito, o que acabou gerando um certo conflito na hora de selecionar uma solução.</description>
+    </item>
+    
+    <item>
+      <title>Definindo APIs com o API Blueprint</title>
+      <link>//blog.coderockr.com/posts/2017/definindo-apis-com-o-api-blueprint/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/definindo-apis-com-o-api-blueprint/</guid>
+      <description>Definindo APIs com o API Blueprint Uma das melhores decisões que tomamos na Coderockr foi adotarmos a abordagem “API First” para todos os projetos que iniciamos, desde 2010. Mas nos últimos meses percebemos uma necessidade: melhorar o processo de definição e documentação das APIs.
+Já usávamos outras abordagens, mas a maioria delas envolvia documentar a API no próprio código, usando annotations. Esta abordagem funciona, mas tem alguns problemas, principalmente quando a documentação precisa ser alterada por alguém de negócios.</description>
+    </item>
+    
+    <item>
+      <title>Ambientes por Branch com OpenShift Next Gen Usando GitHub</title>
+      <link>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-github/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-github/</guid>
+      <description>Esta postagem é uma continuação da “Ambientes por Branch com OpenShift Next Gen”, a introdução do problema esta lá e também mostro como implementar o processo de deploy usando o GitLab nele, se não viu da uma conferida, vale o investimento
+Como prometi na outra postagem, vamos criar um processo de deploy de ambientes por branch usando o GitHub.
+No caso do GitHub, ele cobre “apenas” a parte de repositório de fontes, ele em si não tem integração direta com o Kubernetes/OpenShift, mas possui uma grande gama de opções no que diz respeito de ferramentas de CI e CD.</description>
+    </item>
+    
+    <item>
+      <title>Como Lidar com Senhas Inseguras em Projetos Legados</title>
+      <link>//blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</guid>
+      <description>Aqui na Coderockr nós eventualmente nos deparamos com sistemas legados e muitas vezes inseguros. Um dos problemas mais comuns é a utilização de funções hash como MD5, SHA1, SHA-256 em senhas. O uso dessas funções apresenta alguns riscos que as aplicações não deveriam estar correndo, mas antes de abordar as soluções, vamos ver porque o uso deses algoritmos de hash representam um risco de segurança.
+Por que funções hash não devem ser usadas em senhas?</description>
+    </item>
+    
+    <item>
+      <title>Integração Contínua Usando o Drone</title>
+      <link>//blog.coderockr.com/posts/2017/integracao-continua-usando-o-drone/</link>
+      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/integracao-continua-usando-o-drone/</guid>
+      <description>Integração contínua e deploy contínuo são dois pontos muito importantes no “Coderockr Way”, o processo de desenvolvimento que usamos na Coderockr. Neste post vou falar sobre uma nova ferramenta que estamos avaliando, o Drone.
+O Drone é uma solução open source, desenvolvida em Go e baseada fortemente no uso de containers Docker. Ele é formado por três componentes principais:
+ Server: faz a orquestração dos builds, ouvindo eventos em repositórios hospedados no Github, Gitlab ou Bitbucket e gerenciando a execução usando os agentes.</description>
+    </item>
+    
+    <item>
+      <title>Ambientes por Branch com OpenShift Next Gen Usando Gitlab</title>
+      <link>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</guid>
+      <description>Hoje na Coderockr utilizamos Pull Requests e Code Reviews como uma ferramenta de qualidade nos nossos desenvolvimentos, e tem garantido resultados nesse sentido.
+Mas mesmo com esse processo eventualmente temos de lidar com alguns problemas como, por exemplo, funções que interferem umas nas outras depois de aprovadas, permitir que os Testers possam avaliar as melhorias, e garantir que todos as mudanças feitas na branch principal podem ser enviadas para produção.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com React - #4 Armazenando Estado e Entendendo o Lifecycle</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</link>
+      <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</guid>
+      <description>Quando estamos desenvolvendo uma aplicação, é comum a necessidade de guardarmos estado. Juntamente com essa necessidade, é frequente precisarmos tomar uma ação quando um componente acabou de aparecer na tela, por exemplo, ou quando dados são atualizados. Nesse post, veremos como React pode suprir essas necessidades de forma simples. &amp;gt; Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando um Novo Projeto: Decisões de Arquitetura</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</link>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</guid>
+      <description>No PHP Experience 2017 eu apresentei uma palestra falando sobre algumas das experiências (trocadilho acidental…) que a Coderockr acumulou nesses quase sete anos de existência.
+Aproveitei que estamos iniciando um novo projeto para um cliente/parceiro da Coderockr e gravei um screencast comentando e exemplificando algumas das decisões que citei na palestra usando um caso real.
+O video está no nosso canal do Youtube, que eu recomendo que você assine agora mesmo porque devemos lançar mais vídeos similares em breve.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com React - #3 Criando Componentes</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</link>
+      <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</guid>
+      <description>O React introduz uma nova maneira de construir interfaces, o que podemos chamar de “Interface baseada em componentes”. Componentes permitem que você divida sua interface em partes independentes e reutilizáveis, e que você pense em cada parte de forma isolada.
+ Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.
+ &amp;lt; Anterior | Proximo &amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com React - #2 Criando a Estrutura do Projeto</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</guid>
+      <description>Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando create-react-app, que gera por padrão uma estrutura básica, pronta para começarmos a desenvolver nossa aplicação. Dessa forma, você não precisa entender todo o processo do build antes mesmo de criar o seu primeiro componente.
+Posteriormente, veremos cada parte do build para entender melhor com o que estamos lidando.</description>
+    </item>
+    
+    <item>
+      <title>Iniciando com React - #1 Introdução</title>
+      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</link>
+      <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</guid>
+      <description>React é uma biblioteca Javascript do Facebook para a construção de interfaces web. No mercado desde 2013, vem sendo utilizada por aplicações de alto escala. Entre as principais empresas que adotaram e apostam na lib, estão Facebook, AirBnb, Instagram e Twitter. Por muitas vezes mencionado como o V do MVC, o React se propõe a controlar a camada da View, proporcionando total liberdade para o programador tomar decisões em relação ao resto da arquitetura da aplicação.</description>
+    </item>
+    
+    <item>
+      <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 4</title>
+      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</guid>
+      <description>Este post é a quarta parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.
+ Parte 1 — Conceitos Básicos: clique aqui
+ Parte 2 — Construindo o Ambiente: clique aqui
+ Parte 3 — Volumes Persistentes: clique aqui
+  Como citei no post anterior ainda existe um ponto de desconforto no ambiente, que é o fato das senhas e usuários estarem expostos diretamente nas configurações.</description>
+    </item>
+    
+    <item>
+      <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 3</title>
+      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</link>
+      <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</guid>
+      <description>Este post é a terceira parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.
+ Parte 1 — Conceitos Básicos: clique aqui
+ Parte 2 — Construindo o Ambiente: clique aqui
+ Parte 4 — Segredos: clique aqui
+  Como comentei no post anterior existem alguns problemas no ambiente que construí, e o princípial deles é que os Pods não totalmente efêmeros, ou seja, se eu adicionar novos dados nele, no momento que o Pod fosse destruído os dados iriam junto e sem backup !</description>
+    </item>
+    
+    <item>
+      <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 2</title>
+      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</guid>
+      <description>Este post é parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido os post anteriores recomendo lê-los e depois voltar aqui para não ficar perdido.
+ Parte 1 — Conceitos Básicos: clique aqui
+ Parte 3 — Volumes Persistentes: clique aqui
+ Parte 4 — Segredos: clique aqui
+  Conhecendo os componentes básicos explicados no post anterior posso preparar a aplicação que mostrei para o Kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 1</title>
+      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</guid>
+      <description>Como parte das minhas metas dentro da Coderockr está a construção de um cluster usando algumas das ferramentas de orquestração de contêineres que existem no mercado; como o Docker Swarm, Kubernetes, Apache Mesos, etc.
+Optei pelo Kubernetes no momento, tanto pelo pedigree, criado pelo Google e mantido pela Cloud Native Computing Foundation; quanto pela oferta de grandes clouds como a Red Hat, Azure e Google.
+Quando estava avaliando as opções disponíveis, o Jean Carlo Machado (colega da CompuFácil), me sugeriu usar o **OpenShift Next Gen**, a plataforma da Red Hat para Kubernetes, que esta em Developer Preview permitindo que você se cadastre para testar a ferramenta deles por 30 dias.</description>
+    </item>
+    
+    <item>
+      <title>React Native for React Developers</title>
+      <link>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</link>
+      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</guid>
+      <description>React Native for React Developers
+React Native is becoming the definitive solution to create apps across multiple platforms. What React Native offers, is the possibility to create native mobile apps using only Javascript.
+In this post, I am going to make a comparison between React and React Native, and what are the first things a React Developer should know before starting to code.
+Building Blocks React Native uses the same design as React, you will be using JSX and JavaScript to create your components.</description>
+    </item>
+    
+    <item>
+      <title>Simplificando o Setup de Projetos no GitHub</title>
+      <link>//blog.coderockr.com/posts/2017/simplificando-o-setup-de-projetos-no-github/</link>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/simplificando-o-setup-de-projetos-no-github/</guid>
+      <description>Na Coderockr iniciamos e assumimos vários projetos, sejam para clientes que nos contratam ou para ações internas, e normalmente o GitHub acaba sendo a ferramenta escolhida para eles.
+E ao longo dos anos acabamos definindo uma estrutura para controlarmos as nossas issues, usando as seguintes labels:
+Conjunto de labels utilizadas no Coderockr Way
+É um conjunto bem simples, mas que deixa bem claro as etapas, prioridades, tipos e estados das tarefas, de forma que fica bem fácil de acompanhá-las.</description>
+    </item>
+    
+    <item>
+      <title>Culture Code da Coderockr</title>
+      <link>//blog.coderockr.com/posts/2017/culture-code-da-coderockr/</link>
+      <pubDate>Mon, 09 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/culture-code-da-coderockr/</guid>
+      <description>Hoje é um dia importante para nós da Coderockr pois estamos tornando público nosso Culture Code.
+Essa é uma prática que se tornou famosa desde que a Netflix publicou o seu em 2009 e desde então várias empresas fizeram o mesmo.
+Citando o post da Resultados Digitais sobre o assunto:
+ Culture Code é um documento que serve para uma série de coisas: um guia para os colaboradores da empresa, um material para atração de novas pessoas para o time, critérios de seleção e avaliação de desempenho, um norte para onde queremos evoluir com as nossas práticas no dia a dia e em última instância até como um “manifesto” de como achamos que o trabalho deveria ser na maioria dos lugares.</description>
+    </item>
+    
+    <item>
+      <title>Usando AWS API Gateway e AWS Lambda</title>
+      <link>//blog.coderockr.com/posts/2017/usando-aws-api-gateway-e-aws-lambda/</link>
+      <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/usando-aws-api-gateway-e-aws-lambda/</guid>
+      <description>Recentemente lançamos uma nova versão do site da Coderockr (já viu? Está lindão!) e nosso desenvolvedor/designer apresentou uma ótima ideia: criarmos um formulário de contato mais inteligente, onde o interessado pode nos fornecer informações mais completas já no primeiro momento, acelerando nosso processo de negociação.
+Como usamos o CRM da HubSpot para gerenciar nossos contatos com clientes, rapidamente a ideia evoluiu para usarmos a API e integrarmos o formulário com o CRM.</description>
+    </item>
+    
+    <item>
+      <title>Por que o Planrockr é uma Single Page Application?</title>
+      <link>//blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</link>
+      <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</guid>
+      <description>Há uns dias atrás, foi feita uma pergunta para a equipe do Planrockr no twitter:
+@eminetto qual foi o fator determinante pro Planrockr ser uma SPA e não uma app tradicional? =)
+&amp;mdash; Pedro Costa (@plcosta) October 14, 2016  
+Esse é um assunto interessante a ser abordado: Quando uma aplicação deve ou não ser uma SPA? Nesse artigo não pretendo fazer menção a nenhum framework em específico, mas nos manter focados nas vantagens e desvantagens deste tipo de arquitetura.</description>
+    </item>
+    
+    <item>
+      <title>The Code Ownership Feeling</title>
+      <link>//blog.coderockr.com/posts/2016/the-code-ownership-feeling/</link>
+      <pubDate>Fri, 30 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/the-code-ownership-feeling/</guid>
+      <description>Every developer, sometime in their lives, or very often pass through this feeling. You write code and it feels like it’s a part of you, thus motivating you to write the best code in the world, or at least what you consider it to be
+That’s a good thing if we take into account that you increasingly want to take care of the project, establish patterns and think about more ways of improving your code and scaling the system.</description>
+    </item>
+    
+    <item>
+      <title>O Sentimento de Propriedade do Código</title>
+      <link>//blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</guid>
+      <description>My precious!
+ Todo programador, uma hora ou outra, ou quase sempre passa por isso. Você escreve código e as vezes sente que aquilo faz parte de você, e por isso, a partir desse sentimento, você quer escrever o melhor código do mundo, pelo menos o que você considera ser o melhor código do mundo.
+Isso é uma coisa muito boa, partindo do principio que você quer cuidar do projeto cada vez mais, estabelecer padrões e pensar formas cada vez melhores de escrever o código e escalar o sistema.</description>
+    </item>
+    
+    <item>
+      <title>Gerenciando Rotas com React Router</title>
+      <link>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</link>
+      <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</guid>
+      <description>Quando começamos a desenvolver um SPA, uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente.
+React Router é uma lib completa para controle de rotas. Ela permite que você consiga configurar rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.
+A lib trabalha com History API, mas também deixa a possibilidade de você trabalhar com Hash(#) se for necessário.</description>
+    </item>
+    
+    <item>
+      <title>Gerando Code Coverage com PHPUnit e phpgbg</title>
+      <link>//blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</link>
+      <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</guid>
+      <description>Em um post anterior eu mostrei alguns truques para identificar testes que estão demorando muito para serem executados. Neste texto vou mostrar uma forma de melhorar a performance da geração do relatório de cobertura de códigos usando o PHPUnit.
+É possível incluir configurações no arquivo phpunit.xml para que sejam gerados relatórios relativos aos testes que estão sendo executados. Por exemplo:
+ Desta forma será criado o diretório tests/_reports com uma série de informações úteis.</description>
+    </item>
+    
+    <item>
+      <title>Recharts, Construa Gráficos com React e D3</title>
+      <link>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</guid>
+      <description>Recentemente iniciamos o desenvolvimento de mais cinco widgets no iMasters Planrockr, todos de gráficos. Para a renderização dos mesmos, optamos por usar o D3JS, que é uma das libs mais robustas para a implementação de gráficos atualmente.
+Seria possível implementá-los utilizando somente D3 e foi dessa forma que começamos a implementar o primeiro gráfico. No entanto, aprender a lib do zero pode exigir um tempo e esforço considerável, não sendo nada produtivo no estado inicial.</description>
+    </item>
+    
+    <item>
+      <title>Integrando Mixpanel com React</title>
+      <link>//blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</link>
+      <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</guid>
+      <description>Recentemente lançamos a nova interface do Planrockr, feita em ReactJS. Nesse produto nós estamos utilizando o MixPanel para fazer tracking de ações do usuário. Anteriormente nós fazíamos o tracking apenas pelo backend, já que a interface era experimental e sabíamos que as chances eram grandes de o código dela ser descartado.
+Para essa nova versão do Planrockr, nós decidimos levar o tracking de alguns eventos para o frontend, já que no backend nós não tínhamos acesso a algumas informações, como: Browser, localização, resolução de tela e etc…</description>
+    </item>
+    
+    <item>
+      <title>Developer Experience na Prática</title>
+      <link>//blog.coderockr.com/posts/2016/developer-experience-na-pratica/</link>
+      <pubDate>Thu, 14 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/developer-experience-na-pratica/</guid>
+      <description>No post anterior eu falei sobre a ideia do DX e como implementar algo similar em nossas empresas. Neste post quero comentar um exemplo prático comparando duas empresas similares.
+Quando o Stripe foi lançado nos EUA o mercado de gateways de pagamento já estava consolidado, com grandes players como o Paypal. Nestes cenários a única forma de uma nova empresa se destacar é criando uma “vantagem competitiva” em relação aos outros concorrentes.</description>
+    </item>
+    
+    <item>
+      <title>Tratamento de Erros em Go</title>
+      <link>//blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</link>
+      <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</guid>
+      <description>Um dos primeiros pontos que causam estranheza para quem está começando em Go é a forma como os erros são tratados, principalmente quando viemos de outras linguagens orientadas a objetos. Em Go os erros são “first class citizens”, ou seja, eles não são ocultos ou delegados e são considerados parte importante do código.
+Hoje passei por uma situação onde isso fez diferença. Revisando/debugando o código em PHP (alterado do original):</description>
+    </item>
+    
+    <item>
+      <title>Requisições Assíncronas em Redux</title>
+      <link>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</link>
+      <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</guid>
+      <description>Quando se está começando a aprender Redux, uma das dúvidas mais comuns é como fazer requisições assíncronas.
+Observando os exemplos básicos, que implementam apenas actions comuns, não fica tão óbvio qual abordagem utilizar ao fazer uma integração com uma API.
+Neste post, mostrarei como implementar um middleware, que ficará responsável por interpretar um padrão de específico de action (async action) e gerenciar nossas requisições, disparando uma action correspondente para cada momento das mesmas.</description>
+    </item>
+    
+    <item>
+      <title>Como Melhorar seus Códigos Usando Object Calisthenics</title>
+      <link>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</link>
+      <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</guid>
+      <description>Em um dos primeiros projetos que a Coderockr participou tivemos o privilégio de trabalhar com um “dream team”: Eduardo Shiota, Guilherme Blanco, Rafael Dohms e Otavio Ferreira (em ordem alfabética porque é impossível perfilá-los em qualquer ordem de relevância).
+Neste projeto foi possível aprimorarmos vários pontos importantes como TDD, Scrum, trabalho remoto, análise, integração contínua, etc. Mas o que mais me marcou foram os conceitos de Clean Code e Object Calisthenics que eram aplicados ao projeto.</description>
+    </item>
+    
+    <item>
+      <title>Conhecendo o Básico do Redux</title>
+      <link>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</guid>
+      <description>Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?
+Concebido por Dan Abramov, redux é um padrão de arquitetura de aplicação, inspirado no Flux do Facebook e simplificado com ajuda de algumas práticas do Elm. Redux lhe da o poder de construir aplicações consistentes e controlar a forma como os dados fluem e são transformados, seguindo três princípios:
+1. Single source of truth (SSOT) Todo o estado da sua aplicação é armazenado em uma única árvore de objetos, dentro de uma única store.</description>
+    </item>
+    
+    <item>
+      <title>Learning the Basics About Redux</title>
+      <link>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</link>
+      <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</guid>
+      <description>Redux is a predictable state container for JavaScript Applications, but what does that mean?
+Created by Dan Abramov, Redux is an application architecture pattern based on Flux ideas and simplified with concepts from Elm. Redux gives you the power to build consistent applications and to control the way your data flows and is transformed, following three principles:
+1. Single Source of Truth (SSOT) The entire state of your application is stored in an object tree within a single store.</description>
+    </item>
+    
+    <item>
+      <title>DX — Developer Experience</title>
+      <link>//blog.coderockr.com/posts/2016/dx-developer-experience/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/dx-developer-experience/</guid>
+      <description>Depois de algumas cervejas e várias horas de conversa (ou teriam sido várias cervejas e algumas horas de conversa?), eis que o Guilherme Siquinelli cunha o termo que dá título a este post.
+E este termo faz muito sentido. Nos últimos anos a disciplina de UX — User Experience — provou-se muito importante, desde projetos de aplicativos até e-commerce e sistemas bancários. Tornar um sistema fácil e amigável aos seus usuários é um grande passo para o seu sucesso.</description>
+    </item>
+    
+    <item>
+      <title>Estimativa Baseada em Evidências</title>
+      <link>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</guid>
+      <description>As pessoas, salvo alguns místicos, não são muito boas em prever o futuro.
+https://www.flickr.com/photos/pasukaru76/3998273279/
+Portanto é bem provável que as suas estimativas de entregas de tarefas e projetos não sejam tão precisas quanto seu cliente espera, certo? Felizmente temos outros recursos a nossa disposição para suprir essa nossa deficiência: fatos, números e computadores rápidos o suficiente para processá-las.
+Vamos fazer uma simples &amp;ldquo;conta de padaria&amp;rdquo; e imaginar o seguinte cenário:</description>
+    </item>
+    
+    <item>
+      <title>Gerando documentação de APIs</title>
+      <link>//blog.coderockr.com/posts/2016/gerando-documentacao-de-apis/</link>
+      <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/gerando-documentacao-de-apis/</guid>
+      <description>Uma das melhores decisões técnicas que tomei na minha carreira foi investir pesado nas arquiteturas baseadas em serviços. Meu primeiro post sobre isso data de 2011 e desde então esta decisão só se provou um acerto.
+Uma das tarefas mais importantes, e chatas, é manter a documentação das APIs sempre atualizadas pois elas são consumidas por cada vez mais camadas: frontend, mobile, outros serviços e sistemas. Existem várias ferramentas para esta tarefa, sendo uma das mais completas, e complexas, o Swagger, além de alguns serviços pagos.</description>
+    </item>
+    
+    <item>
+      <title>Por que Go?</title>
+      <link>//blog.coderockr.com/posts/2016/por-que-go/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/por-que-go/</guid>
+      <description>A melhor ferramenta para cada necessidade
+Nestes quase 20 anos de carreira como desenvolvedor eu já trabalhei com várias linguagens de programação, desde C, passando por Cobol, Java, Python e PHP, que tornou-se minha principal ferramenta.
+Uma das coisas que aprendi nesse processo foi sempre tentar encontrar a melhor ferramenta para cada situação e evitar cair na máxima:
+ Se a única ferramenta que você tem é um martelo, para você tudo começa a se parecer com um prego.</description>
+    </item>
+    
+    <item>
+      <title>Melhorando a Performance do PHPUnit</title>
+      <link>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</link>
+      <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</guid>
+      <description>Em pleno 2016 acho que não preciso gastar caracteres comentando a importância dos TDD no desenvolvimento de software, porque você já está escrevendo testes, certo?
+O que eu vou comentar aqui é a importância deles executarem o mais rápido possível, porque se o processo de execução de testes for algo lento a tendência é o desenvolvedor escrever menos, ou executá-los esporadicamente.
+Mas como identificar quais testes estão demorando mais e como melhorar a sua performance?</description>
+    </item>
+    
+    <item>
+      <title>O Fim dos Frameworks Full Stack</title>
+      <link>//blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</link>
+      <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</guid>
+      <description>Venho acompanhando de perto a evolução dos frameworks PHP desde meados de 2004 e me parece que todos estão caminhando para uma abordagem cada vez mais focada ao conceito de micro-frameworks.
+Um pouco de história… Nos primórdios havia o caos, e então veio o Ruby on Rails… E as outras linguagens viram que era legal e criaram suas versões do “framework MVC perfeito”, como o Zend Framework, Symfony, CakePHP, Code Igniter, etc.</description>
+    </item>
+    
+    <item>
+      <title>Socket.IO Notify — Resolvendo Problemas de Notificação Real-Time</title>
+      <link>//blog.coderockr.com/posts/2016/socket-io-notify-resolvendo-problemas-de-notificacao-real-time/</link>
+      <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/socket-io-notify-resolvendo-problemas-de-notificacao-real-time/</guid>
+      <description>No final do ano passado, em dois de nossos projetos na Coderockr, surgiu a necessidade de termos uma comunicação real-time entre o servidor e o browser.
+A primeira tecnologia que veio em mente foi websockets, que possibilita a comunicação bidirecional entre server e client.
+Por questões de suporte à browsers e facilidade na implementação optamos por utilizar socket.io, uma lib client/server que utiliza websockets e fornece uma api bem amigável, além de fallbacks para browsers legados.</description>
+    </item>
+    
+    <item>
+      <title>Doctrine 2 - Contribution Touch</title>
+      <link>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</guid>
+      <description>One of my goals for 2016 is to be a par excellence open source contributor. The project I’m aiming to focus my work is on the Doctrine 2, for lots of reasons. Firstly because it’s an excellent project with lots of the top PHP developers. Did you know that @ocramius is the most assiduous contributor on Github? Secondly I use it on a daily basis at work, so the more I’m proficient at it, the better asset am I for Compufácil.</description>
+    </item>
+    
+    <item>
+      <title>Relógios, Carros e Teste de Software</title>
+      <link>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</link>
+      <pubDate>Thu, 07 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</guid>
+      <description>Recentemente comprei um relógio de pulso. Usar um relógio analógico em 2016 é basicamente uma decisão de estética e não de funcionalidade pois estamos rodeados de relógios digitais, como por exemplo, no painel do meu carro.
+O interessante é que o relógio do meu carro vive atrasando, enquanto que o relógio de pulso nunca apresentou esse problema, apesar do relógio ter custado muito menos do que o veículo. O ponto é que para o relógio a funcionalidade “mostrar as horas” é a coisa mais importante, enquanto que para o carro isso é um extra.</description>
+    </item>
+    
+    <item>
+      <title>Coderockr Way</title>
+      <link>//blog.coderockr.com/posts/2015/coderockr-way/</link>
+      <pubDate>Thu, 29 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/coderockr-way/</guid>
+      <description>Toda empresa tem sua forma de trabalhar, sua caixa de ferramentas. Nestes cinco anos aprendemos bastante e queremos compartilhar esse conhecimento, por isso vamos criar uma série de pequenos vídeos sobre o nosso processo e as ferramentas que usamos.
+O primeiro já está no nosso canal do Youtube, falando sobre a forma como vemos projetos de software. Nossa ideia inicial é fazer um vídeo para cada tópico do mapa mental:</description>
+    </item>
+    
+    <item>
+      <title>A Importância da Revisão de Código</title>
+      <link>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</guid>
+      <description>Em seu famoso artigo “A catedral e o bazar” Eric S. Raymond proferiu:
+ Dados olhos suficientes, todos os erros são óbvios
+ Esta frase, que ficou conhecida com a “Lei de Linus”, resume bem o fenômeno do código aberto e como ele mudou a forma como desenvolvemos software.
+Na Coderockr adotamos a política de Code Review em todos os projetos. Para cada tarefa/melhoria/bug/feature o desenvolvedor cria uma nova branch no Bitbucket (ou Github se o projeto for open source) e ao final do desenvolvimento ele abre um Pull Request para que os outros membros da equipe ajudem a analisar o código.</description>
+    </item>
+    
+    <item>
+      <title>Sintomas de Design de Software Podre</title>
+      <link>//blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/</guid>
+      <description>Existem quatro sintomas primários que nos ajudam a identificar quando nosso design está apodrecendo. São ortogonais, mas relacionados de formas óbvias. Os sintomas são: rigidez, fragilidade, imobilidade, e viscosidade.
+Rigidez É a tendência do software ser difícil de mudar, mesmo que de maneira simples. Cada mudança causa uma cascata de mudanças subsequentes em módulos independentes. O que começa como uma simples mudança de dois dias em um módulo cresce em uma maratona de mudanças de várias semanas alterando módulo atrás de módulo.</description>
+    </item>
+    
+    <item>
+      <title>Os 12 Fatores: Uma Metodologia para Criação de Projetos SaaS</title>
+      <link>//blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</link>
+      <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</guid>
+      <description>Todo desenvolvedor já deve ter ouvido falar do Heroku, plataforma de cloud computing que revolucionou o desenvolvimento, ajudou a criar o movimento “devops” e que foi vendida por diversos milhares de dólares para a Salesforce. Se tem algo que eles tem muita experiência é na criação e suporte de aplicativos SaaS (software-as-a-service), principalmente aplicativos web.
+Eles usaram toda essa experiência para criar o 12factor que é uma espécie de “manifesto” com os 12 fatores que uma aplicação deveria seguir para ter sucesso nesse formato.</description>
+    </item>
+    
+    <item>
+      <title>Sobre como Começar na Área de Desenvolvimento</title>
+      <link>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</link>
+      <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</guid>
+      <description>Recebi um e-mail essa semana com uma dúvida bem comum, que eu mesmo já passei alguns (muitos) anos atrás:
+ Bom dia Elton, tudo bem? Trabalho com TI a 4 anos [..], e agora quero migrar para o desenvolvimento. O grande dilema neste momento tem sido a linguagem. [..] estou na dúvida se começo em PHP (que aparentemente é uma ótima porta de entrada para o desenvolvimento) ou Ruby. Ambas as linguagens parecem de curva de aprendizado rápido [.</description>
+    </item>
+    
+  </channel>
+</rss>

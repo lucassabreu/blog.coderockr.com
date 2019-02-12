@@ -1,0 +1,35 @@
+---
+title: "Programador Dave Grohl e Não Axl Rose"
+description: "O lema da Coderockr é “Programadores são artistas, são Rockstars!” vem sendo usado por algumas pessoas como pejorativo, como algo a ser evitado..."
+author: "Elton Minetto"
+date: 2013-08-26
+draft: false
+categories: ["Coderockr Culture", "Carreira"]
+tags: ["Carreira"]
+---
+
+O lema da Coderockr é “Programadores são artistas, são Rockstars!”. Esse termo “programador rockstar” vem sendo usado por algumas pessoas como pejorativo, como algo a ser evitado.
+
+O CEO da [Netguru](https://netguru.co) fez uma ótima apresentação com o título [“Why no one is looking for ‘rockstar programmers”](http://blog.netguru.co/post/56860239654/no-one-is-looking-for-rockstar-programmers).
+
+Traduzi/adaptei os trechos mais importantes:
+
+* **Seja um programador sem ego.** Lembre que você não é o seu código. A única forma de melhorar é estar aberto para ao feedback dos outros e dar feedbacks honestos e sem julgamentos.
+
+* **Jogue pelo time.** Construir software é um esporte a ser jogado em grupo. Você não é dono de partes do código e sim responsável por fazer com que todo o pacote funcione como esperado. Não seja o cara que diz “na minha máquina funciona”. O software deve funcionar nas máquinas dos usuários.
+
+* **Seja um aprendiz.** A tecnologia muda muito rápido. O que era importante 5 anos atrás não é mais a melhor coisa hoje, e o que é relevante hoje nem existia 5 anos atrás. Você deve aprender novas coisas constantemente (linguagens, bibliotecas, padrões).
+
+* **Seja uma pessoa em [formato T](http://en.wikipedia.org/wiki/T-shaped_skills).** Se especialize em algum campo e tenha um conhecimento superficial em um conjunto de tecnologias. Isto o faz um recurso muito valioso dentro da empresa.
+
+* **Seja incansavelmente engenhoso.** Torne-se a pessoa que consegue resolver qualquer problema. Você não precisa ser capaz de resolver qualquer problema sozinho, mas você sempre sabe onde ir para encontrar a resposta.
+
+Concordo com todos os pontos que o Wiktor cita na apresentação, só não acho certo dizer que que não tem essas qualidades é um “rockstar”. Pelo menos não no modo como vejo, com os rockstars criando coisas novas e sendo ousados, quebrando o *status quo.*
+
+Eu mudaria os termos para: **“Não seja um programador Axl Rose, seja um programador Dave Grohl”.**
+
+Ambos são muito talentosos, mas o Axl é [famoso](http://whiplash.net/materias/news_847/138425-gunsnroses.html) por suas excentricidades e manias.
+
+Enquanto isso, o Dave Grohl é conhecido com [“o cara mais legal do rock”](http://exame.abril.com.br/estilo-de-vida/noticias/livro-mostra-por-que-dave-grohl-e-o-cara-mais-legal-do-rock) por sempre estar disposto a conversar com fãs e reporteres, por ajudar bandas que estão começando, por saber tocar diversos instrumentos, etc.
+
+Essa é minha sugestão.

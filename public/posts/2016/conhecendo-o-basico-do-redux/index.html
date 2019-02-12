@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Conhecendo o Básico do Redux"/>
+  <meta name="twitter:description" content="Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?"/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Conhecendo o Básico do Redux &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Conhecendo o Básico do Redux
+                    </h1>
+                    <h2 class="headline">
+                    Jun 22, 2016 00:00
+                    · 786 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/redux">Redux</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*deNSjC7XD-DA3w4wNK7XEQ.jpeg" alt="" /></p>
+
+<p>Concebido por <a href="undefined">Dan Abramov</a>, redux é um padrão de arquitetura de aplicação, inspirado no <a href="http://facebook.github.io/flux/">Flux</a> do Facebook e simplificado com ajuda de algumas práticas do <a href="https://github.com/evancz/elm-architecture-tutorial/">Elm</a>. Redux lhe da o poder de construir aplicações consistentes e controlar a forma como os dados fluem e são transformados, seguindo três princípios:</p>
+
+<h3 id="1-single-source-of-truth-ssot-https-en-wikipedia-org-wiki-single-source-of-truth">1. Single source of truth <a href="https://en.wikipedia.org/wiki/Single_source_of_truth">(SSOT)</a></h3>
+
+<p>Todo o estado da sua aplicação é armazenado em uma única árvore de objetos, dentro de uma única store. Qualquer acesso ao state, é feito através de referência ao dado armazenado na store. Essa prática evita que você tenha dados duplicados, e uma vez que um dado é atualizado, a alteração se propaga para toda a aplicação.</p>
+
+<h3 id="2-state-is-read-only">2. State is Read-only</h3>
+
+<p>A única forma de alterar o estado da sua aplicação é emitindo uma <strong>action</strong>, um objeto descrevendo o que aconteceu.</p>
+
+<p>Para acessar o state, você pode utilizar o método <strong>getState</strong> da store, o mesmo retorna todo o estado da aplicação, mas somente para a leitura.</p>
+
+<p>Para escutarmos as alterações do state, utilizamos o método <strong>subscribe</strong> da store, passando como parâmetro um listener, da seguinte forma:</p>
+
+<pre><code>let unsubscribe = store.**subscribe**(() =&gt; {
+  //executa a cada alteração no state
+  const state = store.**getState**();
+});
+
+unsubscribe(); //canceling listener
+</code></pre>
+
+<blockquote>
+<p>Como podemos ver no exemplo acima, quando quisermos cancelar o listener, basta chamar o retorno do método <strong>subscribe</strong> como uma função.</p>
+</blockquote>
+
+<p>Quando precisamos fazer uma alteração no <strong>state</strong>, a mesma precisa ser “solicitada” através de uma <strong>action</strong>, um objeto contendo obrigatoriamente um <strong>type</strong> e opcionalmente um <strong>payload</strong>(conteúdo). O <strong>type</strong> é um identificador para a <strong>action</strong> e o <strong>payload</strong> é o conteúdo a ser enviado junto a ela, conforme o exemplo abaixo:</p>
+
+<pre><code>{
+  type: 'ADD_CONTACT',
+  name: 'Jon Snow',
+  email: 'youknownothing@jonsnow.com'
+}
+</code></pre>
+
+<p>como é possível observar acima, essa é uma <strong>action</strong> to tipo ADD_CONTACT, e leva com ela os dados necessários para incluir esse contato ao nosso <strong>state</strong>.</p>
+
+<p>É comum utilizarmos <strong>action creators</strong> para criarmos nossas actions, que são simplesmente funções que esperam parâmetros específicos e devolvem um objeto formatado, conforme o exemplo abaixo:</p>
+
+<pre><code>const addContact = (name, email) =&gt; {
+  return {
+    type: 'ADD_CONTACT',
+    name,
+    email
+  }
+};
+</code></pre>
+
+<p>para disparar uma <strong>action</strong>, utilizamos o método <strong>dispatch</strong> da store:</p>
+
+<pre><code>dispatch(addContact('Jon Snow', 'youknownothing@jonsnow.com'));
+</code></pre>
+
+<h3 id="3-changes-are-made-with-pure-functions">3. Changes are made with Pure functions</h3>
+
+<p>Para descrever como o <strong>state</strong> da aplicação será alterado pelas <strong>actions</strong>, nós escrevemos pure <a href="http://redux.js.org/docs/Glossary.html#reducer">reducers</a>.</p>
+
+<p><strong>Reducers</strong> são funções que são chamadas toda vez que uma action é disparada e recebem como parâmetros o <strong>state</strong> atual e a <strong>action</strong>, e devolvem um novo <strong>state.</strong></p>
+
+<p>É importante ressaltar que um <strong>reducer</strong> deve ser, obrigatoriamente, uma função pura. Dado os mesmos parâmetros, um reducer deve sempre devolver o mesmo resultado e não pode se basear em nada que esteja além do seu próprio escopo para chegar nesse resultado. Para quem quiser se aprofundar um pouco mais em conceitos funcionais, eu indicaria dar uma conferida no post do <a href="undefined">Matheus Lima</a> sobre <a href="https://medium.com/@matheusml/entendendo-programa%C3%A7%C3%A3o-funcional-em-javascript-de-uma-vez-c676489be08b#.9l123fghs">programação funcional em Javascript</a>.</p>
+
+<p>Considerando que nossos reducers devem ser funções puras, vamos implementar nossa lógica de adicionar um novo contato ao nosso <strong>state</strong>:</p>
+
+<pre><code>const reducer = (state = {}, action) =&gt; {
+  if (action.type === 'ADD_CONTACT') {
+
+    return {
+      ..state,
+      contactCollection: [
+        ...state.contactCollection,
+        {
+          name: action.name,
+          email: action.email
+        }
+      ]
+    };
+  }
+}
+</code></pre>
+
+<p>como é possível ver no exemplo acima, nosso reducer verifica se a action é tipo ADD_CONTACT, e se ela realmente for, ele retorna um novo state, incluindo o novo contato.</p>
+
+<p>É importante que, para poder aproveitar ao máximo do redux, você trabalhe com <a href="https://en.wikipedia.org/wiki/Immutable_object"><strong>imutabilidade</strong></a>. No exemplo acima, nós não fazemos um <strong>push</strong> do novo contato dentro da <strong>contactCollection</strong>, e sim retornamos uma nova contactCollection. Esta possui os mesmos contatos da anterior, mas contém o novo contato. Desta forma preservamos o state anterior e nos mantemos dentro da premissa de <strong>read-only state</strong>. Como <strong>Imutabilidade</strong> é um dos princípios base dos redux, aconselho assistir a palestra do William Huang no RSJS2016 <a href="https://www.youtube.com/watch?v=8-R9C3yerPo&amp;list=PLg2lQYZDBwORWkiAe6L9Ah-L2JxJ6froI&amp;index=8">Quando os dados imutáveis mudam tudo</a>, que explica de uma forma prática imutabilidade em Javascript.</p>
+
+<p>Seguindo esses três princípios da forma correta, você conseguirá escrever aplicações previsíveis de uma forma simples.</p>
+
+<p>Nesse post arranhamos apenas a superfície do redux, nos próximos posts vou aprofundar mais em cada conceito.</p>
+
+<p>O <a href="http://redux.js.org/">ReduxJS</a> é uma lib em JS que implementa o redux em apenas 2kb. Ele conta com uma ótima documentação, onde é descrito em detalhe cada feature do redux. Se você pretende se aprofundar, a documentação é um bom lugar para começar.</p>
+
+<p>No próximo post vou abordar uma forma de trabalhar com actions assíncronas, para fazer requisições para APIs.</p>
+
+<p>A princípio, redux pode parecer complicado por ser diferente dos padrões de arquitetura que estamos acostumados, mas assim que você aprende, o céu é o limite.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fconhecendo-o-basico-do-redux%2f - Conhecendo%20o%20B%c3%a1sico%20do%20Redux by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Aplicando HTTPS para uma SPA na AWS"/>
+  <meta name="twitter:description" content="Recentemente passamos a servir a nossa landing page e o SPA do Planrockr sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Aplicando HTTPS para uma SPA na AWS &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Aplicando HTTPS para uma SPA na AWS
+                    </h1>
+                    <h2 class="headline">
+                    Mar 31, 2018 00:00
+                    · 603 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/criptografia">Criptografia</a>
+                          
+                              <a href="//blog.coderockr.com/tags/software-security">Software Security</a>
+                          
+                              <a href="//blog.coderockr.com/tags/aws">AWS</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Recentemente passamos a servir a nossa landing page e o SPA do <a href="https://planrockr.com/">Planrockr</a> sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend, mas percebemos que seria melhor que nosso frontend também usasse.</p>
+
+<p>Alguns dos motivos por traz disso seriam para melhorar o <a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">ranking em sites de pesquisa</a>, para garantir ainda mais a segurança nas comunicações, e também para passar mais segurança para os nossos usuários.</p>
+
+<p>Como estamos servindo nosso frontend usando o S3 da AWS, é apenas uma questão de colocar um CloudFront na frente e alterar a rota no Route 53 e tudo passa a funcionar, mas acabou dando alguma dor de cabeça, não por ser uma tarefa difícil, mas simplesmente por termos encontrado instruções confusas e errôneas quando pesquisamos como executar a migração.</p>
+
+<p>A maioria dos tutoriais que existem na internet sobre habilitar HTTPS no AWS para um SPA passam a instrução errada de que não podemos usar o link facilitado do S3 para vincular com o CloudFront. Isso acabou em um conjunto problemas de comunicação com o S3, e o fez rejeitar as chamadas vindas do CloudFront; e passar a simplesmente redirecionar para a URL pública do bucket, quebrando algumas funcionalidades do Planrockr, principalmente no on-boarding.</p>
+
+<p>Para evitar que outros acabem passando por problemas semelhantes e para servir de registro para projetos futuros, abaixo vou descrever a forma correta (e fácil) de habilitar HTTPS usando o S3 e CloudFront da AWS.</p>
+
+<p>Para usar HTTPS em um bucket do S3, primeiro é necessário possuir um bucket (😜), para esse tutorial, criei um bucket com o nome simple.planrockr.com, e adicionei um arquivo index.html bem simples:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/dada4cc6636fcbf0f8ca77d43224f4ae.js"></script>
+
+<p>Habilitei o mesmo para funcionar como <em>Static website hosting</em>, então posso acessar a URL <a href="http://simple.planrockr.com.s3-website-sa-east-1.amazonaws.com/">http://simple.planrockr.com.s3-website-sa-east-1.amazonaws.com/</a> e verei o seguinte:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*lg-VvNZLAZAHMEuyDj93vw.png" alt="" /></p>
+
+<p>Com esse bucket podemos simular a migração de uma “SPA” no S3 sem HTTPS para uma usando CloudFront para servir via HTTPS.</p>
+
+<p>O primeiro é acessar o dashboard do CloudFront no AWS, nele acesse o botão <strong>Create Distribution</strong>:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*m0jPSL0EFd1Nm9UArqykYQ.png" alt="" /></p>
+
+<p>Ir na opção para Web:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2572/1*FrTcAmT0-mh1LYrmdfP00Q.png" alt="" /></p>
+
+<p>Na tela <strong>Create Distribution</strong>, informe o nome do bucket que deseja usar, e selecione-o quando aparecer na lista.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*orNer9hYh20vjnXSzUd3Ag.png" alt="" /></p>
+
+<p>Eu recomendo marcar a opção “Redirect HTTP to HTTPS” em <strong>Viewer Protocol Policy</strong>, para que o seu site/SPA sempre seja acessado via HTTPS, mesmo que o usuário tenha um link com HTTP apenas.</p>
+
+<p>O resto é bem simples, pode deixar tudo no padrão, e apenas informar o certificado e os “CNAMEs” para o seu serviço.</p>
+
+<p>Como normalmente um SPA usa algum framework JavaScript para gerenciar as rotas (como no nosso caso o react-routes), então é necessário configurar algumas regras na distribution do CloudFront para que ele direcione todas as chamadas para o seu index.html base que ira lidar com as rotas.</p>
+
+<p>Para isso entre na distribution, na aba “Error Pages”, vamos adicionar duas regras para que todas as chamadas para arquivos que não existam no bucket sejam direcionadas para o index.html do SPA.</p>
+
+<p>Fica assim:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*JE2At1orxD9044RD0AX31w.png" alt="" /></p>
+
+<p>O S3 retorna os Status Codes 403 e 404 quando não consegue achar um arquivo ou não permite acesso a ele, desse modo criando a regra acima para esses dois Status Codes todas as requisições (que não forem de assets) serão direcionados ao index.html.</p>
+
+<p>Depois destes ajustes você tem um bucket do S3 sendo servido com HTTPS pelo CloudFront sem quaisquer problemas.</p>
+
+<p>É importante dizer que essa solução é muito boa para SPAs, mas se possuir regras mais complexas de redirecionamentos, ou mais “páginas principais” para o mesmo site, então provavelmente não vai lhe atender, pois não há suporte no CloudFront para isso, seria necessário tratar na origem que o CloudFront estiver lendo.</p>
+
+<p><em>Originally published at <a href="http://www.lucassabreu.net.br/post/aplicando-https-para-uma-spa-na-aws/">www.lucassabreu.net.br</a> on April 1, 2018.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2018%2faplicando-https-para-uma-spa-na-aws%2f - Aplicando%20HTTPS%20para%20uma%20SPA%20na%20AWS by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

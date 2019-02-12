@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tdd on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/tdd/</link>
+    <description>Recent content in Tdd on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DX — Developer Experience</title>
+      <link>//blog.coderockr.com/posts/2016/dx-developer-experience/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/dx-developer-experience/</guid>
+      <description>Depois de algumas cervejas e várias horas de conversa (ou teriam sido várias cervejas e algumas horas de conversa?), eis que o Guilherme Siquinelli cunha o termo que dá título a este post.
+E este termo faz muito sentido. Nos últimos anos a disciplina de UX — User Experience — provou-se muito importante, desde projetos de aplicativos até e-commerce e sistemas bancários. Tornar um sistema fácil e amigável aos seus usuários é um grande passo para o seu sucesso.</description>
+    </item>
+    
+    <item>
+      <title>Melhorando a Performance do PHPUnit</title>
+      <link>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</link>
+      <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</guid>
+      <description>Em pleno 2016 acho que não preciso gastar caracteres comentando a importância dos TDD no desenvolvimento de software, porque você já está escrevendo testes, certo?
+O que eu vou comentar aqui é a importância deles executarem o mais rápido possível, porque se o processo de execução de testes for algo lento a tendência é o desenvolvedor escrever menos, ou executá-los esporadicamente.
+Mas como identificar quais testes estão demorando mais e como melhorar a sua performance?</description>
+    </item>
+    
+    <item>
+      <title>Relógios, Carros e Teste de Software</title>
+      <link>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</link>
+      <pubDate>Thu, 07 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</guid>
+      <description>Recentemente comprei um relógio de pulso. Usar um relógio analógico em 2016 é basicamente uma decisão de estética e não de funcionalidade pois estamos rodeados de relógios digitais, como por exemplo, no painel do meu carro.
+O interessante é que o relógio do meu carro vive atrasando, enquanto que o relógio de pulso nunca apresentou esse problema, apesar do relógio ter custado muito menos do que o veículo. O ponto é que para o relógio a funcionalidade “mostrar as horas” é a coisa mais importante, enquanto que para o carro isso é um extra.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Iniciando com React - #2 Criando a Estrutura do Projeto"/>
+  <meta name="twitter:description" content="Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Iniciando com React - #2 Criando a Estrutura do Projeto &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Iniciando com React - #2 Criando a Estrutura do Projeto
+                    </h1>
+                    <h2 class="headline">
+                    Mar 20, 2017 00:00
+                    · 1268 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/arquitetura">Arquitetura</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>, que gera por padrão uma estrutura básica, pronta para começarmos a desenvolver nossa aplicação. Dessa forma, você não precisa entender todo o processo do build antes mesmo de criar o seu primeiro componente.</p>
+
+<p>Posteriormente, veremos cada parte do build para entender melhor com o que estamos lidando.</p>
+
+<h2 id="instalando-create-react">Instalando Create React</h2>
+
+<blockquote>
+<p>Para a instalação do CLI é necessário que você já tenha o Node e o NPM instalados na sua máquina. Para verificar se eles estão instalados, execute os seguintes comandos no terminal:
+$ node -v
+$ npm -v
+É aconselhável que a versão do Node seja igual ou superior à 5.10.0 e do NPM seja igual ou superior à 3.0.0.
+Caso você ainda não tenha o Node e o NPM instalados, faça <a href="https://nodejs.org/en/">download</a> pelo site e siga os passos do instalador: <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/3596/1*AXOcEwch-O1PSlGHExevug.png" alt="output dos comandos node -v e npm -v" /><em>output dos comandos node -v e npm -v</em></p>
+
+<p>Com o <strong>node</strong> e o <strong>npm</strong> instalados, execute o seguinte comando:</p>
+
+<pre><code>**$** npm install -g create-react-app
+</code></pre>
+
+<p>O comando acima instala globalmente o módulo <em>create-react-app</em>, para que o mesmo fique acessível pelo terminal. O Processo de instalação deve finalizar em alguns minutos.</p>
+
+<h2 id="criando-o-primeiro-projeto">Criando o primeiro projeto</h2>
+
+<p>Com o comando abaixo, iremos criar um projeto chamado <strong>my-app</strong>:</p>
+
+<pre><code>**$** create-react-app my-app
+</code></pre>
+
+<p>O comando acima gera a estrutura do nosso projeto e a coloca em uma nova pasta com o mesmo nome, <strong>my-app</strong>.</p>
+
+<p>Vamos entrar no diretório do projeto utilizando o comando:</p>
+
+<pre><code>**$** cd my-app
+</code></pre>
+
+<p>E por fim, iniciaremos o build da aplicação.</p>
+
+<pre><code>**$** npm start
+</code></pre>
+
+<p>Além de iniciar o build da aplicação, o comando acima levanta um servidor e fica escutando por alterações nos arquivos.</p>
+
+<p>Já é possível acessar a url <a href="http://localhost:3000/">http://localhost:3000</a> no navegador e ver uma tela de boas vindas:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3868/1*rGbFOCkAfwshq56M6_11Gw.png" alt="" /></p>
+
+<h2 id="explorando-a-estrutura-do-projeto">Explorando a estrutura do projeto</h2>
+
+<p>Há inúmeras maneiras de organizar um projeto React, mas esse não é o foco desse post. Aqui, iremos explorar a estrutura default para entendermos como as partes se conectam, e o que realmente é necessário para o bootstrap do React.</p>
+
+<p>O <em>create-react-app</em> cria a seguinte estrutura inicial:</p>
+
+<pre><code>my-app/
+  README.md
+  node_modules/
+  **package.json**
+  .gitignore
+  public/
+    favicon.ico
+    **index.html**
+  src/
+    **App.css
+    App.js
+    App.test.js
+    index.css
+    index.js**
+    **logo.svg**
+</code></pre>
+
+<p>Vamos manter nosso foco nos arquivos <strong>package.json</strong>, <strong>public/index.html</strong> e nos arquivos da pasta <strong>src</strong>.</p>
+
+<h3 id="scripts-e-dependências">Scripts e dependências</h3>
+
+<p>Observe abaixo o conteúdo do <strong>package.json</strong> que lista as dependências do projeto e possui alguns <em>aliases</em> para os scripts envolvidos no build:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/58eca7aab9f7796e69047c815455aa33.js"></script>
+
+<p>Como podemos ver no arquivo acima, temos os módulos react e react-dom declarados como dependência, e o react-scripts declarado como uma dependência de desenvolvimento. O react-scripts é o módulo que encapsula todos os scripts e configs do build.</p>
+
+<p>Também podemos observar que estão sendo declarados alguns scripts, que possuem funcionalidades conforme listadas abaixo:</p>
+
+<ul>
+<li><p><strong>start:</strong> Inicia o build no modo de desenvolvimento.</p></li>
+
+<li><p><strong>build</strong>: Executa o build do projeto otimizado para produção.</p></li>
+
+<li><p><strong>test</strong>: Executa os testes do projeto.</p></li>
+
+<li><p><strong>eject</strong>: Traz para dentro do nosso projeto, toda a configuração que o react-scripts abstrai. **Não use este comando por enquanto! **Utilizaremos mais a frente para estudar o processo do build.</p></li>
+</ul>
+
+<h3 id="index">Index</h3>
+
+<p>Observe abaixo o código do arquivo <strong>public/index.html</strong>:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/5323369a80dc1dc2448632812a14287b.js"></script>
+
+<p>O arquivo <strong>index.html</strong> vem com a marcação mínima necessária para iniciar nossa aplicação. Porém, é possível observar que não há tags de scripts ou estilos. Não se preocupe, as mesmas serão injetadas automaticamente no build.</p>
+
+<p>Por ora a única coisa importante a observar é a tag div com o id** root** na linha #10, é ela que o <em>React</em> irá utilizar para renderizar nossa aplicação.</p>
+
+<h3 id="componente-raiz">Componente raiz</h3>
+
+<p>Vamos explorar o conteúdo da pasta <strong>src</strong>. Observe abaixo o arquivo <strong>App.js</strong>, que contém o componente raiz da aplicação:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/b24adeb867b11dadc985cc1afb09cc55.js"></script>
+
+<p>O componente acima é definido com a <em>class e extende a classe</em> Component do React. Existem duas formas de definir componentes, através de <em>functions</em> ou através de <em>class</em>. Em um futuro post veremos as diferenças entre uma e outra.</p>
+
+<p>Um componente deve sempre implementar um método <strong><em>render</em></strong>, que retorna um <strong><em>JSX</em></strong> do que deve ser mostrado na tela, ou <strong>null</strong> quando não deve mostrar nada.</p>
+
+<h3 id="jsx">JSX</h3>
+
+<p>O que parece ser um HTML dentro do método <strong>render</strong>, é na verdade <a href="https://facebook.github.io/react/docs/introducing-jsx.html">JSX</a>, um <a href="https://pt.wikipedia.org/wiki/A%C3%A7%C3%BAcar_sint%C3%A1tico">sintatic sugar</a> para a API do React. As principais diferenças no dia-a-dia entre HTML e JSX são:</p>
+
+<ul>
+<li><p>O <strong>class</strong> do html passa a se chamar <strong>className</strong>, porque o termo <em>class</em> é uma palavra reservada no Javascript.</p></li>
+
+<li><p>O <strong>for</strong> da tag *label passa a se chamar <strong>htmlFor</strong>, pelo mesmo motivo do <em>class</em>, de ser uma palavra reservada.</p></li>
+
+<li><p>O conteúdo que estiver entre chaves {}, será interpretado como Javascript.</p></li>
+
+<li><p>Todos os atributos são nomeados em <a href="https://pt.wikipedia.org/wiki/CamelCase">lower camelcase</a>.Sendo assim, atributos como onclick, passam a se chamar <a href="https://facebook.github.io/react/docs/handling-events.html">onClick</a>. O mesmo vale para atributos que utilizam hífen -, stroke-width por exemplo, passa a se chamar strokeWidth.</p></li>
+
+<li><p>Todo conteúdo do retorno de um render, deve estar dentro de um único wrapper, caso contrário o seguinte erro é apresentado: Adjacent JSX elements must be wrapped in an enclosing tag while parsing file.</p></li>
+</ul>
+
+<p>É importante lembrar que o JSX é convertido em um código React, por esse motivo, devemos importar o módulo React em todo arquivo que utiliza a sintaxe.</p>
+
+<blockquote>
+<p>JSX já é utilizado por outras libs além do React e vem se tornando um padrão para definição de marcação de componentes.</p>
+
+<p>É possível seguir em frente com as informações apresentadas acima. Mas se você ficou instigado a saber mais sobre JSX, acesse: <a href="https://facebook.github.io/react/docs/introducing-jsx.html">facebook.github.io/react/docs/introducing-jsx.html</a>.</p>
+</blockquote>
+
+<h3 id="importação-de-arquivos-de-estilos-e-imagens">Importação de arquivos de estilos e imagens</h3>
+
+<p>Junto com a base do projeto, já vêm configurados os <a href="https://webpack.github.io/docs/loaders.html">loaders</a> para os formatos <strong>svg</strong> e <strong>css.</strong> Quando importamos um arquivo <strong>css</strong>, o conteúdo do mesmo é injetado na nossa aplicação, permitindo assim que utilizemos os estilos e classes em nossos componentes.</p>
+
+<p>Já o <strong>svg</strong> funciona de uma maneira um pouco diferente. Ao importarmos um <strong>svg</strong>, obteremos uma referência, um caminho para o arquivo, e poderemos utilizar essa referência em tags como <strong><img></strong> e <strong><object></strong>. A importação de outros arquivos de imagem como <strong>jpg</strong>, <strong>png</strong> e <strong>gif</strong> funcionam dessa mesma maneira, porém, nessa estrutura inicial apenas o <strong>svg</strong> é suportado.</p>
+
+<h3 id="bootstrap-da-aplicação">Bootstrap da aplicação</h3>
+
+<p>Vamos observar abaixo o código do arquivo index.js, é nele que ocorre a inicialização da nossa aplicação:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/04a81b9bead72c3c97e8bc3dbddd0907.js"></script>
+
+<p>Na linha #2 do arquivo acima, estamos importando o <strong>ReactDOM</strong>, o módulo do React responsável pela manipulação do <em>DOM</em>.</p>
+
+<p>Na linha #3, importamos nosso componente raiz, o <strong>App.js</strong> que acabamos de ver mais acima.</p>
+
+<p>O <em>bootstrap</em> do React se baseia em você dizer para ele, o que renderizar e onde injetar o que ele renderizou. Estamos fazendo isso na linha #6, através do método render do <strong>ReactDOM</strong>, que espera como primeiro parâmetro um componente, e como segundo parâmetro, um elemento do <em>DOM</em> que será utilizado para injetar todo o HTML renderizado.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*2gZ3Z_hfr-9zaFkN474kUQ.png" alt="O React renderiza os componentes e gera um output HTML" /><em>O React renderiza os componentes e gera um output HTML</em></p>
+
+<p>No nosso caso, estamos passando o componente <strong>App</strong> para ser o raiz e o elemento que possui o id=”root” para ser o que conterá toda a aplicação. Lembra da nossa tag no arquivo <strong>public/index.html</strong>? Ela mesmo!</p>
+
+<blockquote>
+<p>Não abordamos o conteúdo dos arquivos css e svg, pois os mesmos não possuem nenhuma particularidade quanto ao React. Também não abordamos a parte de testes, porque futuramente haverá um post específico sobre este tema. Mas nada impede que você os explore. Seja curioso!</p>
+</blockquote>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Aprendendo como criar a estrutura do projeto e a entendendo bem, torna os próximos passos muito mais fáceis. O <strong>React</strong> tem alguns princípios básicos, que bem aprendidos, permitem que construamos desde aplicações simples até as mais robustas.</p>
+
+<p>No próximo post veremos como criar componentes e aprenderemos sobre o ciclo de vida de um componente React. <strong>Siga-nos e não perca os próximos posts!</strong></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2finiciando-com-react-2-criando-a-estrutura-do-projeto%2f - Iniciando%20com%20React%20-%20%232%20Criando%20a%20Estrutura%20do%20Projeto by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

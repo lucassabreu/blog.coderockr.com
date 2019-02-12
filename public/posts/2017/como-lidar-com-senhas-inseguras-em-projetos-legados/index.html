@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Como Lidar com Senhas Inseguras em Projetos Legados"/>
+  <meta name="twitter:description" content="Aqui na Coderockr nós eventualmente nos deparamos com sistemas legados e muitas vezes inseguros. Um dos problemas mais comuns é a utilização de funções hash como MD5, SHA1, SHA-256 em senhas..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Como Lidar com Senhas Inseguras em Projetos Legados &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Como Lidar com Senhas Inseguras em Projetos Legados
+                    </h1>
+                    <h2 class="headline">
+                    May 8, 2017 00:00
+                    · 572 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/criptografia">Criptografia</a>
+                          
+                              <a href="//blog.coderockr.com/tags/software-security">Software Security</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Leandro Lugaresi</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Aqui na <a href="http://coderockr.com/">Coderockr</a> nós eventualmente nos deparamos com sistemas legados e muitas vezes inseguros. Um dos problemas mais comuns é a utilização de funções hash como MD5, SHA1, SHA-256 em senhas. O uso dessas funções apresenta alguns riscos que as aplicações não deveriam estar correndo, mas antes de abordar as soluções, vamos ver porque o uso deses algoritmos de hash representam um risco de segurança.</p>
+
+<h3 id="por-que-funções-hash-não-devem-ser-usadas-em-senhas"><strong>Por que funções hash não devem ser usadas em senhas?</strong></h3>
+
+<p>Basicamente funções hash foram criadas para verificar a integridade de dados de forma eficiente e no menor tempo possível, sendo um grande problema quando estamos lidando com senhas pois não fornecem nenhuma defesa contra ataques de força bruta.</p>
+
+<p>Se você acha que isso não é algo tão importante ou não sabia disso, o <a href="https://blog.codinghorror.com/about-me">Jeff Atwood</a> fez um <a href="https://blog.codinghorror.com/speed-hashing/">post</a> bem detalhado sobre o assunto em <strong>2012</strong>!
+<a href="https://blog.codinghorror.com/speed-hashing/"><strong>Speed Hashing</strong>
+The good news is that hashing algorithms (assuming you didn&rsquo;t roll your own, God forbid) were designed by professional…</a></p>
+
+<p>Agora que sabemos do problema na utilização dessas funções podemos ir para as soluções:</p>
+
+<h3 id="solução-1-pare-de-usar-senhas"><strong>Solução 1 — Pare de usar senhas!</strong></h3>
+
+<blockquote>
+<p>ALTER TABLE users DROP COLUMN password;</p>
+</blockquote>
+
+<p>Senhas estão obsoletas a um bom tempo e podem/devem ser substituídas por mecanismos possivelmente mais seguros. Muitas empresas como Medium, Telegram, Instagram, Uber e WhatsApp já aderiram a essa prática.</p>
+
+<p>Ficou com medo de fazer uma mudança tão grande? Bom, você deveria ficar com medo é de ser um dos responsáveis por garantir a segurança dessas informações!</p>
+
+<p>Embora essa opção possa dar trabalho para se utilizar em projetos que já estejam em produção é possivelmente mais econômico utilizar serviços de terceiros ao invés de manter uma solução você mesmo.</p>
+
+<p>Algumas opções que podem ser usadas:</p>
+
+<ul>
+<li><p>Auth0 — A <a href="https://auth0.com/">Auth0</a> é uma empresa que prove diversos produtos e serviço que relacionados a autenticação e autorização e facilitam muito a sua vida com segurança.</p></li>
+
+<li><p>Keycloak — O <a href="http://www.keycloak.org/">Keycloak</a> é um sistema open source para gerenciamento de acesso e usuários, é o melhor identity provider open source que eu já encontrei e é mantido pela Redhat.</p></li>
+
+<li><p>Usar uma biblioteca como a <a href="https://github.com/omniauth/omniauth">OmniAuth</a> e utilizar algum dos provedores de login.</p></li>
+
+<li><p>Account Kit — O <a href="https://developers.facebook.com/docs/accountkit">Account Kit</a> é um produto do Facebook para prover registro e login de usuários através de SMS ou email, sem a necessidade de senhas e com o foco principal em aplicativos mobile.</p></li>
+</ul>
+
+<h3 id="solução-2-migrar-as-senhas-para-uma-solução-mais-segura"><strong>Solução 2 — Migrar as senhas para uma solução mais segura</strong></h3>
+
+<p>Existem algumas abordagens utilizadas para migrar as senhas, por exemplo:</p>
+
+<p>Podemos forçar todos os usuários a recuperarem as senhas e utilizar o novo algoritmo quando a nova senha for utilizada. Embora está opção não seja recomendável.</p>
+
+<p>Outra opção é ir utilizando o novo algoritmo nos novos usuários e nos usuários antigos conforme eles forem se logando, essa solução é ruim pois os usuários inativos continuarão com hashes inseguros se acontecer um vazamento da sua base de dados. Podemos resolver isso removendo a senha de usuários que não se logam a muito tempo.</p>
+
+<p><strong>Para mim a melhor solução nesse caso é uma abordagem um pouco diferente, vamos utilizar o resultado do hash antigo como entrada para o novo algoritmo de senhas, dessa forma precisamos apenas fazer a migração dos hashes antigos para o novo e os usuários não irão perceber!</strong></p>
+
+<p>Se você ficou interessado nessa abordagem o pessoal da <a href="https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#legacy-hashes">Paragon Initiative</a> possuí um post bem detalhado sobre essa prática e quais algoritmos de password hash devem ser utilizados.</p>
+
+<p><em>Originally published at <a href="http://www.leandrolugaresi.com.br/post/lidando-com-senhas-sistemas-legados/">www.leandrolugaresi.com.br</a>.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fcomo-lidar-com-senhas-inseguras-em-projetos-legados%2f - Como%20Lidar%20com%20Senhas%20Inseguras%20em%20Projetos%20Legados by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Ambientes por Branch com OpenShift Next Gen Usando GitHub"/>
+  <meta name="twitter:description" content="Esta postagem é uma continuação da “(Ambientes por Branch com OpenShift Next Gen)..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Ambientes por Branch com OpenShift Next Gen Usando GitHub &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Ambientes por Branch com OpenShift Next Gen Usando GitHub
+                    </h1>
+                    <h2 class="headline">
+                    May 10, 2017 00:00
+                    · 1360 words
+                    · 7 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/github">GitHub</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p><em>Esta postagem é uma continuação da “<a href="https://blog.coderockr.com/ambientes-por-branch-com-openshift-next-gen-672698ecb0b7">Ambientes por Branch com OpenShift Next Gen</a>”, a introdução do problema esta lá e também mostro como implementar o processo de deploy usando o GitLab nele, se não viu da uma conferida, vale o investimento</em></p>
+
+<p>Como prometi na outra postagem, vamos criar um processo de deploy de ambientes por branch usando o GitHub.</p>
+
+<p>No caso do GitHub, ele cobre “apenas” a parte de repositório de fontes, ele em si não tem integração direta com o Kubernetes/OpenShift, mas possui uma grande gama de opções no que diz respeito de ferramentas de CI e CD.</p>
+
+<p>A implementação que vou demonstrar usará o Buddy, mas pode ser replicada para qualquer outro CI, com dificuldade semelhante. Para o registro de imagens irei usar o <a href="http://hub.docker.com">Docker Hub</a> e novamente o OpenShift da Getup Cloud.</p>
+
+<p>O cliente de linha de comando do OpenShift pode ser baixado em:
+<a href="https://github.com/openshift/origin/releases">openshift/origin</a></p>
+
+<p>O que queremos montar é um ambiente por branch/PR que deve ser facilmente criado e destruído. Para demonstrar criei um repositório no GitHub com uma aplicação bem simples que apenas retorna uma página estática, mas é o suficiente para o objetivo.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*ezvKYoXbK1FkYYMqxq7H6w.png" alt="retorno do serviço helloworld" /><em>retorno do serviço helloworld</em></p>
+
+<p>E configurei o Buddy para construir uma imagem com base nesse repositório e publicar ela como <a href="https://hub.docker.com/r/lucassabreu/k8s-pr-envs/">lucassabreu/k8s-pr-envs</a> no Docker Hub.</p>
+
+<p>Nesse momento o arquivo buddy.yml esta assim:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/05ebf609355c86d8cd7a69f427b620dc.js"></script>
+
+<p>O fonte nesse momento pode ser visto em:
+<a href="https://github.com/lucassabreu/k8s-pr-envs/tree/v1">lucassabreu/k8s-pr-envs</a></p>
+
+<p>Nesse primeiro momento não possuímos nenhum processo de deploy, seja de teste, produção ou por branch.</p>
+
+<p>Então vamos adicionar um processo de deploy no OpenShift para o ambiente de produção e testes, sendo que o ambiente de testes é atualizado automaticamente para os commits na master e o de produção apenas quando um usuário disparar o deploy via interface web do Buddy (<a href="http://app.buddy.works/">http://app.buddy.works/</a>).</p>
+
+<p>Precisamos preparar o OpenShift para montar esse processo, primeiramente criamos um <strong>Namespace</strong>. A forma como criamos um varia de vendor para vendor, no caso do OpenShift da <a href="undefined">Getup Cloud</a>, basta ir em <a href="https://portal.getupcloud.com/projects">https://portal.getupcloud.com/projects</a> e criar um novo projeto, o nome do projeto será o <strong>Namespace.</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2290/1*gAA4zDfRFyDcOEX2brKGoQ.png" alt="" /></p>
+
+<p>Tendo um <strong>Namespace</strong> precisamos de uma forma do Buddy se autenticar contra o OpenShift, para isso podemos criar um ServiceAccount e usar o <strong>Token</strong> do mesmo para isso. O script abaixo mostra como criar uma ServiceAccount e resgatar o <strong>Token</strong> usando o CLI do OpenShift:</p>
+
+<pre><code>**$ oc login https://api.getupcloud.com:443**
+Authentication required for https://api.getupcloud.com:443 ...
+Username: lucas.s.abreu@gmail.com
+Password:
+Login successful.
+...
+
+**$ oc project github-k8s-pr-envs #usar o seu projeto
+**Now using project &quot;github-k8s-pr-envs&quot; on server ...
+
+**$ oc create serviceaccount github
+**serviceaccount &quot;github&quot; created
+
+**$ oc policy add-role-to-user admin \
+    system:serviceaccount:github-k8s-pr-envs:github**
+
+**$ oc describe serviceaccount github
+**Name:  github
+Namespace: github-k8s-pr-envs
+Labels:  &lt;none&gt;
+
+Image pull secrets: github-dockercfg-vat7r
+
+Mountable secrets:  github-token-d3u3t
+                    github-dockercfg-vat7r
+
+Tokens:             github-token-2pimz
+                    github-token-d3u3t
+
+**$ oc describe secret github-token-d3u3t
+**Name:  github-token-d3u3t
+Namespace: github-k8s-pr-envs
+Labels:  &lt;none&gt;
+Annotations: kubernetes.io/service-account.name=github
+  kubernetes.io/service-account.uid=zzz
+
+Type: kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:  1066 bytes
+namespace: 18 bytes
+service-ca.crt: 2182 bytes
+token:  *token-do-openshift-que-estou-ocultando*
+</code></pre>
+
+<p>Agora podemos informar no Buddy algumas variáveis para ele disponibilizar para nós depois. Meu painel ficou como abaixo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*v_SuLh6P8_CSHG0uchNWGA.png" alt="buddy environments" /><em>buddy environments</em></p>
+
+<p>A URL da API e o domínio que o OpenShift irá utilizar também dependem do seu vendor, no meu caso a API está em <a href="https://api.getupcould.com:443">https://api.getupcould.com:443</a> e o domínio base é getup.io.</p>
+
+<p>Agora podemos criar os novos pipelines no Buddy. No buddy.yml as linhas abaixo:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/2210b0fd682d75e03cd6128923606398.js"></script>
+
+<p>Basicamente criei duas novas pipelines, uma chamada Deploy Staging e outra Deploy Production as únicas diferenças entre elas é que a Deploy Staging é automática para todo o commit na master e usa ENV=staging para indicar o ambiente; e Deploy Production é manual e usa ENV=production. Também criei variáveis para injetar os valores que informamos antes no Buddy e uma extra COMMIT para que ele consiga identificar qual imagem deve usar.</p>
+
+<p>Essas duas pipelines basicamente chamam o script abaixo:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/b29ad821b00c88122c7a80f9e2f3a110.js"></script>
+
+<p>Este script basicamente se autentica contra a API do OpenShift usando o Token que criamos antes, destrói a aplicação antiga e executa o deploy de uma nova.</p>
+
+<p>Para poder identificar quais os componentes de cada ambiente estou marcando eles com a label app=$ENV, dessa forma todos os componentes do ambiente staging estão marcados com app=staging e fica fácil eliminá-los e identificá-los.</p>
+
+<p>É importante ressaltar que estou usando uma imagem customizada para rodar esses comandos (lucassabreu/openshift-k8s-cli) que basicamente é um ubuntu com o oc instalado dentro dela.</p>
+
+<p>Também estou usando um truque de “templating” com o YAML que define os ambientes para poder inserir as variáveis de cada ambiente nele. Existem outras ferramentas mais avançadas como o <a href="https://github.com/kubernetes/helm">Helm</a>, mas para o meu exemplo templating com sed é o suficiente.</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/c262ed4cc2d92d6451cf9f6311fc4aa4.js"></script>
+
+<p>Agora toda vez que é feito commit na master o ambiente de <em>staging</em> é automaticamente atualizado, e ficou bem simples atualizar o ambiente <em>production</em>.</p>
+
+<p>Fonte até agora:
+<a href="https://github.com/lucassabreu/k8s-pr-envs/tree/v2">lucassabreu/k8s-pr-envs</a></p>
+
+<p>Agora que temos um processo de *build *e um de <em>deploy automatizado</em>, vamos adicionar a função de deploy por branch.</p>
+
+<p>Basicamente precisamos de duas novas etapas no nosso CI, uma para subir o ambiente para uma branch e outro para destruir esse ambiente.</p>
+
+<p>Primeiro vamos preparar o deploy por branch, para isso adicionei as seguintes linhas do buddy.yml:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/6530b9e0e76a2962d9707890c1384d2e.js"></script>
+
+<p>No novo pipeline *Review *temos um <em>build</em> da imagem e um deploy de um ambiente para a branch em questão, para uma rota própria.</p>
+
+<p>Eu acabei juntando essas duas ações, pois o build que roda na master vai versionando as imagens por commit, que é uma prática comum e que ajudaria a fazer o deploy para produção mais simples, porém branchs de desenvolvimento tendem a ser mais caóticas e iriam poluir muito o registro de imagens (se usar o do AWS seria um custo maior também), então preferi manter uma imagem por branch, até para não confundir também.</p>
+
+<p>Se eu criar uma nova branch nesse momento, o Buddy automaticamente irá montar uma imagem para ela e inseri-la no OpenShift, se o nome da branch for a-change o nome do ambiente <a href="http://github-k8s-pr-envs-a-change.getup.io">http://github-k8s-pr-envs-a-change.getup.io</a> (talvez ainda esteja acessível).</p>
+
+<p>Eu sei disso porque eu escrevi o script, eu poderia documentar isso no projeto para todos saberem como descobrir as URLs corretas, mas é mais do que natural esperar erros por esse caminho, um “o” que vira “a” na hora de digitar, um nome de branch estranho, etc.</p>
+
+<p>Dessa forma fica difícil para a equipe de QA acessar aos ambientes por branch toda a vez correndo o risco de errar. Então fiz algumas alterações no k8s/deploy para utilizar a <a href="https://developer.github.com/v3/repos/deployments/">API de Deployments do GitHub</a> para registrar as URLs diretamente nos commits.</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/f44b72cd1c0e62976ba0e0dfcfe819ed.js"></script>
+
+<p>Com isso faço algumas chamadas a API do GitHub usando o k8s/github-deployment (que é basicamente um facilitador para a API) e consigo registrar o deploy no GitHub.</p>
+
+<p>O Pull Request da branch a-change fica assim:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*wAfd3quKjHDT0moVuxu0jQ.png" alt="" /></p>
+
+<p>Nesse botão “View deployment” está o link para a rota que criamos no deploy, e dessa forma fica extremamente fácil para a equipe de QA acessar os ambientes.</p>
+
+<p>Fontes até agora:
+<a href="https://github.com/lucassabreu/k8s-pr-envs/tree/v3.1">lucassabreu/k8s-pr-envs</a></p>
+
+<p>Ainda fica faltando uma última atividade por realizar, que é destruir o ambiente da branch quando os Testers não mais precisarem deles.</p>
+
+<p>Então vamos adicionar uma nova pipeline no buddy.yml:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/4972923465c9ff8797c78df3c13db88b.js"></script>
+
+<p>Nesse pipeline manual basicamente chamamos o script k8s/destroy (que esta abaixo) que simplesmente destrói o ambiente inativa ele no GitHub.</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/1da85b4372312c7e374ac7dbed431ef8.js"></script>
+
+<p>Agora podemos chamar ele para eliminar os ambientes de branch em aberto.</p>
+
+<p>Fontes até o momento:
+<a href="https://github.com/lucassabreu/k8s-pr-envs/tree/v4">lucassabreu/k8s-pr-envs</a></p>
+
+<p>Um comportamento que ainda não conseguimos reproduzir usando o Buddy e GitHub é destruir os ambientes quando o Pull Request é finalizado.</p>
+
+<p>Para resolver esse problema podemos adicionar um webhook no GitHub e dispararmos o pipeline através desse webhook. Isso pode ser feito de várias formas, usando Lambda Functions ou um endpoint para esse fim.</p>
+
+<p>No caso criei um novo Pod com um contêiner que criei (lucassabreu/buddy-works-pullrequest-webhook) e associei ela no meu projeto no GitHub.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2146/1*jq2rV61SvpcYOFPnJ7fLtQ.png" alt="" /></p>
+
+<p>E pronto tenho um processo completo, mesmo que se esqueçam de derrubar o ambiente no momento que o merge acontecer automaticamente o ambiente será destruído.</p>
+
+<p>Abaixo esta o meu “webhook” caso opte por um caminho semelhante e poder ter uma base de como é a chamada.
+<a href="https://github.com/lucassabreu/buddy-works-pullrequest-webhook"><strong>lucassabreu/buddy-works-pullrequest-webhook</strong>
+Contribute to buddy-works-pullrequest-webhook development by creating an account on GitHub.github.com</a></p>
+
+<p>Foi mais complexo implementar a integração do OpenShift com o GitHub, mas ainda sim temos um grande ecossistema de integrações que nos permitem contornar essa questão, e o resultado continua sendo o esperado.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fambientes-por-branch-com-openshift-next-gen-usando-github%2f - Ambientes%20por%20Branch%20com%20OpenShift%20Next%20Gen%20Usando%20GitHub by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

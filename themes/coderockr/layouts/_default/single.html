@@ -22,6 +22,7 @@
                       {{ end}}
                       </span>
                     </h2>
+                    <h3 class="author"><span>by</span> {{ .Params.Author | plainify }}</h3>
                 </header>
                 {{ if .Site.Params.enableToc }}
                   {{ if .TableOfContents }}

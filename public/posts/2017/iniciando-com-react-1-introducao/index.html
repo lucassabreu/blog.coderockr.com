@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Iniciando com React - #1 Introdução"/>
+  <meta name="twitter:description" content="React é uma biblioteca Javascript do Facebook para a construção de interfaces web. No mercado desde 2013, vem sendo utilizada por aplicações de alto escala..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Iniciando com React - #1 Introdução &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Iniciando com React - #1 Introdução
+                    </h1>
+                    <h2 class="headline">
+                    Mar 13, 2017 00:00
+                    · 398 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>React é uma biblioteca Javascript do Facebook para a construção de interfaces web. No mercado desde 2013, vem sendo utilizada por aplicações de alto escala. Entre as principais empresas que adotaram e apostam na <em>lib</em>, estão Facebook, AirBnb, Instagram e Twitter. Por muitas vezes mencionado como o <strong>V</strong> do <a href="https://pt.wikipedia.org/wiki/MVC">MVC</a>, o React se propõe a controlar a camada da <strong>View</strong>, proporcionando total liberdade para o programador tomar decisões em relação ao resto da arquitetura da aplicação.</p>
+
+<h2 id="interface-declarativa">Interface Declarativa</h2>
+
+<p>O React permite que nós construamos interfaces interativas de uma maneira fácil e elegante. Com ele, é possível desenvolver <strong>Views</strong> que são renderizadas de acordo com cada estado da aplicação. Ele se responsabiliza por renderizar e atualizar somente o necessário, o que lhe dá um ganho de performance em comparação a Frameworks mais antigos que reconstruíam todo o <em>HTML</em> a cada alteração no estado. Sua forma declarativa de criar componentes, torna nosso código mais previsível e fácil de debugar.</p>
+
+<p>Abaixo segue um exemplo da definição de um componente que chamaremos de <strong>Button</strong>:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/14500e8af29ba3e2a9709d81c80fe656.js"></script>
+
+<p><img src="https://cdn-images-1.medium.com/max/3646/1*3Q2z7pDtYByN2CIl0QCAEQ.png" alt="Componente Button renderizado." /><em>Componente Button renderizado.</em></p>
+
+<blockquote>
+<p>Em um próximo post, abordaremos os passos para criar um componente e explicaremos em detalhes cada item que compõe o código acima.</p>
+</blockquote>
+
+<h2 id="componentes">Componentes</h2>
+
+<p>Somos levados a repensar o desenvolvimento de nossas aplicações de modo que toda a interface seja baseada em componentes. É possível construir componentes simples que gerenciam seu próprio estado e utilizá-los para compor componentes mais complexos. Desse modo, é possível levar a reutilização de código a um novo nível. A lógica dos componentes é toda escrita em Javascript e não em templates, isso nos permite manter separados o estado da nossa aplicação do <a href="https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM">DOM</a>.</p>
+
+<p>Segue abaixo um exemplo da definição de um componente <strong>GroupButton</strong>, que reutiliza o componente <strong>Button</strong> que vimos acima:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/9d57df679a4146183b15cf018a550d11.js"></script>
+
+<p><img src="https://cdn-images-1.medium.com/max/3646/1*fF3gVcC_INGvPhieNoGA3A.png" alt="Componente GroupButton renderizado." /><em>Componente GroupButton renderizado.</em></p>
+
+<h2 id="desacoplamento">Desacoplamento</h2>
+
+<p>Como dissemos anteriormente, o React se responsabiliza somente pela <strong>View</strong> e não opina sobre o resto das tecnologias utilizadas. Sua natureza síncrona e sua propagação de dados unidirecional, permite que ele seja facilmente integrado a outras <em>libs</em>.</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Com essas características, o React se faz uma ótima escolha para construção de aplicações robustas que dependem de manutenibilidade, escalabilidade e perfomance. Inúmeras empresas estão construindo ou migrando suas aplicações para essa tecnologia, por conta disso o mercado tem se mostrado bem aquecido e semanalmente aparecem anúncios de vagas para profissionais que conhecem a biblioteca.</p>
+
+<p>No próximo post aprenderemos a criar a estrutura básica de um projeto React.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2finiciando-com-react-1-introducao%2f - Iniciando%20com%20React%20-%20%231%20Introdu%c3%a7%c3%a3o by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

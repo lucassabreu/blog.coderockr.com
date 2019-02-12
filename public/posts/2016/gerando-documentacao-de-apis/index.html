@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Gerando documentação de APIs"/>
+  <meta name="twitter:description" content="Uma das melhores decisões técnicas que tomei na minha carreira foi investir pesado nas arquiteturas baseadas em serviços..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Gerando documentação de APIs &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Gerando documentação de APIs
+                    </h1>
+                    <h2 class="headline">
+                    May 31, 2016 00:00
+                    · 329 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/api">API</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Uma das melhores decisões técnicas que tomei na minha carreira foi investir pesado nas arquiteturas baseadas em serviços. Meu primeiro post sobre isso data de 2011 e desde então esta decisão só se provou um acerto.</p>
+
+<p>Uma das tarefas mais importantes, e chatas, é manter a documentação das APIs sempre atualizadas pois elas são consumidas por cada vez mais camadas: frontend, mobile, outros serviços e sistemas. Existem várias ferramentas para esta tarefa, sendo uma das mais completas, e complexas, o <a href="http://swagger.io">Swagger</a>, além de alguns serviços pagos. Estamos usando o Swagger em um <a href="http://compufacil.com.br">grande projeto</a>, mas eu estava a procura de algo mais simples para ser usado no <a href="http://planrockr.com">Planrockr</a> e encontrei o <a href="http://apidocjs.com">APIDOC</a>.</p>
+
+<p>Trata-se de um aplicativo escrito para o NodeJS que lê anotações nos seus códigos e gera uma documentação em HTML bem simples mas eficaz. Além das linguagens que usam o formato <em>Javadoc Style</em> ( C#, Go, Dart, Java, JavaScript, PHP, TypeScript) ele consegue gerar documentação em arquivos CoffeeScript, Elixir, Erlang, Perl, Python e Ruby.</p>
+
+<p>Para instalar a ferramenta é necessário ter instalado o gerenciador de pacotes do NodeJS, o <em>npm</em> e rodar o comando:
+&gt; npm install apidoc -g</p>
+
+<p>No site oficial é possível ver todas as anotações disponíveis, mas abaixo um exemplo de uma documentação do Planrockr:
+<script type="application/javascript" src="//gist.github.com/eminetto/9d02d3aa6f88a12906cff0cb4e23d0ba.js"></script></p>
+
+<p>O próximo passo é criar na raiz do seu projeto um arquivo chamado <em>apidoc.json</em> com algumas configurações básicas:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/0dc68c8f9e63fe0a47984ac2042c21f5.js"></script>
+
+<p>E para gerar a documentação basta executar:</p>
+
+<pre><code>apidoc -c apidoc.json -i . -e backend/vendor -e planrockr-backend/frontend/bower_components -o ./apidoc
+</code></pre>
+
+<p>Para ver as opções do comando é só usar o comando
+&gt; apidoc — help</p>
+
+<p>Alguns exemplos da documentação gerada:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*uYXELHo3aMZqQ5Fj.png" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*PyKQTawW_py_NIvq.png" alt="" /></p>
+
+<p>Além de ser bem bonita e fácil de acessar é possível incluir a sua geração em um script de commit, build ou deploy. E por suportar várias linguagens é fácil manter uma documentação unificada e gerada automaticamente.</p>
+
+<p>O que você vem usando para esta tarefa? Se tiver outra sugestão por favor complemente aqui nos comentários.</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/blog/2016/06/01/gerando-documentacao-de-apis/">eltonminetto.net</a> on June 1, 2016.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fgerando-documentacao-de-apis%2f - Gerando%20documenta%c3%a7%c3%a3o%20de%20APIs by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

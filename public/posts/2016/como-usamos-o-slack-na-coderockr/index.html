@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Como Usamos o Slack na Coderockr"/>
+  <meta name="twitter:description" content="Dentre os valores da Coderockr estão dois pontos importantes: cooperação e transparência. Como somos uma empresa que desenvolve software nada mais esperado..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Como Usamos o Slack na Coderockr &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Como Usamos o Slack na Coderockr
+                    </h1>
+                    <h2 class="headline">
+                    Jul 21, 2016 00:00
+                    · 452 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Dentre os valores da Coderockr estão dois pontos importantes: cooperação e transparência. Como somos uma empresa que desenvolve software nada mais esperado do que usarmos aplicativos para ajudar nestes objetivos. E hoje a principal ferramenta para isso é o Slack, que rapidamente tornou-se o coração de muitas empresas</p>
+
+<p>Nós usamos o Slack como o nosso canal de comunicação, tanto entre as equipes quanto com os clientes. Cada projeto recebe um canal específico, como no exemplo abaixo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*lSu6V-IcO7nfy6kP.png" alt="" /></p>
+
+<p>Os canais que eu ocultei são relativos a projetos de clientes, já os canais “planrockr” e “timerockr” são projetos da Coderockr. Um destaque aqui é o canal “exceptions” onde todos os projeto enviam os erros que acontecem. Vou comentar mais sobre isso abaixo.</p>
+
+<p>Projetos maiores ganham uma organização separada:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*UowjYw_zFCHEw9yK.png" alt="" /></p>
+
+<p>Neste exemplo dividimos melhor os assuntos entre as equipes de “backend”, “frontend”, “testing” e por localização, como a “joinville”, já que temos equipes trabalhando em outras cidades. No canal “devops” encontram-se as mensagens geradas pelas ferramentas de teste e deploy que vou citar abaixo.</p>
+
+<p>A parte da colaboração é fácil de entender no Slack, mas e quanto ao ponto “transparência” que eu comentei lá no começo? Nós usamos o Slack para centralizar todos os fatos relevantes que acontecem nos projetos, através de integração de ferramentas. Alguns exemplos de integrações que usamos:</p>
+
+<ul>
+<li><p>Jira envia para o canal #devops a criação de novas tarefas, a mudança de status (To Do, Doing, Done, etc). O mesmo para os <a href="https://www.youtube.com/watch?v=oybYF8XhXjs&amp;index=2&amp;list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">projetos onde usamos o Trello</a></p></li>
+
+<li><p>Github (ou o Bitbucket) envia para o canal #devops (ou o canal do projeto) a criação de Pull Requests, commits, <a href="https://www.youtube.com/watch?v=0JDFcT3uCSs&amp;index=3&amp;list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">branches</a></p></li>
+
+<li><p>O DeployBot envia para o #devops o resultado do <a href="https://www.youtube.com/watch?v=5fiVaCszbDs&amp;index=7&amp;list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">deploy</a> para um dos ambientes como homolog ou produção</p></li>
+
+<li><p>O <a href="https://www.youtube.com/watch?v=0sVeYpUiJig&amp;index=4&amp;list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">Codacy</a> envia para o #devops a nota do commit que o desenvolvedor acabou de enviar para o repositório</p></li>
+
+<li><p>O Buildkite avisa, também em #devops ou no canal do projeto, o resultado do <a href="https://www.youtube.com/watch?v=TpeOwCzsVKg&amp;index=6&amp;list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">build</a> de determinada funcionalidade</p></li>
+
+<li><p>Algum erro acontece em um dos servidores e este erro é enviado direto para o canal #exceptions. Como a maioria dos nossos servidores usa PHP usamos o componente Monolog para fazer isso. Apresentei uma <a href="http://www.slideshare.net/eminetto/lets-log">palestra</a> sobre isso recentemente</p></li>
+</ul>
+
+<p>Também é possível criar comandos dentro do Slack para que ele execute tarefas para você:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*u9-kJZl315ey_RUD.png" alt="" /></p>
+
+<p>Rapidamente o Slack se tornou uma ferramenta indispensável para nós e temos ótimos resultados com ela. E você, como usa a ferramenta? Quer compartilhar outros truques e dicas?</p>
+
+<p>Se você quer saber mais detalhes sobre a metodologia de trabalho que criamos na Coderockr confira nossa série de videos sobre o “<a href="https://www.youtube.com/playlist?list=PLkS5lYehKysZhw1prsoZQhiVfbYA5fEGz">Coderockr Way</a>”. E se procura uma ferramenta para tornar seus projetos ainda mais inteligentes não deixe de conferir o <a href="http://planrockr.com">http://planrockr.com</a></p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2016-07-22-como-usamos-o-slack-na-coderockr/">eltonminetto.net</a> on July 22, 2016.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fcomo-usamos-o-slack-na-coderockr%2f - Como%20Usamos%20o%20Slack%20na%20Coderockr by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>
