@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Criptografia on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/criptografia/</link>
+    <link>https://blog.coderockr.com/tags/criptografia/</link>
     <description>Recent content in Criptografia on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 31 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/criptografia/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/criptografia/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicando HTTPS para uma SPA na AWS</title>
-      <link>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</link>
+      <link>https://blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</link>
       <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</guid>
       <description>Recentemente passamos a servir a nossa landing page e o SPA do Planrockr sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend, mas percebemos que seria melhor que nosso frontend também usasse.
 Alguns dos motivos por traz disso seriam para melhorar o ranking em sites de pesquisa, para garantir ainda mais a segurança nas comunicações, e também para passar mais segurança para os nossos usuários.
 Como estamos servindo nosso frontend usando o S3 da AWS, é apenas uma questão de colocar um CloudFront na frente e alterar a rota no Route 53 e tudo passa a funcionar, mas acabou dando alguma dor de cabeça, não por ser uma tarefa difícil, mas simplesmente por termos encontrado instruções confusas e errôneas quando pesquisamos como executar a migração.</description>
@@ -24,10 +24,10 @@ Como estamos servindo nosso frontend usando o S3 da AWS, é apenas uma questão 
     
     <item>
       <title>Como Lidar com Senhas Inseguras em Projetos Legados</title>
-      <link>//blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</link>
+      <link>https://blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</guid>
       <description>Aqui na Coderockr nós eventualmente nos deparamos com sistemas legados e muitas vezes inseguros. Um dos problemas mais comuns é a utilização de funções hash como MD5, SHA1, SHA-256 em senhas. O uso dessas funções apresenta alguns riscos que as aplicações não deveriam estar correndo, mas antes de abordar as soluções, vamos ver porque o uso deses algoritmos de hash representam um risco de segurança.
 Por que funções hash não devem ser usadas em senhas?</description>
     </item>

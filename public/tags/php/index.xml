@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/php/</link>
+    <link>https://blog.coderockr.com/tags/php/</link>
     <description>Recent content in Php on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Mon, 29 Aug 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gerando Code Coverage com PHPUnit e phpgbg</title>
-      <link>//blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</link>
+      <link>https://blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</link>
       <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</guid>
       <description>Em um post anterior eu mostrei alguns truques para identificar testes que estão demorando muito para serem executados. Neste texto vou mostrar uma forma de melhorar a performance da geração do relatório de cobertura de códigos usando o PHPUnit.
 É possível incluir configurações no arquivo phpunit.xml para que sejam gerados relatórios relativos aos testes que estão sendo executados. Por exemplo:
  Desta forma será criado o diretório tests/_reports com uma série de informações úteis.</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>Como Melhorar seus Códigos Usando Object Calisthenics</title>
-      <link>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</link>
       <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</guid>
       <description>Em um dos primeiros projetos que a Coderockr participou tivemos o privilégio de trabalhar com um “dream team”: Eduardo Shiota, Guilherme Blanco, Rafael Dohms e Otavio Ferreira (em ordem alfabética porque é impossível perfilá-los em qualquer ordem de relevância).
 Neste projeto foi possível aprimorarmos vários pontos importantes como TDD, Scrum, trabalho remoto, análise, integração contínua, etc. Mas o que mais me marcou foram os conceitos de Clean Code e Object Calisthenics que eram aplicados ao projeto.</description>
     </item>
     
     <item>
       <title>Melhorando a Performance do PHPUnit</title>
-      <link>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</link>
+      <link>https://blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</link>
       <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</guid>
       <description>Em pleno 2016 acho que não preciso gastar caracteres comentando a importância dos TDD no desenvolvimento de software, porque você já está escrevendo testes, certo?
 O que eu vou comentar aqui é a importância deles executarem o mais rápido possível, porque se o processo de execução de testes for algo lento a tendência é o desenvolvedor escrever menos, ou executá-los esporadicamente.
 Mas como identificar quais testes estão demorando mais e como melhorar a sua performance?</description>
@@ -45,20 +45,20 @@ Mas como identificar quais testes estão demorando mais e como melhorar a sua pe
     
     <item>
       <title>O Fim dos Frameworks Full Stack</title>
-      <link>//blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</link>
+      <link>https://blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</link>
       <pubDate>Tue, 15 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</guid>
       <description>Venho acompanhando de perto a evolução dos frameworks PHP desde meados de 2004 e me parece que todos estão caminhando para uma abordagem cada vez mais focada ao conceito de micro-frameworks.
 Um pouco de história… Nos primórdios havia o caos, e então veio o Ruby on Rails… E as outras linguagens viram que era legal e criaram suas versões do “framework MVC perfeito”, como o Zend Framework, Symfony, CakePHP, Code Igniter, etc.</description>
     </item>
     
     <item>
       <title>Doctrine 2 - Contribution Touch</title>
-      <link>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</link>
+      <link>https://blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</link>
       <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</guid>
       <description>One of my goals for 2016 is to be a par excellence open source contributor. The project I’m aiming to focus my work is on the Doctrine 2, for lots of reasons. Firstly because it’s an excellent project with lots of the top PHP developers. Did you know that @ocramius is the most assiduous contributor on Github? Secondly I use it on a daily basis at work, so the more I’m proficient at it, the better asset am I for Compufácil.</description>
     </item>
     

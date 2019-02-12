@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redux on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/redux/</link>
+    <link>https://blog.coderockr.com/tags/redux/</link>
     <description>Recent content in Redux on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 19 Oct 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/redux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Como React e Redux me Fizeram um Programador Melhor</title>
-      <link>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
       <description>Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso.
 Quando começamos a trabalhar como programadores, é muito comum aprendermos a trabalhar com abstrações que facilitam nosso caminho e nossa curva de aprendizado. Um grande exemplo disso é o jQuery, que provavelmente é a primeira lib que os desenvolvedores Frontend tem contato.</description>
     </item>
     
     <item>
       <title>Requisições Assíncronas em Redux</title>
-      <link>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</link>
       <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</guid>
       <description>Quando se está começando a aprender Redux, uma das dúvidas mais comuns é como fazer requisições assíncronas.
 Observando os exemplos básicos, que implementam apenas actions comuns, não fica tão óbvio qual abordagem utilizar ao fazer uma integração com uma API.
 Neste post, mostrarei como implementar um middleware, que ficará responsável por interpretar um padrão de específico de action (async action) e gerenciar nossas requisições, disparando uma action correspondente para cada momento das mesmas.</description>
@@ -34,10 +34,10 @@ Neste post, mostrarei como implementar um middleware, que ficará responsável p
     
     <item>
       <title>Conhecendo o Básico do Redux</title>
-      <link>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</guid>
       <description>Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?
 Concebido por Dan Abramov, redux é um padrão de arquitetura de aplicação, inspirado no Flux do Facebook e simplificado com ajuda de algumas práticas do Elm. Redux lhe da o poder de construir aplicações consistentes e controlar a forma como os dados fluem e são transformados, seguindo três princípios:
 1. Single source of truth (SSOT) Todo o estado da sua aplicação é armazenado em uma única árvore de objetos, dentro de uma única store.</description>
@@ -45,10 +45,10 @@ Concebido por Dan Abramov, redux é um padrão de arquitetura de aplicação, in
     
     <item>
       <title>Learning the Basics About Redux</title>
-      <link>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</guid>
       <description>Redux is a predictable state container for JavaScript Applications, but what does that mean?
 Created by Dan Abramov, Redux is an application architecture pattern based on Flux ideas and simplified with concepts from Elm. Redux gives you the power to build consistent applications and to control the way your data flows and is transformed, following three principles:
 1. Single Source of Truth (SSOT) The entire state of your application is stored in an object tree within a single store.</description>

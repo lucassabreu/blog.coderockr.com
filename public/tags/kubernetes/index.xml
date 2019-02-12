@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/kubernetes/</link>
+    <link>https://blog.coderockr.com/tags/kubernetes/</link>
     <description>Recent content in Kubernetes on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 10 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 4</title>
-      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</link>
+      <link>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</link>
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</guid>
       <description>Este post é a quarta parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.
  Parte 1 — Conceitos Básicos: clique aqui
  Parte 2 — Construindo o Ambiente: clique aqui
@@ -26,10 +26,10 @@
     
     <item>
       <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 3</title>
-      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</link>
+      <link>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</link>
       <pubDate>Thu, 09 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</guid>
       <description>Este post é a terceira parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.
  Parte 1 — Conceitos Básicos: clique aqui
  Parte 2 — Construindo o Ambiente: clique aqui
@@ -39,10 +39,10 @@
     
     <item>
       <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 2</title>
-      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</link>
+      <link>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</guid>
       <description>Este post é parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido os post anteriores recomendo lê-los e depois voltar aqui para não ficar perdido.
  Parte 1 — Conceitos Básicos: clique aqui
  Parte 3 — Volumes Persistentes: clique aqui
@@ -52,10 +52,10 @@
     
     <item>
       <title>Um Ambiente Simples Usando Kubernetes e OpenShift Next Gen — Parte 1</title>
-      <link>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</link>
+      <link>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</guid>
       <description>Como parte das minhas metas dentro da Coderockr está a construção de um cluster usando algumas das ferramentas de orquestração de contêineres que existem no mercado; como o Docker Swarm, Kubernetes, Apache Mesos, etc.
 Optei pelo Kubernetes no momento, tanto pelo pedigree, criado pelo Google e mantido pela Cloud Native Computing Foundation; quanto pela oferta de grandes clouds como a Red Hat, Azure e Google.
 Quando estava avaliando as opções disponíveis, o Jean Carlo Machado (colega da CompuFácil), me sugeriu usar o **OpenShift Next Gen**, a plataforma da Red Hat para Kubernetes, que esta em Developer Preview permitindo que você se cadastre para testar a ferramenta deles por 30 dias.</description>
