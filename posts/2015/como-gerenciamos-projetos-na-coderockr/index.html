@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Como Gerenciamos Projetos na Coderockr"/>
+  <meta name="twitter:description" content="A Coderockr é, simplificando bastante, uma empresa de projetos de software. Para conseguirmos cumprir nosso propósito precisamos gerenciar projetos..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Como Gerenciamos Projetos na Coderockr &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Como Gerenciamos Projetos na Coderockr
+                    </h1>
+                    <h2 class="headline">
+                    Jun 25, 2015 00:00
+                    · 731 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/gerenciamento-de-projetos">Gerenciamento de Projetos</a>
+                          
+                              <a href="//blog.coderockr.com/tags/metodologias">Metodologias</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>A Coderockr é, simplificando bastante, uma empresa de projetos de software. Para conseguirmos cumprir nosso propósito precisamos gerenciar projetos com qualidade e eficiência. Neste post vamos comentar como fazemos isso.</p>
+
+<h2 id="metodologia">Metodologia</h2>
+
+<p>Desde o nascimento da Coderockr sempre tivemos como foco o uso de metodologias ágeis, principalmente devido a natureza dos projetos e dos clientes que atendemos, que precisam responder rápido a mudanças. Após muito estudo e experiências chegamos a conclusão que a melhor metodologia para nossos projetos é o Kanban. Na nossa experiência o Scrum mostrou-se um pouco burocrático, com suas reuniões e sprints de tamanho fixo. Nós quebramos as tarefas em tamanhos similares, para podermos calcular o tempo médio de entrega, e criamos quadros para cada projeto, com as fases:</p>
+
+<ul>
+<li><p><strong>To Do</strong>: lista de tarefas a serem realizadas. O cliente pode adicionar tarefas a qualquer momento e reordená-las de acordo com a prioridade.</p></li>
+
+<li><p><strong>In Progress</strong>: são as tarefas que estão sendo trabalhadas, seja código, análise, arquitetura, criação de servidores, design, etc.</p></li>
+
+<li><p><strong>Review</strong>: todas as tarefas passam por revisão de outra pessoa. Se é uma tarefa de código cada tarefa gera um <em>branch</em> no <em>git</em> e quando o desenvolvedor move para Review ele cria um <em>Pull Request</em> para outra pessoa avaliar. As <em>branches</em> sempre são criadas a partir da *branch master *e quando aprovadas o <em>merge</em> é feito também para a <em>master</em>. Usamos algo bem similar ao <a href="https://guides.github.com/introduction/flow/">Github Flow</a> como metodologia de desenvolvimento e escrevemos um <a href="https://medium.com/@coderockr/a-import%C3%A2ncia-da-revis%C3%A3o-de-c%C3%B3digo-a1a8b41ed7ff">post</a> sobre a importância da revisão de código.</p></li>
+
+<li><p><strong>Testing</strong>: após o <em>Pull Request</em> ser aprovado fazemos o <em>deploy</em> da tarefa para um servidor de testes/homologação onde outra pessoa, geralmente o cliente, faz mais uma sessão de testes. Os testes unitários além de serem executados pelos desenvolvedores são feitos novamente pelo servidor de integração contínua.</p></li>
+
+<li><p><strong>Done</strong>: após todos os testes e correções terem sido feitos, o <em>deploy</em> é realizado para o servidor de produção.</p></li>
+</ul>
+
+<p>Encontramos diversas vantagens neste processo. O cliente agora não precisa esperar até o final do <em>sprint</em> para ver o resultado da tarefa pois fazemos entregas contínuas. Para os desenvolvedores é motivador ver o processo evoluindo e mais coisas sendo entregues. Como as tarefas são pequenas (geralmente tentamos quebrar em tarefas que não demorem mais do que 1.5 dias para serem feitas) as mudanças são mais fáceis de serem realizadas.</p>
+
+<h2 id="equipe">Equipe</h2>
+
+<p>Em cada projeto além dos desenvolvedores temos duas figuras importantes:</p>
+
+<ul>
+<li><p><strong>O gerente de projetos</strong>. Ele é responsável por coordenar a equipe, conversar com o cliente e acompanhar o andamento das tarefas. Como a maioria dos contratos da Coderockr é no formato “banco de horas”, onde o cliente compra X horas/mês é papel do gerente acompanhar o consumo destas horas e manter o cliente atualizado.</p></li>
+
+<li><p><strong>O líder técnico</strong>. Geralmente é uma pessoa que tem mais experiência nas tecnologias usadas no projeto ou com o próprio negócio do cliente. É seu papel auxiliar o gerente na definição das tarefas, ajudar a equipe a resolver problemas mais complexos, auxiliar na definição da arquitetura das soluções, escalabilidade, performance e qualidade.</p></li>
+</ul>
+
+<p>Em alguns projetos menores estes papéis podem ser desempenhados por uma mesma pessoa e um desenvolvedor de um projeto pode ser líder técnico de outro.</p>
+
+<h2 id="ferramentas">Ferramentas</h2>
+
+<p>Dentre todos os tópicos desde post este é o mais volátil. Todos os dias surgem ótimas novas ferramentas para auxiliar no desenvolvimento de software, análise de qualidade e na gestão de projetos. Atualmente na nossa caixa de ferramentas temos:</p>
+
+<ul>
+<li><p><strong>Bitbucket</strong> para gerenciar os repositórios privados.</p></li>
+
+<li><p><strong>Github</strong> para gerenciar os <a href="https://github.com/coderockr">repositórios públicos.</a></p></li>
+
+<li><p><strong>Jira</strong> para os projetos mais complexos. Ele possui ótimos relatórios como o <em>Control Chart</em> que nos permite acompanhar o tempo médio de entrega das tarefas, entre outros. E a integração com o Bitbucket é bem interessante.</p></li>
+
+<li><p><strong>Trello</strong> para projetos menores. O Trello é uma ferramenta muito útil e versátil mas faltam relatórios estatísticos que são importantes para a gestão de projetos maiores.</p></li>
+
+<li><p><strong>Codeship</strong> como servidor de integração contínua. Também estamos testando o <a href="https://www.phptesting.org/">PHPCI</a> em alguns projetos. O deploy fazemos com scripts PHP criados com o <a href="http://eltonminetto.net/blog/2015/03/18/usando-o-deployer/">deployer.</a></p></li>
+
+<li><p><strong>PHPCS, PHPMD, PHPCPD, PHPUnit</strong>. Usamos ferramentas para auxiliar no processo de revisão de código e testes. Também estamos avaliando ferramentas como o <a href="https://www.codacy.com">Codacy</a> e o <a href="https://insight.sensiolabs.com/">SensioLabsInsight.</a></p></li>
+
+<li><p><strong>Tiempo</strong> para anotarmos as horas que estamos trabalhando em cada projeto.</p></li>
+</ul>
+
+<p>O mais importante conceito que tentamos manter sempre em nossas mentes é a evolução. A cada erro aprendemos como fazer melhor, com cada nova ferramenta ou nova ideia que surge tentamos chegar mais próximo da perfeição.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2015%2fcomo-gerenciamos-projetos-na-coderockr%2f - Como%20Gerenciamos%20Projetos%20na%20Coderockr by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

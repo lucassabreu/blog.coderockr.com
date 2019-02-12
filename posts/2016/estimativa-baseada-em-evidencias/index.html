@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Estimativa Baseada em Evidências"/>
+  <meta name="twitter:description" content="As pessoas, salvo alguns místicos, não são muito boas em prever o futuro..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Estimativa Baseada em Evidências &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Estimativa Baseada em Evidências
+                    </h1>
+                    <h2 class="headline">
+                    Jun 2, 2016 00:00
+                    · 607 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/metodologias">Metodologias</a>
+                          
+                              <a href="//blog.coderockr.com/tags/gerenciamento-de-projetos">Gerenciamento de Projetos</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>As pessoas, salvo alguns místicos, não são muito boas em prever o futuro.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2560/1*I7neRm3n2G9LgGEwOObahg.jpeg" alt="[https://www.flickr.com/photos/pasukaru76/3998273279/](https://www.flickr.com/photos/pasukaru76/3998273279/)" /><em><a href="https://www.flickr.com/photos/pasukaru76/3998273279/">https://www.flickr.com/photos/pasukaru76/3998273279/</a></em></p>
+
+<p>Portanto é bem provável que as suas estimativas de entregas de tarefas e projetos não sejam tão precisas quanto seu cliente espera, certo? Felizmente temos outros recursos a nossa disposição para suprir essa nossa deficiência: fatos, números e computadores rápidos o suficiente para processá-las.</p>
+
+<p>Vamos fazer uma simples &ldquo;conta de padaria&rdquo; e imaginar o seguinte cenário:</p>
+
+<blockquote>
+<p>Dado um projeto a ser entregue o gerente de projetos, junto com a equipe de preferência, dividiu as funcionalidades em um número de tarefas, digamos 200. Sabe-se que a equipe consegue entregar 20 tarefas por semana, então o projeto seria finalizado em 10 semanas.</p>
+</blockquote>
+
+<p>Fácil! Calma jovem Padawan, calma, a vida não é tão simples…</p>
+
+<p>O que pode acontecer nesse cenário:</p>
+
+<ul>
+<li><p>Novas tarefas podem surgir durante o desenvolvimento</p></li>
+
+<li><p>Bugs podem ser encontrados</p></li>
+
+<li><p>As tarefas não são todas do mesmo tamanho/complexidade</p></li>
+
+<li><p>Novas pessoas podem entrar ou sair da equipe, mudando a velocidade das entregas</p></li>
+
+<li><p>Um apocalipse zumbi pode acontecer e os backend developers tornam-se consumidores de cérebro humano</p></li>
+</ul>
+
+<p>Quanto ao último item pouco podemos fazer, além de estocar armas e comida em casa, mas os outros podem ser mitigados.</p>
+
+<p>Como sabemos que novas tarefas/bugs podem surgir durante o desenvolvimento, vamos considerar uma margem de erro e assumir que o número de tarefas seja entre 200 e 240, por exemplo.</p>
+
+<p>Para o problema das tarefas não serem todas da mesma complexidade podemos adotar uma regra simples: nenhuma tarefa deve demorar mais do que X horas para ser entregue. Na <a href="http://coderockr.com">Coderockr</a> adotamos 16 horas, ou seja, nenhuma tarefa demora mais do que 2 dias para ser finalizada. Claro que algumas ainda são bem menores do que 2 dias, mas desta forma temos uma diferença pequena entre elas e não uma tarefa que demora 1 hora e outra 3 dias.</p>
+
+<p>Quanto a velocidade do time, também podemos assumir uma margem de erro. Digamos que a equipe entrega entre 20 e 30 tarefas por semana, assim temos uma variação que contempla coisas como computadores com problemas, faltas por doença, feriados, etc.</p>
+
+<p>Ok, mas agora como usar isso tudo no nosso cálculo? Simples:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5184/1*i4Q-IyYPJdjCerhCU7QGjA.jpeg" alt="[https://www.flickr.com/photos/lisabrideau/with/5213615948/](https://www.flickr.com/photos/lisabrideau/with/5213615948/)" /><em><a href="https://www.flickr.com/photos/lisabrideau/with/5213615948/">https://www.flickr.com/photos/lisabrideau/with/5213615948/</a></em></p>
+
+<p>Não, não vou sugerir que você largue tudo e vá tentar a sorte em Las Vegas, apesar de eu já ter cogitado isso algumas vezes…</p>
+
+<p>Vamos usar uma técnica chamada &ldquo;Método de Monte Carlo&rdquo;. Segundo a <a href="https://pt.wikipedia.org/wiki/Método_de_Monte_Carlo">Wikipedia</a> são:</p>
+
+<blockquote>
+<p>… métodos estatísticos que se baseiam em amostragens aleatórias massivas para obter resultados numéricos, isto é, repetindo sucessivas simulações um elevado numero de vezes, para calcular probabilidades heuristicamente, tal como se, de facto, se registrassem os resultados reais em jogos de casino (daí o nome)</p>
+</blockquote>
+
+<p>Vamos pegar estes dados e realizar diversas simulações de possíveis cenários, digamos 1000, e contamos a probabilidade deles acontecerem. Com isso podemos ter algo similar a isso:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2398/1*ezArcqj65E2BHD4DseC7KQ.png" alt="" /></p>
+
+<p>Conforme as semanas vão passando e as tarefas sendo entregues, a equipe pode ir atualizando este gráfico usando os dados mais precisos e acompanhando os resultados. Quanto mais dados ou evidências tivermos, mais preciso este método vai se tornando e as equipes podem ir acompanhando sua evolução.</p>
+
+<p>Quer testar esse método? Criamos um site para facilitar isso, o <a href="http://www.estimeoprazo.com.br">http://www.estimeoprazo.com.br</a>. Nele é possível inserir os dados de número de tarefas e entregas e a tabela acima é apresentada com as suas estimativas. E se você quiser tornar isso ainda mais automático estamos implementando essa funcionalidade na nova versão do <a href="http://planrockr.com">iMasters Planrockr</a>, por isso <a href="https://app.planrockr.com/app/#/signup">cadastre-se agora</a> e em breve você vai ter acesso aos seus dados na forma de um widget:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*EI0NS5YgMd-xrYETtkBMXw.png" alt="" /></p>
+
+<p>O que acha deste método? Você já vem usando ele ou tem alguma sugestão de melhoria? Adoraríamos ouvir suas experiências.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2festimativa-baseada-em-evidencias%2f - Estimativa%20Baseada%20em%20Evid%c3%aancias by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

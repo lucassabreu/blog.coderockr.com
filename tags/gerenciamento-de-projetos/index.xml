@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gerenciamento De Projetos on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/gerenciamento-de-projetos/</link>
+    <description>Recent content in Gerenciamento De Projetos on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 02 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/gerenciamento-de-projetos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estimativa Baseada em Evidências</title>
+      <link>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</guid>
+      <description>As pessoas, salvo alguns místicos, não são muito boas em prever o futuro.
+https://www.flickr.com/photos/pasukaru76/3998273279/
+Portanto é bem provável que as suas estimativas de entregas de tarefas e projetos não sejam tão precisas quanto seu cliente espera, certo? Felizmente temos outros recursos a nossa disposição para suprir essa nossa deficiência: fatos, números e computadores rápidos o suficiente para processá-las.
+Vamos fazer uma simples &amp;ldquo;conta de padaria&amp;rdquo; e imaginar o seguinte cenário:</description>
+    </item>
+    
+    <item>
+      <title>Como Gerenciamos Projetos na Coderockr</title>
+      <link>//blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</guid>
+      <description>A Coderockr é, simplificando bastante, uma empresa de projetos de software. Para conseguirmos cumprir nosso propósito precisamos gerenciar projetos com qualidade e eficiência. Neste post vamos comentar como fazemos isso.
+Metodologia Desde o nascimento da Coderockr sempre tivemos como foco o uso de metodologias ágeis, principalmente devido a natureza dos projetos e dos clientes que atendemos, que precisam responder rápido a mudanças. Após muito estudo e experiências chegamos a conclusão que a melhor metodologia para nossos projetos é o Kanban.</description>
+    </item>
+    
+  </channel>
+</rss>

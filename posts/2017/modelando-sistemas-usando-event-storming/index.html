@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Modelando Sistemas Usando Event Storming"/>
+  <meta name="twitter:description" content="O desenvolvimento de software envolve muito mais do que escrever códigos. O objetivo maior é desenvolver o software correto, que resolva as necessidades do usuários e com a máxima qualidade..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Modelando Sistemas Usando Event Storming &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Modelando Sistemas Usando Event Storming
+                    </h1>
+                    <h2 class="headline">
+                    Oct 11, 2017 00:00
+                    · 911 words
+                    · 5 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/metodologias">Metodologias</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Mão na massa!</p>
+
+<p>O desenvolvimento de software envolve muito mais do que escrever códigos. O objetivo maior é desenvolver o software correto, que resolva as necessidades do usuários e com a máxima qualidade.</p>
+
+<p>Parte deste desafio é aumentar o entendimento do negócio e dos problemas que estão sendo resolvidos, por todos os envolvidos no projeto.</p>
+
+<p>Existem varias formas de realizar este levantamento de requisitos, desde as mais tradicionais até ideias modernas. Neste post vou apresentar uma destas metodologias, o Event Storming.</p>
+
+<h2 id="o-que-é">O que é</h2>
+
+<p>Uma técnica de modelagem e discussão em grupo, rápida, divertida e que tem como objetivo acelerar o conhecimento sobre um projeto, negócio ou mesmo uma funcionalidade complexa.</p>
+
+<p>Ela foi criada por um consultor italiano chamado <a href="https://www.linkedin.com/in/brando/">Alberto Brandolini</a> e sua primeira referência é de um <a href="http://ziobrando.blogspot.com.br/2013/11/introducing-event-storming.html">post publicado em 2013</a>.</p>
+
+<h2 id="o-que-não-é">O que não é</h2>
+
+<p>Apesar de ter vários conceitos em comum com DDD (Domain Driven Design) e Event Sourcing, o Event Storming não é voltado apenas para desenvolvimento de software. A ideia é que todos os envolvidos participem, para gerar uma linguagem que possa ser usada tanto pelos desenvolvedores quanto pelos detentores do conhecimento de negócios.</p>
+
+<p>Não estamos discutindo sobre implementação então, mais tarde, a equipe de desenvolvimento pode selecionar a melhor arquitetura de código necessária para obter os resultados esperados.</p>
+
+<h2 id="conceitos">Conceitos</h2>
+
+<p>Primeiro é necessário entendermos os conceitos básicos que vamos usar nos próximos passos. São eles:</p>
+
+<h3 id="events">Events</h3>
+
+<p>Um evento de domínio é algo que aconteceu e que tem relevância para o projeto sendo analisado. Eles capturam fatos que ocorreram, independente da forma como serão gerados ou tratados.</p>
+
+<h3 id="commands">Commands</h3>
+
+<p>Os comandos são ações que ocorrem no sistema, os geradores dos eventos.</p>
+
+<h3 id="actors">Actors</h3>
+
+<p>Os atores são os responsáveis por executar os comandos, que por sua vez geram os eventos. Como atores podemos considerar os usuários do sistema, sistemas externos ou até mesmo o tempo (um comando que é gerado em determinada data do mês, por exemplo).</p>
+
+<h3 id="agreggate">Agreggate</h3>
+
+<p>Um agreggate é um agrupamento lógico de eventos e comandos que estão relacionados.</p>
+
+<h3 id="bounded-context">Bounded context</h3>
+
+<p>Representam os limites do sistema, agrupando agreggates e identificando como estes limites se comunicam. Podemos fazer uma analogia com os “módulos” de um sistema.</p>
+
+<h2 id="o-workshop">O workshop</h2>
+
+<p>Entendidos os conceitos principais podemos falar sobre o Event Storming propriamente dito. Trata-se de uma atividade em grupo onde juntamos desenvolvedores, designers, analistas de negócios, usuários do sistema, etc.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/6528/1*BzPZVpXJVDDXFuNlknwXEg.jpeg" alt="" /></p>
+
+<p>O que é necessário:</p>
+
+<ul>
+<li><p>Post-its de cores diferentes, para diferenciar Events, Commands, Actors e Agreggates, etc.</p></li>
+
+<li><p>Um espaço físico com uma parede disponível para os post-its serem colados. E sem cadeiras, a ideia é todos ficarem em pé discutindo, colando e movendo os post-its.</p></li>
+
+<li><p>Um mediador que vai ficar guiando o andamento e controlando o tempo.</p></li>
+</ul>
+
+<p>Os passos:</p>
+
+<ol>
+<li>São identificados os eventos que ocorrem, independente de ordem ou de quem os gera. São anotados em post-its de uma cor selecionada e colados na parede. Os nomes dos eventos devem ser escritos no passado, como “Usuário denunciado”, “Conta criada”.</li>
+</ol>
+
+<p><img src="https://cdn-images-1.medium.com/max/4896/1*fqvkmy2y2g7DYOVwoIad0w.jpeg" alt="Events" /><em>Events</em></p>
+
+<ol>
+<li><p>São identificados os comandos que geram os eventos, anotados e colados próximos aos respectivos eventos. Os nomes dos comandos devem ser no formato “Denunciar usuário”, “Submeter formulário de cadastro”.</p></li>
+
+<li><p>São identificados os atores que executam os comandos. Os atores são anotados em post-its de uma cor selecionada e posicionados ao lado de cada comando.</p></li>
+</ol>
+
+<p><img src="https://cdn-images-1.medium.com/max/6528/1*bx_T0Ku7FkDEw-Uee0Sf5g.jpeg" alt="Actors" /><em>Actors</em></p>
+
+<ol>
+<li>Agrupar os eventos e comandos em agreggates, movendo os post-its para posicioná-los próximos e dando um nome para cada grupo</li>
+</ol>
+
+<p><img src="https://cdn-images-1.medium.com/max/6528/1*AQvNMrDUcgb9ZLXw59qf9Q.jpeg" alt="Aggregate" /><em>Aggregate</em></p>
+
+<ol>
+<li>Identificar os Bounded contexts movendo os agreggates e identificando quais eventos fazem a ligação entre eles. Dependendo da complexidade do projeto ou mesmo da funcionalidade sendo analisada é possível que este passo não seja necessário.</li>
+</ol>
+
+<p>Uma sugestão para o mediador é definir um tempo específico para cada passo, geralmente 20 a 30 minutos.</p>
+
+<h2 id="os-resultados">Os resultados</h2>
+
+<p>Usamos um dos eventos internos da Coderockr, o Coderock Jam, para executar uma sessão de Event Storming. Ao final do processo conseguimos ter alguns resultados interessantes:</p>
+
+<ul>
+<li><p>Tivemos uma melhor compreensão dos eventos mais importantes que ocorrem. Durante as discussões várias vezes levantamos a pergunta “isso é um evento relevante?” antes de decidir se deveríamos ter um post-it na parede.</p></li>
+
+<li><p>Conseguimos identificar os limites dos módulos do sistema, graças aos Aggregates</p></li>
+
+<li><p>Foi mais fácil identificar o que seria prioridade no desenvolvimento, o que ajuda na definição de um roadmap</p></li>
+
+<li><p>Durante as discussões encontramos termos que eram dúbios e a equipe chegou a uma nomenclatura que todos acordaram. Isso é muito importante no desenvolvimento, para evitar confusão de conceitos e nomes</p></li>
+
+<li><p>Identificamos novas funcionalidades que podemos implementar em um futuro próximo e que não estavam no nosso radar antes da discussão</p></li>
+
+<li><p>A equipe interagiu bastante, gerando mais entrosamento e confiança</p></li>
+</ul>
+
+<p>Alguns pontos a considerar no nosso caso:</p>
+
+<ul>
+<li><p>Foi a primeira sessão que fizemos de Event Storming, então pode ser que não tenhamos percebido alguns erros no processo</p></li>
+
+<li><p>Foi a primeira vez que mediei um Event Storming, então percebi alguns pontos que devo melhorar</p></li>
+
+<li><p>Usamos como case um projeto que estamos criando na Coderockr então agimos como desenvolvedores e também como “analistas de negócios”. Talvez esse não seja o cenário ideal, mas pretendemos repetir o processo em outros projetos, incluindo mais pessoas de diferentes áreas.</p></li>
+</ul>
+
+<p>Nos próximos eventos internos da Coderockr vamos testar outras metodologias para podermos comparar os resultados e também postá-los aqui. Sabemos que o Event Storming não é uma “bala de prata” que vai resolver todos os nossos problemas, mas é uma ferramenta a mais no nosso arsenal. E foi uma experiência bem interessante e que recomendo a tentativa.</p>
+
+<h2 id="links">Links</h2>
+
+<p><a href="https://blog.redelastic.com/corporate-arts-crafts-modelling-reactive-systems-with-event-storming-73c6236f5dd7">https://blog.redelastic.com/corporate-arts-crafts-modelling-reactive-systems-with-event-storming-73c6236f5dd7</a>
+<a href="https://techbeacon.com/introduction-event-storming-easy-way-achieve-domain-driven-design">https://techbeacon.com/introduction-event-storming-easy-way-achieve-domain-driven-design</a>
+<a href="http://ziobrando.blogspot.com.br/2013/11/introducing-event-storming.html">http://ziobrando.blogspot.com.br/2013/11/introducing-event-storming.html</a></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fmodelando-sistemas-usando-event-storming%2f - Modelando%20Sistemas%20Usando%20Event%20Storming by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

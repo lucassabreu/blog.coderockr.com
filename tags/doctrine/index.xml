@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doctrine on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/doctrine/</link>
+    <description>Recent content in Doctrine on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 22 Feb 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/doctrine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Doctrine 2 - Contribution Touch</title>
+      <link>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</guid>
+      <description>One of my goals for 2016 is to be a par excellence open source contributor. The project I’m aiming to focus my work is on the Doctrine 2, for lots of reasons. Firstly because it’s an excellent project with lots of the top PHP developers. Did you know that @ocramius is the most assiduous contributor on Github? Secondly I use it on a daily basis at work, so the more I’m proficient at it, the better asset am I for Compufácil.</description>
+    </item>
+    
+  </channel>
+</rss>

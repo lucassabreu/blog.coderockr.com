@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Gerando Code Coverage com PHPUnit e phpgbg"/>
+  <meta name="twitter:description" content="Em um post anterior eu mostrei alguns truques para identificar testes que estão demorando muito para serem executados..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Gerando Code Coverage com PHPUnit e phpgbg &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Gerando Code Coverage com PHPUnit e phpgbg
+                    </h1>
+                    <h2 class="headline">
+                    Aug 29, 2016 00:00
+                    · 507 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/php">PHP</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Em um post anterior eu mostrei alguns truques para identificar testes que estão demorando muito para serem executados. Neste texto vou mostrar uma forma de melhorar a performance da geração do relatório de cobertura de códigos usando o PHPUnit.</p>
+
+<p>É possível incluir configurações no arquivo <em>phpunit.xml</em> para que sejam gerados relatórios relativos aos testes que estão sendo executados. Por exemplo:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/c40bb8a5ed54c495b4ae1bfa0c43a41b.js"></script>
+
+<p>Desta forma será criado o diretório <em>tests/_reports</em> com uma série de informações úteis. No diretório <em>coverage-html</em> podemos ver detalhes da cobertura de testes dos códigos, facilitando a análise. O arquivo <em>clover.xml</em> é uma versão desta mesma informação para ser processada por serviços como Jenkins, CodeCov, Coveralls, Codacy, etc, para automatizarmos alertas e scripts.</p>
+
+<p>Para estas informações serem geradas além de alterarmos o <em>phpunit.xml</em> é necessário que instalemos a extensão <em>XDebug</em>. O problema é que ao fazermos isso temos uma queda considerável de performance. Confira o resultado da execução dos testes sem a geração dos relatórios:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/bce4c9a19e2785f3812d46244a3f9756.js"></script>
+
+<p>Habilitando o <em>XDebug</em> e rodando novamente teremos uma surpresa:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/69004afb25070817317ae7653d21f463.js"></script>
+
+<p>O tempo de execução pulou de 1.08 para 22.26 minutos!</p>
+
+<p>Depois de algumas pesquisas pela internet cheguei a <a href="http://blog.remirepo.net/post/2015/11/09/PHPUnit-code-coverage-benchmark">este post</a> e resolvi testar o <em>phpdbg</em>.</p>
+
+<p>Como estou usando o MacOS X para este teste eu executei os comandos abaixo para instalar todas as dependências que eu necessito.</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/a6c0caadf01d7807db6070cb5cb23356.js"></script>
+
+<p>A diferença principal é o parâmetro <em>–with-phpdbg</em> usando na instalação do php7.</p>
+
+<p>Seguindo <a href="https://thephp.cc/news/2015/08/phpunit-4-8-code-coverage-support">este post</a> do Sebastian Bergmann, criador do PHPUnit eu cheguei a sintaxe para rodar o teste novamente:</p>
+
+<p><em>phpdbg -qrr ./vendor/bin/phpunit</em></p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/a5a49e789b0670cbddfdf55ed89ef6d7.js"></script>
+
+<p>1.59 min é um tempo bem melhor do que os 22.26 usados pelo <em>XDebug</em>.</p>
+
+<p>Na empolgação eu comentei isso no Twitter, antes mesmo de escrever este post:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*8iruJz2kqgtjw3qQ.png" alt="" /></p>
+
+<p>Se você observar, quem respondeu foi ninguém menos do que o criador do <em>XDebug</em>! Levando isso em conta fiz a comparação entre os resultados gerados pelo <em>XDebug</em> e o <em>phpdbg</em>.</p>
+
+<p>Abaixo a comparação do <em>coverage-html</em> gerado pelo <em>XDebug</em> (na esquerda) e o <em>phpdbg</em> (na direita da imagem).</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*gqeyhN4lr9cT0qDF.png" alt="" /></p>
+
+<p>Usei a ferramenta CodeCov para processar o arquivo <em>clover.xml</em> e o resultado também foi ligeiramente diferente:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*q9TaWLh0x4cvU0hO.png" alt="*phpdbg*" /><strong>phpdbg</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*Awn2wLOmelL5hHnh.png" alt="XDebug" /><em>XDebug</em></p>
+
+<p>Segundo o relatório gerado pelo <em>phpdbg</em> o <a href="http://planrockr.com">Planrockr</a> está com 66,05 % de cobertura de códigos. Já o <em>XDebug</em> apresenta o resultado de 65,92 %.</p>
+
+<p>Algumas conclusões que posso tirar deste pequeno teste:</p>
+
+<ul>
+<li><p>O <em>XDebug</em> é uma ferramenta incrível e faz muito mais do que gerar cobertura de código, por isso não estou aqui dizendo que deveríamos parar de usá-la. Aqui estou apenas comparando um dos seus recursos</p></li>
+
+<li><p>Eu estou comparando o resultado “de fábrica”, sem fazer ajustes em configurações do <em>XDebug</em> ou do <em>phpdbg</em>, por isso resultados diferentes podem acontecer em outros cenários</p></li>
+
+<li><p>Apesar da diferença de resultados entre os dois relatórios a diferença de performance compensa o uso do <em>phpdbg</em> no meu caso.</p></li>
+</ul>
+
+<p>Vou seguir usando o <em>phpdbg</em> por mais tempo e se algum novo resultado aparecer nas próximas semanas eu atualizo este post, ou gero outro relatando o aprendizado.</p>
+
+<p>E se eu estou errado em minhas conclusões por favor me avisem que terei o maior prazer em me retratar :)</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2016-08-30-gerando-phpunit-code-coverage-with-phpdbg/">eltonminetto.net</a> on August 30, 2016.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fgerando-code-coverage-com-phpunit-e-phpgbd%2f - Gerando%20Code%20Coverage%20com%20PHPUnit%20e%20phpgbg by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

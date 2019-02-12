@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Simplifying Project Setup Even Further"/>
+  <meta name="twitter:description" content="Last year we created a simple script to assist in the setup of projects in GitHub, it met our needs well for the new repositories we created in GitHub..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Simplifying Project Setup Even Further &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Simplifying Project Setup Even Further
+                    </h1>
+                    <h2 class="headline">
+                    May 6, 2018 00:00
+                    · 450 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/github">GitHub</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Now simplifying GitHub, GitLab and Trello</p>
+
+<p><em>Em português <a href="https://blog.coderockr.com/simplificando-ainda-mais-o-setup-de-projetos-e6a482b25b8a">clique aqui</a></em></p>
+
+<p>Last year we created a simple script to assist in the <a href="https://blog.coderockr.com/simplifying-project-setup-on-github-1cd2ac2895ee">setup of projects in GitHub</a>, it met our needs well for the new repositories we created in GitHub.</p>
+
+<p>We also worked with other tools to manage our projects, like GitLab and Trello, but we did not do a similar script for them.</p>
+
+<p>At the beginning of the year, I created a new script to perform the project setup in GitLab, which is basically a copy of the first script, but with the GitLab endpoints..</p>
+
+<p>When I started working on the script for Trello I came across a problem, unlike GitLab and GitHub it does not offer a system of tokens to be used for scripting.</p>
+
+<p>But this does not prevent integrations with Trello, we should just use their authentication process (like OAuth, but much simpler).</p>
+
+<p>I could create a script that uses the token returned by this process, but this would require the user to use the browser to authenticate and then report the script or open the screen during script execution.</p>
+
+<p>I did not like the idea, it looked like a jerry-rig.</p>
+
+<p>Looking for another solution I decided to create a SPA to do the setup of the projects based on Coderockr Way, then when a project setup is necessary, I would not need access to my terminal, I could do it straight from my cell phone, for example.</p>
+
+<p>Once I was making it I decided that the SPA would also cover GitHub and GitLab setups, being a complete solution for the tools we use today.</p>
+
+<p>Then I found another problem, while coding the integration with GitHub and GitLab it would have to use OAuth authentication, which requires a callback and handling from a backend. Meaning that I would also need a server to perform authorizations, GitHub Pages or S3 were not suitable for serving the SPA.</p>
+
+<p>Luckily I already knew another static page deployment service, Netlify! And conveniently it has a feature called <a href="https://www.netlify.com/docs/authentication-providers/">OAuth Providers</a> that can be used to authenticate against GitHub and GitLab (BitBucket too, but that’s beside the point) as well serving pages over HTTPs which is very good.</p>
+
+<p>Now with all the problems solved, it was only necessary to finish the SPA and publish it 😄</p>
+
+<p>Now, when you need to setup a project, just go to “Coderockr Way Project Setup”, authorize yourself, choose your project in the list (based on your permission) and Apply!</p>
+
+<p>Take a look at how it was: <a href="https://cwps.lucassabreu.net.br/">https://cwps.lucassabreu.net.br</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2702/1*3i2vq5LRI-jMOamXQQASog.png" alt="" /></p>
+
+<p>For those who are interested in customizing the tool with the your labels, just make a fork and change the <a href="https://github.com/lucassabreu/coderockr-way-project-setup/blob/master/src/Labels.js">Labels.js</a> file and enjoy 😉</p>
+
+<p>Here is the source <a href="https://github.com/lucassabreu/coderockr-way-project-setup">code</a>.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2018%2fsimplifying-project-setup-even-further%2f - Simplifying%20Project%20Setup%20Even%20Further by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Como React e Redux me Fizeram um Programador Melhor"/>
+  <meta name="twitter:description" content="Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Como React e Redux me Fizeram um Programador Melhor &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Como React e Redux me Fizeram um Programador Melhor
+                    </h1>
+                    <h2 class="headline">
+                    Oct 19, 2016 00:00
+                    · 1651 words
+                    · 8 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/carreira">Carreira</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/redux">Redux</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/3840/1*SgIzRKXaGHYYpQzYuVLStQ.jpeg" alt="" /></p>
+
+<p>Quando começamos a trabalhar como programadores, é muito comum aprendermos a trabalhar com abstrações que facilitam nosso caminho e nossa curva de aprendizado. Um grande exemplo disso é o <a href="https://jquery.com/"><em>jQuery</em></a>, que provavelmente é a primeira lib que os desenvolvedores Frontend tem contato.</p>
+
+<p>Abstrações são ótimas, elas podem facilitar muito as nossas vidas e aumentar nossa produtividade. Porém, é muito comum programadores ficarem presos às abstrações e esquecerem de aprender os fundamentos básicos referentes a tecnologia abstraída. Os programadores se prendem aos vícios das abstrações e ficam completamente dependente delas.</p>
+
+<p>Existe esse meme clássico que exemplifica claramente isso:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2048/1*sfHJGjVXCvqQEm_O2ddNFQ.gif" alt="" /></p>
+
+<p>É importante você saber pensar por fora das abstrações, para saber quando ou não utilizá-las.</p>
+
+<blockquote>
+<p>Se a única ferramenta que você tem é um martelo, para você tudo começa a se parecer com um prego.</p>
+</blockquote>
+
+<p>Como é o caso de inúmeras animações ainda feitas em <em>jQuery</em>, mas que facilmente poderiam ser substituídas por CSS.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7ZjdFUDfP4X_OdzsrRyXFw.jpeg" alt="" /></p>
+
+<blockquote>
+<p><strong>Disclaimer</strong>: Antes de continuar este artigo, deixo claro que eu trabalhei mais de um ano com Angular, em grandes aplicações, antes de começar a trabalhar com React, e ainda trabalho com o mesmo em aplicações já em produção. Falo aqui como alguém que antes defendia muito o Framework e adorava trabalhar com ele.</p>
+</blockquote>
+
+<p>Trabalhando com <a href="https://angularjs.org/"><em>Angular</em></a> e outros Frameworks, nós acabamos seguido p0r esse mesmo caminho, de pensar como resolver problema <strong>X</strong> com o framework, antes mesmo de pensar como poderíamos resolver sem ele.</p>
+
+<p>Um claro exemplo que eu poderia dar, seria o <strong>angular</strong>.<a href="https://docs.angularjs.org/api/ng/function/angular.forEach">forEach</a>. Nós poderíamos simplesmente utilizar <strong>Array</strong>.<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a>, nativo do Javascript.</p>
+
+<p>Eu sei que há casos em que você precisa iterar sobre um objeto e não um <em>array</em>, para isso, bastaria utilizar <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys</a>(Array).<strong>forEach</strong>, também nativo. Mas com o Angular é mais cómodo, não é?</p>
+
+<p>Nós não paramos por aí, utilizamos factory, service, session, value, constant, dependency Injection, *tudo isso específico do angular. Quando precisamos fazer uma integração específica, como integrar a aplicação com um serviço de <a href="https://developer.mozilla.org/pt-BR/docs/WebSockets"><em>websocket</em></a>, utilizamos módulos como <a href="https://github.com/btford/angular-socket-io"><em>Angular Socket IO</em></a>, ao invés de utilizar diretamente o <a href="https://github.com/socketio/socket.io-client"><em>socket.io-client</em></a>. Aos poucos você olha para a sua aplicação e percebe que ela está totalmente acoplada e dependente do framework.</p>
+
+<p>Você pode vir com o argumento que é possível deixar a aplicação menos acoplada e que esses módulos na maioria das vezes só lidam com a natureza assíncrona do <em>Angular</em>. Mas tentar deixar o <em>Angular</em> menos acoplado, utilizando funções construtoras ao invés de factories e ai por diante, implica em ainda ter que implementar inúmeros workarounds ao longo do código, como por exemplo: <a href="https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$apply"><em>$scope.$apply</em></a> para sincronizar o <a href="https://docs.angularjs.org/guide/scope"><em>digest cycle</em></a>. Sem contar que esse não é o <em>Angular</em> way de trabalhar e seria considerado uma má prática.</p>
+
+<p>E mesmo contornando essas dependências de inúmeras formas, no final do dia você ainda não conseguiria rodar nenhum teste unitário sem ter o <em>Angular</em> como dependência, pelo menos, não de uma forma viável.</p>
+
+<p>Eu sei, peguei bastante no pé do <em>Angular</em>, mas justamente por ele ser um dos frameworks mais populares, por eu ter mais experiência com o mesmo, e porque utilizando-o como exemplo, é fácil expor os problemas que é se amarrar a um framework.</p>
+
+<p>Ter um framework que cobre de ponta a ponta da sua aplicação é ruim, porque toda a aplicação tende a ser desenvolvida da maneira dele. Se amanhã surge uma lib que resolve uma parte do problema de uma maneira melhor que o seu framework, dificilmente você vai conseguir migrar somente uma responsabilidade para a lib, pelo menos, não de forma fluída.</p>
+
+<p>Vemos esse mesmo tipo de opinião também no Backend. No post <a href="http://eltonminetto.net/2016/03/15/o-fim-da-era-dos-frameworks-full-stack/"><strong>O fim da era dos frameworks full stack</strong></a> o <a href="undefined">Elton Minetto</a> fala sobre o assunto.</p>
+
+<p>O problema em si não é o <em>Angular</em>, mas todo framework que te força a trabalhar da maneira dele e que você precisa “comprar o pacote completo” para se beneficiar apenas de uma feature ou outra.</p>
+
+<h2 id="arquitetura-desacoplada">Arquitetura desacoplada</h2>
+
+<p>Agora que conseguimos entender o que é um cenário totalmente acoplado, fica mais fácil compreender as vantagens de uma arquitetura desacoplada.</p>
+
+<h3 id="separation-of-concerns-soc">Separation of concerns(SoC)</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/2048/1*QaJLbOURQAugLzPHLqreuQ.jpeg" alt="Brinquedo de Lego" /><em>Brinquedo de Lego</em></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Separation_of_concerns"><em>Separation of Concerns</em></a>, ou <em>Separação de conceitos</em>, termo cunhado por <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>, em 1974.</p>
+
+<p>No básico, se refere a identificar as responsabilidades que existem dentro de uma aplicação, isolá-las e delegá-las, de uma forma que fique claro o que cada parte do seu software faz e que fique claro onde deve ser feito cada coisa.</p>
+
+<p>A adoção desse princípio traz inúmeras vantagens como: Facilidade na manutenção, facilidade para encontrar e resolver bugs e facilidade para compreender o software como um todo.</p>
+
+<p>Utilizando corretamente esse conceito, fica fácil substituir determinada parte do seu software quando necessário.</p>
+
+<blockquote>
+<h2 id="seu-software-deve-parecer-com-um-brinquedo-de-lego-onde-você-pode-tirar-uma-peça-amarela-colocar-uma-azul-e-ele-continua-funcionando-se-limitando-apenas-a-possuir-as-mesmas-entradas-e-saídas">Seu software deve parecer com um brinquedo de lego, onde você pode tirar uma peça amarela, colocar uma azul e ele continua funcionando, se limitando apenas a possuir as mesmas entradas e saídas.</h2>
+</blockquote>
+
+<h2 id="single-page-applications">Single Page Applications</h2>
+
+<p>Vamos tentar distinguir os aspectos e as responsabilidades dentro de uma <a href="https://en.wikipedia.org/wiki/Single-page_application"><strong>SPA</strong></a>.</p>
+
+<p>Nós podemos separar um SPA em três partes: <strong>State</strong>, <strong>View</strong> e <strong>Actions.</strong></p>
+
+<h3 id="state">State</h3>
+
+<p>Todos os dados que existem dentro da nossa aplicação, desde os dados buscados por requests, até os dados definidos estaticamente no código.</p>
+
+<h3 id="view">View</h3>
+
+<p>Basicamente, é nosso HTML e CSS, que são renderizados de acordo com os dados que existem dentro da nossa aplicação.</p>
+
+<h3 id="actions">Actions</h3>
+
+<p>São os eventos que ocorrem dentro da nossa aplicação, que poderão ou não alterar o <em>State</em>.</p>
+
+<p>Podemos dividir esses eventos em duas categorias:</p>
+
+<p><strong>— Interação do usuário:</strong> Click em botão, entrada de dados em um formulário, etc…</p>
+
+<p><strong>— IO:</strong> Eventos de rede, como início e fim de um request.</p>
+
+<p>A forma como cada uma dessas partes se integram é bem simples. O <strong>State</strong> fica responsável por armazenar os dados e entregá-los para a <strong>View.</strong> A <strong>View</strong> por sua vez, irá se renderizar de acordo com os dados que recebe do <strong>State</strong>. As <strong>Actions,</strong> ao ocorrerem, poderão causar uma alteração no <strong>State</strong>, que entrega os novos dados para <strong>View</strong> e assim segue esse ciclo.</p>
+
+<p>Essas características podem ser vistas em qualquer <strong>SPA</strong>, independente da tecnologia em que seja desenvolvida. O problema é que muitos frameworks deixam essas três características totalmente acopladas, não sendo possível substituir o “responsável” por cada uma.</p>
+
+<h2 id="react">React</h2>
+
+<p>Entre as três características que vimos, o React se propõe a ser o responsável por apenas uma, a <strong>View.</strong> O React não se importa em como você controla seu <strong>State</strong> ou suas <strong>Actions</strong>, ele só recebe os dados através de suas props e interage com o <a href="https://pt.wikipedia.org/wiki/Modelo_de_Objeto_de_Documentos"><em>DOM</em></a> para renderizar a <strong>View.</strong></p>
+
+<h2 id="redux">Redux</h2>
+
+<p>Ao contrário do <em>React</em>, o <strong>Redux</strong> é alheio a sua camada de <strong>View</strong>, ele fica responsável apenas pelo <strong>State</strong> e pelas <strong>Actions</strong> da sua aplicação, dando a você total poder de escolha em relação a <strong>View</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*9i0TmROGf25Lqpbc98PnJQ.jpeg" alt="" /></p>
+
+<p>A <a href="http://redux.js.org/docs/api/Store.html"><strong>Store</strong></a> do <em>Redux</em> disponibiliza três métodos para interação com o <em>State</em> através de sua <a href="http://redux.js.org/docs/api/Store.html#store-methods">API pública</a>:</p>
+
+<h3 id="subscribe-http-redux-js-org-docs-api-store-html-subscribe"><a href="http://redux.js.org/docs/api/Store.html#subscribe"><em>subscribe</em></a></h3>
+
+<p>Esse método permite que você adicione um listener à <em>Store</em>, que será chamado, toda vez que houver uma alteração no <em>State.</em></p>
+
+<h3 id="dispatch-http-redux-js-org-docs-api-store-html-dispatch"><a href="http://redux.js.org/docs/api/Store.html#dispatch"><em>dispatch</em></a></h3>
+
+<p>Através desse método, você dispara as <em>Actions</em>.</p>
+
+<h3 id="getstate-http-redux-js-org-docs-api-store-html-getstate"><a href="http://redux.js.org/docs/api/Store.html#getState"><em>getState</em></a></h3>
+
+<p>Executando esse método, você receberá o <em>State</em> atual. Esse método é normalmente utilizado dentro dos listeners, para capturar o <em>State</em> após uma alteração ter ocorrido.</p>
+
+<p>Com esses três métodos, é possível integrar o <em>Redux</em> com qualquer lib de renderização da <em>View</em>.</p>
+
+<p>Analisando essas duas libs, nós conseguimos enxergar a forma como as suas se complementam e se integram uma com a outra e também conseguimos ver que mesmo se complementando, elas conseguem trabalhar de forma independente, deixando a aplicação muito menos acoplada.</p>
+
+<h3 id="programação-funcional">Programação Funcional</h3>
+
+<p>O <em>Redux</em> é baseado em conceitos de programação funcional, como imutabilidade e funções puras. É através dessas funções que nós manipulamos o <em>State. As funções em questão são os <a href="http://redux.js.org/docs/basics/Reducers.html">reducers</a>, que possuem a seguinte assinatura:</em></p>
+
+<pre><code>(currentState, action) =&gt; newState
+</code></pre>
+
+<p>Observando a estrutura acima, percebemos que não precisamos depender do <em>Redux</em> para escrever nossos testes unitários, uma vez que você só precisaremos chamar um <em>Reducer</em>, passando um objeto para simular o <em>State</em> atual e um outro objeto que será a <em>Action</em>, e fazer uma asserção com o valor de retorno.</p>
+
+<p>O mesmo vale para o teste de <a href="http://redux.js.org/docs/basics/Actions.html#action-creators">Action Creators</a>, que também devem ser funções puras.</p>
+
+<p>Na documentação do <em>Redux</em>, há uma <a href="http://redux.js.org/docs/recipes/WritingTests.html">sessão dedicada a escrita de testes</a>, vale a pena conferir.</p>
+
+<p>Os conceitos de programação funcional que o <em>Redux</em> traz, ajuda muito a expandir nosso conhecimento e nossa forma de pensar como escrevemos nossa lógica, além de ser porta de entrada para muita gente nesse novo paradigma.</p>
+
+<p>O Redux e o React se baseiam numa arquitetura de fluxo dados uni-direcional, o que nos dá um controle bem maior, e não cria dificuldades na hora de integrarmos uma nova lib ao projeto.</p>
+
+<h2 id="ainda-sobre-react">Ainda sobre React</h2>
+
+<p>O <em>React</em> nos induz a desenvolver nossa aplicação orientada a componentes, fazendo com que o reaproveitamento de código seja bem efetivo e tornando nossa aplicação muito mais modular.</p>
+
+<p>Além disso, podemos contar com inúmeras ferramentas que melhoram nosso workflow, como o <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>, que nos concede uma experiência de desenvolvimento muito rica, e o <a href="https://github.com/kadirahq/react-storybook">React Storybook</a>, que nos permite desenvolver nossos componentes de forma isolada, nos dando um controle que até então não tínhamos no Frontend.</p>
+
+<h2 id="por-que-react-e-redux-nos-fazem-ser-programadores-melhores">Por que React e Redux nos fazem ser programadores melhores?</h2>
+
+<p>Em um resumo geral, <em>React</em> e o <em>Redux</em> nos ensinam a pensar em nossas aplicações de forma modular nos induzindo a identificar e separar as responsabilidades de uma forma bem intuitiva. A facilidade que o <em>React</em> traz para trabalharmos com componentes, nos conduz a os separá-los de uma forma melhor, o que por si só já resulta em um reaproveitamento maior do código. A forma como cada lib se contém a sua responsabilidade, nos permite aprender a desenvolver aplicações de uma forma desacoplada. Os conceitos que o <em>React</em> e o <em>Redux</em> introduzem, traz um ganho sem tamanho para nós desenvolvedores.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fcomo-react-e-redux-me-fizeram-um-programador-melhor%2f - Como%20React%20e%20Redux%20me%20Fizeram%20um%20Programador%20Melhor by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

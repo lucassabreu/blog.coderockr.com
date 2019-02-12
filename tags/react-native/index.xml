@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React Native on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/react-native/</link>
+    <description>Recent content in React Native on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 16 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React Native for React Developers</title>
+      <link>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</link>
+      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</guid>
+      <description>React Native for React Developers
+React Native is becoming the definitive solution to create apps across multiple platforms. What React Native offers, is the possibility to create native mobile apps using only Javascript.
+In this post, I am going to make a comparison between React and React Native, and what are the first things a React Developer should know before starting to code.
+Building Blocks React Native uses the same design as React, you will be using JSX and JavaScript to create your components.</description>
+    </item>
+    
+  </channel>
+</rss>

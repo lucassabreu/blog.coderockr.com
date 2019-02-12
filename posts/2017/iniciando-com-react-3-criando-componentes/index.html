@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Iniciando com React - #3 Criando Componentes"/>
+  <meta name="twitter:description" content="O React introduz uma nova maneira de construir interfaces, o que podemos chamar de “Interface baseada em componentes”. Componentes permitem que você divida sua interface em partes independentes..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Iniciando com React - #3 Criando Componentes &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Iniciando com React - #3 Criando Componentes
+                    </h1>
+                    <h2 class="headline">
+                    Mar 29, 2017 00:00
+                    · 1071 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>O <strong>React</strong> introduz uma nova maneira de construir interfaces, o que podemos chamar de “Interface baseada em componentes”. Componentes permitem que você divida sua interface em partes independentes e reutilizáveis, e que você pense em cada parte de forma isolada.</p>
+
+<blockquote>
+<p>Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.</p>
+</blockquote>
+
+<p><a href="https://blog.coderockr.com/iniciando-com-react-2-criando-a-estrutura-do-projeto-2c3b0f8e9f9">&lt; Anterior</a> | <a href="https://blog.coderockr.com/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle-bbb92b27da83">Proximo &gt;</a></p>
+
+<p>Componentes podem possuir diversos formatos e ter diferentes responsabilidades. Um componente pode ser desde um botão, um formulário ou até uma página completa.</p>
+
+<p>O React nos permite definir e reutilizar componentes de maneira simples, conforme veremos ao longo desse post.</p>
+
+<h2 id="functional-components">Functional Components</h2>
+
+<p>A forma mais fácil de definir componentes é através de funções Javascript, conforme o exemplo abaixo:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/5d73a9b3823a139a97de7d5e8531b5ad.js"></script>
+
+<p>Quando o componente é definido em forma de função, o React cria o componente executando essa função e passando as <strong>props</strong> como primeiro parâmetro. Ele espera um retorno em <strong>JSX</strong> do que deve ser renderizado, ou <strong>null</strong> no caso de não mostrar nada. Componentes React definidos da forma descrita acima, ganham o nome de <em>Functional Components.</em></p>
+
+<h2 id="props">Props</h2>
+
+<p>A forma principal de comunicação entre componentes é utilizando as **props. **Elas são propriedades/atributos passados para os componentes filhos. Observe o exemplo abaixo:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/84d0089114a77ea7861cd3bd3c2eb12e.js"></script>
+
+<p>No exemplo acima, na linha #4, estamos novamente definindo o componente Welcome. Na linha #11, estamos utilizando esse componente e passando para ele a prop <strong>name</strong> que possui como valor, a string “<strong>Stranger</strong>”.</p>
+
+<h3 id="valores-dinâmicos">Valores Dinâmicos</h3>
+
+<p>Podemos também passar variáveis para as props, utilizando chaves {}:</p>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/b9109e1096fee4b50b806f701ec38fff.js"></script>
+
+<p>Observe as linhas #10 e #13 do exemplo acima. Primeiro definimos uma const <strong>strangerName</strong> e depois passamos ela para a props <strong>name</strong>. No JSX, todo o conteúdo que estiver dentro de chaves será interpretado como Javascript.
+&gt; O ES6 trouxe uma feature chamada <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao#Desestruração_de_objeto">Object Detructuring</a>, e é ela que estamos utilizando na linha #4 ({ name }). Basicamente, o que ela faz é extrair os atributos de um objeto e criar variáveis com o mesmo nome. Dessa forma, podemos utilizar <strong>name</strong> aos invés de <strong>props.name</strong>.</p>
+
+<h3 id="funções-callbacks">Funções callbacks</h3>
+
+<p>É possível também, passar funções através das <strong>props</strong>. Normalmente fazemos isso quando precisamos passar um <strong>callback</strong> para um componente.
+&gt; Um callback é em suma, uma função que passamos como parâmetro para outra função, que por sua vez poderá executar o callback quando algum determinado evento ocorrer, como o final de um request, um evento de click do usuário e etc.</p>
+
+<iframe src="https://medium.com/media/7569c189f1727e93d69fb6db6d7cdb77" frameborder=0></iframe>
+
+<p>No arquivo acima, não estamos definindo nenhum novo componente, apenas utilizando o elemento button, comum do HTML.</p>
+
+<p>De acordo com o exemplo acima, cada vez que o usuário clicar no botão, um alerta será mostrado na tela.</p>
+
+<p>O React suporta <a href="https://facebook.github.io/react/docs/events.html">alguns eventos básicos</a> de interação de acordo com o componente HTML que utilizarmos, como onClick, onChange, onKeyPress, etc…</p>
+
+<h3 id="children">Children</h3>
+
+<p>A <strong>prop</strong> “**children” <strong>é um pouco diferente das outras.</strong> <strong>Ela</strong> **é o conteúdo que passamos dentro da tag:</p>
+
+<pre><code>&lt;div&gt;**Esse conteúdo será a prop children**&lt;/div&gt;
+</code></pre>
+
+<p>Conforme o exemplo acima, todo o conteúdo que está dentro da div, será o valor de <strong>props.children</strong>.</p>
+
+<p>Conforme o exemplo que veremos logo abaixo, é possível passar <strong>children</strong> explicitamente, porém, esse modo é pouco utilizado. A forma abaixo é equivalente à anterior:</p>
+
+<pre><code>&lt;div children='**Esse conteúdo será a prop children**' /&gt;
+</code></pre>
+
+<h2 id="button">Button</h2>
+
+<p>Vamos rever um exemplo similar ao que foi apresentado no primeiro post da série, explorando em detalhes o conteúdo:</p>
+
+<iframe src="https://medium.com/media/3b684b5593b7a9cbfac399ece376e750" frameborder=0></iframe>
+
+<p>Como podemos ver no exemplo acima, na linha #4 estamos definindo um componente chamado <strong>Button</strong>. Mais abaixo na linha #13 estamos utilizando ele, passando o children “**Example” **e uma função para <strong>onClick</strong>, que quando executada, exibirá “You just clicked” no console do navegador.</p>
+
+<p>Na definição do componente na linha #4, estamos esperando as props <strong>children</strong>, <strong>onClick</strong> e <strong>type</strong>, e especificamos a string <strong>“button”</strong>, para ser o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos">valor padrão</a> da prop <strong>type</strong>.</p>
+
+<p>Na linha #6, estamos utilizando o elemento button, passando para ele a prop <strong>type</strong> e passando a prop <strong>className</strong>, que é equivalente ao atributo <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Global_attributes/class"><strong>class</strong> do HTML</a>. No <strong>className</strong>, estamos passando a classe “<strong>btn”</strong>, que seria utilizada no CSS para definirmos o estilo do nosso botão. Além disso, repassamos a prop <strong>onClick</strong>.</p>
+
+<p>Na linha #7, apenas repassamos o children que recebemos.
+&gt; **Dica: <strong>Sempre inicie o nome de componentes com uma letra maiúscula.
+&gt; Por exemplo, &lt;</strong>b<strong>utton /&gt; representa um elemento HTML padrão, mas &lt;</strong>B**utton /&gt; representa um componente e exige que a variável <strong>Button</strong> esteja no escopo.</p>
+
+<h2 id="composição-de-componentes">Composição de componentes</h2>
+
+<p>É possível criar componentes que reutilizam outros. Dessa forma, podemos criar pequenos componentes que são úteis em várias partes de uma aplicação e então, compor esses componentes quando precisamos criar componentes mais complexos.</p>
+
+<iframe src="https://medium.com/media/7f6e5ef49c5d452709e6c81daa18ba5b" frameborder=0></iframe>
+
+<p>Conforme é possível ver no exemplo acima, possuímos dois componentes: <strong>Button</strong> e <strong>GroupButton</strong>. Primeiro temos o componente mais simples, <strong>Button</strong>, que pode ser reaproveitado em qualquer parte da aplicação. Depois temos o <strong>ButtonGroup</strong>, onde reutilizamos <strong>Button</strong> para criarmos um componente maior.
+&gt; Dica: Componentes devem retornar um único elemento raiz. Esse é um dos motivos de termos colocado uma<em><div></em> para conter todos os componentes <em><Button /></em>.</p>
+
+<h2 id="props-são-read-only">Props são Read-Only</h2>
+
+<p>De qualquer maneira que você declare componentes, seja através de classes ou funções, você nunca deve alterar o valor de <strong>props</strong>. Os componentes devem ser escritos como ***funções puras, ***de modo que o valor de suas <strong>props</strong> permaneça intacto:</p>
+
+<p>Observe abaixo um exemplo de função pura:</p>
+
+<pre><code>function sum(**a**, **b**) {
+  return **a** + **b**;
+}
+</code></pre>
+
+<p>Na função acima, nós recebemos os parâmetros <strong>a</strong> e **b **e retornamos a sua soma. Funções como essa, são consideradas <strong><em>funções puras</em></strong>, pois chamadas com os mesmos parâmetros, sempre retornarão os mesmos resultados, e elas também não alteram o valor dos seus parâmetros ou valores que estão fora de seu escopo.</p>
+
+<p>Já o exemplo abaixo é considerado uma função impura, porque na linha #2, estamos reatribuindo o valor de <strong>result.a</strong>, objeto que foi criado fora do escopo atual:</p>
+
+<pre><code>1  function sum(result, b) {
+2    **result**.**a** += **b**;
+3    return **result**;
+4  }
+</code></pre>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p><strong><em>Functional components</em></strong> como vimos até agora, não guardam muita lógica dentro de si. Eles normalmente só guardam uma marcação específica do componente. Quando possuem lógica, é a mínima possível.</p>
+
+<p>Sendo assim, <em>functional components</em> são perfeitos para construir componentes simples de apresentação, como botões, labels, listas e etc. Quando precisamos construir componentes que envolvem lógica e precisam guardar estado, precisamos criar componentes utilizando *<strong>class</strong>, *e é isso que veremos no próximo post. <strong>Siga-nos e não perca!</strong></p>
+
+<p>Gostou do post e achou útil? Dê um **like **❤️ abaixo para ajudar na divulgação e para que mais pessoas tenham acesso :)</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2finiciando-com-react-3-criando-componentes%2f - Iniciando%20com%20React%20-%20%233%20Criando%20Componentes by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

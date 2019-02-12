@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Usando AWS API Gateway e AWS Lambda"/>
+  <meta name="twitter:description" content="Recentemente lançamos uma nova versão do site da Coderockr e nosso desenvolvedor/designer apresentou uma ótima ideia..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Usando AWS API Gateway e AWS Lambda &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Usando AWS API Gateway e AWS Lambda
+                    </h1>
+                    <h2 class="headline">
+                    Jan 3, 2017 00:00
+                    · 517 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/aws">AWS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Recentemente lançamos uma nova versão do site da Coderockr (<a href="http://coderockr.com/">já viu? Está lindão!</a>) e nosso <a href="https://www.facebook.com/raonymarcondes">desenvolvedor/designer</a> apresentou uma ótima ideia: criarmos um <a href="http://coderockr.com/contact.html">formulário de contato</a> mais inteligente, onde o interessado pode nos fornecer informações mais completas já no primeiro momento, acelerando nosso processo de negociação.</p>
+
+<p>Como usamos o <a href="https://www.hubspot.com/products/crm">CRM da HubSpot</a> para gerenciar nossos contatos com clientes, rapidamente a ideia evoluiu para usarmos a API e integrarmos o formulário com o CRM.</p>
+
+<p>Mas nesse momento enfrentamos um problema, pois algumas limitações da API não permitiram a integração usando JavaScript direto do navegador (a API do HubSpot não permite CORS…). A solução seria termos um script, em PHP por exemplo, que receberia os dados do formulário e os enviaria para a API, usando CURL. Como o site da Coderockr foi desenvolvido usando o Github Pages precisaríamos de um servidor para executar esse script, o que aumentaria o custo de execução e manutenção do site. Neste momento lembramos da solução API Gateway + Lambda, da Amazon Web Services.</p>
+
+<p>O primeiro passo foi a criação da “função lambda”, que conteria a lógica necessária para realizar a operação de envio dos dados para o HubSpot. Usando o painel da AWS criamos uma função chamada “contato” e optamos por desenvolvê-la usando Python (as outras opções eram C#, Java e NodeJS). O código, com pequenas alterações, pode ser visto neste <a href="https://gist.github.com/eminetto/dfeade6e3bca92496ba5ecbb89d51580">Gist</a>. Para mais detalhes sobre a API do HubSpot é possível acessar a <a href="https://developers.hubspot.com/">documentação oficial</a>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*hDlO1lyZd3zf8_cg.png" alt="" /></p>
+
+<p>Com o código criado o próximo passo foi a criação de uma API, que recebe as informações do formulário e as repassa para a função lambda. Para isso usamos o serviço API Gateway e criamos o recurso chamado/contato. Um detalhe importante é que para podermos acessar essa API facilmente pelo navegador é preciso habilitarmos a opção “Enable CORS”, no menu Actions.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*XpkMbcqATfXpM7G4.png" alt="" /></p>
+
+<p>Também é preciso criarmos um “Stage”, na opção correspondente no menu na esquerda. Neste exemplo criamos apenas um, chamado <em>prod</em> e com isso temos uma url para acesso e opções de configuração avançada de segurança, cache e logs.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*bdULf7Sv23VmvGC-.png" alt="" /></p>
+
+<p>O passo final é configurar a função lambda para ser executada sempre que receber uma mensagem da API. No painel de configuração da função podemos usar a opção “Triggers” para fazer a conexão entre a API e nossa lógica.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*hi8Ji4D8dCo0vJzd.png" alt="" /></p>
+
+<p>Podemos fazer um teste de conexão usando o painel de configuração da API para garantirmos que tudo está funcionando</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*f9FTLR7aYHExGTlK.png" alt="" /></p>
+
+<p>Assim bastou escrevermos um pouco de JavaScript para que o formulário fizesse um post para a nova API fornecida pelo Gateway e ela executa a função lambda e envia os dados para o HubSpot. E nós só pagamos para a Amazon apenas os segundos gastos nesse processo, sem a necessidade de mantermos um servidor rodando PHP ou outra linguagem.</p>
+
+<p>O resultado final é uma nova entrada no nosso CRM e um e-mail na caixa postal do responsável por entrar em contato com os clientes, enviado automaticamente pelo próprio HubSpot.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2800/0*vMFBzHQoRabv0ecu.png" alt="" /></p>
+
+<p>Como todo o site é formado por páginas estáticas, fornecidas pelos servidores do Github, podemos dizer que temos uma solução “serverless” e barata. E mais um motivo para aprender algo novo ;)</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fusando-aws-api-gateway-e-aws-lambda%2f - Usando%20AWS%20API%20Gateway%20e%20AWS%20Lambda by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Iniciando com React - #4 Armazenando Estado e Entendendo o Lifecycle"/>
+  <meta name="twitter:description" content="Quando estamos desenvolvendo uma aplicação, é comum a necessidade de guardarmos estado. Juntamente com essa necessidade, é frequente precisarmos tomar uma ação..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Iniciando com React - #4 Armazenando Estado e Entendendo o Lifecycle &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Iniciando com React - #4 Armazenando Estado e Entendendo o Lifecycle
+                    </h1>
+                    <h2 class="headline">
+                    Apr 10, 2017 00:00
+                    · 1717 words
+                    · 9 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Quando estamos desenvolvendo uma aplicação, é comum a necessidade de guardarmos estado. Juntamente com essa necessidade, é frequente precisarmos tomar uma ação quando um componente acabou de aparecer na tela, por exemplo, ou quando dados são atualizados. Nesse post, veremos como React pode suprir essas necessidades de forma simples.
+&gt; Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts <a href="https://blog.coderockr.com/iniciando-com-react-3-criando-componentes-97f7023ca5ab">primeiro.
+&lt; Anterior</a></p>
+
+<h2 id="class-components">Class Components</h2>
+
+<p><em>Funcional components</em>, como os que vimos anteriormente, não possuem as funcionalidades que listamos acima. Para podermos utilizá-las, precisamos criar componentes baseados em classes, ou <strong><em>Class Components</em></strong> como são mais conhecidos.</p>
+
+<p>Para criarmos tais componentes, conforme abaixo, precisamos utilizar o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes">class</a>, que foi introduzido no <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Classes">ES6</a>:</p>
+
+<iframe src="https://medium.com/media/72eac84e4775edb89b971076e509eba8" frameborder=0></iframe>
+
+<p>No exemplo acima, estamos definindo um componente chamado <strong>Welcome,</strong> que extende de **React.Component. **Esse componente retorna apenas uma <strong>div</strong> com o texto** Welcome **e o valor que for passado na <strong>prop</strong> name**. <strong>Como podemos observar, em</strong> Class Components <strong>as</strong> props <strong>são acessadas através do</strong> this.props.**</p>
+
+<h2 id="estado">Estado</h2>
+
+<p>O estado pode ser qualquer conjunto de informações que serão utilizadas em algum momento pela interface. Por exemplo: As informações do usuário, uma lista de itens, o resultado de um request ou até informações específicas de UI, como veremos abaixo:</p>
+
+<iframe src="https://medium.com/media/6ed3f1a01d6e0cca106cdeecbf6edcc7" frameborder=0></iframe>
+
+<p>O exemplo acima, traz várias coisas novas, mas não se preocupe, vamos explorá-lo em detalhes.</p>
+
+<h3 id="método-constructor">Método constructor</h3>
+
+<p>No <strong>constructor</strong>, nós recebemos as props como primeiro parâmetro, chamamos <strong>super(props)</strong> para executar o construtor da classe pai, que no nosso caso é a class <strong>Component.</strong> Também estamos inicializando o estado do componente, através de:</p>
+
+<pre><code>constructor(props) {**
+  **super(props);
+  **this.state = {
+    activeIndex: props.initialIndex,
+  };**
+}
+</code></pre>
+
+<p>Especificamos que o valor inicial de <strong>activeIndex</strong>, será a prop **initialIndex. **Uma vez que o estado foi inicializado, a nossa propriedade <strong>activeIndex</strong> poderá ser acessada em toda a classe através de <strong>this.state.activeIndex.</strong> Essa forma direta de atribuir um valor ao estado, só poderá ser utilizada dentro do construtor da classe.</p>
+
+<h3 id="método-onselectbutton">Método onSelectButton</h3>
+
+<p>Abaixo do método constructor, estamos definindo outro método, que será utilizado como <a href="https://blog.coderockr.com/iniciando-com-react-3-criando-componentes-97f7023ca5ab#8aea">*callback</a>*, o **onSelectButton. **Ele será executado cada vez que houver um click em um dos nossos botões.</p>
+
+<p>Nesse método, recebemos o parâmetro **index, **e atualizamos o estado do componente, através de:</p>
+
+<pre><code>onSelectButton(index) {
+  **this.setState({
+    activeIndex: index,
+  });**
+}
+</code></pre>
+
+<p>Você deve estar se perguntando: “Por que não fazer uma atribuição direta, utilizando: this.state.<strong>activeIndex</strong> = <strong>index</strong>;”? A reposta é simples: É dessa forma que o React tomará conhecimento que o estado do componente mudou, e ele tomará as medidas necessárias para atualizar a interface se for necessário.</p>
+
+<p>O método <strong>setState</strong>, por sua vez, espera como primeiro parâmetro um objeto. Ele mesclará o valor desse objeto ao estado atual do componente. Sendo assim, não adianta executarmos this.setState(<strong>{}</strong>) achando que isso removerá todo o estado do componente.</p>
+
+<p>A regra geral do <strong>setState</strong> é bem simples: Dentro do método <strong>constructor</strong>, inicializamos utilizando this.state <strong>=</strong> {&hellip;}, em qualquer outro lugar, sempre utilizamos this.setState({&hellip;}) a fim de atualizar o estado.</p>
+
+<h3 id="método-isactiveindex">Método isActiveIndex</h3>
+
+<p>O método <strong>isActiveIndex</strong>, espera como primeiro parâmetro o index e retorna <strong>true</strong> se o index fornecido for o ativo naquele momento.</p>
+
+<p>Você deve ter notado que estamos acessando o valor de <strong>activeIndex</strong> diretamente, utilizando this.state.<strong>activeIndex</strong>. Nesse caso não precisamos utilizar nenhum método especial, pois estamos apenas <strong>lendo</strong> o valor do estado atual.</p>
+
+<h3 id="método-render">Método render</h3>
+
+<p>No método <strong>render</strong>, estamos retornando o <a href="https://blog.coderockr.com/iniciando-com-react-2-criando-a-estrutura-do-projeto-2c3b0f8e9f9#a705">***JSX</a>*** do nosso componente. No <strong>className</strong> dos nossos botões, estamos utilizando um ternário com o resultado da função <strong>isActiveIndex</strong>, para incluirmos a classe **btn-active **no botão que estiver selecionado. Na prop <strong>onClick</strong> dos nossos botões, estamos passando um <em>callback</em> para atualizar o estado. Sendo assim, toda vez que houver um click no botão, será executada a função **onSelectButton, **com o respectivo index.</p>
+
+<h2 id="component-lifecycle">Component Lifecycle</h2>
+
+<p><em>Class components</em>, possuem o que chamamos de <em>lifecycle methods</em>, que são métodos que serão executados em determinamos momentos da vida de um componente. Vamos separar esses métodos em três diferentes momentos: criação, atualização e remoção.</p>
+
+<h3 id="criação">Criação</h3>
+
+<p>No momento da criação de um componente, quatro métodos são executados:</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#constructor">**constructor</a> - **Esse é o método construtor do nosso componente, executado logo quando o componente é instanciado. Normalmente, esse método é utilizado para inicializarmos valores dentro e também quando precisamos fazer <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#es6-classes">bind dos métodos</a> da nossa classe. Observe o exemplo abaixo:</p>
+
+<pre><code>**constructor(props) {
+  **super(props);
+  this.state = {
+    collection: [
+      { name: 'Default Option'},
+      ...props.collection
+    ],
+  };
+  this.onClickButton = this.onClickButton.bind(this);
+**}**
+</code></pre>
+
+<blockquote>
+<p>Estamos utilizando o <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator">spread operator</a> no exemplo acima, funcionalidade que foi introduzida no ES6. Caso você ainda não esteja familiarizado com o mesmo, confira <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator">esse link do MDN</a>.</p>
+</blockquote>
+
+<p>No exemplo acima, estamos inicializando nosso <strong>state</strong> com base em uma collection que recebemos, porém, adicionamos como primeiro item dessa collection, um objeto para ser o nosso item default. Também fazemos um <strong>bind</strong> do método <strong>onClickButton</strong>, para que seja possível utilizar o <strong>this</strong> dentro dele, independente do contexto que ele estiver sendo executado.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentwillmount">**componentWillMount</a> - **Esse método é executado imediatamente antes do componente ser montado, e antes do método **render. **Nesse método, é possível alterar o state através do <strong>this.setState</strong>. Porém, é preferível fazer o mesmo no <strong>constructor</strong>, já que os dois possuem funcionalidade similar.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#render">**render</a>** - No ciclo de montagem do componente, esse método é executado logo após <strong>componentWillMount</strong>, e o mesmo deve retornar o JSX do componente. Esse é o único método obrigatório. É importante manter o método <strong>render</strong> como uma função pura, uma vez que dados os mesmos <em>state</em> e <em>props</em>, ele retorne sempre o mesmo resultado. Não faça alterações ao estado de dentro desse método, utilize os outros métodos do <em>lifecycle</em> para o fazê-lo.</p>
+
+<pre><code>**render()** **{**
+  return &lt;div&gt;Hello there&lt;/div&gt;
+**}**
+</code></pre>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentwillmount">**componentDidMount</a> - **Esse método é chamado imediatamente após a montagem do componente. Em casos que precisamos fazer alguma operação que precise de elementos do DOM, é aqui o lugar certo. Aqui também é um bom lugar para inicializarmos requests quando necessário.</p>
+
+<pre><code>**componentDidMount() {**
+  request('some/endpoint').then((response) =&gt; {
+    console.log('Request have finished');
+  });
+**}**
+</code></pre>
+
+<h3 id="atualização">Atualização</h3>
+
+<p>Todos os métodos acima são executados no momento de montagem de um componente. Além do momento de montagem, temos o momento de atualização, que pode ser por exemplo, quando as <em>props</em> ou o <em>state</em> do componente são atualizados. No momento de atualização, cinco métodos são executados:
+&gt; <strong>Nota</strong>: Com excessão do método render, nenhum dos métodos abaixo é executado no momento de montagem do componente.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentwillreceiveprops"><strong>componentWillReceiveProps</strong>(nextProps)</a>** - **Esse método é o primeiro método executado no ciclo de atualização, sempre com as novas props do componente. Sendo assim, se o <strong>state</strong> do componente depende do valor das <strong>props</strong>, é aqui que você deve atualizá-lo. Observe abaixo o exemplo:</p>
+
+<pre><code>**componentWillReceiveProps(nextProps){
+**  this.setState({
+    collection: [
+      { name: 'Default Option'},
+      ...nextProps.collection
+    ],
+  };
+**}**
+</code></pre>
+
+<p>No exemplo acima, estamos atualizando nosso <strong>state</strong> <strong>collection</strong>, com base na nova <strong>collection</strong> que recebemos através das <strong>props</strong>.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#shouldcomponentupdate"><strong>shouldComponentUpdate</strong>(nextProps, nextState)</a> **- **Esse método é chamado antes de o componente se atualizar. Ele recebe como parâmetros, as novas <strong>props</strong> e o novo <strong>state</strong> do componente, e deve retornar um boolean, indicando se o componente deve ou não ser atualizado. Quando retornado <strong>false</strong>, o React interrompe o ciclo de atualização do componente, para economizar processamento. Algumas abordagens para resolver problemas de performance, são focadas nesse método. Observe o exemplo abaixo:</p>
+
+<pre><code>**shouldComponentUpdate(nextProps, nextState) {**
+  return !equals(nextProps, this.props) ||
+    !equals(nextState, this.state)
+**}**
+</code></pre>
+
+<p>No exemplo acima, estamos comparando se o próximo state e props são iguais aos que já temos, se eles forem iguais nós retornamos false e assim é interrompido o ciclo de atualização.
+&gt; <strong>Dica:</strong> Há uma classe base de componentes que já implementa essa comparação para otimizar a performance, a classe <a href="https://facebook.github.io/react/docs/react-api.html#react.purecomponent">***React.PureComponent</a>**. *Basta utilizá-la da mesma maneira que já fazemos com React.Component:
+&gt; class <strong>MyComponent</strong> extends **React.PureComponent **{
+&gt; Porém, para ela funcionar da maneira esperada, você precisa estar aplicando <strong>imutabilidade</strong> em seus dados.</p>
+
+<p>O comportamento default do componente é sempre executar todo o ciclo quando houve alguma mudança na árvore de componentes, e para a maioria dos casos, você pode confiar nesse comportamento.
+&gt; <strong>Nota:</strong> Nenhum dos métodos abaixo será executado se o retorno do método **shouldComponentUpdate **for <strong>false.</strong></p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentwillupdate"><strong>componentWillUpdate</strong>(nextProps, nextState)</a> <strong>-</strong> Esse método é executado logo antes do componente ser atualizado e recebe como parâmetros, as próximas <strong>props</strong> e o próximo <strong>state</strong> do componente. <strong>Você não pode chamar this.setState dentro desse método</strong>. Se você precisa atualizar o state baseado em uma props, utilize o método **componentWillReceiveProps, **que já vimos mais acima.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#render">**render()</a> - **Esse método é chamado tanto no momento da montagem, como já vimos acima, como em cada ciclo de atualização do componente, se o mesmo não for interrompido. Nos ciclos de atualização, esse método é executado após o método <strong>componentWillUpdate.</strong></p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentdidupdate"><strong>componentDidUpdate</strong>(prevProps, prevState)</a> . Esse método é um substituto ao método <strong>componentDidMount</strong>, no ciclos de atualização. Porém, esse método recebe como parâmetros, as <em>props</em> e o <em>state</em> anteriores ao último update. Aqui é um ótimo lugar para você aplicar atualizações no DOM se necessário. Também é possível inicializar requisições dentro desse método, contanto que você coloque uma condição qualquer para as mesmas, como no exemplo abaixo:</p>
+
+<pre><code>**componentDidUpdate(prevProps, prevState) {**
+  if(prevState.activeIndex !== this.state.activeIndex) {
+    ...perform action
+  }
+**}**
+</code></pre>
+
+<p>No exemplo acima, verificamos se realmente foi atualizado o <strong>activeIndex</strong> antes de efetuarmos uma ação.
+&gt; Alguns métodos recebem as próximas <strong>props</strong> e o próximo <strong>state</strong> e outro método recebe o <strong>state</strong> e <strong>props</strong> anteriores. Caso você precise acessar o <strong>state</strong> e <strong>props</strong> <strong>atual</strong> dos componentes, basta utilizar <strong>this.state</strong> ou <strong>this.props</strong>, como já vimos anteriormente.</p>
+
+<h3 id="remoção">Remoção</h3>
+
+<p>No ciclo de vida de um componente, há também o ciclo de remoção, quando o mesmo é removido do DOM e não pertencerá mais a árvore de componentes.</p>
+
+<p><a href="https://facebook.github.io/react/docs/react-component.html#componentwillunmount">**componentWillUnmount</a> - **Esse método é executado imediatamente antes do componente ser destruído. Esse é o lugar perfeito para você limpar timers, cancelar requests ou remover qualquer elemento do DOM que foi criado manualmente dento do método <strong>componentDidMount</strong>.</p>
+
+<pre><code>**componentWillUnmount() {**
+  **clearTimeout**(currentTimerId);
+**}**
+</code></pre>
+
+<p>Na maioria dos componentes, você utilizará somente os métodos <strong>constructor</strong> e <strong>render</strong>, mas é importante conhecer todos eles para utilizá-los quando necessário.</p>
+
+<p>Esses métodos permitem a criação de componentes complexos de uma maneira clara e simples, assim fica fácil saber onde colocar cada parte da sua lógica.</p>
+
+<p>No próximo post, veremos como criar nossos componentes em um ambiente controlado, o <strong>storybook</strong>. Uma ferramenta que ajuda muito a melhorar nossa produtividade no dia dia. <strong>Siga-nos e não perca!</strong></p>
+
+<p>Gostou do post e achou útil? Dê um **like **❤️ abaixo para ajudar na divulgação e para que mais pessoas tenham acesso :)</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2finiciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle%2f - Iniciando%20com%20React%20-%20%234%20Armazenando%20Estado%20e%20Entendendo%20o%20Lifecycle by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

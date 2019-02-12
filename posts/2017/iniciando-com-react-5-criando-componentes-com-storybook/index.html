@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Iniciando com React - #5 Criando Componentes com Storybook"/>
+  <meta name="twitter:description" content="Quando estamos desenvolvendo um novo componente para um projeto, é comum o fazermos diretamente na aplicação. Essa abordagem pode nos levar à um processo exaustivo..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Iniciando com React - #5 Criando Componentes com Storybook &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Iniciando com React - #5 Criando Componentes com Storybook
+                    </h1>
+                    <h2 class="headline">
+                    Nov 3, 2017 00:00
+                    · 1149 words
+                    · 6 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Iniciando com React - 5 Criando componentes com Storybook</p>
+
+<p>Quando estamos desenvolvendo um novo componente para um projeto, é comum o fazermos diretamente na aplicação. Essa abordagem pode nos levar à um processo exaustivo, onde as vezes não temos os dados necessários a nossa disposição, ou situações onde temos que preencher todos os campos de um formulário, só para ver se a mensagem de erro está correta. O *<strong>React Storybook</strong> *vem para solucionar esses problemas e deixar o nosso workflow muito mais fluído.
+&gt; Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.
+<a href="https://blog.coderockr.com/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle-bbb92b27da83">&lt; Anterior</a></p>
+
+<h2 id="o-que-é-o-storybook">O que é o Storybook?</h2>
+
+<p>O storybook é uma ferramenta que nos permite desenvolver e testar componentes fora da nossa aplicação. É possível criar componentes completos utilizando mocks de dados para simular diferentes estados e diferentes comportamentos. Observe o exemplo abaixo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/4312/1*TxuoKupMwNqsEKyrCdB9cQ.gif" alt="Exemplo do Storybook funcionando" /><em>Exemplo do Storybook funcionando</em></p>
+
+<p>O exemplo acima da um bom overview de como é a ferramenta e qual é a sua proposta. Sem mais delongas, vamos para o processo de instalação.</p>
+
+<h2 id="instalação">Instalação</h2>
+
+<p>O Storybook possui um CLI para ser utilizado no terminal, que funciona de forma muito similar ao <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>. Os passos abaixo levam em consideração um ambiente com <em>Node</em> e <em>NPM</em> instalados, conforme já vimos no <a href="https://blog.coderockr.com/iniciando-com-react-2-criando-a-estrutura-do-projeto-2c3b0f8e9f9#b6a7">segundo post</a>. Também é importante que você já possua um projeto com o ambiente configurado, conforme explicado também no <a href="https://blog.coderockr.com/iniciando-com-react-2-criando-a-estrutura-do-projeto-2c3b0f8e9f9">segundo post</a>.</p>
+
+<p>O primeiro passo, é instalarmos o nosso CLI globalmente, utilizando o comando abaixo:</p>
+
+<pre><code>npm i -g @storybook/cli
+</code></pre>
+
+<p>Após terminar a instalação, basta irmos para a pasta do nosso projeto:</p>
+
+<pre><code>cd path/to/my-app
+</code></pre>
+
+<p>Dentro da pasta do projeto, executamos o comando abaixo, que criará toda a configuração necessária e instalará todas as dependências:</p>
+
+<pre><code>getstorybook
+</code></pre>
+
+<p>O comando acima, também insere o script **storybook **no nosso arquivo <strong>package.json.</strong></p>
+
+<p>Terminada a execução do comando, é possível testar o storybook executando:</p>
+
+<pre><code>npm run storybook
+</code></pre>
+
+<p>E acessar a url indicada, que no meu caso é <a href="http://localhost:9009/">http://localhost:9009/</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/4100/1*2PBQEmkAm5hc8Uy5ChjCaw.png" alt="" /></p>
+
+<p>Ao acessar a url indicada, é possível visualizar o storybook com algumas stories de exemplo:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5568/1*1d3PtybwXhSjopYjnTZ89A.png" alt="" /></p>
+
+<p>É possível navegar no menu lateral e ver o componente <strong>Button</strong> funcionando.</p>
+
+<p>Se acessarmos nosso projeto, podemos observar que foi criado uma pasta .storybook dentro do diretório raiz da aplicação. Essa pasta contém arquivos referente as configurações do storybook.</p>
+
+<p>O arquivo .storybook/config.js é o responsável por carregar as stories do projeto e ele contém o seguinte código:</p>
+
+<iframe src="https://medium.com/media/f05ffbaa27b8e98d22e125eab3dc44ca" frameborder=0></iframe>
+
+<p>A função loadStories importa o arquivo src/stories/index.js, que por sua vez, contém a definição das stories, conforme abaixo:</p>
+
+<iframe src="https://medium.com/media/449a766bcf133e21ff727ddbd50d0be0" frameborder=0></iframe>
+
+<p>Cada componente tem suas próprias stories, de modo que cada uma represente um estado dele. Com isso, podemos construir e testar cada componente de forma isolada, o que nos leva a ter mais controle no processo de desenvolvimento.</p>
+
+<p>Seguindo o código acima, o método <strong>storiesOf</strong> é responsável por inicializar as stories de um componente, e ele espera como primeiro parâmetro o nome do componente (que é o nome que aparecerá naquele menu lateral) e como segundo parâmetro, a variável global <strong>module</strong>. A funcão <strong>storiesOf</strong> retorna um objeto que contém o método <strong>add</strong>, que será utilizado para adicionar novas stories ao componente.</p>
+
+<p>No exemplo acima, está sendo definido uma story para o componente <strong>Welcome</strong>, com a descrição “to Storybook”. Também estão sendo defininidas as stories para o componente Button: “with text” e “with some emoji”.</p>
+
+<p>Outra coisa que podemos ver no arquivo de exemplo, é o uso da função <strong>action</strong> e <strong>linkTo</strong>. A funcão **action **é utilizada para criar funções mocks que podem ser passadas como callbacks através das props. Quando os mocks são executados, eles geram um log que aparece no storybook, o que é útil para debugging. A função <strong>linkTo</strong> por sua vez, cria links para outras stories.</p>
+
+<p>Agora vamos ver exemplos que se aproximam mais de casos reais.</p>
+
+<h2 id="button">Button</h2>
+
+<p>Vamos criar um componente Button, que possui algumas variações de estado:</p>
+
+<p>Primeiramente, crie uma pasta <strong>Button</strong> dentro de <strong>src</strong>. Dentro dela crie um arquivo <strong>Button.jsx</strong> e outro arquivo <strong>Button.css.</strong> A estrutura desses arquivos deve estar da seguinte maneira:</p>
+
+<pre><code>src/
+  Button/
+    Button.jsx
+    Button.css
+</code></pre>
+
+<p>O código para o componente será o seguinte:</p>
+
+<iframe src="https://medium.com/media/03f6d304fc529d69683f5137259aca2d" frameborder=0></iframe>
+
+<p>No código acima, nós definimos o componente Button, que aceita as props: <strong>children</strong>, <strong>onClick</strong> e <strong>disabled</strong>.</p>
+
+<p>Essas três props nós repassamos para o elemento button do html. Porém, nós também utilizamos a prop <strong>disabled</strong> para inserir ou não o class name: button&ndash;disabled que será utilizado para estilizar o componente no respectivo estado.</p>
+
+<p>Para estilizar o componente acima, o arquivo <strong>Button.css</strong> deve conter o seguinte código:</p>
+
+<iframe src="https://medium.com/media/7e9732dd7b5379f251e2a5b604f8c730" frameborder=0></iframe>
+
+<p>O arquivo acima possui um estilo padrão para o componente através da classe .button e possui um estilo adicional para o estado **disabled, **através da classe .button&ndash;disabled</p>
+
+<p>Por último, criaremos as stories do nosso componente. Substitua o código do arquivo src/stories/index.js pelo seguinte:</p>
+
+<iframe src="https://medium.com/media/7786bdb5cb2157e0ec99d88dc756eff0" frameborder=0></iframe>
+
+<p>No arquivo acima, nós importamos o componente <strong>Button</strong> e criamos duas stories para o mesmo. Cada story possui uma utilização básica do componente. A primeira story nós só passamos um callback para a prop <strong>onClick</strong>, e sendo assim, o button assumirá seu estado padrão. Na segunda story, além da prop <strong>onClick</strong>, nós passamos a prop <strong>disabled</strong>, para que nessa story o componente assuma o respectivo estado.</p>
+
+<p>Feito isso, acesse novamente o storybook no seu navegador e veja o resultado.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5568/1*sF0FMX51biXcNGJ4OHYc9A.png" alt="" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/5568/1*_1kGCyQo7DWgmpxJS1Vz8Q.png" alt="" /></p>
+
+<p>No geral, as stories funcionam basicamente assim: Você importa o componente, define uma story e utiliza o mesmo passando props e dados mocados para para simular um estado.</p>
+
+<h2 id="carregando-stories-dinamicamente">Carregando stories dinamicamente</h2>
+
+<p>Até aqui nós vimos como criar uma story. Porém, seria falta de organização e pouco produtivo manter as stories dos componentes todas em um único arquivo. O ideal é que possamos criar um arquivo de stories para cada componente e que não precisemos importar cada arquivo de stories manualmente. Vamos ver como podemos chegar nesse cenário.</p>
+
+<p>Primeiramente, crie o arquivo Button.stories.jsx dentro da pasta do componente Button e mova para ele o conteúdo do arquivosrc/stories/index.js, corrigindo o caminho do import do componente. O arquivo em questão ficará com o seguinte código:</p>
+
+<iframe src="https://medium.com/media/a69d80d1c33e932d25a5dd81f29e79e3" frameborder=0></iframe>
+
+<p>Feito isso, podemos remover completamente a pasta src/stories</p>
+
+<p>Em seguida, iremos alterar o arquivo .storybook/config.js para carregar dinamicamente todos os arquivos que possuem .stories.jsx em seu nome. O arquivo final ficará da seguinte maneira:</p>
+
+<iframe src="https://medium.com/media/805b5fceecd3ae4dd2c15051ba3a2615" frameborder=0></iframe>
+
+<p>No arquivo acima, nós utilizamos require.context para carregar todos os arquivos que respeitem o pattern que definimos. Com isso, para criar um novo arquivo de stories, basta criá-lo dentro da pasta src ou de qualquer sub-pasta dela e incluir .stories.jsx no final do nome do arquivo</p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Vimos que é possível criar cada componente de forma independente, isso nos dá mais controle do desenvolvimento e também nos compele a construir componentes mais resilientes, pensando em como eles irão se comportar em cada situação.</p>
+
+<p>Aproveite que as stories estão configuradas e carregando automaticamente e crie um novo componente com novas stories. A melhor maneira de aprender e fixar o conhecimento, é praticando.</p>
+
+<p>Gostou do post e achou útil? Ajude a divulgar para que mais pessoas tenham acesso! ❤️ ️</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2finiciando-com-react-5-criando-componentes-com-storybook%2f - Iniciando%20com%20React%20-%20%235%20Criando%20Componentes%20com%20Storybook by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

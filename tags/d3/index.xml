@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D3 on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/d3/</link>
+    <description>Recent content in D3 on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 22 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/d3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recharts, Construa Gráficos com React e D3</title>
+      <link>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</guid>
+      <description>Recentemente iniciamos o desenvolvimento de mais cinco widgets no iMasters Planrockr, todos de gráficos. Para a renderização dos mesmos, optamos por usar o D3JS, que é uma das libs mais robustas para a implementação de gráficos atualmente.
+Seria possível implementá-los utilizando somente D3 e foi dessa forma que começamos a implementar o primeiro gráfico. No entanto, aprender a lib do zero pode exigir um tempo e esforço considerável, não sendo nada produtivo no estado inicial.</description>
+    </item>
+    
+  </channel>
+</rss>

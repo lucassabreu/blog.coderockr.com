@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clean Code on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/clean-code/</link>
+    <description>Recent content in Clean Code on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Mon, 13 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boas Práticas na Criação de Milestones, Tarefas, Pull Requests e Commits</title>
+      <link>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</guid>
+      <description>Um dos fatores de sucesso do processo de desenvolvimento de software, assim como a maioria dos empreendimentos humanos, é uma boa comunicação.
+A Gitlab, ao cunhar o termo Conversational Development foi muito feliz ao definir
+ ConvDev takes a different approach by constraining the agile principles to what’s at the center of getting work done, the conversation.
+ Neste post vou citar algumas práticas que estamos implementando e que vem melhorando nossos processos.</description>
+    </item>
+    
+    <item>
+      <title>Como Melhorar seus Códigos Usando Object Calisthenics</title>
+      <link>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</link>
+      <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</guid>
+      <description>Em um dos primeiros projetos que a Coderockr participou tivemos o privilégio de trabalhar com um “dream team”: Eduardo Shiota, Guilherme Blanco, Rafael Dohms e Otavio Ferreira (em ordem alfabética porque é impossível perfilá-los em qualquer ordem de relevância).
+Neste projeto foi possível aprimorarmos vários pontos importantes como TDD, Scrum, trabalho remoto, análise, integração contínua, etc. Mas o que mais me marcou foram os conceitos de Clean Code e Object Calisthenics que eram aplicados ao projeto.</description>
+    </item>
+    
+    <item>
+      <title>A Importância da Revisão de Código</title>
+      <link>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</link>
+      <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</guid>
+      <description>Em seu famoso artigo “A catedral e o bazar” Eric S. Raymond proferiu:
+ Dados olhos suficientes, todos os erros são óbvios
+ Esta frase, que ficou conhecida com a “Lei de Linus”, resume bem o fenômeno do código aberto e como ele mudou a forma como desenvolvemos software.
+Na Coderockr adotamos a política de Code Review em todos os projetos. Para cada tarefa/melhoria/bug/feature o desenvolvedor cria uma nova branch no Bitbucket (ou Github se o projeto for open source) e ao final do desenvolvimento ele abre um Pull Request para que os outros membros da equipe ajudem a analisar o código.</description>
+    </item>
+    
+    <item>
+      <title>Sintomas de Design de Software Podre</title>
+      <link>//blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/</link>
+      <pubDate>Thu, 07 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/</guid>
+      <description>Existem quatro sintomas primários que nos ajudam a identificar quando nosso design está apodrecendo. São ortogonais, mas relacionados de formas óbvias. Os sintomas são: rigidez, fragilidade, imobilidade, e viscosidade.
+Rigidez É a tendência do software ser difícil de mudar, mesmo que de maneira simples. Cada mudança causa uma cascata de mudanças subsequentes em módulos independentes. O que começa como uma simples mudança de dois dias em um módulo cresce em uma maratona de mudanças de várias semanas alterando módulo atrás de módulo.</description>
+    </item>
+    
+  </channel>
+</rss>

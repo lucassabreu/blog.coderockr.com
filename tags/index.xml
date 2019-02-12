@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/</link>
+    <description>Recent content in Tags on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Api</title>
+      <link>//blog.coderockr.com/tags/api/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arquitetura</title>
+      <link>//blog.coderockr.com/tags/arquitetura/</link>
+      <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/arquitetura/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws</title>
+      <link>//blog.coderockr.com/tags/aws/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carreira</title>
+      <link>//blog.coderockr.com/tags/carreira/</link>
+      <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/carreira/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clean Code</title>
+      <link>//blog.coderockr.com/tags/clean-code/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/clean-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Criptografia</title>
+      <link>//blog.coderockr.com/tags/criptografia/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/criptografia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>D3</title>
+      <link>//blog.coderockr.com/tags/d3/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/d3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Desenvolvimento</title>
+      <link>//blog.coderockr.com/tags/desenvolvimento/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/desenvolvimento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doctrine</title>
+      <link>//blog.coderockr.com/tags/doctrine/</link>
+      <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/doctrine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ferramentas</title>
+      <link>//blog.coderockr.com/tags/ferramentas/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/ferramentas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gerenciamento De Projetos</title>
+      <link>//blog.coderockr.com/tags/gerenciamento-de-projetos/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/gerenciamento-de-projetos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>//blog.coderockr.com/tags/github/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>//blog.coderockr.com/tags/gitlab/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>//blog.coderockr.com/tags/go/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I.a.</title>
+      <link>//blog.coderockr.com/tags/i.a./</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/i.a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Js</title>
+      <link>//blog.coderockr.com/tags/js/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>//blog.coderockr.com/tags/kubernetes/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metodologias</title>
+      <link>//blog.coderockr.com/tags/metodologias/</link>
+      <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/metodologias/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile</title>
+      <link>//blog.coderockr.com/tags/mobile/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>//blog.coderockr.com/tags/php/</link>
+      <pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programação Funcional</title>
+      <link>//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>//blog.coderockr.com/tags/react/</link>
+      <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React Native</title>
+      <link>//blog.coderockr.com/tags/react-native/</link>
+      <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/react-native/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redux</title>
+      <link>//blog.coderockr.com/tags/redux/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/redux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Security</title>
+      <link>//blog.coderockr.com/tags/software-security/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/software-security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tdd</title>
+      <link>//blog.coderockr.com/tags/tdd/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trabalho Remoto</title>
+      <link>//blog.coderockr.com/tags/trabalho-remoto/</link>
+      <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/trabalho-remoto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transformação Digital</title>
+      <link>//blog.coderockr.com/tags/transforma%C3%A7%C3%A3o-digital/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/tags/transforma%C3%A7%C3%A3o-digital/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

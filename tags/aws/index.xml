@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/aws/</link>
+    <description>Recent content in Aws on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 31 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aplicando HTTPS para uma SPA na AWS</title>
+      <link>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</guid>
+      <description>Recentemente passamos a servir a nossa landing page e o SPA do Planrockr sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend, mas percebemos que seria melhor que nosso frontend também usasse.
+Alguns dos motivos por traz disso seriam para melhorar o ranking em sites de pesquisa, para garantir ainda mais a segurança nas comunicações, e também para passar mais segurança para os nossos usuários.
+Como estamos servindo nosso frontend usando o S3 da AWS, é apenas uma questão de colocar um CloudFront na frente e alterar a rota no Route 53 e tudo passa a funcionar, mas acabou dando alguma dor de cabeça, não por ser uma tarefa difícil, mas simplesmente por termos encontrado instruções confusas e errôneas quando pesquisamos como executar a migração.</description>
+    </item>
+    
+    <item>
+      <title>Usando AWS API Gateway e AWS Lambda</title>
+      <link>//blog.coderockr.com/posts/2017/usando-aws-api-gateway-e-aws-lambda/</link>
+      <pubDate>Tue, 03 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/usando-aws-api-gateway-e-aws-lambda/</guid>
+      <description>Recentemente lançamos uma nova versão do site da Coderockr (já viu? Está lindão!) e nosso desenvolvedor/designer apresentou uma ótima ideia: criarmos um formulário de contato mais inteligente, onde o interessado pode nos fornecer informações mais completas já no primeiro momento, acelerando nosso processo de negociação.
+Como usamos o CRM da HubSpot para gerenciar nossos contatos com clientes, rapidamente a ideia evoluiu para usarmos a API e integrarmos o formulário com o CRM.</description>
+    </item>
+    
+  </channel>
+</rss>

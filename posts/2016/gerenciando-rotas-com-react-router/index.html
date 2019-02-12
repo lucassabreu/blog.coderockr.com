@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Gerenciando Rotas com React Router"/>
+  <meta name="twitter:description" content="Quando começamos a desenvolver um SPA, uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Gerenciando Rotas com React Router &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Gerenciando Rotas com React Router
+                    </h1>
+                    <h2 class="headline">
+                    Sep 5, 2016 00:00
+                    · 1036 words
+                    · 5 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/js">JS</a>
+                          
+                              <a href="//blog.coderockr.com/tags/react">React</a>
+                          
+                              <a href="//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional">Programação Funcional</a>
+                          
+                              <a href="//blog.coderockr.com/tags/arquitetura">Arquitetura</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Vinicius Dacal</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Quando começamos a desenvolver um <a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a>, uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente.</p>
+
+<p><a href="https://github.com/reactjs/react-router">React Router</a> é uma lib completa para controle de rotas. Ela permite que você consiga configurar rotas utilizando o formato <a href="https://facebook.github.io/react/docs/jsx-in-depth.html">JSX</a> e também disponibiliza uma API para você configurar diretamente via Javascript.</p>
+
+<p>A lib trabalha com <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/History">History API</a>, mas também deixa a possibilidade de você trabalhar com <strong>Hash(#)</strong> se for necessário.</p>
+
+<p>Ela possui features como: Rotas aninhadas, lazy loading de componentes, matching para rotas dinâmicas e controle de transição de rotas, além de possuir suporte a <a href="https://facebook.github.io/react/docs/environments.html">server-rendering</a>.</p>
+
+<p>Para utilizá-la, basta instalar utilizando o npm:</p>
+
+<pre><code>npm install react-router --save
+</code></pre>
+
+<p>Em nosso exemplo abaixo, podemos ver como ficaria a estrutura básica para uma aplicação de agenda de contatos. Essa aplicação possuirá duas telas: uma tela para a listagem dos contatos e outra tela para a visualização detalhada do contato.</p>
+
+<p>Teremos quatro componentes:</p>
+
+<ul>
+<li><p><strong>App</strong> — O componente container da nossa aplicação.</p></li>
+
+<li><p><strong>ContactList</strong> — Nossa lista de contatos.</p></li>
+
+<li><p><strong>ContactDetail</strong> — Nosso componente de visualização de detalhes do contato.</p></li>
+
+<li><p><strong>NotFound</strong> — Nossa página 404.</p></li>
+</ul>
+
+<script type="application/javascript" src="//gist.github.com/viniciusdacal/8085867df1fe261d2bcc12c0e1e520bf.js"></script>
+
+<blockquote>
+<p>No exemplo acima, os componentes estão no mesmo arquivo apenas para fins didáticos. É uma boa prática manter apenas uma definição de componente por arquivo.</p>
+</blockquote>
+
+<p>No bloco abaixo, temos a definição de todas as nossas rotas. Os componentes que utilizamos para essa definição são o <strong>Router</strong> e o <strong>Route.</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*GrvQBNGGAGXLtXkOWtUVOA.png" alt="" /></p>
+
+<p><strong>Router</strong></p>
+
+<p>Componente raiz da aplicação. Todas as rotas devem ser definidas dentro dele e deve existir somente um <strong>Router</strong> por aplicação.</p>
+
+<p>O router espera receber o parâmetro <strong>history</strong>, que é o objeto que ele utilizará para o controle da transição das páginas. Esse objeto é diretamente importado do react-router, podendo ser o <a href="https://github.com/reactjs/react-router/blob/master/docs/API.md#browserhistory">browserHistory</a> ou o <a href="https://github.com/reactjs/react-router/blob/master/docs/API.md#hashhistory">hashHistory</a>.</p>
+
+<h3 id="route"><strong>Route</strong></h3>
+
+<p>É cada rota da nossa aplicação. Espera como parâmetros as props:</p>
+
+<ul>
+<li><p><strong>path</strong> — utiliza para fazer matching com a url.</p></li>
+
+<li><p><strong>component</strong> — componente que será renderizado caso a url dê matching com o <strong>path.</strong></p></li>
+</ul>
+
+<p>O path aceita alguns formatos para definição da rota:</p>
+
+<pre><code>// Rota estática, ou fixa:
+path='contacts'
+
+// Rota com parâmetros:
+path='contacts/:id'
+
+// Rota com parâmetros opcionais:
+path='contacts(/:id)'
+</code></pre>
+
+<p>Os parâmetro passados pelas rotas chegam no componente através da propriedade <strong>params</strong>. No exemplo acima, poderíamos acessar o parâmetro <strong>id</strong> de dentro do componente respectivo à rota da seguinte forma:</p>
+
+<pre><code>componentDidMount() {
+  const id = this.props.params.id;
+  ...
+}
+</code></pre>
+
+<p>Outro formato aceito é utilizando o ***, **que funciona como um coringa:</p>
+
+<pre><code>**path=’*’**
+fará matching com todas as rotas
+
+**path='contacts/*'**
+fará matching com todas as rotas a partir de contacts.
+ex:
+ contacts/
+ contacts/example
+ contacts/123
+</code></pre>
+
+<blockquote>
+<p>Mais detalhes sobre os formatos suportados podem ser encontrados <a href="https://github.com/reactjs/react-router/blob/master/docs/guides/RouteMatching.md">nesse link da docs</a>.</p>
+</blockquote>
+
+<p>Um ponto importante a ressaltar é que somente uma rota fará matching por vez, e a prioridade delas vem de cima para baixo. Por esse motivo, conseguimos fazer nossa página 404 apenas utilizando o <strong>path=’*’</strong> e colocando ele abaixo de todas as rotas. Caso não for feito matching com nenhuma rota anterior, ele chega nessa rota e renderiza o component <strong>NotFound.</strong></p>
+
+<h3 id="rotas-aninhadas"><strong>Rotas aninhadas</strong></h3>
+
+<p>É comum em nossas aplicações utilizarmos rotas aninhadas. No nosso exemplo acima já estamos utilizando, mas talvez não tenha ficado evidente:</p>
+
+<pre><code>&lt;Route path='**/**' component={App}&gt;
+  &lt;Route path='**contacts**' component={ContactList} /&gt;
+  ...
+&lt;/Route&gt;
+</code></pre>
+
+<p>Nesse trecho, podemos observar que a rota <strong>contacts</strong> está aninhada a rota <strong>/</strong> que é nossa rota raiz.</p>
+
+<p>Nossa rota raiz renderiza o componente <strong>App</strong>, que atualmente funciona apenas como um layout base da nossa aplicação.</p>
+
+<p>Nele poderíamos colocar o rodapé, o menu e componentes que sempre estarão na tela, independentemente da rota em que estivermos.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*xgvUUvGHlGqlj1s2vOknHQ.png" alt="" /></p>
+
+<p>Na imagem acima, na linha 7, acessamos a propriedade <strong>children</strong> que é inserida pelo <strong>react router</strong> no nosso componente. Nesse caso, <strong>children</strong> seria o componente respectivo a uma rota aninhada. Por exemplo:</p>
+
+<pre><code>// URL atual: 'http://app.myapp.com/**contacts**'
+
+&lt;Route path='**/**' component={App}&gt;
+  &lt;Route path='**contacts**' component={**ContactList**} /&gt;
+  &lt;Route path='contacts/:id' component={ContactDetail} /&gt;
+&lt;/Route&gt;
+</code></pre>
+
+<p>Dada a url atual e a nossa configuração de rotas, o <strong>children</strong> do nosso componente <strong>App</strong> seria o componente <strong>ContactList.</strong></p>
+
+<p>Abaixo segue um layout que com frequência vemos em aplicações:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*U6i9FxBP9xFOmtCyv-XHvw.png" alt="" /></p>
+
+<p>No layout acima, temos o menu superior e a sidebar que estarão em todas as telas e temos o conteúdo central, que mudará de uma rota para outra.</p>
+
+<p>Nesse caso, poderíamos manter o <strong>Menu</strong> e a <strong>Sidebar</strong> no nosso componente <strong>App</strong>, renderizando o children ao centro.</p>
+
+<pre><code>render () {
+  return (
+    &lt;div&gt;
+      &lt;Menu /&gt;
+      &lt;Sidebar /&gt;
+      &lt;section className='content-wrapper'&gt;
+        {children}
+      &lt;/section&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+
+<p>Em nosso exemplo da agenda, só utilizamos um nível de aninhamento de rota, mas é possível utilizar quantos forem necessários:</p>
+
+<pre><code>&lt;Route path='/' component={App}&gt;
+  &lt;Route path='contacts' component={ContactList} /&gt;
+  &lt;Route path='contacts:id' component={**ContactDetail**}&gt;
+    &lt;Route path='**calls**' component={**ContactCalls**} /&gt;
+  &lt;/Route&gt;
+&lt;/Route&gt;
+</code></pre>
+
+<p>Nesse exemplo acima, temos uma rota aninhada dentro da visualização do contato. Nessa rota iríamos mostrar, abaixo das informações do contato, uma lista de ligações feitas para o mesmo.</p>
+
+<p>Quando a rota <strong>calls</strong> fizer matching, o componente <strong>ContactCalls</strong> estará disponível através da propriedade <strong>children</strong> do componente <strong>ContactDetail.</strong></p>
+
+<p><strong>ContactCall</strong> fica como o children de <strong>ContactDetail</strong> que por sua vez é children de <strong>App.</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*7tUAfXw6SY4g6T61X9axRw.gif" alt="Cat inception" /><em>Cat inception</em></p>
+
+<h3 id="link">Link</h3>
+
+<p>O componente Link é utilizado para fazer a navegação das páginas. esse componente aceita os seguintes parâmetros:</p>
+
+<h3 id="to"><strong>to</strong></h3>
+
+<p>O destino para o link, que pode ser passado em dois formatos, string ou objeto.</p>
+
+<p>Em caso de string, deve ser o caminho absoluto para a página, ex:</p>
+
+<pre><code>&lt;Link to='**/contacts/123**'&gt;Contato 123&lt;/Link&gt;
+</code></pre>
+
+<p>Em caso de objeto, pode conter os seguintes parâmetros:</p>
+
+<pre><code>{
+  **pathname**: 'String representando o caminho para o link',
+  **query**: 'Um objeto com chave valor dos parâmetros da url',
+  **hash**: 'Uma hash para colocar na URL, ex: #uma-hash.',
+  **state**: 'state a ser persistido para o location'
+}
+</code></pre>
+
+<h3 id="activeclassname"><strong>activeClassName</strong></h3>
+
+<p>className a ser inserido no link quando a url do link em questão estiver ativa. É uma forma fácil de estilizar seu link ativo no menu de navegação.</p>
+
+<h3 id="activestyle">activeStyle</h3>
+
+<p>Bem parecido com o activeClassName, mas ao invés do className, aceita um objeto de estilos CSS.</p>
+
+<p>Os demais atributos podem ser encontrado nesse <a href="https://github.com/reactjs/react-router/blob/master/docs/API.md#link">link da docs</a>.</p>
+
+<p>Com esses componentes, já é possível construir uma aplicação baseada em rotas. Mas o controle de rotas não para apenas por aqui, há outras questões como rotas dinâmicas e controle de autenticação de usuário que eu pretendo abordar em posts futuros.</p>
+
+<p>Para se aprofundar no tema, aconselho começar pela <a href="https://github.com/reactjs/react-router">documentação</a> que hoje se encontra no Github.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2016%2fgerenciando-rotas-com-react-router%2f - Gerenciando%20Rotas%20com%20React%20Router by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

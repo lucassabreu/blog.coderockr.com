@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Integração Contínua Usando o Drone"/>
+  <meta name="twitter:description" content="Integração contínua e deploy contínuo são dois pontos muito importantes no “Coderockr Way”, o processo de desenvolvimento que usamos na Coderockr..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Integração Contínua Usando o Drone &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Integração Contínua Usando o Drone
+                    </h1>
+                    <h2 class="headline">
+                    May 8, 2017 00:00
+                    · 804 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Elton Minetto</h3>
+                </header>
+                
+                <section id="post-body">
+                    <p>Integração contínua e deploy contínuo são dois pontos muito importantes no “Coderockr Way”, o processo de desenvolvimento que usamos na Coderockr. Neste post vou falar sobre uma nova ferramenta que estamos avaliando, o Drone.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*YwR9yAOWUkbLiiscmQRN7g.png" alt="" /></p>
+
+<p>O <a href="https://drone.io/">Drone</a> é uma solução open source, desenvolvida em Go e baseada fortemente no uso de containers Docker. Ele é formado por três componentes principais:</p>
+
+<ul>
+<li><p><strong>Server</strong>: faz a orquestração dos builds, ouvindo eventos em repositórios hospedados no Github, Gitlab ou Bitbucket e gerenciando a execução usando os agentes. Ele é um container Docker que deve ser executado em um local que possa ser visível tanto pelos agentes quanto pela hospedagem do repositório.</p></li>
+
+<li><p><strong>Agents</strong>: os agentes fazem o trabalho pesado do processo. São eles que recebem do server as instruções que devem ser executadas durante um build ou deploy. São containers Docker que podem ser executados em qualquer máquina que suporte containers.</p></li>
+
+<li><p><strong>Cli</strong>: o aplicativo de linha de comando é opcional mas ajuda bastante no processo de configuração e gerenciamento de deploys.</p></li>
+</ul>
+
+<p>Vamos começar instalando o servidor e um agente em uma máquina. Para isso basta criar um arquivo docker-compose.yml como o abaixo:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/daa46392d377b40190f8f72d8282ea5c.js"></script>
+
+<p>Neste exemplo vamos usar a integração com o Github para executar os testes. O primeiro passo é criarmos uma integração do Github com o Drone e para isso é preciso acessar a URL: <a href="https://github.com/settings/applications/new">https://github.com/settings/applications/new</a> e registrar uma nova aplicação.</p>
+
+<ul>
+<li><p>O campo nome é usado para a sua organização, então pode ser algo como Drone.</p></li>
+
+<li><p>No campo <em>Homepage URL</em> coloque o endereço do seu servidor: <a href="http://ci.seu_server.com:8001/">http://ci.seu_server.com:8001</a>. Note que é o mesmo endereço usado na variável DRONE_SERVER do docker-compose.yml.</p></li>
+
+<li><p>No campo <em>Authorization callback URL</em> complete com o seguinte conteúdo: <a href="http://ci.seu_server.com:8001/authorize">http://ci.seu_server.com:8001/authorize</a>.</p></li>
+</ul>
+
+<p>Após confirmar a criação o Github vai mostrar as informações de <em>Client ID</em> e <em>Client Secret</em> que devem ser salvas no docker-compose.yml, nas variáveis <em>DRONE_GITHUB_CLIENT</em> e <em>DRONE_GITHUB_SECRET</em>. Ainda sobre este arquivo, a variável <em>DRONE_SECRET</em> é uma informação que deve ser igual entre o server e os agents, para garantir a segurança.</p>
+
+<p>Com tudo configurado basta executar o comando</p>
+
+<pre><code>docker-compose up -d
+</code></pre>
+
+<p>E acessar, via navegador o <a href="http://ci.seu_server.com:8001/">http://ci.seu_server.com:8001</a>. Na interface é possível fazer login com o usuário do Github e visualizar os projetos e builds cadastrados. No momento ainda não temos nenhum projeto, então este vai ser o próximo passo.</p>
+
+<p>Para facilitar este exemplo vou criar um repositório com um projeto do Zend Expressive, pois este já configura um ambiente de testes simples. Para isso usei os comandos:</p>
+
+<pre><code>curl -s http://getcomposer.org/installer | php
+php composer.phar create-project zendframework/zend-expressive-skeleton drone-post
+</code></pre>
+
+<p>Após responder os valores padrão que o script pergunta podemos verificar se os testes estão passando, usando os comandos:</p>
+
+<pre><code>cd drone-post/ ./vendor/bin/phpunit
+</code></pre>
+
+<p>Precisamos configurar o repositório para que os testes sejam executados a cada push. O primeiro passo é criarmos no repositório um arquivo chamado .drone.yml, que vai definir os passos que os agentes devem executar. O conteúdo deste arquivo ficou da seguinte forma:</p>
+
+<script type="application/javascript" src="//gist.github.com/eminetto/ea44442efabfa07fc98a2db9dcb9e3d5.js"></script>
+
+<p>Em <em>image</em> indicamos qual é o container Docker que vai ser usado para executar os <em>commands</em>. Neste caso estou usando o container oficial do PHP, que pode ser encontrado no <a href="https://hub.docker.com/_/php/">Docker Hub</a>. É possível usar qualquer container que esteja no Docker Hub ou em outro registro, tanto público quanto privado. Na documentação do Drone é possível ver como usar estes casos mais complexos.</p>
+
+<p>O último passo é fazer a integração entre o Github e o Drone, para que o servidor seja avisado a cada alteração no repositório e inicialize os builds. É possível fazer isso usando a interface do Drone via navegador, ou usando o aplicativo de linha de comando. Vamos usar o CLI para fazer este processo.</p>
+
+<p>Após <a href="http://docs.drone.io/cli-installation/">instalá-lo</a> em seu computador é preciso configurá-lo para que possa acessar o seu servidor. Para isso é preciso configurar duas variáveis de ambiente:</p>
+
+<pre><code>export DRONE_SERVER=&quot;http://ci.seu_server.com:8001&quot;
+export DRONE_TOKEN=&quot;token&quot;
+</code></pre>
+
+<p>Este token pode ser encontrado no seu servidor, na URL: <a href="http://ci.seu_server.com:8001/account">http://ci.seu_server.com:8001/account</a>, na opção <em>Show token</em>.</p>
+
+<p>Agora basta executarmos:</p>
+
+<pre><code>drone repo add eminetto/drone-post
+</code></pre>
+
+<p>Para que isto seja possível é necessário que o usuário dono do Token seja um administrador do Drone, o que foi configurado na variável <em>DRONE_ADMIN</em> do docker-compose.yml. O comando acima criou um <em>Webhook</em> no repositório do Github indicando que os eventos de push, commit, deploy, etc, devem ser enviados ao nosso servidor do Drone. Agora basta fazer push dos arquivos para o repositório e acessar a interface do Drone para ver os testes passando:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2652/0*SUv7NJBc5imk2hFG.png" alt="" /></p>
+
+<p>O que é interessante na arquitetura do Drone é que basta executar mais agentes, em mais máquinas, que o processo de desenvolvimento escala conforme sua necessidade. É possível, por exemplo, usar as máquinas dos desenvolvedores para executarem builds, aumentando a velocidade durante o horário de trabalho.</p>
+
+<p>Neste primeiro post apresentei o básico do Drone. Em futuros textos vou falar sobre deploy, plugins, segurança, etc. Enquanto isso é possível acessar a <a href="http://docs.drone.io/">documentação oficial</a> para encontrar mais detalhes e exemplos avançados.</p>
+
+<p><em>Originally published at <a href="http://eltonminetto.net/post/2017-05-09-integracao-continua-drone-io/">http://eltonminetto.net/post/2017-05-09-integracao-continua-drone-io/</a> on May 9, 2017.</em></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fintegracao-continua-usando-o-drone%2f - Integra%c3%a7%c3%a3o%20Cont%c3%adnua%20Usando%20o%20Drone by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

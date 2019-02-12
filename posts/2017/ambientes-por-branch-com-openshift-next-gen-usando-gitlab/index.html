@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="//blog.coderockr.com/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Ambientes por Branch com OpenShift Next Gen Usando Gitlab"/>
+  <meta name="twitter:description" content="Esta postagem é uma continuação da “(Ambientes por Branch com OpenShift Next Gen)..."/>
+  
+    <meta name="twitter:site" content="@coderockr"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@Coderockr"/>
+  
+
+
+
+		
+		<meta name="author" content="Coderockr">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.53" />
+		<title>Ambientes por Branch com OpenShift Next Gen Usando Gitlab &middot; Blog Coderockr</title>
+		<link rel="shortcut icon" href="//blog.coderockr.com/images/favicon.png">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/style.css">
+		<link rel="stylesheet" href="//blog.coderockr.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="//blog.coderockr.com/css/font-awesome.min.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='//blog.coderockr.com/'> <span class="arrow">← </span>Página Inicial</a>
+	
+	<a href='//blog.coderockr.com/about'>Sobre</a>
+	<a href='//blog.coderockr.com/tags'>Tags</a>
+	<a href='//blog.coderockr.com/posts'>Arquivo</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Ambientes por Branch com OpenShift Next Gen Usando Gitlab
+                    </h1>
+                    <h2 class="headline">
+                    May 1, 2017 00:00
+                    · 1469 words
+                    · 7 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="//blog.coderockr.com/tags/desenvolvimento">Desenvolvimento</a>
+                          
+                              <a href="//blog.coderockr.com/tags/github">GitHub</a>
+                          
+                              <a href="//blog.coderockr.com/tags/gitlab">GitLab</a>
+                          
+                              <a href="//blog.coderockr.com/tags/ferramentas">Ferramentas</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                    <h3 class="author"><span>by</span> Lucas Abreu</h3>
+                </header>
+                
+                <section id="post-body">
+                    
+
+<p>Hoje na Coderockr utilizamos <a href="https://blog.coderockr.com/a-import%C3%A2ncia-da-revis%C3%A3o-de-c%C3%B3digo-a1a8b41ed7ff">Pull Requests e Code Reviews</a> como uma ferramenta de qualidade nos nossos desenvolvimentos, e tem garantido resultados nesse sentido.</p>
+
+<p>Mas mesmo com esse processo eventualmente temos de lidar com alguns problemas como, por exemplo, funções que interferem umas nas outras depois de aprovadas, permitir que os Testers possam avaliar as melhorias, e garantir que todos as mudanças feitas na branch principal podem ser enviadas para produção.</p>
+
+<p>Esses problemas podem ser reduzidos, ou até eliminados; se, mesmo antes de aprovar os PRs; os Testers conseguissem trabalhar sobre essas melhorias e só repassadas para a branch principal após a aprovação deles.</p>
+
+<p>Desse modo o fonte principal não só passou pelo Review de outros desenvolvedores, como foi testado pela equipe de QA, dando ainda mais confiança no mesmo.</p>
+
+<p>Mas subir ambientes de homologação para cada um dos PRs, automaticamente ou sobre demanda, não é um problema trivial, envolve subir máquinas, garantir que esta rodando a versão atualizada, liberar portas, etc.</p>
+
+<p>Uma forma que encontramos para resolver esse problema é utilizando um cluster Kubernetes (ou a versão da Red Hat o OpenShift), pois essas ações são bem simples de realizar com ele e ainda mais fáceis se forem automatizadas.</p>
+
+<p>Agora vou explicar como montar um exemplo simples, um para o GitLab e outro para o GitHub, integrando com o OpenShift da Getup Cloud.</p>
+
+<p>O cliente de linha de comando pode ser baixado em:
+<a href="https://github.com/openshift/origin/releases">openshift/origin</a></p>
+
+<h3 id="gitlab-integrations-ci-registry-e-environments">GitLab: Integrations, CI, Registry e Environments</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/3780/1*HfMIAubVZCe9unsTTB0pvw.png" alt="" /></p>
+
+<p>A primeira experiencia que fizemos foi com o GitLab, principalmente pela integração que ele traz com o Kubernetes, e as outras ferramentas que ele oferece que acabaram cobrindo todo o escopo do problema.</p>
+
+<p>O que queremos montar é um ambiente por branch/PR que deve ser facilmente criado e destruído. Para demonstrar criei um repositório no GitLab com uma aplicação bem simples que apenas retorna uma página estática, mas é o suficiente para o objetivo.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*QUmaq3wDLl5-LBlTBFduZA.png" alt="retorno do serviço helloworld" /><em>retorno do serviço helloworld</em></p>
+
+<p>Primeiramente criei a base da aplicação usando Docker, a mesma gera uma página com o conteúdo acima. O que vale destacar nesse primeiro momento é que já configurei um processo de CI simples:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/8dffd818c17be92850960e74464d399b.js"></script>
+
+<p>Nesse CI eu construo o contêiner da aplicação para cada commit feito e guardo no registro do próprio GitLab por branch, dessa forma tenho uma versão do meu contêiner para cada uma das branchs que forem criadas e vou atualizando essas versões automaticamente a cada alteração.</p>
+
+<p>Fonte completo até aqui:
+<a href="https://gitlab.com/lucassabreu/k8s-pr-envs/tree/v1">Files · v1</a></p>
+
+<p>Nesse momento não tenho nenhum deploy, seja de ambiente de teste, produção ou por branch.</p>
+
+<p>Então vamos adicionar um processo de deploy no OpenShift para o ambiente de produção e testes, sendo que o ambiente de testes é atualizado automaticamente para os commits na master e o de produção apenas quando um usuário disparar o deploy.</p>
+
+<p>Para fazer isso primeiramente temos de configurar a integração entre o OpenShift e o GitLab, para isso vamos em <em>Settings</em> &gt; <em>Integrations</em> e procuramos <em>Kubernetes</em> nas opções. O GitLab irá solicitar algumas informações sobre o ambiente, qual o <strong>Namespace</strong>, o <strong>URL da API</strong> do <strong>Kubernetes</strong> e uma forma de autenticação, que pode ser um <strong>Service Token</strong> ou um <strong>CA Bundle</strong>.</p>
+
+<p>Dessa forma vou criar um novo <strong>Namespace</strong>, como fazer isso vai depender do seu vendor de Kubernetes, no caso da <a href="undefined">Getup Cloud</a>, basta ir em <a href="https://portal.getupcloud.com/projects">https://portal.getupcloud.com/projects</a> e criar um novo projeto, o nome do projeto será o <strong>Namespace.</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2282/1*5l7iFyUNDY3dYtFsNMnv5g.png" alt="" /></p>
+
+<p>Uma vez com o <strong>Namespace</strong> podemos criar um novo <strong>Service Token</strong> para ser usado no CI do GitLab, no caso para criar um Service Token é necessário criar uma ServiceAccount e dar permissões a mesma, e então pegar o Service Token dela. O script abaixo realiza essas operações:</p>
+
+<pre><code>**$ oc login https://api.getupcloud.com:443**
+Authentication required for https://api.getupcloud.com:443 ...
+Username: lucas.s.abreu@gmail.com
+Password:
+Login successful.
+...
+
+**$ oc project gitlab-k8s-pr-envs #usar o seu projeto**
+Now using project &quot;gitlab-k8s-pr-envs&quot; on server ...
+
+**$ oc create serviceaccount gitlab
+**serviceaccount &quot;gitlab&quot; created
+
+**$ oc policy add-role-to-user admin \
+    system:serviceaccount:gitlab-k8s-pr-envs:gitlab**
+
+**$ oc describe serviceaccount gitlab**
+Name:  gitlab
+Namespace: gitlab-k8s-pr-envs
+Labels:  &lt;none&gt;
+
+Image pull secrets: gitlab-dockercfg-qj9o9
+
+Mountable secrets:  gitlab-token-6ael2
+                    gitlab-dockercfg-qj9o9
+
+Tokens:             gitlab-token-6ael2
+                    gitlab-token-zkk6u
+
+**$ oc describe secret gitlab-token-6ael2**
+Name:  gitlab-token-6ael2
+Namespace: gitlab-k8s-pr-envs
+Labels:  &lt;none&gt;
+Annotations: kubernetes.io/service-account.name=gitlab
+  kubernetes.io/service-account.uid=zzz
+
+Type: kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:  1066 bytes
+namespace: 18 bytes
+service-ca.crt: 2182 bytes
+token:  *token-do-openshift-que-estou-ocultando*
+</code></pre>
+
+<p>Agora que temos o token gerado basta adicionar essas informações no GitLab.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*A2_0BlYViKN8kkBTLjwdTg.png" alt="" /></p>
+
+<p>Você pode confirmar se passou os dados corretos com o botão de teste no GitLab.</p>
+
+<p>Certo, agora o GitLab consegue conversar com o OpenShift. Podemos então alterar nossas regras de CI para criar duas novas etapas: *staging *e <em>production</em>, que irão realizar o deploy dos nossos ambientes padrões, sendo que *staging *será disparada automaticamente por commits na master e *production *ficará como manual.</p>
+
+<p>O .gitlab-ci.yml ficou como abaixo (já usando a integração com OpenShift):</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/da8113aff4b637b1800361606603d081.js"></script>
+
+<p>As mudança são os novos stages staging e production; as variáveis novas KUBE_DOMAIN e CI_ENVIRONMENT_URL; e o script k8s/deploy. Vamos por partes.</p>
+
+<p>A variável KUBE_DOMAIN vai ajudar a deixar o nosso processo de deploy mais simples, basicamente nós colocamos nela o domínio base que o OpenShift usa para expor as rotas dele, no caso da Getup seria “getup.io”. A CI_ENVIRONMENT_URL é completar a KUBE_DOMAIN e serve para informar o k8s/deploy qual endereço ele deve expor o ambiente, ele deve sempre terminar com o KUBE_DOMAIN e deve ser igual a url da chave environment, pois é por essa chave que o GitLab sabe onde os ambientes estão expostos.</p>
+
+<p>As etapas de staging e production irão fazer o deploy dos nossos ambientes e como comentei antes o ambiente de <em>staging</em> terá deploy automático para todo commit na master, enquanto <em>production</em> irá esperar uma ação do usuário. No mais as duas etapas são iguais mudando apenas a URL que estão sendo expostas. Estou usando a imagem lucassabreu/openshift-k8s-cli que é basicamente um ubuntu com o oc instalado.</p>
+
+<p>O script k8s/deploy está abaixo e ele basicamente se autentica contra a API do OpenShift usando o <em>Service Token</em> que criamos antes, destrói a aplicação antiga e executa o deploy de uma nova.</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/44d9392e4bbcd3b66cc44c50e27186a9.js"></script>
+
+<p>Vale ressaltar que é importante marcar os componentes do ambiente com app=$CI_ENVIRONMENT_SLUG, pois é assim que o GitLab consegue encontrar eles e lhe retornar status sobre eles.</p>
+
+<p>Também estou usando um truque de “templating” com o YAML que define os ambientes para poder inserir as variáveis de cada ambiente nele. Existem outras ferramentas mais avançadas como o <a href="https://github.com/kubernetes/helm">Helm</a>, mas para o meu exemplo templating com sed é o suficiente.</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/111b209e726ce716b5337d46ed4f393f.js"></script>
+
+<p>Agora, depois que do commit das alterações, o GitLab faz o <em>build</em>, o deploy da <em>staging</em> e <em>production</em> (manual); podemos ver na área <em>Environments</em> do GitLab que os ambientes estão rodando, ele inclusive traz alguns comandos para facilitar a vida: link para a URL do ambiente, terminal dentro do Pod e opção de Re-deploy.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2576/1*yYD4nAESb0oRvhLX_T5QPA.png" alt="" /></p>
+
+<p>Fonte completo até agora:
+<a href="https://gitlab.com/lucassabreu/k8s-pr-envs/tree/v2">Files · v2</a></p>
+
+<p>Agora que temos o <em>build</em> da nossa aplicação e um deploy automatizado, vamos adicionar a função de deploy por branch.</p>
+
+<p>Basicamente precisamos de duas novas etapas no nosso CI, uma para subir o ambiente para uma branch e outro para destruir esse ambiente para evitar consumir recursos sem necessidade.</p>
+
+<p>Para isso fiz as seguintes alterações nos .gitlab-ci.yml:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/c692a65b4f77fec338ecbc07c68fd249.js"></script>
+
+<p>Basicamente adicionei as duas novas etapas, review basicamente faz a mesma coisa que staging, mas usa um nome de ambiente dinâmico baseado na branch; e tem um enviroment:on_stop que basicamente indica o que fazer quando a branch for removida.</p>
+
+<p>Na etapa stop_review executo alguns comandos para eliminar o ambiente quando for chamada, é importante deixar essa como manual para que ela não apague sozinha o ambiente quando terminar as outras etapas.</p>
+
+<p>Os comandos da etapa stop_review precisam estar definidos diretamente no .gitlab-ci.yml, pois quando essa etapa for executada é possível que a branch e commits dela não existam mais, é também por esse motivo que informamos a variável GIT_STRATEGY como NO evitando que sequer seja checado se a branch/commit de origem existem.</p>
+
+<p>Agora quando crio uma nova branch automaticamente é criado um novo ambiente para a mesma no OpenShift.</p>
+
+<p>Para testar criei a branch a-change e fiz a seguinte alteração:</p>
+
+<script type="application/javascript" src="//gist.github.com/lucassabreu/5f933375252a37b45c48448ddc0cb1c6.js"></script>
+
+<p>Assim que dei o git push começou o deploy do novo ambiente r/a-change, logo que terminou pude verificar na área de ambientes do GitLab que estava rodando, e tem as mesmas operações disponíveis que os outros, mais a opção de parada (stop_review):</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2566/1*stDKq53dJiXZ-26r9VsrRw.png" alt="" /></p>
+
+<p>Já rodando as alterações:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*sy65fHBOufpoLOvspeBo8w.png" alt="" /></p>
+
+<p>Fontes com essas alterações em:
+<a href="https://gitlab.com/lucassabreu/k8s-pr-envs/tree/v3">Files · v3</a></p>
+
+<p>Após essas alterações podemos implementar a regra de merge apenas após testes pela equipe de QA, sem interferência de outras atividades que foram aplicadas no meio do caminho e permitindo um controle melhor sobre o que esta pronto para ir para a produção.</p>
+
+<p>O postagem acabou ficando bem grande apenas para falar do processo no GitLab, por isso vou criar um segundo post sobre como fazer isso no GitHub, abaixo esta o link para ele:
+<a href="https://blog.coderockr.com/ambientes-por-branch-com-openshift-next-gen-usando-github-80f46091340b">Ambientes por Branch com OpenShift Next Gen usando GitHub</a></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=%2f%2fblog.coderockr.com%2fposts%2f2017%2fambientes-por-branch-com-openshift-next-gen-usando-gitlab%2f - Ambientes%20por%20Branch%20com%20OpenShift%20Next%20Gen%20Usando%20Gitlab by @coderockr"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'blog-coderockr'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/coderockr">
+        <i class="fa fa-facebook"></i>
+    </a>
+    
+    <a class="symbol" href="https://github.com/Coderockr">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="http://www.coderockr.com">
+        <i class="fa fa-globe"></i>
+    </a>
+    
+    <a class="symbol" href="https://twitter.com/coderockr">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2019 <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="http://coderockr.com">
+            coderockr.com
+        </a>
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//blog.coderockr.com/js/jquery-3.3.1.min.js"></script>
+<script src="//blog.coderockr.com/js/main.js"></script>
+<script src="//blog.coderockr.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'your_google_analytics_id', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+    </body>
+</html>

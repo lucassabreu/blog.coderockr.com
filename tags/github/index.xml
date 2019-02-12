@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Blog Coderockr</title>
+    <link>//blog.coderockr.com/tags/github/</link>
+    <description>Recent content in Github on Blog Coderockr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 06 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//blog.coderockr.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simplificando Ainda Mais o Setup de Projetos</title>
+      <link>//blog.coderockr.com/posts/2018/simplificando-ainda-mais-o-setup-de-projetos/</link>
+      <pubDate>Wed, 06 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplificando-ainda-mais-o-setup-de-projetos/</guid>
+      <description>Simplificando ainda mais o Setup de Projetos Agora simplificando GitHub, GitLab e Trello
+English version: click here
+Ano passado nós criamos um script simples para auxiliar no setup de projetos no GitHub, ele atendeu bem as nossas necessidades para os novos repositórios que criamos no GitHub.
+Porém também trabalhamos com outras ferramentas para gerir os nossos projetos, como o GitLab e o Trello, mas não fizemos um script semelhante para eles.</description>
+    </item>
+    
+    <item>
+      <title>Simplifying Project Setup on GitHub</title>
+      <link>//blog.coderockr.com/posts/2018/simplifying-project-setup-on-github/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplifying-project-setup-on-github/</guid>
+      <description>At Coderockr we start and take on many projects, either for clients that hire us or for internal actions, and usually GitHub ends up being the tool we choose for them.
+Over the years we ended up defining a structure to control our issues, using the following labels:
+Labels set used on Coderockr Way
+It is a very simple set, but it makes all the steps, priorities, types and states of the tasks clear, and becomes very easy to understand what is happening.</description>
+    </item>
+    
+    <item>
+      <title>Simplifying Project Setup Even Further</title>
+      <link>//blog.coderockr.com/posts/2018/simplifying-project-setup-even-further/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2018/simplifying-project-setup-even-further/</guid>
+      <description>Now simplifying GitHub, GitLab and Trello
+Em português clique aqui
+Last year we created a simple script to assist in the setup of projects in GitHub, it met our needs well for the new repositories we created in GitHub.
+We also worked with other tools to manage our projects, like GitLab and Trello, but we did not do a similar script for them.
+At the beginning of the year, I created a new script to perform the project setup in GitLab, which is basically a copy of the first script, but with the GitLab endpoints.</description>
+    </item>
+    
+    <item>
+      <title>Boas Práticas na Criação de Milestones, Tarefas, Pull Requests e Commits</title>
+      <link>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</guid>
+      <description>Um dos fatores de sucesso do processo de desenvolvimento de software, assim como a maioria dos empreendimentos humanos, é uma boa comunicação.
+A Gitlab, ao cunhar o termo Conversational Development foi muito feliz ao definir
+ ConvDev takes a different approach by constraining the agile principles to what’s at the center of getting work done, the conversation.
+ Neste post vou citar algumas práticas que estamos implementando e que vem melhorando nossos processos.</description>
+    </item>
+    
+    <item>
+      <title>Ambientes por Branch com OpenShift Next Gen Usando GitHub</title>
+      <link>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-github/</link>
+      <pubDate>Wed, 10 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-github/</guid>
+      <description>Esta postagem é uma continuação da “Ambientes por Branch com OpenShift Next Gen”, a introdução do problema esta lá e também mostro como implementar o processo de deploy usando o GitLab nele, se não viu da uma conferida, vale o investimento
+Como prometi na outra postagem, vamos criar um processo de deploy de ambientes por branch usando o GitHub.
+No caso do GitHub, ele cobre “apenas” a parte de repositório de fontes, ele em si não tem integração direta com o Kubernetes/OpenShift, mas possui uma grande gama de opções no que diz respeito de ferramentas de CI e CD.</description>
+    </item>
+    
+    <item>
+      <title>Ambientes por Branch com OpenShift Next Gen Usando Gitlab</title>
+      <link>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</guid>
+      <description>Hoje na Coderockr utilizamos Pull Requests e Code Reviews como uma ferramenta de qualidade nos nossos desenvolvimentos, e tem garantido resultados nesse sentido.
+Mas mesmo com esse processo eventualmente temos de lidar com alguns problemas como, por exemplo, funções que interferem umas nas outras depois de aprovadas, permitir que os Testers possam avaliar as melhorias, e garantir que todos as mudanças feitas na branch principal podem ser enviadas para produção.</description>
+    </item>
+    
+    <item>
+      <title>Simplificando o Setup de Projetos no GitHub</title>
+      <link>//blog.coderockr.com/posts/2017/simplificando-o-setup-de-projetos-no-github/</link>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>//blog.coderockr.com/posts/2017/simplificando-o-setup-de-projetos-no-github/</guid>
+      <description>Na Coderockr iniciamos e assumimos vários projetos, sejam para clientes que nos contratam ou para ações internas, e normalmente o GitHub acaba sendo a ferramenta escolhida para eles.
+E ao longo dos anos acabamos definindo uma estrutura para controlarmos as nossas issues, usando as seguintes labels:
+Conjunto de labels utilizadas no Coderockr Way
+É um conjunto bem simples, mas que deixa bem claro as etapas, prioridades, tipos e estados das tarefas, de forma que fica bem fácil de acompanhá-las.</description>
+    </item>
+    
+  </channel>
+</rss>

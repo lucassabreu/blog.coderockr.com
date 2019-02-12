@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/mercado-de-aplicativos-4-tendencias-para-2019/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/inteligencia-artificial/</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/presenca-digital-para-as-organizacoes/</loc>
+    <lastmod>2018-10-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/entenda-a-diferenca-de-um-software-customizado-e-um-software-pronto/</loc>
+    <lastmod>2018-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/simplificando-ainda-mais-o-setup-de-projetos/</loc>
+    <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/escopo-fechado-porque-nao-optar/</loc>
+    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/simplifying-project-setup-on-github/</loc>
+    <lastmod>2018-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/simplifying-project-setup-even-further/</loc>
+    <lastmod>2018-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/aplicando-https-para-uma-spa-na-aws/</loc>
+    <lastmod>2018-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2018/5-razoes-para-o-desenvolvimento-de-software-para-o-seu-negocio/</loc>
+    <lastmod>2018-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/time-tracking-na-linha-de-comando/</loc>
+    <lastmod>2017-08-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</loc>
+    <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/definindo-apis-com-o-api-blueprint/</loc>
+    <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/usando-um-bot-do-telegram-para-receber-notificacoes/</loc>
+    <lastmod>2017-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</loc>
+    <lastmod>2017-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</loc>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-github/</loc>
+    <lastmod>2017-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/como-lidar-com-senhas-inseguras-em-projetos-legados/</loc>
+    <lastmod>2017-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/integracao-continua-usando-o-drone/</loc>
+    <lastmod>2017-05-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/ambientes-por-branch-com-openshift-next-gen-usando-gitlab/</loc>
+    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</loc>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</loc>
+    <lastmod>2017-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</loc>
+    <lastmod>2017-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</loc>
+    <lastmod>2017-03-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</loc>
+    <lastmod>2017-03-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-4/</loc>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3/</loc>
+    <lastmod>2017-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-2/</loc>
+    <lastmod>2017-03-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/dois-anos-de-coderockr/</loc>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</loc>
+    <lastmod>2017-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/simplificando-o-setup-de-projetos-no-github/</loc>
+    <lastmod>2017-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/culture-code-da-coderockr/</loc>
+    <lastmod>2017-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2017/usando-aws-api-gateway-e-aws-lambda/</loc>
+    <lastmod>2017-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</loc>
+    <lastmod>2016-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</loc>
+    <lastmod>2016-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/the-code-ownership-feeling/</loc>
+    <lastmod>2016-09-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/a-importancia-do-proposito/</loc>
+    <lastmod>2016-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</loc>
+    <lastmod>2016-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</loc>
+    <lastmod>2016-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/gerando-code-coverage-com-phpunit-e-phpgbd/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</loc>
+    <lastmod>2016-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</loc>
+    <lastmod>2016-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/como-usamos-o-slack-na-coderockr/</loc>
+    <lastmod>2016-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/developer-experience-na-pratica/</loc>
+    <lastmod>2016-07-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</loc>
+    <lastmod>2016-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</loc>
+    <lastmod>2016-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/como-melhorar-seus-codigos-usando-object-calisthenics/</loc>
+    <lastmod>2016-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</loc>
+    <lastmod>2016-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</loc>
+    <lastmod>2016-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/dx-developer-experience/</loc>
+    <lastmod>2016-06-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</loc>
+    <lastmod>2016-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/gerando-documentacao-de-apis/</loc>
+    <lastmod>2016-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/por-que-go/</loc>
+    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/melhorando-a-performance-do-phpunit/</loc>
+    <lastmod>2016-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</loc>
+    <lastmod>2016-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/nossas-experiencias-com-mentoria-na-coderockr/</loc>
+    <lastmod>2016-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/o-fim-dos-frameworks-full-stack/</loc>
+    <lastmod>2016-03-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</loc>
+    <lastmod>2016-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/socket-io-notify-resolvendo-problemas-de-notificacao-real-time/</loc>
+    <lastmod>2016-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/doctrine-2-contribution-touch/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</loc>
+    <lastmod>2016-02-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</loc>
+    <lastmod>2016-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/se-eu-soubesse-aos-18/</loc>
+    <lastmod>2015-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/coderockr-way/</loc>
+    <lastmod>2015-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</loc>
+    <lastmod>2015-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/about/</loc>
+    <lastmod>2015-06-20T14:02:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</loc>
+    <lastmod>2015-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</loc>
+    <lastmod>2015-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/sintomas-de-design-de-software-podre/</loc>
+    <lastmod>2015-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</loc>
+    <lastmod>2015-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/se-as-empresas-fossem-bandas-de-rock/</loc>
+    <lastmod>2015-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</loc>
+    <lastmod>2015-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2014/multitasking-so-e-bom-no-seu-computador/</loc>
+    <lastmod>2014-11-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</loc>
+    <lastmod>2013-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/2013/programador-dave-grohl-e-nao-axl-rose/</loc>
+    <lastmod>2013-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/api/</loc>
+    <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/arquitetura/</loc>
+    <lastmod>2017-04-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/aws/</loc>
+    <lastmod>2018-03-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/categories/carreira/</loc>
+    <lastmod>2017-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/carreira/</loc>
+    <lastmod>2017-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/categories/</loc>
+    <lastmod>2017-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/clean-code/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/categories/coderockr-culture/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/criptografia/</loc>
+    <lastmod>2018-03-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/d3/</loc>
+    <lastmod>2016-08-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/categories/desenvolvimento/</loc>
+    <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/desenvolvimento/</loc>
+    <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/doctrine/</loc>
+    <lastmod>2016-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/ferramentas/</loc>
+    <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/gerenciamento-de-projetos/</loc>
+    <lastmod>2016-06-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/github/</loc>
+    <lastmod>2018-06-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/gitlab/</loc>
+    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/go/</loc>
+    <lastmod>2017-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/i.a./</loc>
+    <lastmod>2018-11-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/js/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/kubernetes/</loc>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/categories/mercado/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/metodologias/</loc>
+    <lastmod>2017-10-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/mobile/</loc>
+    <lastmod>2018-04-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/php/</loc>
+    <lastmod>2016-08-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/posts/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/programa%C3%A7%C3%A3o-funcional/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/react/</loc>
+    <lastmod>2017-11-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/react-native/</loc>
+    <lastmod>2017-02-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/redux/</loc>
+    <lastmod>2016-10-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/software-security/</loc>
+    <lastmod>2018-03-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/</loc>
+    <lastmod>2017-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/tdd/</loc>
+    <lastmod>2016-06-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/trabalho-remoto/</loc>
+    <lastmod>2017-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//blog.coderockr.com/tags/transforma%C3%A7%C3%A3o-digital/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
