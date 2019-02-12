@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arquitetura on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/arquitetura/</link>
+    <link>https://blog.coderockr.com/tags/arquitetura/</link>
     <description>Recent content in Arquitetura on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 05 Apr 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/arquitetura/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/arquitetura/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Iniciando um Novo Projeto: Decisões de Arquitetura</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</link>
       <pubDate>Wed, 05 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-um-novo-projeto-decisoes-de-arquitetura/</guid>
       <description>No PHP Experience 2017 eu apresentei uma palestra falando sobre algumas das experiências (trocadilho acidental…) que a Coderockr acumulou nesses quase sete anos de existência.
 Aproveitei que estamos iniciando um novo projeto para um cliente/parceiro da Coderockr e gravei um screencast comentando e exemplificando algumas das decisões que citei na palestra usando um caso real.
 O video está no nosso canal do Youtube, que eu recomendo que você assine agora mesmo porque devemos lançar mais vídeos similares em breve.</description>
@@ -24,20 +24,20 @@ O video está no nosso canal do Youtube, que eu recomendo que você assine agora
     
     <item>
       <title>Iniciando com React - #2 Criando a Estrutura do Projeto</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</guid>
       <description>Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando create-react-app, que gera por padrão uma estrutura básica, pronta para começarmos a desenvolver nossa aplicação. Dessa forma, você não precisa entender todo o processo do build antes mesmo de criar o seu primeiro componente.
 Posteriormente, veremos cada parte do build para entender melhor com o que estamos lidando.</description>
     </item>
     
     <item>
       <title>Gerenciando Rotas com React Router</title>
-      <link>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</link>
+      <link>https://blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</link>
       <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</guid>
       <description>Quando começamos a desenvolver um SPA, uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente.
 React Router é uma lib completa para controle de rotas. Ela permite que você consiga configurar rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.
 A lib trabalha com History API, mas também deixa a possibilidade de você trabalhar com Hash(#) se for necessário.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Metodologias on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/metodologias/</link>
+    <link>https://blog.coderockr.com/tags/metodologias/</link>
     <description>Recent content in Metodologias on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 11 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/metodologias/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/metodologias/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Modelando Sistemas Usando Event Storming</title>
-      <link>//blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</link>
+      <link>https://blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</link>
       <pubDate>Wed, 11 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/modelando-sistemas-usando-event-storming/</guid>
       <description>Mão na massa!
 O desenvolvimento de software envolve muito mais do que escrever códigos. O objetivo maior é desenvolver o software correto, que resolva as necessidades do usuários e com a máxima qualidade.
 Parte deste desafio é aumentar o entendimento do negócio e dos problemas que estão sendo resolvidos, por todos os envolvidos no projeto.
@@ -25,10 +25,10 @@ Existem varias formas de realizar este levantamento de requisitos, desde as mais
     
     <item>
       <title>Estimativa Baseada em Evidências</title>
-      <link>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</link>
+      <link>https://blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</link>
       <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/estimativa-baseada-em-evidencias/</guid>
       <description>As pessoas, salvo alguns místicos, não são muito boas em prever o futuro.
 https://www.flickr.com/photos/pasukaru76/3998273279/
 Portanto é bem provável que as suas estimativas de entregas de tarefas e projetos não sejam tão precisas quanto seu cliente espera, certo? Felizmente temos outros recursos a nossa disposição para suprir essa nossa deficiência: fatos, números e computadores rápidos o suficiente para processá-las.
@@ -37,40 +37,40 @@ Vamos fazer uma simples &amp;ldquo;conta de padaria&amp;rdquo; e imaginar o segu
     
     <item>
       <title>Relógios, Carros e Teste de Software</title>
-      <link>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</link>
+      <link>https://blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</link>
       <pubDate>Thu, 07 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/relogios-carros-e-teste-de-software/</guid>
       <description>Recentemente comprei um relógio de pulso. Usar um relógio analógico em 2016 é basicamente uma decisão de estética e não de funcionalidade pois estamos rodeados de relógios digitais, como por exemplo, no painel do meu carro.
 O interessante é que o relógio do meu carro vive atrasando, enquanto que o relógio de pulso nunca apresentou esse problema, apesar do relógio ter custado muito menos do que o veículo. O ponto é que para o relógio a funcionalidade “mostrar as horas” é a coisa mais importante, enquanto que para o carro isso é um extra.</description>
     </item>
     
     <item>
       <title>Coderockr Way</title>
-      <link>//blog.coderockr.com/posts/2015/coderockr-way/</link>
+      <link>https://blog.coderockr.com/posts/2015/coderockr-way/</link>
       <pubDate>Thu, 29 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/coderockr-way/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/coderockr-way/</guid>
       <description>Toda empresa tem sua forma de trabalhar, sua caixa de ferramentas. Nestes cinco anos aprendemos bastante e queremos compartilhar esse conhecimento, por isso vamos criar uma série de pequenos vídeos sobre o nosso processo e as ferramentas que usamos.
 O primeiro já está no nosso canal do Youtube, falando sobre a forma como vemos projetos de software. Nossa ideia inicial é fazer um vídeo para cada tópico do mapa mental:</description>
     </item>
     
     <item>
       <title>Como Gerenciamos Projetos na Coderockr</title>
-      <link>//blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</link>
       <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/como-gerenciamos-projetos-na-coderockr/</guid>
       <description>A Coderockr é, simplificando bastante, uma empresa de projetos de software. Para conseguirmos cumprir nosso propósito precisamos gerenciar projetos com qualidade e eficiência. Neste post vamos comentar como fazemos isso.
 Metodologia Desde o nascimento da Coderockr sempre tivemos como foco o uso de metodologias ágeis, principalmente devido a natureza dos projetos e dos clientes que atendemos, que precisam responder rápido a mudanças. Após muito estudo e experiências chegamos a conclusão que a melhor metodologia para nossos projetos é o Kanban.</description>
     </item>
     
     <item>
       <title>A Importância da Revisão de Código</title>
-      <link>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</link>
+      <link>https://blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</link>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/a-importancia-da-revisao-de-codigo/</guid>
       <description>Em seu famoso artigo “A catedral e o bazar” Eric S. Raymond proferiu:
  Dados olhos suficientes, todos os erros são óbvios
  Esta frase, que ficou conhecida com a “Lei de Linus”, resume bem o fenômeno do código aberto e como ele mudou a forma como desenvolvemos software.
@@ -79,10 +79,10 @@ Na Coderockr adotamos a política de Code Review em todos os projetos. Para cada
     
     <item>
       <title>Os 12 Fatores: Uma Metodologia para Criação de Projetos SaaS</title>
-      <link>//blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</link>
+      <link>https://blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</link>
       <pubDate>Tue, 28 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas/</guid>
       <description>Todo desenvolvedor já deve ter ouvido falar do Heroku, plataforma de cloud computing que revolucionou o desenvolvimento, ajudou a criar o movimento “devops” e que foi vendida por diversos milhares de dólares para a Salesforce. Se tem algo que eles tem muita experiência é na criação e suporte de aplicativos SaaS (software-as-a-service), principalmente aplicativos web.
 Eles usaram toda essa experiência para criar o 12factor que é uma espécie de “manifesto” com os 12 fatores que uma aplicação deveria seguir para ter sucesso nesse formato.</description>
     </item>

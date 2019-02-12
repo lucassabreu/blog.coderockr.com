@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Carreira on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/carreira/</link>
+    <link>https://blog.coderockr.com/tags/carreira/</link>
     <description>Recent content in Carreira on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Wed, 07 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/carreira/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/carreira/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Por que não Temos Equipes Remotas na Coderockr</title>
-      <link>//blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</guid>
       <description>Recentemente lançamos nosso plano de carreiras e no Twitter o grande @femontanha levantou um ponto interessante:
 Como é um assunto relevante achei legal escrever um post explicando os motivos de não termos equipes remotas na Coderockr. São dois fatores, que vou chamar de “Fator Matemática” e “Fator Pessoas”.
 O Fator Matemática Atualmente a Coderockr é uma empresa de serviços então, resumidamente, o que entregamos são horas de desenvolvimento. O valor/hora que cobramos precisa ser competitivo com o mercado e também cobrir todos os custos da empresa.</description>
@@ -24,10 +24,10 @@ O Fator Matemática Atualmente a Coderockr é uma empresa de serviços então, r
     
     <item>
       <title>O Plano de Carreiras da Coderockr</title>
-      <link>//blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</guid>
       <description>O que é um plano de carreira?
 Citando a definição neste ótimo post publicado no site da Endeavor:
  Plano de carreira é um programa estruturado que estipula o caminho que cada funcionário vai percorrer dentro de uma organização. Ele determina as competências necessárias para cada posição hierárquica e também qual é a expectativa da empresa em relação àquela posição.
@@ -36,10 +36,10 @@ Citando a definição neste ótimo post publicado no site da Endeavor:
     
     <item>
       <title>Como Montar um Bom Currículo para Desenvolvedores e Designers</title>
-      <link>//blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</link>
+      <link>https://blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</link>
       <pubDate>Thu, 30 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</guid>
       <description>Desde 2010, quando fundamos a Coderockr, uma das tarefas mais difíceis e importantes que eu tenho realizado é a contratação de pessoas. Neste post gostaria de compartilhar algumas ideias que podem ajudar na escrita de um currículo para desenvolvedores e designers.
 Vamos lá…
 Com o passar do tempo nós fomos evoluindo nosso processo e atualmente ele é formado por quatro etapas: &amp;gt; leitura de currículos -&amp;gt; entrevista -&amp;gt; teste técnico -&amp;gt; entrevista com a equipe.</description>
@@ -47,49 +47,49 @@ Com o passar do tempo nós fomos evoluindo nosso processo e atualmente ele é fo
     
     <item>
       <title>Dois Anos de Coderockr</title>
-      <link>//blog.coderockr.com/posts/2017/dois-anos-de-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2017/dois-anos-de-coderockr/</link>
       <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/dois-anos-de-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/dois-anos-de-coderockr/</guid>
       <description>Este mês, estou completando oficialmente dois anos trabalhando para a Coderockr, e através desse post, gostaria de trazer um overview desta experiência.
 Antes de entrar na Coderockr eu trabalhava em uma agência digital, desenvolvendo hotsites e sites constitucionais, projetos que deveriam ficar prontos dentro de duas semanas e que tinham um orçamento baixo. Naquela época, eu já acompanhava muito a comunidade de desenvolvimento e todas as tecnologias e boas práticas que estavam sendo adotadas e nas minhas horas vagas eu tirava um tempo para estudá-las.</description>
     </item>
     
     <item>
       <title>Como React e Redux me Fizeram um Programador Melhor</title>
-      <link>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
       <description>Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso.
 Quando começamos a trabalhar como programadores, é muito comum aprendermos a trabalhar com abstrações que facilitam nosso caminho e nossa curva de aprendizado. Um grande exemplo disso é o jQuery, que provavelmente é a primeira lib que os desenvolvedores Frontend tem contato.</description>
     </item>
     
     <item>
       <title>The Code Ownership Feeling</title>
-      <link>//blog.coderockr.com/posts/2016/the-code-ownership-feeling/</link>
+      <link>https://blog.coderockr.com/posts/2016/the-code-ownership-feeling/</link>
       <pubDate>Fri, 30 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/the-code-ownership-feeling/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/the-code-ownership-feeling/</guid>
       <description>Every developer, sometime in their lives, or very often pass through this feeling. You write code and it feels like it’s a part of you, thus motivating you to write the best code in the world, or at least what you consider it to be
 That’s a good thing if we take into account that you increasingly want to take care of the project, establish patterns and think about more ways of improving your code and scaling the system.</description>
     </item>
     
     <item>
       <title>A Importância do Propósito</title>
-      <link>//blog.coderockr.com/posts/2016/a-importancia-do-proposito/</link>
+      <link>https://blog.coderockr.com/posts/2016/a-importancia-do-proposito/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/a-importancia-do-proposito/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/a-importancia-do-proposito/</guid>
       <description>Nos últimos anos o Brasil viu um crescimento do número de novas empresas, sejam mais &amp;ldquo;tradicionais&amp;rdquo; ou &amp;ldquo;startups&amp;rdquo;. E eu me encaixo nessa nova onda de empreendedores, mesmo com minha formação de cientista da computação. Talvez por eu não ter uma formação empreendedora mais tradicional eu demorei alguns anos para perceber que não é perda de tempo parar um pouco e pensar em coisas importantes como &amp;ldquo;missão, visão, valores&amp;rdquo;, e o que eu acho ainda mais útil: o propósito da empresa.</description>
     </item>
     
     <item>
       <title>O Sentimento de Propriedade do Código</title>
-      <link>//blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</link>
+      <link>https://blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/o-sentimento-de-propriedade-do-codigo/</guid>
       <description>My precious!
  Todo programador, uma hora ou outra, ou quase sempre passa por isso. Você escreve código e as vezes sente que aquilo faz parte de você, e por isso, a partir desse sentimento, você quer escrever o melhor código do mundo, pelo menos o que você considera ser o melhor código do mundo.
 Isso é uma coisa muito boa, partindo do principio que você quer cuidar do projeto cada vez mais, estabelecer padrões e pensar formas cada vez melhores de escrever o código e escalar o sistema.</description>
@@ -97,59 +97,59 @@ Isso é uma coisa muito boa, partindo do principio que você quer cuidar do proj
     
     <item>
       <title>Aprenda a Dizer NÃO, Você Precisará Disso!</title>
-      <link>//blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</link>
+      <link>https://blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</guid>
       <description>Uma das habilidades mais importantes e que muitas pessoas não a tem, e quando digo muitas pessoas também me incluo entre elas. Acredito que o texto abaixo se encaixa em qualquer área, mas como trabalho com desenvolvimento de software é nesse contexto que o texto será desenvolvido.
 Em sua grande maioria, quem trabalha com computadores está acostumado com o título “Garoto do computador”, não importa se você é técnico em informática, se você é programador, arquiteto de software ou CTO de alguma startup, algumas pessoas ainda recorrerão a você quando perderem a senha do Facebook.</description>
     </item>
     
     <item>
       <title>Nossas Experiências com Mentoria na Coderockr</title>
-      <link>//blog.coderockr.com/posts/2016/nossas-experiencias-com-mentoria-na-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2016/nossas-experiencias-com-mentoria-na-coderockr/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/nossas-experiencias-com-mentoria-na-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/nossas-experiencias-com-mentoria-na-coderockr/</guid>
       <description>Quero neste post compartilhar uma experiência que estamos fazendo na Coderockr nos últimos meses: um processo de mentorias.
 A motivação Como quase todas as iniciativas humanas esta também começou com uma motivação egoísta: eu quero que a Coderockr seja uma empresa cada vez melhor e mais relevante. Em algum post que eu li algum tempo atrás eu encontrei algo que acho bem importante. Trata-se de uma lista de quatro formas para uma empresa de serviços como a Coderockr crescer:</description>
     </item>
     
     <item>
       <title>Por que Ir a Eventos?</title>
-      <link>//blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</link>
+      <link>https://blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</guid>
       <description>Algumas pessoas me perguntam se vale a pena ir em eventos e neste post quero citar alguns motivos pelos quais acredito que isso é um dos melhores investimentos que você pode fazer para sua carreira.
 Conhecimento. Apesar de termos todo conhecimento necessário para resolver qualquer problema ao acesso de uma busca no Google, ir a eventos trás um outro tipo de informação. Assistindo as palestras, conversando com as pessoas nos corredores você consegue adquirir algo que não está tão facilmente disponível na internet: a experiência das pessoas.</description>
     </item>
     
     <item>
       <title>Como o Facebook pode Prejudicar sua Carreira como Desenvolvedor</title>
-      <link>//blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</guid>
       <description>Quem me conhece pessoalmente, ou pelas redes sociais, sabe que eu não sou muito fã do Facebook por isso este post não deve ser surpresa. Eu poderia citar aqui vários motivos do meu desgosto pessoal, como a perda de tempo, a quantia de posts sobre política e sem embasamento nenhum, as centenas de comentários inúteis (kkkk, hehehe), etc. Mas neste post vou falar sobre outro aspecto do Facebook que pode prejudicar a sua carreira.</description>
     </item>
     
     <item>
       <title>Se eu Soubesse aos 18  —  Profissão</title>
-      <link>//blog.coderockr.com/posts/2015/se-eu-soubesse-aos-18/</link>
+      <link>https://blog.coderockr.com/posts/2015/se-eu-soubesse-aos-18/</link>
       <pubDate>Fri, 18 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/se-eu-soubesse-aos-18/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/se-eu-soubesse-aos-18/</guid>
       <description>Há 9 meses atrás escrevi um post semelhante falando sobre a faculdade, nele eu prometi escrever um post abordando o tema profissão, e aqui estou, cumprindo com a promessa; Antes tarde do que nunca.
 A intensão desse post não é falar nenhuma verdade absoluta ou mostrar um caminho definitivo para o sucesso profissional, e sim, apenas relatar um pouco da experiência que tive nesses quatro anos trabalhando com web, e contribuir com algumas dicas que acredito que teriam sido úteis la no início.</description>
     </item>
     
     <item>
       <title>O Propósito da Coderockr</title>
-      <link>//blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</link>
       <pubDate>Thu, 14 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</guid>
       <description>Em seu célebre TED Talk Simon Sinek nos apresenta o que ele chamou de &amp;ldquo;golden circle&amp;rdquo; onde mostra a importância das empresas terem foco no &amp;ldquo;por quê&amp;rdquo; mais do que no &amp;ldquo;como&amp;rdquo; ou &amp;ldquo;o que&amp;rdquo; fazem.
 Inspirado neste conceito e no projeto /purpose criamos esta página para compartilhar nossa visão de mundo, nossos propósitos.
  Nosso propósito é criar softwares incríveis e ajudar outras empresas a fazerem o mesmo. Fazemos isso porque acreditamos que o desenvolvimento de software é uma arte, que deve ser feita com paixão e dedicação.</description>
@@ -157,50 +157,50 @@ Inspirado neste conceito e no projeto /purpose criamos esta página para compart
     
     <item>
       <title>Se as Empresas Fossem Bandas de Rock</title>
-      <link>//blog.coderockr.com/posts/2015/se-as-empresas-fossem-bandas-de-rock/</link>
+      <link>https://blog.coderockr.com/posts/2015/se-as-empresas-fossem-bandas-de-rock/</link>
       <pubDate>Wed, 22 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/se-as-empresas-fossem-bandas-de-rock/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/se-as-empresas-fossem-bandas-de-rock/</guid>
       <description>Um dos motes da Coderockr é “Bons programadores são únicos, assim como estrelas no mundo do rock”. Nesse post vou aumentar um pouco as analogias, envolvendo outras áreas das empresas.
 O Manager O Manager é a pessoa que negocia os shows, que assina os contratos da banda com gravadoras, que vende os direitos autorais das músicas. Os Beatles não seriam ninguém sem o Brian Epstein fazer sua parte e colocá-los em grandes contratos.</description>
     </item>
     
     <item>
       <title>Sobre como Começar na Área de Desenvolvimento</title>
-      <link>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</link>
+      <link>https://blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</guid>
       <description>Recebi um e-mail essa semana com uma dúvida bem comum, que eu mesmo já passei alguns (muitos) anos atrás:
  Bom dia Elton, tudo bem? Trabalho com TI a 4 anos [..], e agora quero migrar para o desenvolvimento. O grande dilema neste momento tem sido a linguagem. [..] estou na dúvida se começo em PHP (que aparentemente é uma ótima porta de entrada para o desenvolvimento) ou Ruby. Ambas as linguagens parecem de curva de aprendizado rápido [.</description>
     </item>
     
     <item>
       <title>Multitasking Só é Bom no seu Computador</title>
-      <link>//blog.coderockr.com/posts/2014/multitasking-so-e-bom-no-seu-computador/</link>
+      <link>https://blog.coderockr.com/posts/2014/multitasking-so-e-bom-no-seu-computador/</link>
       <pubDate>Thu, 27 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2014/multitasking-so-e-bom-no-seu-computador/</guid>
+      <guid>https://blog.coderockr.com/posts/2014/multitasking-so-e-bom-no-seu-computador/</guid>
       <description>Recentemente a Coderockr conquistou alguns clientes no formato “banco de horas”. Isto significa que o cliente compra um número de horas de nossa experiência e trabalho, então precisamos ter alguma forma de contabilizar como estamos usando nossos dias.
 Confesso que no começo achei que iria ser bem chato anotar as minhas atividades e anotar quantas horas estou trabalhando em cada projeto. Mas já no segundo dia eu me apaixonei pelo processo e isso se tornou um vício.</description>
     </item>
     
     <item>
       <title>Carreira, e não Emprego</title>
-      <link>//blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</link>
+      <link>https://blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</link>
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</guid>
+      <guid>https://blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</guid>
       <description>A ideia para este post surgiu de duas situações. A primeira foi o fato de que com os cursos básicos de programação que estamos publicando no Code Squad (logica e php) estou recebendo mais e-mails de pessoas que estão entrando agora na profissão de programador, com aquelas dúvidas que eu também tive no início.
 A segunda motivação foi uma das ótimas conversas geradas em intervalos de palestras em um evento de desenvolvedores que participei (você precisa participar destes eventos!</description>
     </item>
     
     <item>
       <title>Programador Dave Grohl e Não Axl Rose</title>
-      <link>//blog.coderockr.com/posts/2013/programador-dave-grohl-e-nao-axl-rose/</link>
+      <link>https://blog.coderockr.com/posts/2013/programador-dave-grohl-e-nao-axl-rose/</link>
       <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2013/programador-dave-grohl-e-nao-axl-rose/</guid>
+      <guid>https://blog.coderockr.com/posts/2013/programador-dave-grohl-e-nao-axl-rose/</guid>
       <description>O lema da Coderockr é “Programadores são artistas, são Rockstars!”. Esse termo “programador rockstar” vem sendo usado por algumas pessoas como pejorativo, como algo a ser evitado.
 O CEO da Netguru fez uma ótima apresentação com o título “Why no one is looking for ‘rockstar programmers”.
 Traduzi/adaptei os trechos mais importantes:

@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/react/</link>
+    <link>https://blog.coderockr.com/tags/react/</link>
     <description>Recent content in React on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 03 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Iniciando com React - #5 Criando Componentes com Storybook</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</link>
       <pubDate>Fri, 03 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-5-criando-componentes-com-storybook/</guid>
       <description>Iniciando com React - 5 Criando componentes com Storybook
 Quando estamos desenvolvendo um novo componente para um projeto, é comum o fazermos diretamente na aplicação. Essa abordagem pode nos levar à um processo exaustivo, onde as vezes não temos os dados necessários a nossa disposição, ou situações onde temos que preencher todos os campos de um formulário, só para ver se a mensagem de erro está correta. O *React Storybook *vem para solucionar esses problemas e deixar o nosso workflow muito mais fluído.</description>
     </item>
     
     <item>
       <title>Iniciando com React - #4 Armazenando Estado e Entendendo o Lifecycle</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</link>
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle/</guid>
       <description>Quando estamos desenvolvendo uma aplicação, é comum a necessidade de guardarmos estado. Juntamente com essa necessidade, é frequente precisarmos tomar uma ação quando um componente acabou de aparecer na tela, por exemplo, ou quando dados são atualizados. Nesse post, veremos como React pode suprir essas necessidades de forma simples. &amp;gt; Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.</description>
     </item>
     
     <item>
       <title>Iniciando com React - #3 Criando Componentes</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</link>
       <pubDate>Wed, 29 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-3-criando-componentes/</guid>
       <description>O React introduz uma nova maneira de construir interfaces, o que podemos chamar de “Interface baseada em componentes”. Componentes permitem que você divida sua interface em partes independentes e reutilizáveis, e que você pense em cada parte de forma isolada.
  Nota: Este post faz parte da série “Iniciando com React”. Se você está começando com React agora, sugiro ler os outros posts primeiro.
  &amp;lt; Anterior | Proximo &amp;gt;</description>
@@ -43,29 +43,29 @@ Quando estamos desenvolvendo um novo componente para um projeto, é comum o faze
     
     <item>
       <title>Iniciando com React - #2 Criando a Estrutura do Projeto</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-2-criando-a-estrutura-do-projeto/</guid>
       <description>Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando create-react-app, que gera por padrão uma estrutura básica, pronta para começarmos a desenvolver nossa aplicação. Dessa forma, você não precisa entender todo o processo do build antes mesmo de criar o seu primeiro componente.
 Posteriormente, veremos cada parte do build para entender melhor com o que estamos lidando.</description>
     </item>
     
     <item>
       <title>Iniciando com React - #1 Introdução</title>
-      <link>//blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</link>
+      <link>https://blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</link>
       <pubDate>Mon, 13 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/iniciando-com-react-1-introducao/</guid>
       <description>React é uma biblioteca Javascript do Facebook para a construção de interfaces web. No mercado desde 2013, vem sendo utilizada por aplicações de alto escala. Entre as principais empresas que adotaram e apostam na lib, estão Facebook, AirBnb, Instagram e Twitter. Por muitas vezes mencionado como o V do MVC, o React se propõe a controlar a camada da View, proporcionando total liberdade para o programador tomar decisões em relação ao resto da arquitetura da aplicação.</description>
     </item>
     
     <item>
       <title>React Native for React Developers</title>
-      <link>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</link>
+      <link>https://blog.coderockr.com/posts/2017/react-native-for-react-developers/</link>
       <pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/react-native-for-react-developers/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/react-native-for-react-developers/</guid>
       <description>React Native for React Developers
 React Native is becoming the definitive solution to create apps across multiple platforms. What React Native offers, is the possibility to create native mobile apps using only Javascript.
 In this post, I am going to make a comparison between React and React Native, and what are the first things a React Developer should know before starting to code.
@@ -74,10 +74,10 @@ Building Blocks React Native uses the same design as React, you will be using JS
     
     <item>
       <title>Por que o Planrockr é uma Single Page Application?</title>
-      <link>//blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</link>
+      <link>https://blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</link>
       <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/por-que-o-planrockr-e-uma-single-page-application/</guid>
       <description>Há uns dias atrás, foi feita uma pergunta para a equipe do Planrockr no twitter:
 @eminetto qual foi o fator determinante pro Planrockr ser uma SPA e não uma app tradicional? =)
 &amp;mdash; Pedro Costa (@plcosta) October 14, 2016  
@@ -86,20 +86,20 @@ Esse é um assunto interessante a ser abordado: Quando uma aplicação deve ou n
     
     <item>
       <title>Como React e Redux me Fizeram um Programador Melhor</title>
-      <link>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</link>
       <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-react-e-redux-me-fizeram-um-programador-melhor/</guid>
       <description>Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso.
 Quando começamos a trabalhar como programadores, é muito comum aprendermos a trabalhar com abstrações que facilitam nosso caminho e nossa curva de aprendizado. Um grande exemplo disso é o jQuery, que provavelmente é a primeira lib que os desenvolvedores Frontend tem contato.</description>
     </item>
     
     <item>
       <title>Gerenciando Rotas com React Router</title>
-      <link>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</link>
+      <link>https://blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</link>
       <pubDate>Mon, 05 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/gerenciando-rotas-com-react-router/</guid>
       <description>Quando começamos a desenvolver um SPA, uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente.
 React Router é uma lib completa para controle de rotas. Ela permite que você consiga configurar rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.
 A lib trabalha com History API, mas também deixa a possibilidade de você trabalhar com Hash(#) se for necessário.</description>
@@ -107,30 +107,30 @@ A lib trabalha com History API, mas também deixa a possibilidade de você traba
     
     <item>
       <title>Recharts, Construa Gráficos com React e D3</title>
-      <link>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</link>
+      <link>https://blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</link>
       <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/recharts-construa-graficos-com-react-e-d3/</guid>
       <description>Recentemente iniciamos o desenvolvimento de mais cinco widgets no iMasters Planrockr, todos de gráficos. Para a renderização dos mesmos, optamos por usar o D3JS, que é uma das libs mais robustas para a implementação de gráficos atualmente.
 Seria possível implementá-los utilizando somente D3 e foi dessa forma que começamos a implementar o primeiro gráfico. No entanto, aprender a lib do zero pode exigir um tempo e esforço considerável, não sendo nada produtivo no estado inicial.</description>
     </item>
     
     <item>
       <title>Integrando Mixpanel com React</title>
-      <link>//blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</link>
+      <link>https://blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</link>
       <pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/integrando-mixpanel-com-react/</guid>
       <description>Recentemente lançamos a nova interface do Planrockr, feita em ReactJS. Nesse produto nós estamos utilizando o MixPanel para fazer tracking de ações do usuário. Anteriormente nós fazíamos o tracking apenas pelo backend, já que a interface era experimental e sabíamos que as chances eram grandes de o código dela ser descartado.
 Para essa nova versão do Planrockr, nós decidimos levar o tracking de alguns eventos para o frontend, já que no backend nós não tínhamos acesso a algumas informações, como: Browser, localização, resolução de tela e etc…</description>
     </item>
     
     <item>
       <title>Requisições Assíncronas em Redux</title>
-      <link>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</link>
       <pubDate>Sat, 02 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/requisicoes-assincronas-em-redux/</guid>
       <description>Quando se está começando a aprender Redux, uma das dúvidas mais comuns é como fazer requisições assíncronas.
 Observando os exemplos básicos, que implementam apenas actions comuns, não fica tão óbvio qual abordagem utilizar ao fazer uma integração com uma API.
 Neste post, mostrarei como implementar um middleware, que ficará responsável por interpretar um padrão de específico de action (async action) e gerenciar nossas requisições, disparando uma action correspondente para cada momento das mesmas.</description>
@@ -138,10 +138,10 @@ Neste post, mostrarei como implementar um middleware, que ficará responsável p
     
     <item>
       <title>Conhecendo o Básico do Redux</title>
-      <link>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/conhecendo-o-basico-do-redux/</guid>
       <description>Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?
 Concebido por Dan Abramov, redux é um padrão de arquitetura de aplicação, inspirado no Flux do Facebook e simplificado com ajuda de algumas práticas do Elm. Redux lhe da o poder de construir aplicações consistentes e controlar a forma como os dados fluem e são transformados, seguindo três princípios:
 1. Single source of truth (SSOT) Todo o estado da sua aplicação é armazenado em uma única árvore de objetos, dentro de uma única store.</description>
@@ -149,10 +149,10 @@ Concebido por Dan Abramov, redux é um padrão de arquitetura de aplicação, in
     
     <item>
       <title>Learning the Basics About Redux</title>
-      <link>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</link>
+      <link>https://blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</link>
       <pubDate>Wed, 22 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/learning-the-basics-about-redux/</guid>
       <description>Redux is a predictable state container for JavaScript Applications, but what does that mean?
 Created by Dan Abramov, Redux is an application architecture pattern based on Flux ideas and simplified with concepts from Elm. Redux gives you the power to build consistent applications and to control the way your data flows and is transformed, following three principles:
 1. Single Source of Truth (SSOT) The entire state of your application is stored in an object tree within a single store.</description>

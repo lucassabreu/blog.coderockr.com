@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mercado on Blog Coderockr</title>
-    <link>//blog.coderockr.com/categories/mercado/</link>
+    <link>https://blog.coderockr.com/categories/mercado/</link>
     <description>Recent content in Mercado on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/categories/mercado/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/categories/mercado/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mercado de Aplicativos: 4 Tendências para 2019</title>
-      <link>//blog.coderockr.com/posts/2018/mercado-de-aplicativos-4-tendencias-para-2019/</link>
+      <link>https://blog.coderockr.com/posts/2018/mercado-de-aplicativos-4-tendencias-para-2019/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/mercado-de-aplicativos-4-tendencias-para-2019/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/mercado-de-aplicativos-4-tendencias-para-2019/</guid>
       <description>O mercado de apps está sempre repleto de novidades e para o próximo ano as perspectivas não são diferentes. Esse mercado continuará em expansão, acompanhando a consolidação do crescente uso de celulares e outros dispositivos móveis, como os tablets. Os smartphones, por exemplo, já não são mais acessórios usados apenas para ligações e envio de mensagens. Com o desenvolvimento tecnológico do mercado de aplicativos, esses aparelhos se tornaram presentes em diversas etapas do dia-dia.</description>
     </item>
     
     <item>
       <title>I.A. Inteligência Artificial</title>
-      <link>//blog.coderockr.com/posts/2018/inteligencia-artificial/</link>
+      <link>https://blog.coderockr.com/posts/2018/inteligencia-artificial/</link>
       <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/inteligencia-artificial/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/inteligencia-artificial/</guid>
       <description>Estamos vivendo atualmente em uma nova era, na idade da inteligência artificial e não há como fugir disso. A grande maioria das pessoas identifica ou já identificou algo relacionado com inteligência artificial em muitas empresas, segundo Brian Krzanich (CEO da Intel), todas as empresas serão afetadas por esta nova tecnologia, caso contrário não conseguirão adaptar-se à nova realidade a que já assistimos. Com o cessar de 2018, muitos especialistas inclinam-se sobre as principais tendências de I.</description>
     </item>
     
     <item>
       <title>Presença Digital para as Organizações</title>
-      <link>//blog.coderockr.com/posts/2018/presenca-digital-para-as-organizacoes/</link>
+      <link>https://blog.coderockr.com/posts/2018/presenca-digital-para-as-organizacoes/</link>
       <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/presenca-digital-para-as-organizacoes/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/presenca-digital-para-as-organizacoes/</guid>
       <description>Entenda a importância!
 O mercado apresenta novas tendências cada vez mais rápido e, com esta realidade, é natural que o seu cliente também esteja atento a essas mudanças e modifique o seu perfil em busca de novas oportunidades que lhe proporcionem maior retorno.
 Nesse cenário, as empresas que possuem forte presença digital têm uma excelente vantagem, porque conseguem atender a esse anseio do público com maior facilidade na hora de adquirir um produto ou serviço.</description>
@@ -42,20 +42,20 @@ Nesse cenário, as empresas que possuem forte presença digital têm uma excelen
     
     <item>
       <title>Entenda a Diferença de um Software Customizado e um Software Pronto</title>
-      <link>//blog.coderockr.com/posts/2018/entenda-a-diferenca-de-um-software-customizado-e-um-software-pronto/</link>
+      <link>https://blog.coderockr.com/posts/2018/entenda-a-diferenca-de-um-software-customizado-e-um-software-pronto/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/entenda-a-diferenca-de-um-software-customizado-e-um-software-pronto/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/entenda-a-diferenca-de-um-software-customizado-e-um-software-pronto/</guid>
       <description>Um software pode ser desenvolvido para uma área de mercado ou customizado para atender uma necessidade específica de negócio. Neste último caso, o desenvolvimento é adaptado a empresa, compreendendo os desejos de seu cliente e criando áreas específicas para atender 100% a demanda em questão.
 Um software pronto “de prateleira” é mais fechado, geralmente desenvolvido de maneira genérica para atender o maior número de situações de negócios possível, utilizando um modelo específico.</description>
     </item>
     
     <item>
       <title>Escopo Fechado: Porque Não Optar?</title>
-      <link>//blog.coderockr.com/posts/2018/escopo-fechado-porque-nao-optar/</link>
+      <link>https://blog.coderockr.com/posts/2018/escopo-fechado-porque-nao-optar/</link>
       <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/escopo-fechado-porque-nao-optar/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/escopo-fechado-porque-nao-optar/</guid>
       <description>Motivos que afetam o insucesso do seu projeto digital
 O mercado de desenvolvimento de soluções digitais têm frequentemente se deparado com vários problemas ao optar por métodos de desenvolvimento de software tradicionais.
 Principalmente quando as necessidades do projeto mudam e os desenvolvedores não tem expertise para atender essas mudanças em curto prazo. E acredite, com certeza as necessidades do projeto vão mudar em algum momento, mesmo você afirmando que hoje é somente isso o que quer em seu projeto.</description>
@@ -63,29 +63,29 @@ Principalmente quando as necessidades do projeto mudam e os desenvolvedores não
     
     <item>
       <title>Android x iOS: 6 Pontos Essenciais no Desenvolvimento de Aplicativos</title>
-      <link>//blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</link>
+      <link>https://blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</link>
       <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos/</guid>
       <description>O mercado de aplicativos para celulares é um dos mais rentáveis, a maioria das empresas já entendeu que é fundamental ter um bom produto mobile para atender cada vez melhor seus clientes. Isso significa que a demanda por mão de obra qualificada é crescente, como também a busca por uma fábrica de software, que se compromete a longo prazo com o sucesso do seu produto, desde sua criação a manutenção dele, com todas as melhorias e inovações.</description>
     </item>
     
     <item>
       <title>5 Razões para Desenvolver um Software Personalizado para o seu Negócio</title>
-      <link>//blog.coderockr.com/posts/2018/5-razoes-para-o-desenvolvimento-de-software-para-o-seu-negocio/</link>
+      <link>https://blog.coderockr.com/posts/2018/5-razoes-para-o-desenvolvimento-de-software-para-o-seu-negocio/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2018/5-razoes-para-o-desenvolvimento-de-software-para-o-seu-negocio/</guid>
+      <guid>https://blog.coderockr.com/posts/2018/5-razoes-para-o-desenvolvimento-de-software-para-o-seu-negocio/</guid>
       <description>Sua empresa enfrenta problemas relacionados a gestão, lançamentos massivos, cadastros diversos, sofre com a falta de identidade da sua marca, opções de personalização e melhorias escassas, entre outros? A solução pode estar na busca por uma Software House, empresa especializada no desenvolvimento de softwares e aplicativos, que atenda todas as suas necessidades. Veja as vantagens de investir no desenvolvimento de um software próprio:
 Atende às necessidades específicas da empresa A principal vantagem de ter um software sob medida é que este foi desenvolvido para atender especialmente às necessidades do seu negócio ou empresa.</description>
     </item>
     
     <item>
       <title>Por que não Temos Equipes Remotas na Coderockr</title>
-      <link>//blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</link>
       <pubDate>Wed, 07 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/por-que-nao-temos-equipes-remotas-na-coderockr/</guid>
       <description>Recentemente lançamos nosso plano de carreiras e no Twitter o grande @femontanha levantou um ponto interessante:
 Como é um assunto relevante achei legal escrever um post explicando os motivos de não termos equipes remotas na Coderockr. São dois fatores, que vou chamar de “Fator Matemática” e “Fator Pessoas”.
 O Fator Matemática Atualmente a Coderockr é uma empresa de serviços então, resumidamente, o que entregamos são horas de desenvolvimento. O valor/hora que cobramos precisa ser competitivo com o mercado e também cobrir todos os custos da empresa.</description>
@@ -93,10 +93,10 @@ O Fator Matemática Atualmente a Coderockr é uma empresa de serviços então, r
     
     <item>
       <title>O Plano de Carreiras da Coderockr</title>
-      <link>//blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/o-plano-de-carreiras-da-coderockr/</guid>
       <description>O que é um plano de carreira?
 Citando a definição neste ótimo post publicado no site da Endeavor:
  Plano de carreira é um programa estruturado que estipula o caminho que cada funcionário vai percorrer dentro de uma organização. Ele determina as competências necessárias para cada posição hierárquica e também qual é a expectativa da empresa em relação àquela posição.
@@ -105,10 +105,10 @@ Citando a definição neste ótimo post publicado no site da Endeavor:
     
     <item>
       <title>Como Montar um Bom Currículo para Desenvolvedores e Designers</title>
-      <link>//blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</link>
+      <link>https://blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</link>
       <pubDate>Thu, 30 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers/</guid>
       <description>Desde 2010, quando fundamos a Coderockr, uma das tarefas mais difíceis e importantes que eu tenho realizado é a contratação de pessoas. Neste post gostaria de compartilhar algumas ideias que podem ajudar na escrita de um currículo para desenvolvedores e designers.
 Vamos lá…
 Com o passar do tempo nós fomos evoluindo nosso processo e atualmente ele é formado por quatro etapas: &amp;gt; leitura de currículos -&amp;gt; entrevista -&amp;gt; teste técnico -&amp;gt; entrevista com a equipe.</description>
@@ -116,48 +116,48 @@ Com o passar do tempo nós fomos evoluindo nosso processo e atualmente ele é fo
     
     <item>
       <title>A Importância do Propósito</title>
-      <link>//blog.coderockr.com/posts/2016/a-importancia-do-proposito/</link>
+      <link>https://blog.coderockr.com/posts/2016/a-importancia-do-proposito/</link>
       <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/a-importancia-do-proposito/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/a-importancia-do-proposito/</guid>
       <description>Nos últimos anos o Brasil viu um crescimento do número de novas empresas, sejam mais &amp;ldquo;tradicionais&amp;rdquo; ou &amp;ldquo;startups&amp;rdquo;. E eu me encaixo nessa nova onda de empreendedores, mesmo com minha formação de cientista da computação. Talvez por eu não ter uma formação empreendedora mais tradicional eu demorei alguns anos para perceber que não é perda de tempo parar um pouco e pensar em coisas importantes como &amp;ldquo;missão, visão, valores&amp;rdquo;, e o que eu acho ainda mais útil: o propósito da empresa.</description>
     </item>
     
     <item>
       <title>Aprenda a Dizer NÃO, Você Precisará Disso!</title>
-      <link>//blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</link>
+      <link>https://blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/aprenda-a-dizer-nao-voce-precisara-disso/</guid>
       <description>Uma das habilidades mais importantes e que muitas pessoas não a tem, e quando digo muitas pessoas também me incluo entre elas. Acredito que o texto abaixo se encaixa em qualquer área, mas como trabalho com desenvolvimento de software é nesse contexto que o texto será desenvolvido.
 Em sua grande maioria, quem trabalha com computadores está acostumado com o título “Garoto do computador”, não importa se você é técnico em informática, se você é programador, arquiteto de software ou CTO de alguma startup, algumas pessoas ainda recorrerão a você quando perderem a senha do Facebook.</description>
     </item>
     
     <item>
       <title>Por que Ir a Eventos?</title>
-      <link>//blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</link>
+      <link>https://blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</link>
       <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/por-que-ir-a-eventos/</guid>
       <description>Algumas pessoas me perguntam se vale a pena ir em eventos e neste post quero citar alguns motivos pelos quais acredito que isso é um dos melhores investimentos que você pode fazer para sua carreira.
 Conhecimento. Apesar de termos todo conhecimento necessário para resolver qualquer problema ao acesso de uma busca no Google, ir a eventos trás um outro tipo de informação. Assistindo as palestras, conversando com as pessoas nos corredores você consegue adquirir algo que não está tão facilmente disponível na internet: a experiência das pessoas.</description>
     </item>
     
     <item>
       <title>Como o Facebook pode Prejudicar sua Carreira como Desenvolvedor</title>
-      <link>//blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</link>
+      <link>https://blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</link>
       <pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor/</guid>
       <description>Quem me conhece pessoalmente, ou pelas redes sociais, sabe que eu não sou muito fã do Facebook por isso este post não deve ser surpresa. Eu poderia citar aqui vários motivos do meu desgosto pessoal, como a perda de tempo, a quantia de posts sobre política e sem embasamento nenhum, as centenas de comentários inúteis (kkkk, hehehe), etc. Mas neste post vou falar sobre outro aspecto do Facebook que pode prejudicar a sua carreira.</description>
     </item>
     
     <item>
       <title>O Propósito da Coderockr</title>
-      <link>//blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</link>
+      <link>https://blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</link>
       <pubDate>Thu, 14 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/o-proposito-da-coderockr/</guid>
       <description>Em seu célebre TED Talk Simon Sinek nos apresenta o que ele chamou de &amp;ldquo;golden circle&amp;rdquo; onde mostra a importância das empresas terem foco no &amp;ldquo;por quê&amp;rdquo; mais do que no &amp;ldquo;como&amp;rdquo; ou &amp;ldquo;o que&amp;rdquo; fazem.
 Inspirado neste conceito e no projeto /purpose criamos esta página para compartilhar nossa visão de mundo, nossos propósitos.
  Nosso propósito é criar softwares incríveis e ajudar outras empresas a fazerem o mesmo. Fazemos isso porque acreditamos que o desenvolvimento de software é uma arte, que deve ser feita com paixão e dedicação.</description>
@@ -165,20 +165,20 @@ Inspirado neste conceito e no projeto /purpose criamos esta página para compart
     
     <item>
       <title>Sobre como Começar na Área de Desenvolvimento</title>
-      <link>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</link>
+      <link>https://blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</link>
       <pubDate>Sat, 14 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</guid>
+      <guid>https://blog.coderockr.com/posts/2015/sobre_como_come%C3%A7ar_na_area_de_desenvolvimento/</guid>
       <description>Recebi um e-mail essa semana com uma dúvida bem comum, que eu mesmo já passei alguns (muitos) anos atrás:
  Bom dia Elton, tudo bem? Trabalho com TI a 4 anos [..], e agora quero migrar para o desenvolvimento. O grande dilema neste momento tem sido a linguagem. [..] estou na dúvida se começo em PHP (que aparentemente é uma ótima porta de entrada para o desenvolvimento) ou Ruby. Ambas as linguagens parecem de curva de aprendizado rápido [.</description>
     </item>
     
     <item>
       <title>Carreira, e não Emprego</title>
-      <link>//blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</link>
+      <link>https://blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</link>
       <pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</guid>
+      <guid>https://blog.coderockr.com/posts/2013/carreira-e-nao-emprego/</guid>
       <description>A ideia para este post surgiu de duas situações. A primeira foi o fato de que com os cursos básicos de programação que estamos publicando no Code Squad (logica e php) estou recebendo mais e-mails de pessoas que estão entrando agora na profissão de programador, com aquelas dúvidas que eu também tive no início.
 A segunda motivação foi uma das ótimas conversas geradas em intervalos de palestras em um evento de desenvolvedores que participei (você precisa participar destes eventos!</description>
     </item>

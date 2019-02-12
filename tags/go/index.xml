@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Blog Coderockr</title>
-    <link>//blog.coderockr.com/tags/go/</link>
+    <link>https://blog.coderockr.com/tags/go/</link>
     <description>Recent content in Go on Blog Coderockr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 27 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//blog.coderockr.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.coderockr.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gerenciando Dependências em Golang</title>
-      <link>//blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</link>
+      <link>https://blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</link>
       <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</guid>
+      <guid>https://blog.coderockr.com/posts/2017/gerenciando-dependencias-em-golang/</guid>
       <description>Gerenciando dependências em Golang Desenvolver software atualmente se parece cada vez mais com montar um quebra-cabeça. Foi-se o tempo dos grandes frameworks, com várias funcionalidades acopladas, e é muito comum usarmos vários pequenos pacotes para montarmos nossos projetos.
 A maioria das linguagens de programação modernas possui um sistema de gerenciamento destas dependências, como o Composer do PHP, o yarn/npm para JavaScript, pip no Python, etc. No ecossistema Go existem várias implementações deste conceito, o que acabou gerando um certo conflito na hora de selecionar uma solução.</description>
     </item>
     
     <item>
       <title>Tratamento de Erros em Go</title>
-      <link>//blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</link>
+      <link>https://blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</link>
       <pubDate>Wed, 13 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/tratamento-de-erros-em-go/</guid>
       <description>Um dos primeiros pontos que causam estranheza para quem está começando em Go é a forma como os erros são tratados, principalmente quando viemos de outras linguagens orientadas a objetos. Em Go os erros são “first class citizens”, ou seja, eles não são ocultos ou delegados e são considerados parte importante do código.
 Hoje passei por uma situação onde isso fez diferença. Revisando/debugando o código em PHP (alterado do original):</description>
     </item>
     
     <item>
       <title>Por que Go?</title>
-      <link>//blog.coderockr.com/posts/2016/por-que-go/</link>
+      <link>https://blog.coderockr.com/posts/2016/por-que-go/</link>
       <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>//blog.coderockr.com/posts/2016/por-que-go/</guid>
+      <guid>https://blog.coderockr.com/posts/2016/por-que-go/</guid>
       <description>A melhor ferramenta para cada necessidade
 Nestes quase 20 anos de carreira como desenvolvedor eu já trabalhei com várias linguagens de programação, desde C, passando por Cobol, Java, Python e PHP, que tornou-se minha principal ferramenta.
 Uma das coisas que aprendi nesse processo foi sempre tentar encontrar a melhor ferramenta para cada situação e evitar cair na máxima:
