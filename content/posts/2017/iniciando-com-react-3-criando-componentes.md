@@ -6,6 +6,10 @@ date: 2017-03-29
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Programação Funcional"]
+aliases: [
+    "/iniciando-com-react----3-criando-componentes-97f7023ca5ab",
+    "/iniciando-com-react-3-criando-componentes-97f7023ca5ab",
+]
 ---
 
 O **React** introduz uma nova maneira de construir interfaces, o que podemos chamar de “Interface baseada em componentes”. Componentes permitem que você divida sua interface em partes independentes e reutilizáveis, e que você pense em cada parte de forma isolada.

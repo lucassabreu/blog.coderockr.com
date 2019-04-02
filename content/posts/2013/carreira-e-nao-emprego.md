@@ -6,6 +6,11 @@ date: 2013-09-01
 draft: false
 categories: ["Coderockr Culture", "Mercado", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/carreira-e-n-o-emprego-6f039d9525d7",
+    "/carreira-e-nao-emprego-6f039d9525d7",
+    "/carreira-e-não-emprego-6f039d9525d7",
+]
 ---
 
 A ideia para este post surgiu de duas situações. A primeira foi o fato de que com os cursos básicos de programação que estamos publicando no Code Squad (logica e php) estou recebendo mais e-mails de pessoas que estão entrando agora na profissão de programador, com aquelas dúvidas que eu também tive no início.

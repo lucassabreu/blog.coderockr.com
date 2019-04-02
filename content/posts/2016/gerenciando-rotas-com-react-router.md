@@ -6,6 +6,9 @@ date: 2016-09-05
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Programação Funcional", "Arquitetura"]
+aliases: [
+    "/gerenciando-rotas-com-react-router-ed44ce1e8753",
+]
 ---
 
 Quando começamos a desenvolver um [SPA](https://en.wikipedia.org/wiki/Single-page_application), uma das primeiras coisas que precisamos definir é a forma como controlamos as rotas da aplicação. Em React isso não é diferente.

@@ -6,6 +6,9 @@ date: 2018-06-06
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GitHub", "Ferramentas"]
+aliases: [
+    "/simplificando-ainda-mais-o-setup-de-projetos-e6a482b25b8a"
+]
 ---
 
 # Simplificando ainda mais o Setup de Projetos

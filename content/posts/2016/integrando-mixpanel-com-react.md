@@ -6,6 +6,9 @@ date: 2016-07-28
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Ferramentas"]
+aliase: [
+    "/integrando-mixpanel-com-react-783179311719"
+]
 ---
 
 Recentemente lançamos a nova interface do [Planrockr](http://planrockr.com/), feita em ReactJS. Nesse produto nós estamos utilizando o [MixPanel](https://mixpanel.com) para fazer tracking de ações do usuário. Anteriormente nós fazíamos o tracking apenas pelo backend, já que a interface era experimental e sabíamos que as chances eram grandes de o código dela ser descartado.

@@ -6,6 +6,9 @@ date: 2016-07-13
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GO", "Ferramentas"]
+aliases: [
+    "/tratamento-de-erros-em-go-cf4e4c23e813",
+]
 ---
 
 Um dos primeiros pontos que causam estranheza para quem está começando em Go é a forma como os erros são tratados, principalmente quando viemos de outras linguagens orientadas a objetos. Em Go os erros são “first class citizens”, ou seja, eles não são ocultos ou delegados e são considerados parte importante do código.

@@ -6,6 +6,11 @@ date: 2016-04-02
 draft: false
 categories: ["Mercado", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/aprenda-a-dizer-n-o--voc--precisar--disso--53818d0a7fc",
+    "/aprenda-a-dizer-nao-voce-precisara-disso--53818d0a7fc",
+    "/aprenda-a-dizer-não-você-precisará-disso--53818d0a7fc",
+]
 ---
 Uma das habilidades mais importantes e que muitas pessoas não a tem, e quando digo muitas pessoas também me incluo entre elas. Acredito que o texto abaixo se encaixa em qualquer área, mas como trabalho com desenvolvimento de software é nesse contexto que o texto será desenvolvido.
 

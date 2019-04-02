@@ -6,6 +6,11 @@ date: 2016-07-02
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Redux"]
+aliases: [
+    "/requisi--es-ass-ncronas-em-redux-c613a0d3ac7e",
+    "/requisicoes-assincronas-em-redux-c613a0d3ac7e",
+    "/requisições-assíncronas-em-redux-c613a0d3ac7e",
+]
 ---
 
 Quando se está começando a aprender **Redux**, uma das dúvidas mais comuns é como fazer requisições assíncronas.

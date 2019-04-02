@@ -6,6 +6,9 @@ date: 2018-05-06
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GitHub", "Ferramentas"]
+aliases: [
+    "/simplifying-project-setup-even-further-da5ef60a1ec9"
+]
 ---
 
 Now simplifying GitHub, GitLab and Trello

@@ -6,6 +6,9 @@ date: 2015-06-25
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Gerenciamento de Projetos", "Metodologias"]
+aliases: [
+    "/como-gerenciamos-projetos-na-coderockr-3345a7eb129f",
+]
 ---
 
 A Coderockr é, simplificando bastante, uma empresa de projetos de software. Para conseguirmos cumprir nosso propósito precisamos gerenciar projetos com qualidade e eficiência. Neste post vamos comentar como fazemos isso.

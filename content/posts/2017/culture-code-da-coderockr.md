@@ -6,6 +6,9 @@ date: 2017-01-09
 draft: false
 categories: ["Coderockr Culture"]
 tags: ["Desenvolvimento"]
+aliases: [
+    "/culture-code-da-coderockr-17f1789e7731",
+]
 ---
 
 Hoje é um dia importante para nós da Coderockr pois estamos tornando público nosso Culture Code.

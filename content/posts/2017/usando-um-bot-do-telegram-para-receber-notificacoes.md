@@ -4,6 +4,11 @@ description: "Quem me conhece sabe que eu não gosto muito do WhatsApp. E o moti
 author: "Elton Minetto"
 date: 2017-06-12
 draft: false
+aliases: [
+    "/usando-um-bot-do-telegram-para-receber-notifica--es-31f726732243",
+    "/usando-um-bot-do-telegram-para-receber-notificacoes-31f726732243",
+    "/usando-um-bot-do-telegram-para-receber-notificações-31f726732243",
+]
 ---
 
 #

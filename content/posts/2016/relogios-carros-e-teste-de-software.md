@@ -6,6 +6,11 @@ date: 2016-01-07
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "TDD", "Metodologias", "Ferramentas"]
+aliases: [
+    "/rel-gios--carros-e-teste-de-software-ca56a41daddd",
+    "/relogios-carros-e-teste-de-software-ca56a41daddd",
+    "/relógios-carros-e-teste-de-software-ca56a41daddd",
+]
 ---
 
 Recentemente comprei um relógio de pulso. Usar um relógio analógico em 2016 é basicamente uma decisão de estética e não de funcionalidade pois estamos rodeados de relógios digitais, como por exemplo, no painel do meu carro.

@@ -6,6 +6,11 @@ date: 2016-06-23
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Clean Code", "PHP"]
+aliases: [
+    "/como-melhorar-seus-c-digos-usando-object-calisthenics-444daf3e2e06",
+    "/como-melhorar-seus-codigos-usando-object-calisthenics-444daf3e2e06",
+    "/como-melhorar-seus-códigos-usando-object-calisthenics-444daf3e2e06",
+]
 ---
 
 Em um dos primeiros projetos que a Coderockr participou tivemos o privilégio de trabalhar com um “dream team”: Eduardo Shiota, Guilherme Blanco, Rafael Dohms e Otavio Ferreira (em ordem alfabética porque é impossível perfilá-los em qualquer ordem de relevância).

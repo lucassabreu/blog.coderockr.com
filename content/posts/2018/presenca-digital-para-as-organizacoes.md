@@ -6,6 +6,11 @@ date: 2018-10-18
 draft: false
 categories: ["Mercado"]
 tags: ["Transformação Digital"]
+aliases: [
+    "/presen-a-digital-para-as-organiza--es-b747986eb604",
+    "/presenca-digital-para-as-organizacoes-b747986eb604",
+    "/presença-digital-para-as-organizações-b747986eb604",
+]
 ---
 
 Entenda a importância!

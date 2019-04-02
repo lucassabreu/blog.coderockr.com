@@ -6,6 +6,11 @@ date: 2017-03-13
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Programação Funcional"]
+aliases: [
+    "/iniciando-com-react---introdu--o-a79d74fe8f8c",
+	"/iniciando-com-react-introducao-a79d74fe8f8c",
+	"/iniciando-com-react-introdução-a79d74fe8f8c",
+]
 ---
 
 React é uma biblioteca Javascript do Facebook para a construção de interfaces web. No mercado desde 2013, vem sendo utilizada por aplicações de alto escala. Entre as principais empresas que adotaram e apostam na *lib*, estão Facebook, AirBnb, Instagram e Twitter. Por muitas vezes mencionado como o **V** do [MVC](https://pt.wikipedia.org/wiki/MVC), o React se propõe a controlar a camada da **View**, proporcionando total liberdade para o programador tomar decisões em relação ao resto da arquitetura da aplicação.

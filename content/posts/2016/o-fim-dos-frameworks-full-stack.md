@@ -6,6 +6,9 @@ date: 2016-03-15
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "PHP", "Ferramentas"]
+aliases: [
+    "/o-fim-dos-frameworks-full-stack-463d6e7b0952",
+]
 ---
 
 Venho acompanhando de perto a evolução dos frameworks PHP desde meados de 2004 e me parece que todos estão caminhando para uma abordagem cada vez mais focada ao conceito de micro-frameworks.

@@ -6,6 +6,10 @@ date: 2017-03-20
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Arquitetura", "JS", "React", "Programação Funcional"]
+aliases: [
+    "/iniciando-com-react----2-criando-a-estrutura-do-projeto-2c3b0f8e9f9",
+    "/iniciando-com-react-2-criando-a-estrutura-do-projeto-2c3b0f8e9f9",
+]
 ---
 
 Montar a estrutura de um projeto React e configurar o build manualmente, pode ser um pouco confuso de início. Por esse motivo, iremos utilizar o comando [create-react-app](https://github.com/facebookincubator/create-react-app), que gera por padrão uma estrutura básica, pronta para começarmos a desenvolver nossa aplicação. Dessa forma, você não precisa entender todo o processo do build antes mesmo de criar o seu primeiro componente.

@@ -6,6 +6,11 @@ date: 2016-09-20
 draft: false
 categories: ["Coderockr Culture", "Mercado"]
 tags: ["Carreira"]
+aliases: [
+    "/a-import-ncia-do-prop-sito-48f478577cbe",
+    "/a-importancia-do-proposito-48f478577cbe",
+    "/a-importância-do-propósito-48f478577cbe",
+]
 ---
 
 Nos últimos anos o Brasil viu um crescimento do número de novas empresas, sejam mais "tradicionais" ou "startups". E eu me encaixo nessa nova onda de empreendedores, mesmo com minha formação de cientista da computação. Talvez por eu não ter uma formação empreendedora mais tradicional eu demorei alguns anos para perceber que não é perda de tempo parar um pouco e pensar em coisas importantes como "missão, visão, valores", e o que eu acho ainda mais útil: o propósito da empresa.

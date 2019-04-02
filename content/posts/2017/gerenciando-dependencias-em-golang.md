@@ -6,6 +6,11 @@ date: 2017-07-27
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GO", "Ferramentas"]
+aliases: [
+    "/gerenciando-depend-ncias-em-golang-c8c668285c55",
+	"/gerenciando-dependencias-em-golang-c8c668285c55",
+	"/gerenciando-dependências-em-golang-c8c668285c55",
+]
 ---
 # Gerenciando dependências em Golang
 

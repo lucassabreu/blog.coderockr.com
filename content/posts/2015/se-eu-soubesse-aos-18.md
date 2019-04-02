@@ -6,6 +6,10 @@ date: 2015-12-18
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/se-eu-soubesse-aos-18-profissao-42c75ba331d",
+    "/se-eu-soubesse-aos-18-profissão-42c75ba331d",
+]
 ---
 
 Há 9 meses atrás escrevi um post semelhante falando sobre a faculdade, nele eu prometi escrever um post abordando o tema profissão, e aqui estou, cumprindo com a promessa; Antes tarde do que nunca.

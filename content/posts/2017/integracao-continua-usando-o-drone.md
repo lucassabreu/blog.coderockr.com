@@ -6,6 +6,11 @@ date: 2017-05-08
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Ferramentas"]
+aliases: [
+    "/integra--o-cont-nua-usando-o-drone-b890b018746b",
+    "/integracao-continua-usando-o-drone-b890b018746b",
+    "/integração-contínua-usando-o-drone-b890b018746b",
+]
 ---
 
 Integração contínua e deploy contínuo são dois pontos muito importantes no “Coderockr Way”, o processo de desenvolvimento que usamos na Coderockr. Neste post vou falar sobre uma nova ferramenta que estamos avaliando, o Drone.

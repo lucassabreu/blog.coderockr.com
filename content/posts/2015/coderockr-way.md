@@ -6,6 +6,9 @@ date: 2015-10-29
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Metodologias", "Desenvolvimento"]
+aliases: [
+    "/coderockr-way-922baaa89cf9",
+]
 ---
 
 Toda empresa tem sua forma de trabalhar, sua caixa de ferramentas. Nestes cinco anos aprendemos bastante e queremos compartilhar esse conhecimento, por isso vamos criar uma série de pequenos vídeos sobre o nosso processo e as ferramentas que usamos.

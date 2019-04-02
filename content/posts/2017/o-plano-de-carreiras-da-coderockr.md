@@ -6,6 +6,9 @@ date: 2017-05-29
 draft: false
 categories: ["Coderockr Culture", "Mercado"]
 tags: ["Carreira"]
+aliases: [
+    "/o-plano-de-carreiras-da-coderockr-aaf10de29c14"
+]
 ---
 
 O que é um plano de carreira?

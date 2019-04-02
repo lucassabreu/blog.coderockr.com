@@ -6,6 +6,11 @@ date: 2015-03-14
 draft: false
 categories: ["Mercado", "Carreira"]
 tags: ["Desenvolvimento", "Carreira"]
+aliases: [
+    "/sobre-como-come-ar-na--rea-de-desenvolvimento-26a3ce6781",
+    "/sobre-como-comecar-na-area-de-desenvolvimento-26a3ce6781",
+    "/sobre-como-começar-na-área-de-desenvolvimento-26a3ce6781",
+]
 ---
 
 Recebi um e-mail essa semana com uma dúvida bem comum, que eu mesmo já passei alguns (muitos) anos atrás:

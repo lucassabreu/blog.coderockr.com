@@ -6,6 +6,10 @@ date: 2018-04-16
 draft: false
 categories: ["Mercado"]
 tags: ["Desenvolvimento", "Transformação Digital", "Mobile"]
+aliases: [
+    "/android-x-ios--6-pontos-essenciais-no-desenvolvimento-de-aplicativos-81d2bffe237f",
+    "/android-x-ios-6-pontos-essenciais-no-desenvolvimento-de-aplicativos-81d2bffe237f",
+]
 ---
 
 O mercado de aplicativos para celulares é um dos mais rentáveis, a maioria das empresas já entendeu que é fundamental ter um bom produto mobile para atender cada vez melhor seus clientes. Isso significa que a demanda por mão de obra qualificada é crescente, como também a busca por uma fábrica de software, que se compromete a longo prazo com o sucesso do seu produto, desde sua criação a manutenção dele, com todas as melhorias e inovações.

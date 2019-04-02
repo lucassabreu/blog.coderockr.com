@@ -6,6 +6,9 @@ date: 2017-06-28
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "API", "Ferramentas"]
+aliases: [
+    "/definindo-apis-com-o-api-blueprint-99c0595a0ffd"
+]
 ---
 
 # Definindo APIs com o API Blueprint

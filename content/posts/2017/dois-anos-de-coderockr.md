@@ -6,6 +6,9 @@ date: 2017-02-26
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/dois-anos-de-coderockr-f9ce3f4891a5"
+]
 ---
 
 Este mês, estou completando oficialmente dois anos trabalhando para a Coderockr, e através desse post, gostaria de trazer um overview desta experiência.

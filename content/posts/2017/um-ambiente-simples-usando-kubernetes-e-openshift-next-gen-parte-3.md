@@ -6,6 +6,10 @@ date: 2017-03-09
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Kubernetes", "Ferramentas"]
+aliases: [
+    "/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen---parte-3-d012d6eb5344",
+    "/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-3-d012d6eb5344",
+]
 ---
 
 Este post é a terceira parte de uma série sobre o básico necessário para usar o Kubernetes, caso você não tenha lido o post anterior recomendo lê-lo e depois voltar aqui para não ficar perdido.

@@ -6,6 +6,9 @@ date: 2016-10-19
 draft: false
 categories: ["Desenvolvimento", "Carreira"]
 tags: ["Carreira", "JS", "React", "Redux", "Programação Funcional"]
+aliases: [
+    "/como-react-e-redux-me-fizeram-um-programador-melhor-e982c633c011",
+]
 ---
 
 Há uns dias atrás, no primeiro hangout do React Cast, apareceu o assunto sobre como React e Redux nos faziam ser programadores melhores. Nesse post vou esclarecer os pontos que me levam a acreditar nisso.

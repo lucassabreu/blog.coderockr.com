@@ -6,6 +6,9 @@ date: 2017-01-03
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "AWS", "Ferramentas"]
+aliases: [
+    "/usando-aws-api-gateway-e-aws-lambda-451057fe1c21"
+]
 ---
 
 Recentemente lançamos uma nova versão do site da Coderockr ([já viu? Está lindão!](http://coderockr.com/)) e nosso [desenvolvedor/designer](https://www.facebook.com/raonymarcondes) apresentou uma ótima ideia: criarmos um [formulário de contato](http://coderockr.com/contact.html) mais inteligente, onde o interessado pode nos fornecer informações mais completas já no primeiro momento, acelerando nosso processo de negociação.

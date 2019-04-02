@@ -6,6 +6,9 @@ date: 2017-05-08
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Criptografia", "Software Security", "Ferramentas"]
+aliases: [
+    "/como-lidar-com-senhas-inseguras-em-projetos-legados-cf15a93e126f"
+]
 ---
 
 Aqui na [Coderockr](http://coderockr.com/) nós eventualmente nos deparamos com sistemas legados e muitas vezes inseguros. Um dos problemas mais comuns é a utilização de funções hash como MD5, SHA1, SHA-256 em senhas. O uso dessas funções apresenta alguns riscos que as aplicações não deveriam estar correndo, mas antes de abordar as soluções, vamos ver porque o uso deses algoritmos de hash representam um risco de segurança.

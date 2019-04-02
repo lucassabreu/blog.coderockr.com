@@ -6,6 +6,11 @@ date: 2014-11-27
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/multitasking-s----bom-no-seu-computador-3055b1c542b2",
+    "/multitasking-so-e-bom-no-seu-computador-3055b1c542b2",
+    "/multitasking-só-e-bom-no-seu-computador-3055b1c542b2",
+]
 ---
 
 Recentemente a Coderockr conquistou alguns clientes no formato “banco de horas”. Isto significa que o cliente compra um número de horas de nossa experiência e trabalho, então precisamos ter alguma forma de contabilizar como estamos usando nossos dias.

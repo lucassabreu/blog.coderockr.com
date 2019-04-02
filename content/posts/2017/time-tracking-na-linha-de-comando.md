@@ -6,6 +6,9 @@ date: 2017-08-21
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Ferramentas"]
 draft: false
+aliases: [
+    "/time-tracking-na-linha-de-comando-ce5624642a88"
+]
 ---
 
 Escrevi [um post](http://eltonminetto.net/2014/11/26/multitasking-so-e-bom-no-seu-computador/) algum tempo atrás falando sobre as armadilhas do “multitasking” no nosso dia a dia. Uma das minhas sugestões no post foi usar uma ferramenta para anotar as horas e tarefas, o que ajuda a manter o foco em uma coisa de cada vez. Neste post vou apresentar uma nova ferramenta que estou usando e gostando bastante, o Watson.

@@ -6,6 +6,11 @@ date: 2017-03-30
 draft: false
 categories: ["Coderockr Culture", "Mercado", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+	"/como-montar-um-bom-curr-culo-para-desenvolvedores-e-designers-429ad08cf405",
+    "/como-montar-um-bom-curriculo-para-desenvolvedores-e-designers-429ad08cf405",
+    "/como-montar-um-bom-currículo-para-desenvolvedores-e-designers-429ad08cf405",
+]
 ---
 
 Desde 2010, quando fundamos a Coderockr, uma das tarefas mais difíceis e importantes que eu tenho realizado é a contratação de pessoas. Neste post gostaria de compartilhar algumas ideias que podem ajudar na escrita de um currículo para desenvolvedores e designers.

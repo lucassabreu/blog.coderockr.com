@@ -6,6 +6,9 @@ date: 2016-07-21
 draft: false
 categories: ["Coderockr Culture"]
 tags: ["Ferramentas"]
+aliases: [
+    "/como-usamos-o-slack-na-coderockr-d7420b2575d5"
+]
 ---
 
 Dentre os valores da Coderockr estão dois pontos importantes: cooperação e transparência. Como somos uma empresa que desenvolve software nada mais esperado do que usarmos aplicativos para ajudar nestes objetivos. E hoje a principal ferramenta para isso é o Slack, que rapidamente tornou-se o coração de muitas empresas

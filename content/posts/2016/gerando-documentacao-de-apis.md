@@ -6,6 +6,11 @@ date: 2016-05-31
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "API", "Ferramentas"]
+aliases: [
+    "/gerando-documenta--o-de-apis-13cee60017e4",
+    "/gerando-documentacao-de-apis-13cee60017e4",
+    "/gerando-documentação-de-apis-13cee60017e4",
+]
 ---
 
 Uma das melhores decisões técnicas que tomei na minha carreira foi investir pesado nas arquiteturas baseadas em serviços. Meu primeiro post sobre isso data de 2011 e desde então esta decisão só se provou um acerto.

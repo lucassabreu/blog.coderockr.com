@@ -6,6 +6,11 @@ date: 2016-04-01
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/nossas-experi-ncias-com-mentoria-na-coderockr-f3f982e4f8d3",
+    "/nossas-experiencias-com-mentoria-na-coderockr-f3f982e4f8d3",
+    "/nossas-experiências-com-mentoria-na-coderockr-f3f982e4f8d3",
+]
 ---
 
 Quero neste post compartilhar uma experiência que estamos fazendo na Coderockr nos últimos meses: um processo de mentorias.

@@ -6,6 +6,11 @@ date: 2016-02-23
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS"]
+aliases: [
+    "/socket-io-notify---resolvendo-problemas-de-notifica--o-real-time-6a21eff22e8f",
+    "/socket-io-notify-resolvendo-problemas-de-notificacao-real-time-6a21eff22e8f",
+    "/socket-io-notify-resolvendo-problemas-de-notificação-real-time-6a21eff22e8f",
+]
 ---
 
 No final do ano passado, em dois de nossos projetos na Coderockr, surgiu a necessidade de termos uma comunicação real-time entre o servidor e o browser.

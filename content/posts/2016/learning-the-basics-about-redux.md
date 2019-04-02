@@ -6,6 +6,9 @@ date: 2016-06-22
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Redux", "Programação Funcional"]
+aliases: [
+	"/learning-the-basics-about-redux-b55e072bc3f1"
+]
 ---
 
 Redux is a predictable state container for JavaScript Applications, but what does that mean?

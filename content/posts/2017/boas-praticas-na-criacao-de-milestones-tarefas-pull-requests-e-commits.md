@@ -6,6 +6,11 @@ date: 2017-11-13
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Clean Code", "GitHub", "Ferramentas"]
+animes: [
+    "/boas-pr-ticas-na-cria--o-de-milestones--tarefas--pull-requests-e-commits-e26e14faa8d5",
+    "/boas-praticas-na-criacao-de-milestones-tarefas-pull-requests-e-commits-e26e14faa8d5",
+    "/boas-práticas-na-criação-de-milestones-tarefas-pull-requests-e-commits-e26e14faa8d5",
+]
 ---
 
 Um dos fatores de sucesso do processo de desenvolvimento de software, assim como a maioria dos empreendimentos humanos, é uma boa comunicação.

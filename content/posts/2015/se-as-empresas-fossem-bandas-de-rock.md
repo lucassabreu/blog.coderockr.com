@@ -6,6 +6,9 @@ date: 2015-04-22
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/se-as-empresas-fossem-bandas-de-rock-eacee65903cd",
+]
 ---
 
 Um dos motes da Coderockr é “Bons programadores são únicos, assim como estrelas no mundo do rock”. Nesse post vou aumentar um pouco as analogias, envolvendo outras áreas das empresas.

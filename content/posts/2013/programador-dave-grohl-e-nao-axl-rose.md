@@ -6,6 +6,10 @@ date: 2013-08-26
 draft: false
 categories: ["Coderockr Culture", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/programador-dave-grohl-e-nao-axl-rose-356922609927",
+    "/programador-dave-grohl-e-não-axl-rose-356922609927",
+]
 ---
 
 O lema da Coderockr é “Programadores são artistas, são Rockstars!”. Esse termo “programador rockstar” vem sendo usado por algumas pessoas como pejorativo, como algo a ser evitado.

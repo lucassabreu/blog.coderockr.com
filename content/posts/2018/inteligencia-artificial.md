@@ -6,6 +6,13 @@ date: 2018-11-29
 draft: false
 categories: ["Mercado"]
 tags: ["Transformação Digital", "I.A."]
+aliases: [
+    "/-i-a---intelig-ncia-artificial--8c4197934e96",
+	"/ia---inteligencia-artificial--8c4197934e96",
+	"/ia---inteligência-artificial--8c4197934e96",
+    "/-i-a-inteligencia-artificial-8c4197934e96",
+    "/-i-a-inteligência-artificial-8c4197934e96",
+]
 ---
 
 ![](https://cdn-images-1.medium.com/max/2000/1*19n63dlE5CAZMdcyduJZlQ.jpeg)

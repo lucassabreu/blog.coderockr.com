@@ -6,6 +6,9 @@ date: 2018-08-10
 draft: false
 categories: ["Mercado"]
 tags: ["Transformação Digital"]
+aliase: [
+    "/entenda-a-diferen-a-de-um-software-customizado-e-um-software-pronto-d09d47723437"
+]
 ---
 
 Um software pode ser desenvolvido para uma área de mercado ou customizado para atender uma necessidade específica de negócio. Neste último caso, o desenvolvimento é adaptado a empresa, compreendendo os desejos de seu cliente e criando áreas específicas para atender 100% a demanda em questão.

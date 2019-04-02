@@ -6,6 +6,10 @@ date: 2017-04-10
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Programação Funcional"]
+aliases: [
+    "/iniciando-com-react----4-armazenando-estado-e-entendendo-o-lifecycle-bbb92b27da83",
+    "/iniciando-com-react-4-armazenando-estado-e-entendendo-o-lifecycle-bbb92b27da83",
+]
 ---
 
 Quando estamos desenvolvendo uma aplicação, é comum a necessidade de guardarmos estado. Juntamente com essa necessidade, é frequente precisarmos tomar uma ação quando um componente acabou de aparecer na tela, por exemplo, ou quando dados são atualizados. Nesse post, veremos como React pode suprir essas necessidades de forma simples.

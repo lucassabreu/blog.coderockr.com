@@ -6,6 +6,9 @@ date: 2015-05-07
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Clean Code"]
+aliases: [
+    "/sintomas-de-design-de-software-podre-f65c8f43c1e"
+]
 ---
 
 Existem quatro sintomas primários que nos ajudam a identificar quando nosso design está apodrecendo. São ortogonais, mas relacionados de formas óbvias. Os sintomas são: rigidez, fragilidade, imobilidade, e viscosidade.

@@ -6,6 +6,10 @@ date: 2017-11-03
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Programação Funcional"]
+aliases: [
+    "/iniciando-com-react----5-criando-componentes-com-storybook-fb65a3969f15",
+    "/iniciando-com-react-5-criando-componentes-com-storybook-fb65a3969f15",
+]
 ---
 
 Iniciando com React - 5 Criando componentes com Storybook

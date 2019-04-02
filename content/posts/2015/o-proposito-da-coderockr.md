@@ -6,6 +6,11 @@ date: 2015-05-14
 draft: false
 categories: ["Coderockr Culture", "Mercado"]
 tags: ["Carreira"]
+aliases: [
+    "/o-prop-sito-da-coderockr-56bb69334acb",
+    "/o-proposito-da-coderockr-56bb69334acb",
+    "/o-propósito-da-coderockr-56bb69334acb",
+]
 ---
 
 Em seu célebre TED Talk Simon Sinek nos apresenta o que ele chamou de "golden circle" onde mostra a importância das empresas terem foco no "por quê" mais do que no "como" ou "o que" fazem.

@@ -6,6 +6,9 @@ date: 2016-04-07
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "TDD", "Ferramentas", "PHP"]
+aliases: [
+    "/melhorando-a-performance-do-phpunit-7ab3f558a7cf",
+]
 ---
 
 Em pleno 2016 acho que não preciso gastar caracteres comentando a importância dos TDD no desenvolvimento de software, porque você já está escrevendo testes, certo?

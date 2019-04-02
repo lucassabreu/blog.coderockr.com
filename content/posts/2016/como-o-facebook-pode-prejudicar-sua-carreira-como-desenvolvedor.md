@@ -6,6 +6,9 @@ date: 2016-02-02
 draft: false
 categories: ["Mercado", "Carreira"]
 tags: ["Carreira"]
+aliases: [
+    "/como-o-facebook-pode-prejudicar-sua-carreira-como-desenvolvedor-ed18a7f040aa",
+]
 ---
 
 Quem me conhece pessoalmente, ou pelas redes sociais, sabe que eu não sou muito fã do Facebook por isso este post não deve ser surpresa. Eu poderia citar aqui vários motivos do meu desgosto pessoal, como a perda de tempo, a quantia de posts sobre política e sem embasamento nenhum, as centenas de comentários inúteis (kkkk, hehehe), etc. Mas neste post vou falar sobre outro aspecto do Facebook que pode prejudicar a sua carreira.

@@ -6,6 +6,11 @@ date: 2015-04-28
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Metodologias", "Ferramentas"]
+aliases: [
+    "/os-12-fatores--uma-metodologia-para-cria--o-de-projetos-saas-9a575cfca272",
+    "/os-12-fatores-uma-metodologia-para-criacao-de-projetos-saas-9a575cfca272",
+    "/os-12-fatores-uma-metodologia-para-criação-de-projetos-saas-9a575cfca272",
+]
 ---
 
 Todo desenvolvedor já deve ter ouvido falar do Heroku, plataforma de cloud computing que revolucionou o desenvolvimento, ajudou a criar o movimento “devops” e que foi vendida por diversos milhares de dólares para a Salesforce. Se tem algo que eles tem muita experiência é na criação e suporte de aplicativos SaaS (software-as-a-service), principalmente aplicativos web.

@@ -6,6 +6,10 @@ date: 2016-02-26
 draft: false
 categories: ["Coderockr Culture", "Mercado"]
 tags: ["Carreira"]
+aliases: [
+    "/por-que-ir-a-eventos--cd9fdf937c11",
+    "/por-que-ir-a-eventos-cd9fdf937c11",
+]
 ---
 
 Algumas pessoas me perguntam se vale a pena ir em eventos e neste post quero citar alguns motivos pelos quais acredito que isso é um dos melhores investimentos que você pode fazer para sua carreira.

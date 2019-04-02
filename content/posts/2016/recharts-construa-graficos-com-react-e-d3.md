@@ -6,6 +6,11 @@ date: 2016-08-22
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "D3", "Programação Funcional"]
+aliases: [
+    "/recharts--construa-gr-ficos-com-react-e-d3-31b238bd98a8",
+    "/recharts-construa-graficos-com-react-e-d3-31b238bd98a8",
+    "/recharts-construa-gráficos-com-react-e-d3-31b238bd98a8",
+]
 ---
 
 Recentemente iniciamos o desenvolvimento de [mais cinco widgets](https://blog.planrockr.com/novo-plano-novos-conte%C3%BAdos-e-gr%C3%A1ficos-no-planrockr-f2b4ab0c9d18#.vudj5kkkc) no [iMasters Planrockr](http://planrockr.com), todos de gráficos. Para a renderização dos mesmos, optamos por usar o [D3JS](https://d3js.org/), que é uma das libs mais robustas para a implementação de gráficos atualmente.

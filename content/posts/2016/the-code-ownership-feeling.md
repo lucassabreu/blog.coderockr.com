@@ -6,6 +6,9 @@ date: 2016-09-30
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Carreira"]
+aliases: [
+    "/the-code-ownership-feeling-7d841e040b4c"
+]
 ---
 
 Every developer, sometime in their lives, or very often pass through this feeling. You write code and it feels like it’s a part of you, thus motivating you to write the best code in the world, or at least what you consider it to be

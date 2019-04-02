@@ -6,6 +6,9 @@ date: 2017-05-10
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GitHub", "Ferramentas"]
+aliases: [
+    "/ambientes-por-branch-com-openshift-next-gen-usando-github-80f46091340b"
+]
 ---
 
 *Esta postagem é uma continuação da “[Ambientes por Branch com OpenShift Next Gen](https://blog.coderockr.com/ambientes-por-branch-com-openshift-next-gen-672698ecb0b7)”, a introdução do problema esta lá e também mostro como implementar o processo de deploy usando o GitLab nele, se não viu da uma conferida, vale o investimento*

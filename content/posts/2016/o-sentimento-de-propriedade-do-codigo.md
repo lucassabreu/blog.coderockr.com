@@ -6,6 +6,11 @@ date: 2016-09-15
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Carreira"]
+aliases: [
+    "/o-sentimento-de-propriedade-do-c-digo-fb02abee47f",
+    "/o-sentimento-de-propriedade-do-codigo-fb02abee47f",
+    "/o-sentimento-de-propriedade-do-código-fb02abee47f",
+]
 ---
 
 >My precious!

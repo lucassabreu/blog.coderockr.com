@@ -6,6 +6,9 @@ date: 2018-03-31
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Criptografia", "Software Security", "AWS"]
+aliases: [
+    "/aplicando-https-para-uma-spa-na-aws-c208950b9cb7",
+]
 ---
 
 Recentemente passamos a servir a nossa landing page e o SPA do [Planrockr](https://planrockr.com/) sobre HTTPS, inicialmente apenas estamos usando HTTPS no nosso backend, mas percebemos que seria melhor que nosso frontend também usasse.

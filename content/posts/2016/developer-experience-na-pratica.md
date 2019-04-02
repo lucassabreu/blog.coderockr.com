@@ -6,6 +6,11 @@ date: 2016-07-14
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "API", "Ferramentas"]
+aliases: [
+    "/developer-experience-na-pr-tica-a613af9adc6a",
+    "/developer-experience-na-pratica-a613af9adc6a",
+    "/developer-experience-na-prática-a613af9adc6a",
+]
 ---
 
 No post anterior eu falei sobre a ideia do DX e como implementar algo similar em nossas empresas. Neste post quero comentar um exemplo prático comparando duas empresas similares.

@@ -6,6 +6,11 @@ date: 2017-06-07
 draft: false
 categories: ["Coderockr Culture", "Mercado"]
 tags: ["Carreira", "Trabalho Remoto"]
+aliases: [
+    "/por-que-n-o-temos-equipes-remotas-na-coderockr-3da04c2b8212",
+    "/por-que-nao-temos-equipes-remotas-na-coderockr-3da04c2b8212",
+    "/por-que-não-temos-equipes-remotas-na-coderockr-3da04c2b8212",
+]
 ---
 
 Recentemente lançamos nosso plano de carreiras e no Twitter o grande @femontanha levantou um ponto interessante:

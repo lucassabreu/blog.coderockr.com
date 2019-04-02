@@ -6,6 +6,9 @@ date: 2017-01-10
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GitHub", "Ferramentas"]
+aliases: [
+    "/simplificando-o-setup-de-projetos-no-github-f29b76c83194"
+]
 ---
 
 Na Coderockr iniciamos e assumimos vários projetos, sejam para clientes que nos contratam ou para ações internas, e normalmente o GitHub acaba sendo a ferramenta escolhida para eles.

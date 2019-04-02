@@ -6,6 +6,9 @@ date: 2017-02-16
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "React Native", "Mobile", "Programação Funcional"]
+aliases: [
+    "/react-native-for-react-developers-769cca5ca6cc",
+]
 ---
 
 React Native for React Developers

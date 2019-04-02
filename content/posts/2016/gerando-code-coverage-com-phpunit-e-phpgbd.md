@@ -6,6 +6,9 @@ date: 2016-08-29
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "PHP", "Ferramentas"]
+aliases: [
+    "/gerando-code-coverage-com-phpunit-e-phpdbg-d6c49d092180"
+]
 ---
 
 Em um post anterior eu mostrei alguns truques para identificar testes que estão demorando muito para serem executados. Neste texto vou mostrar uma forma de melhorar a performance da geração do relatório de cobertura de códigos usando o PHPUnit.

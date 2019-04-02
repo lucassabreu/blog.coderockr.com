@@ -6,6 +6,13 @@ date: 2016-06-22
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "JS", "React", "Redux", "Programação Funcional"]
+aliases: [
+    "/conhecendo-o-b-sico-do-redux--7315bcf09cef",
+    "/conhecendo-o-basico-do-redux--7315bcf09cef",
+    "/conhecendo-o-básico-do-redux--7315bcf09cef",
+    "/conhecendo-o-basico-do-redux-7315bcf09cef",
+    "/conhecendo-o-básico-do-redux-7315bcf09cef",
+]
 ---
 
 Redux é um container de estados previsível para aplicações javascript, mas o que isso significa?

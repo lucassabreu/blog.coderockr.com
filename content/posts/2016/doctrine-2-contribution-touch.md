@@ -6,6 +6,9 @@ date: 2016-02-22
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Doctrine", "PHP"]
+aliases: [
+    "/doctrine-2-contribution-touch-953d607badb0"
+]
 ---
 
 One of my goals for 2016 is to be a par excellence open source contributor. The project I’m aiming to focus my work is on the Doctrine 2, for lots of reasons. Firstly because it’s an excellent project with lots of the top PHP developers. Did you know that @ocramius is the most assiduous contributor on Github? Secondly I use it on a daily basis at work, so the more I’m proficient at it, the better asset am I for Compufácil.

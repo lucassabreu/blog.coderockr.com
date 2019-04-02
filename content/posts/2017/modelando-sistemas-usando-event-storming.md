@@ -6,6 +6,9 @@ date: 2017-10-11
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Metodologias"]
+aliases: [
+    "/modelando-sistemas-usando-event-storming-1e18e6563eaa",
+]
 ---
 
 Mão na massa!

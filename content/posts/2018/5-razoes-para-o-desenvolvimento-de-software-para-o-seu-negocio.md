@@ -6,6 +6,11 @@ date: 2018-03-08
 draft: false
 categories: ["Mercado"]
 tags: ["Transformação Digital"]
+aliases: [
+    "/5-raz-es-para-desenvolver-um-software-personalizado-para-o-seu-neg-cio--697836f5ef05",
+    "/5-razoes-para-desenvolver-um-software-personalizado-para-o-seu-negocio-697836f5ef05",
+    "/5-razões-para-desenvolver-um-software-personalizado-para-o-seu-negócio-697836f5ef05",
+]
 ---
 
 ### Sua empresa enfrenta problemas relacionados a gestão, lançamentos massivos, cadastros diversos, sofre com a falta de identidade da sua marca, opções de personalização e melhorias escassas, entre outros?

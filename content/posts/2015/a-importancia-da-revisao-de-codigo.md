@@ -6,6 +6,11 @@ date: 2015-06-05
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Metodologias", "Clean Code"]
+aliases: [
+    "/a-import-ncia-da-revis-o-de-c-digo-a1a8b41ed7ff",
+	"/a-importancia-da-revisao-de-codigo-a1a8b41ed7ff",
+	"/a-importância-da-revisão-de-código-a1a8b41ed7ff",
+]
 ---
 
 Em seu famoso artigo “A catedral e o bazar” Eric S. Raymond proferiu:

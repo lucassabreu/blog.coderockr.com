@@ -6,6 +6,11 @@ date: 2017-04-05
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Arquitetura"]
+aliases: [
+    "/iniciando-um-novo-projeto--decis-es-de-arquitetura-ddd676b2e700",
+    "/iniciando-um-novo-projeto-decisoes-de-arquitetura-ddd676b2e700",
+    "/iniciando-um-novo-projeto-decisões-de-arquitetura-ddd676b2e700",
+]
 ---
 
 No PHP Experience 2017 eu apresentei uma palestra falando sobre algumas das experiências (trocadilho acidental…) que a Coderockr acumulou nesses quase sete anos de existência.

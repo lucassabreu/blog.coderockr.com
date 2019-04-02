@@ -6,6 +6,13 @@ date: 2016-11-02
 draft: false
 categories: ["Desenvolvimento", "Coderockr Culture"]
 tags: ["Desenvolvimento", "JS", "React", "Ferramentas", "Programação Funcional"]
+aliases: [
+    "/por-que-o-planrockr---uma-single-page-application--588484f495d2",
+    "/por-que-o-planrockr-e-uma-single-page-application--588484f495d2",
+    "/por-que-o-planrockr-é-uma-single-page-application--588484f495d2",
+    "/por-que-o-planrockr-e-uma-single-page-application-588484f495d2",
+    "/por-que-o-planrockr-é-uma-single-page-application-588484f495d2",
+]
 ---
 
 Há uns dias atrás, foi feita uma pergunta para a equipe do [Planrockr](http://planrockr.com/pt-br/) no twitter:

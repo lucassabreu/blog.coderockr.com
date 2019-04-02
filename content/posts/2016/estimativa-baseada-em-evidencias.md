@@ -6,6 +6,11 @@ date: 2016-06-02
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "Metodologias", "Gerenciamento de Projetos", "Ferramentas"]
+aliases: [
+    "/estimativa-baseada-em-evid-ncias-c156d5527427",
+    "/estimativa-baseada-em-evidencias-c156d5527427",
+    "/estimativa-baseada-em-evidências-c156d5527427",
+]
 ---
 
 As pessoas, salvo alguns místicos, não são muito boas em prever o futuro.

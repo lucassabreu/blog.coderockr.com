@@ -6,6 +6,10 @@ date: 2017-03-07
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "Kubernetes", "Ferramentas"]
+aliases: [
+    "/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen---parte-1-d012d6eb5344",
+    "/um-ambiente-simples-usando-kubernetes-e-openshift-next-gen-parte-1-d012d6eb5344",
+]
 ---
 
 Como parte das minhas metas dentro da Coderockr está a construção de um cluster usando algumas das ferramentas de orquestração de contêineres que existem no mercado; como o [Docker Swarm](https://docs.docker.com/engine/swarm/), [Kubernetes](http://kubernetes.io), [Apache Mesos](http://mesos.apache.org/), etc.

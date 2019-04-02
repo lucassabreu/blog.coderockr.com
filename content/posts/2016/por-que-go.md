@@ -6,6 +6,10 @@ date: 2016-04-28
 draft: false
 categories: ["Desenvolvimento"]
 tags: ["Desenvolvimento", "GO", "Ferramentas"]
+aliases: [
+    "/por-que-go--a04175bee0e6",
+    "/por-que-go-a04175bee0e6",
+]
 ---
 
 A melhor ferramenta para cada necessidade

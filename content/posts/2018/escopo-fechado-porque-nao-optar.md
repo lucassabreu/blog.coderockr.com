@@ -6,6 +6,11 @@ date: 2018-06-05
 draft: false
 categories: ["Mercado"]
 tags: ["Transformação Digital"]
+aliases: [
+    "/escopo-fechado--porque-n-o-optar--dab0a4cc6c25",
+	"/escopo-fechado-porque-não-optar-dab0a4cc6c25",
+	"/escopo-fechado-porque-nao-optar-dab0a4cc6c25",
+]
 ---
 
 Motivos que afetam o insucesso do seu projeto digital

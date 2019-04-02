@@ -6,6 +6,10 @@ date: 2016-06-16
 draft: false
 categories: ["Coderockr Culture", "Desenvolvimento"]
 tags: ["Desenvolvimento", "API", "TDD", "Ferramentas"]
+aliases: [
+    "/dx---developer-experience-c31f379f6fda",
+    "/dx-developer-experience-c31f379f6fda",
+]
 ---
 
 Depois de algumas cervejas e várias horas de conversa (ou teriam sido várias cervejas e algumas horas de conversa?), eis que o Guilherme Siquinelli cunha o termo que dá título a este post.
